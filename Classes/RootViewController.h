@@ -23,12 +23,12 @@
 
 @interface RootViewController : UITableViewController <UISplitViewControllerDelegate>{
    // UISplitViewController *splitViewController;
-    
+    FirstDetailViewController *firstDetailViewController;
     NSArray *array1;
     EnhancedSplitViewController *splitViewController;
 }
 
-
+@property (nonatomic, retain) IBOutlet FirstDetailViewController *firstDetailViewController;
 @property (nonatomic, retain) IBOutlet NSArray *array1;
 @property (nonatomic, assign) IBOutlet EnhancedSplitViewController *splitViewController;
 

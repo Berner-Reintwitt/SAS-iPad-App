@@ -30,7 +30,7 @@
     
     for (UIViewController *controller in tabBarController.viewControllers) {
         if (index == 2) {
-            firstDetailViewController = [[FirstDetailViewController alloc] initWithNibName:@"ThirdView" bundle:nil];
+            firstDetailViewController = [[FirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
             rootViewController = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
             rootViewController.firstDetailViewController = firstDetailViewController;
             rootViewController.navigationItem.title = @"List";

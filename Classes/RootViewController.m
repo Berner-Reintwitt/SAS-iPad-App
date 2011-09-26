@@ -13,7 +13,7 @@
 @implementation RootViewController
 @synthesize firstDetailViewController;
 @synthesize array1;
-@synthesize secondDetailViewController;
+
 //@synthesize splitViewController;
 #pragma mark -
 #pragma mark View lifecycle
@@ -71,10 +71,10 @@
     NSUInteger row = indexPath.row;
     
    
-    if(indexPath.row==0){
-        FirstDetailViewController *firstDetailViewCOntroller=[[firstDetailViewCOntroller alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
-        UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstDetailViewCOntroller];
-        [firstDetailViewCOntroller release];
+    if(row==0){
+        firstDetailViewController=[[FirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+        UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstDetailViewController];
+        [firstDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, firstDetailNavigationController, nil]];
         
         
@@ -83,7 +83,7 @@
     }
     
     
-    else if( indexPath.row==1){
+    else if(row==1){
         
     
     SecondDetailViewController *secondDetailViewController=[[SecondDetailViewController alloc] initWithNibName:@"SecondDetailViewController" bundle:nil];

@@ -19,7 +19,8 @@
     MKMapView *mapView;
     MKPlacemark *mPlacemark;
 	CLLocationCoordinate2D location;
-
+    UIButton *datePicker;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIPopoverController *popoverController;
@@ -28,8 +29,10 @@
 
 @property (nonatomic, retain) id detailItem;
 @property (nonatomic, retain) IBOutlet UILabel *detailDescriptionLabel;
+@property (retain, nonatomic) IBOutlet UIButton *datePicker;
 
 - (void)addBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc;
 - (void)removeBarButtonItem;
+- (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender;
 
 @end

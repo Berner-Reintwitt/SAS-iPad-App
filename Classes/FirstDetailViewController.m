@@ -15,6 +15,7 @@
 @end
 
 @implementation FirstDetailViewController
+@synthesize datePicker;
 
 @synthesize toolbar, barButton, popoverController, detailItem, detailDescriptionLabel;
 
@@ -78,6 +79,12 @@
     }
 }
 
+- (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender {
+    NSLog(@"hallo");
+    [datePicker setHidden:NO];
+    
+}
+
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
     self.barButton = barButtonItem;
     [self addBarButtonItem:barButtonItem forPopoverController:pc];
@@ -106,6 +113,7 @@
     self.detailItem = nil;
     self.detailDescriptionLabel = nil;
     
+    [self setDatePicker:nil];
     [super viewDidUnload];
 }
 
@@ -151,6 +159,7 @@
     [detailItem release];
     [detailDescriptionLabel release];
 	
+    [datePicker release];
     [super dealloc];
 }
 
