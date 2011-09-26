@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D8AD4231430D83800DD5861 /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8AD4221430D83800DD5861 /* Apartment.m */; };
 		7DDC97161430A54E0041E0ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97151430A54E0041E0ED /* UIKit.framework */; };
 		7DDC97181430A54E0041E0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97171430A54E0041E0ED /* Foundation.framework */; };
 		7DDC971A1430A54E0041E0ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97191430A54E0041E0ED /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D8AD4211430D83800DD5861 /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
+		7D8AD4221430D83800DD5861 /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
 		7DDC97111430A54E0041E0ED /* SAS-iPad-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAS-iPad-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDC97151430A54E0041E0ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DDC97171430A54E0041E0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +87,8 @@
 				7DDC97271430A54E0041E0ED /* AppDelegate.m */,
 				7DDC97291430A54E0041E0ED /* SAS_iPad_App.xcdatamodeld */,
 				7DDC971E1430A54E0041E0ED /* Supporting Files */,
+				7D8AD4211430D83800DD5861 /* Apartment.h */,
+				7D8AD4221430D83800DD5861 /* Apartment.m */,
 			);
 			path = "SAS-iPad-App";
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				7DDC97241430A54E0041E0ED /* main.m in Sources */,
 				7DDC97281430A54E0041E0ED /* AppDelegate.m in Sources */,
 				7DDC972B1430A54E0041E0ED /* SAS_iPad_App.xcdatamodeld in Sources */,
+				7D8AD4231430D83800DD5861 /* Apartment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
