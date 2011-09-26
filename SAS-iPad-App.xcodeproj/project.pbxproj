@@ -15,6 +15,7 @@
 		7DDC97241430A54E0041E0ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC97231430A54E0041E0ED /* main.m */; };
 		7DDC97281430A54E0041E0ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC97271430A54E0041E0ED /* AppDelegate.m */; };
 		7DDC972B1430A54E0041E0ED /* SAS_iPad_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC97291430A54E0041E0ED /* SAS_iPad_App.xcdatamodeld */; };
+		8F4264731430B03A00CA5340 /* SearchPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4264721430B03A00CA5340 /* SearchPopUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7DDC97261430A54E0041E0ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DDC97271430A54E0041E0ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7DDC972A1430A54E0041E0ED /* SAS_iPad_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SAS_iPad_App.xcdatamodel; sourceTree = "<group>"; };
+		8F4264721430B03A00CA5340 /* SearchPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPopUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		7DDC971E1430A54E0041E0ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F4264721430B03A00CA5340 /* SearchPopUpViewController.xib */,
 				7DDC971F1430A54E0041E0ED /* SAS-iPad-App-Info.plist */,
 				7DDC97201430A54E0041E0ED /* InfoPlist.strings */,
 				7DDC97231430A54E0041E0ED /* main.m */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDC97221430A54E0041E0ED /* InfoPlist.strings in Resources */,
+				8F4264731430B03A00CA5340 /* SearchPopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +271,7 @@
 				7DDC97301430A54E0041E0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
