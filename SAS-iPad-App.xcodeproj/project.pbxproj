@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D72F2E31431D05300B91EB6 /* SearchPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D72F2E11431D05300B91EB6 /* SearchPopUpViewController.m */; };
+		7D72F2E41431D05300B91EB6 /* SearchPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D72F2E21431D05300B91EB6 /* SearchPopUpViewController.xib */; };
 		7D8AD4231430D83800DD5861 /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8AD4221430D83800DD5861 /* Apartment.m */; };
 		7DC1333E1431C8C500B70A42 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1332D1431C8C500B70A42 /* EnhancedSplitViewController.m */; };
 		7DC1333F1431C8C500B70A42 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1332F1431C8C500B70A42 /* FirstDetailViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D72F2E01431D05300B91EB6 /* SearchPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPopUpViewController.h; sourceTree = "<group>"; };
+		7D72F2E11431D05300B91EB6 /* SearchPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPopUpViewController.m; sourceTree = "<group>"; };
+		7D72F2E21431D05300B91EB6 /* SearchPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPopUpViewController.xib; sourceTree = "<group>"; };
 		7D8AD4211430D83800DD5861 /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
 		7D8AD4221430D83800DD5861 /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
 		7DC1332C1431C8C500B70A42 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -108,6 +113,9 @@
 		7DDC97061430A54D0041E0ED = {
 			isa = PBXGroup;
 			children = (
+				7D72F2E01431D05300B91EB6 /* SearchPopUpViewController.h */,
+				7D72F2E11431D05300B91EB6 /* SearchPopUpViewController.m */,
+				7D72F2E21431D05300B91EB6 /* SearchPopUpViewController.xib */,
 				7DC1332B1431C8C500B70A42 /* Classes */,
 				7DDC971D1430A54E0041E0ED /* SAS-iPad-App */,
 				7DDC97141430A54E0041E0ED /* Frameworks */,
@@ -214,6 +222,7 @@
 				8F4264731430B03A00CA5340 /* SearchPopUpViewController.xib in Resources */,
 				7DC133401431C8C500B70A42 /* FirstDetailViewController.xib in Resources */,
 				7DC133451431C8C500B70A42 /* SecondDetailViewController.xib in Resources */,
+				7D72F2E41431D05300B91EB6 /* SearchPopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +245,7 @@
 				7DC133441431C8C500B70A42 /* SecondDetailViewController.m in Sources */,
 				7DC133461431C8C500B70A42 /* SecondViewController.m in Sources */,
 				7DC133471431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m in Sources */,
+				7D72F2E31431D05300B91EB6 /* SearchPopUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +268,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -284,7 +294,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -303,6 +313,7 @@
 		7DDC972F1430A54E0041E0ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAS-iPad-App/SAS-iPad-App-Prefix.pch";
 				INFOPLIST_FILE = "SAS-iPad-App/SAS-iPad-App-Info.plist";
@@ -314,6 +325,7 @@
 		7DDC97301430A54E0041E0ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAS-iPad-App/SAS-iPad-App-Prefix.pch";
 				INFOPLIST_FILE = "SAS-iPad-App/SAS-iPad-App-Info.plist";
