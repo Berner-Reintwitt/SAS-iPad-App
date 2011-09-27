@@ -7,11 +7,7 @@
 //
 
 #import "TabBarWithSplitViewAppDelegate.h"
-<<<<<<< HEAD
 #import "DomizileRootViewController.h"
-=======
-#import "RootViewController.h"
->>>>>>> 80e8fdcbca094ca3a384ab588ab9e5746df64d92
 #import "FirstDetailViewController.h"
 #import "EnhancedSplitViewController.h"
 
@@ -35,11 +31,7 @@
     for (UIViewController *controller in tabBarController.viewControllers) {
         if (index == 2) {
             firstDetailViewController = [[FirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
-<<<<<<< HEAD
             rootViewController = [[DomizileRootViewController alloc] initWithStyle:UITableViewStylePlain];
-=======
-            rootViewController = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
->>>>>>> 80e8fdcbca094ca3a384ab588ab9e5746df64d92
             rootViewController.firstDetailViewController = firstDetailViewController;
             rootViewController.navigationItem.title = @"List";
             UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
