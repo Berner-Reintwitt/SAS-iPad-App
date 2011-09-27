@@ -1,0 +1,385 @@
+TTabBarWithSplitView
+v7
+r0
+t323331764.424368
+cCheck dependencies
+cProcessInfoPlistFile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/Info.plist TabBarWithSplitView-Info.plist
+cCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib
+cCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib
+cCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib
+cCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib
+cProcessPCH /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch.gch TabBarWithSplitView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/main.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitViewAppDelegate.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/FirstViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/SecondViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/RootViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/ThirdViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView normal i386
+cGenerateDSYMFile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView
+cTouch /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D5C9B4E0000000000000110
+t1297914702
+s272
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.h
+c000000004D8A48970000000000000102
+t1300908183
+s258
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m
+c000000004D8A489700000000000003B3
+t1300908183
+s947
+i"FirstViewController.h"
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.h
+c000000004D8A48970000000000000198
+t1300908183
+s408
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m
+c000000004D8A499800000000000010C0
+t1300908440
+s4288
+i"RootViewController.h"
+i"ThirdViewController.h"
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.h
+c000000004D8A48970000000000000104
+t1300908183
+s260
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m
+c000000004D8A489700000000000003B6
+t1300908183
+s950
+i"SecondViewController.h"
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.h
+c000000004D8A489700000000000003BF
+t1300908183
+s959
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m
+c000000004D8A48970000000000000EFC
+t1300908183
+s3836
+i"TabBarWithSplitViewAppDelegate.h"
+i"RootViewController.h"
+i"ThirdViewController.h"
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib
+c000000004D8A463F000000000000537B
+t1300907583
+s21371
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.h
+c000000004D8A4998000000000000026A
+t1300908440
+s618
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m
+c000000004D8A49C00000000000000DD1
+t1300908480
+s3537
+i"ThirdViewController.h"
+i"RootViewController.h"
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib
+c000000004D8A46760000000000005629
+t1300907638
+s22057
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib
+c000000004D8A46FB0000000000006A0B
+t1300907771
+s27147
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib
+c000000004D8A46760000000000005C55
+t1300907638
+s23637
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/TabBarWithSplitView_Prefix.pch
+c000000004D8A467600000000000000CF
+t1300907638
+s207
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app
+t1301638964
+s306
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM
+t1301638964
+s102
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/FirstView.nib
+t1301638963
+s3468
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/Info.plist
+t1301638962
+s852
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/MainWindow.nib
+t1301638963
+s3253
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/PkgInfo
+t1301638962
+s8
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/SecondView.nib
+t1301638963
+s3638
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView
+t1301638964
+s30664
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/ThirdView.nib
+t1301638963
+s2321
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/FirstViewController.o
+t1301638964
+s38412
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/RootViewController.o
+t1301638964
+s46168
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/SecondViewController.o
+t1301638964
+s38432
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitView.LinkFileList
+c000000004D956F320000000000000416
+t1301638962
+s1046
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitViewAppDelegate.o
+t1301638964
+s63308
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/ThirdViewController.o
+t1301638964
+s49932
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/main.o
+t1301638964
+s6348
+
+N/Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m
+c000000004D8A4897000000000000017D
+t1300908183
+s381
+i<UIKit/UIKit.h>
+
+N/var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch.gch
+t1301638964
+s15465904
+
+NTabBarWithSplitView-Info.plist
+c000000004D8A467600000000000004D6
+t1300907638
+s1238
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies323331762#323331762#0(0"0(0#1#0"7307466928370249728#0"0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/FirstViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.073843
+e323331764.189338
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/FirstViewController.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m323331764#323331764#0(0"0(0#0#80"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m8611806848#2411"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/FirstViewController.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/FirstViewController.o0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/RootViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.162231
+e323331764.312132
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/RootViewController.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m323331764#323331764#0(0"0(0#0#79"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m8608555712#2409"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/RootViewController.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/SecondViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.075649
+e323331764.192564
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/SecondViewController.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m323331764#323331764#0(0"0(0#0#81"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m8611114720#2413"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/SecondViewController.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/SecondViewController.o0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitViewAppDelegate.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.072482
+e323331764.284597
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitViewAppDelegate.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m323331764#323331764#0(0"0(0#0#91"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m8603233632#2433"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/TabBarWithSplitViewAppDelegate.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitViewAppDelegate.o0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/ThirdViewController.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.189500
+e323331764.339825
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/ThirdViewController.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m323331764#323331764#0(0"0(0#0#80"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m8608152864#2411"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdViewController.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/ThirdViewController.o0#
+
+CCompileC build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/main.o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331764.070705
+e323331764.162071
+r1
+xCompileC
+xbuild/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/main.o
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m323331764#323331764#0(0"0(0#0#57"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m8604773792#2373"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/main.m -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib
+s323331762.547968
+e323331763.219694
+r1
+xCompileXIB
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib
+lSLF07#2@32"CompileXIB Classes/ThirdView.xib323331762#323331763#0(0"0(0#0#72"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib8599043168#654"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/ThirdView.nib /Users/bruijnesteijn/Downloads/TabBarWithSplitView/Classes/ThirdView.xib --sdk /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib
+s323331762.540680
+e323331763.279347
+r1
+xCompileXIB
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib
+lSLF07#2@24"CompileXIB FirstView.xib323331762#323331763#0(0"0(0#0#64"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib27303549489381488#646"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/FirstView.nib /Users/bruijnesteijn/Downloads/TabBarWithSplitView/FirstView.xib --sdk /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib
+s323331762.536383
+e323331763.210827
+r1
+xCompileXIB
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib323331762#323331763#0(0"0(0#0#65"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib8607249440#648"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/MainWindow.nib /Users/bruijnesteijn/Downloads/TabBarWithSplitView/MainWindow.xib --sdk /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib
+s323331762.538207
+e323331763.287774
+r1
+xCompileXIB
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib
+lSLF07#2@25"CompileXIB SecondView.xib323331762#323331763#0(0"0(0#0#65"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib8603684128#648"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/SecondView.nib /Users/bruijnesteijn/Downloads/TabBarWithSplitView/SecondView.xib --sdk /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CGenerateDSYMFile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView
+s323331764.387945
+e323331764.420398
+r1
+xGenerateDSYMFile
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView
+lSLF07#2@149"GenerateDSYMFile build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView323331764#323331764#0(0"0(0#0#124"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView8603128544#480"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/usr/bin/dsymutil /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app.dSYM0#
+
+CLd /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView normal i386
+s323331764.339916
+e323331764.387845
+r1
+xLd
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView
+xnormal
+xi386
+lSLF07#2@129"Link /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView323331764#323331764#0(0"0(0#0#0"8607978848#1056"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -filelist /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/Objects-normal/i386/TabBarWithSplitView.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/TabBarWithSplitView0#
+
+CProcessInfoPlistFile /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/Info.plist TabBarWithSplitView-Info.plist
+s323331762.523387
+e323331762.536228
+r1
+xProcessInfoPlistFile
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/Info.plist
+xTabBarWithSplitView-Info.plist
+lSLF07#2@38"Process TabBarWithSplitView-Info.plist323331762#323331762#0(0"0(0#0#81"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/TabBarWithSplitView-Info.plist29555336418426964#569"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TabBarWithSplitView-Info.plist -genpkginfo /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app/Info.plist0#
+
+CProcessPCH /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch.gch TabBarWithSplitView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s323331763.288026
+e323331764.070407
+r1
+xProcessPCH
+x/var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch.gch
+xTabBarWithSplitView_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@41"Precompile TabBarWithSplitView_Prefix.pch323331763#323331764#0(0"0(0#0#81"/Users/bruijnesteijn/Downloads/TabBarWithSplitView/TabBarWithSplitView_Prefix.pch8607912352#2239"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-generated-files.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-own-target-headers.hmap -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-all-target-headers.hmap -iquote /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/TabBarWithSplitView-project-headers.hmap -F/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/include -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources/i386 -I/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/TabBarWithSplitView.build/Release-iphonesimulator/TabBarWithSplitView.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/TabBarWithSplitView_Prefix.pch -o /var/folders/sN/sNAImTGfEn460gM-v8bK5E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TabBarWithSplitView_Prefix-fwjqfmqjzmwpopdavdnalqkuybhg/TabBarWithSplitView_Prefix.pch.gch0#
+
+CTouch /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app
+s323331764.420534
+e323331764.424315
+r1
+xTouch
+x/Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app
+lSLF07#2@110"Touch /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app323331764#323331764#0(0"0(0#0#0"8604533472#330"    cd /Users/bruijnesteijn/Downloads/TabBarWithSplitView    setenv PATH "/Developer/Legacy/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/Legacy/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/bruijnesteijn/Downloads/TabBarWithSplitView/build/Release-iphonesimulator/TabBarWithSplitView.app0#
+
