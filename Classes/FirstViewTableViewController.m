@@ -6,10 +6,10 @@
 //  Copyright 2011 neveling.net GmbH. All rights reserved.
 //
 
-#import "FirstTableViewController.h"
+#import "FirstViewTableViewController.h"
 
 
-@implementation FirstTableViewController
+@implementation FirstViewTableViewController
 @synthesize listData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

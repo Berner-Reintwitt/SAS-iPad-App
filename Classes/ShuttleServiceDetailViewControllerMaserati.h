@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShuttleServiceDetailViewControllerMaserati : UIViewController
+@interface ShuttleServiceDetailViewControllerMaserati : UIViewController <UISplitViewControllerDelegate>
+
+
 
 @end

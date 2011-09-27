@@ -2,8 +2,7 @@
 //  main.m
 //  TabBarWithSplitView
 //
-//  Created by Bart Bruijnesteijn on 3/23/11.
-//  Copyright 2011 PiecesOfMyMind Software. All rights reserved.
+
 //
 
 #import <UIKit/UIKit.h>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-@interface FirstDetailViewController : UIViewController <MKMapViewDelegate,UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
+@interface DomizileFirstDetailViewController : UIViewController <MKMapViewDelegate,UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;

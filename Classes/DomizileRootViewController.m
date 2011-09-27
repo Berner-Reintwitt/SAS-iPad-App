@@ -6,11 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "FirstDetailViewController.h"
+#import "DomizileRootViewController.h"
+#import "DomizileFirstDetailViewController.h"
 #import "TabBarWithSplitViewAppDelegate.h"
 
-@implementation RootViewController
+@implementation DomizileRootViewController
 @synthesize firstDetailViewController;
 @synthesize array1;
 
@@ -72,7 +72,7 @@
     
    
     if(row==0){
-        firstDetailViewController=[[FirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+        firstDetailViewController=[[DomizileFirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
         UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstDetailViewController];
         [firstDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, firstDetailNavigationController, nil]];
@@ -86,34 +86,38 @@
     else if(row==1){
         
     
-    SecondDetailViewController *secondDetailViewController=[[SecondDetailViewController alloc] initWithNibName:@"SecondDetailViewController" bundle:nil];
+    DomizileSecondDetailViewController *secondDetailViewController=[[DomizileSecondDetailViewController alloc] initWithNibName:@"SecondDetailViewController" bundle:nil];
     UINavigationController *secondDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:secondDetailViewController];
     [secondDetailViewController release];
     [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, secondDetailNavigationController, nil]];
     }
     
     
+    else if (row==2){
+        DomizileThirdDetailViewController*thirdDetailViewController=[[DomizileThirdDetailViewController alloc] initWithNibName:@"ThirdDetailViewController" bundle:nil];
+        UINavigationController *thirdDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:thirdDetailViewController];
+        [thirdDetailViewController release];
+        [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, thirdDetailNavigationController, nil]];
+        
+        
+    }
     
+    
+    else if (row==3){
+        DomizileFourthDetailViewController*fourthDetailViewController=[[DomizileFourthDetailViewController alloc] initWithNibName:@"FourthDetailViewControllern" bundle:nil];
+        UINavigationController *fourthDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:fourthDetailViewController];
+        [fourthDetailViewController release];
+        [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, fourthDetailNavigationController, nil]];
+        
+        
+        
+        
+        
+        
+    }
+
                          
-      //  detailViewController = sec;
- 
-  
-    // Update the split view controller's view controllers array.
-   // NSArray *viewControllers = [[NSArray alloc] initWithObjects:self.navigationController, detailViewController, nil];
-  //  splitViewController.viewControllers=viewControllers;
-   // [viewControllers release];
-    
-  /*  // Dismiss the popover if it's present.
-    if (popoverController != nil) {
-        [popoverController dismissPopoverAnimated:YES];
-    }
-    
-    // Configure the new view controller's popover button (after the view has been displayed and its toolbar/navigation bar has been created).
-    if (rootPopoverButtonItem != nil) {
-        [detailViewController showRootPopoverButtonItem:self.rootPopoverButtonItem];
-    }
-    */
-   // [detailViewController release];
+     
 
 }
 

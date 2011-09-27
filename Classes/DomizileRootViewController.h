@@ -12,8 +12,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EnhancedSplitViewController.h"
-#import "SecondDetailViewController.h"
-@class FirstDetailViewController;
+#import "DomizileSecondDetailViewController.h"
+#import "DomizileThirdDetailViewController.h"
+#import "DomizileFourthDetailViewController.h"
+@class DomizileFirstDetailViewController;
 
 
 @protocol SubstitutableDetailViewController
@@ -21,14 +23,13 @@
 - (void)invalidateRootPopoverButtonItem:(UIBarButtonItem *)barButtonItem;
 @end
 
-@interface RootViewController : UITableViewController <UISplitViewControllerDelegate>{
-   // UISplitViewController *splitViewController;
-    FirstDetailViewController *firstDetailViewController;
+@interface DomizileRootViewController : UITableViewController <UISplitViewControllerDelegate>{
+    DomizileFirstDetailViewController *firstDetailViewController;
     NSArray *array1;
     EnhancedSplitViewController *splitViewController;
 }
 
-@property (nonatomic, retain) IBOutlet FirstDetailViewController *firstDetailViewController;
+@property (nonatomic, retain) IBOutlet DomizileFirstDetailViewController *firstDetailViewController;
 @property (nonatomic, retain) IBOutlet NSArray *array1;
 @property (nonatomic, assign) IBOutlet EnhancedSplitViewController *splitViewController;
 

@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShuttleServiceDetailViewControllerMaserati.h"
+#import "EnhancedSplitViewController.h"
+#import "ShuttleServiceDetailViewControllerAstonMartin.h"
 
-@interface ShuttleServiceRootViewController : UIViewController
+@interface ShuttleServiceRootViewController : UITableViewController <UISplitViewControllerDelegate>{
+    
+    ShuttleServiceDetailViewControllerMaserati *firstDetailViewController;
+    NSArray *array1;
+    EnhancedSplitViewController *splitViewController;
+}
+
+
+@property (nonatomic, retain) IBOutlet NSArray *array1;
+@property (nonatomic, assign) IBOutlet EnhancedSplitViewController *splitViewController;
+@property (nonatomic, retain) ShuttleServiceDetailViewControllerMaserati *firstDetailViewController;
 
 @end

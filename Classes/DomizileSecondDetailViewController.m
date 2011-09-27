@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SecondDetailViewController.h"
+#import "DomizileSecondDetailViewController.h"
 
-@implementation SecondDetailViewController
+@implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
 @synthesize listData;
 @synthesize domizilCell;
