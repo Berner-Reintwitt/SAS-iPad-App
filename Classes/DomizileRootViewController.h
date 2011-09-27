@@ -2,7 +2,7 @@
 //  RootViewController.h
 //  SplitView
 //
-//  Created by Bart Bruijnesteijn on 3/23/11.
+//  Created by Bart Bruijnestijn on 3/23/11.
 //  Copyright 2011 PiecesOfMyMind Software. All rights reserved.
 //
 
