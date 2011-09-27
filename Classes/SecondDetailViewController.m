@@ -9,6 +9,10 @@
 #import "SecondDetailViewController.h"
 
 @implementation SecondDetailViewController
+@synthesize firstTextLabel;
+@synthesize listData;
+@synthesize domizilCell;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,12 +35,19 @@
 
 - (void)viewDidLoad
 {
+    
+    NSArray *array = [[NSArray alloc] initWithObjects:@"Sleepy", @"Sneezy",@"Bashful", @"Happy", @"Doc", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bifur", @"Bofur", @"Bombur", nil];
+    self.listData = array; 
+    [array release];
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+   
 }
 
 - (void)viewDidUnload
-{
+{   self.listData = nil;
+    [self setFirstTextLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,4 +59,30 @@
 	return YES;
 }
 
+#pragma mark - #pragma mark Table View Data Source Methods 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
+    return [self.listData count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+      //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
+           
+        if (cell == nil) { 
+            NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+            //cell = [[[UITableViewCell alloc]
+                            //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+            cell=self.domizilCell;              
+                    }
+    
+        firstTextLabel.text=@"hallo";
+      //  cell.imageView.image = image;
+     //   cell.detailTextLabel.text=@"Hallo";
+       // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+        return cell;
+}
+- (void)dealloc {
+    [firstTextLabel release];
+    [super dealloc];
+}
 @end

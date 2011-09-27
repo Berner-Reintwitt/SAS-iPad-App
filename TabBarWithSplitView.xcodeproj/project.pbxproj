@@ -24,8 +24,14 @@
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BB7D546133A7E600054CAC2 /* FirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB7D543133A7E600054CAC2 /* FirstDetailViewController.xib */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
+		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
+		8F9537801431D37C009B183B /* FourthDetailViewControllern.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F95377B1431D37C009B183B /* FourthDetailViewControllern.m */; };
+		8F9537811431D37C009B183B /* FourthDetailViewControllern.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F95377C1431D37C009B183B /* FourthDetailViewControllern.xib */; };
+		8F9537821431D37C009B183B /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F95377E1431D37C009B183B /* ThirdDetailViewController.m */; };
+		8F9537831431D37C009B183B /* ThirdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F95377F1431D37C009B183B /* ThirdDetailViewController.xib */; };
+		8F95378A1431D492009B183B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9537891431D492009B183B /* star.png */; };
 		8FEBA380142A10EE008F1A68 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA37D142A10EE008F1A68 /* FirstDetailViewController.m */; };
-		8FEBA389142A15D7008F1A68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA388142A15D7008F1A68 /* RootViewController.m */; };
+		8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */; };
 		8FEBA392142A1807008F1A68 /* SecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA390142A1806008F1A68 /* SecondDetailViewController.m */; };
 		8FEBA393142A1807008F1A68 /* SecondDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FEBA391142A1806008F1A68 /* SecondDetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -57,10 +63,18 @@
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
 		8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancedSplitViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabBarWithSplitView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizilCell.xib; sourceTree = "<group>"; };
+		8F95377A1431D37C009B183B /* FourthDetailViewControllern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthDetailViewControllern.h; sourceTree = "<group>"; };
+		8F95377B1431D37C009B183B /* FourthDetailViewControllern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthDetailViewControllern.m; sourceTree = "<group>"; };
+		8F95377C1431D37C009B183B /* FourthDetailViewControllern.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FourthDetailViewControllern.xib; path = Classes/FourthDetailViewControllern.xib; sourceTree = "<group>"; };
+		8F95377D1431D37C009B183B /* ThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailViewController.h; sourceTree = "<group>"; };
+		8F95377E1431D37C009B183B /* ThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailViewController.m; sourceTree = "<group>"; };
+		8F95377F1431D37C009B183B /* ThirdDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThirdDetailViewController.xib; path = Classes/ThirdDetailViewController.xib; sourceTree = "<group>"; };
+		8F9537891431D492009B183B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../star.png; sourceTree = "<group>"; };
 		8FEBA37C142A10EE008F1A68 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		8FEBA37D142A10EE008F1A68 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
-		8FEBA37E142A10EE008F1A68 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RootViewController.h; sourceTree = "<group>"; };
-		8FEBA388142A15D7008F1A68 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DomizileRootViewController.h; sourceTree = "<group>"; };
+		8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileRootViewController.m; sourceTree = "<group>"; };
 		8FEBA38F142A1806008F1A68 /* SecondDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDetailViewController.h; sourceTree = "<group>"; };
 		8FEBA390142A1806008F1A68 /* SecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDetailViewController.m; sourceTree = "<group>"; };
 		8FEBA391142A1806008F1A68 /* SecondDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecondDetailViewController.xib; path = Classes/SecondDetailViewController.xib; sourceTree = "<group>"; };
@@ -85,12 +99,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8FEBA37E142A10EE008F1A68 /* RootViewController.h */,
-				8FEBA388142A15D7008F1A68 /* RootViewController.m */,
+				8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */,
+				8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */,
 				8FEBA38F142A1806008F1A68 /* SecondDetailViewController.h */,
 				8FEBA390142A1806008F1A68 /* SecondDetailViewController.m */,
 				8FEBA37C142A10EE008F1A68 /* FirstDetailViewController.h */,
 				8FEBA37D142A10EE008F1A68 /* FirstDetailViewController.m */,
+				8F95377D1431D37C009B183B /* ThirdDetailViewController.h */,
+				8F95377E1431D37C009B183B /* ThirdDetailViewController.m */,
+				8F95377A1431D37C009B183B /* FourthDetailViewControllern.h */,
+				8F95377B1431D37C009B183B /* FourthDetailViewControllern.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
 				8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */,
 				1D3623240D0F684500981E51 /* TabBarWithSplitViewAppDelegate.h */,
@@ -139,6 +157,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F9537891431D492009B183B /* star.png */,
+				8F95377C1431D37C009B183B /* FourthDetailViewControllern.xib */,
+				8F95377F1431D37C009B183B /* ThirdDetailViewController.xib */,
+				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
 				8FEBA391142A1806008F1A68 /* SecondDetailViewController.xib */,
 				8BB7D543133A7E600054CAC2 /* FirstDetailViewController.xib */,
 				28D4B067107A5DE70093E739 /* FirstView.xib */,
@@ -220,6 +242,10 @@
 				8BB7D546133A7E600054CAC2 /* FirstDetailViewController.xib in Resources */,
 				7D01FDF31428857800528D28 /* SearchPopUpViewController.xib in Resources */,
 				8FEBA393142A1807008F1A68 /* SecondDetailViewController.xib in Resources */,
+				8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */,
+				8F9537811431D37C009B183B /* FourthDetailViewControllern.xib in Resources */,
+				8F9537831431D37C009B183B /* ThirdDetailViewController.xib in Resources */,
+				8F95378A1431D492009B183B /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +264,10 @@
 				7D01FDF21428857800528D28 /* SearchPopUpViewController.m in Sources */,
 				7D01FDF71428A28800528D28 /* FirstTableViewController.m in Sources */,
 				8FEBA380142A10EE008F1A68 /* FirstDetailViewController.m in Sources */,
-				8FEBA389142A15D7008F1A68 /* RootViewController.m in Sources */,
+				8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */,
 				8FEBA392142A1807008F1A68 /* SecondDetailViewController.m in Sources */,
+				8F9537801431D37C009B183B /* FourthDetailViewControllern.m in Sources */,
+				8F9537821431D37C009B183B /* ThirdDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

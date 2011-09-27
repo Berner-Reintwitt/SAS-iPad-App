@@ -7,7 +7,7 @@
 //
 
 #import "FirstDetailViewController.h"
-#import "RootViewController.h"
+#import "DomizileRootViewController.h"
 
 
 @interface FirstDetailViewController ()
@@ -15,7 +15,17 @@
 @end
 
 @implementation FirstDetailViewController
+
+@synthesize AnreiseButtonAuswaehlen;
+@synthesize fruehesteAnreiseButton;
+
 @synthesize datePicker;
+@synthesize fruehesteAnreiseLabel;
+@synthesize spaetesteAnreiseLabel;
+
+
+
+
 
 @synthesize toolbar, barButton, popoverController, detailItem, detailDescriptionLabel;
 
@@ -80,8 +90,44 @@
 }
 
 - (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender {
-    NSLog(@"hallo");
-    [datePicker setHidden:NO];
+    [datePicker setHidden:NO]; 
+    NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
+    fruehesteAnreiseLabel.text =date ;
+    [fruehesteAnreiseLabel setHidden:NO];
+    [AnreiseButtonAuswaehlen setHidden:NO];
+    frueherDatePicker=YES;
+    
+}
+
+- (IBAction)fruehesteAnreiseButtonAuswaehlenWaspressed:(id)sender {
+   
+    if(frueherDatePicker){
+        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
+        fruehesteAnreiseLabel.text =date ;
+        [fruehesteAnreiseButton setHighlighted:NO];
+        [AnreiseButtonAuswaehlen setHidden:YES];
+        [datePicker setHidden:YES];
+        
+    }
+    
+    else if (!frueherDatePicker){
+        
+        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
+        spaetesteAnreiseLabel.text=date;
+        [spaetesteAnreiseButton setHighlighted:NO];
+        [AnreiseButtonAuswaehlen setHidden:YES];
+        [datePicker setHidden:YES];
+
+    }
+}
+- (IBAction)spaetesteAnreiseButtonWasPressed:(id)sender {
+        [spaetesteAnreiseLabel setHidden:NO];
+        NSLog(@"Hallo");
+        [datePicker setHidden:NO];
+        [AnreiseButtonAuswaehlen setHidden:NO];
+        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
+        spaetesteAnreiseLabel.text=date;
+        frueherDatePicker=false;
     
 }
 
@@ -114,6 +160,22 @@
     self.detailDescriptionLabel = nil;
     
     [self setDatePicker:nil];
+    [self setDatePicker:nil];
+    [datePicker release];
+    datePicker = nil;
+   
+
+    [fruehesteAnreiseLabel release];
+    fruehesteAnreiseLabel = nil;
+    [self setAnreiseButtonAuswaehlen:nil];
+    [AnreiseButtonAuswaehlen release];
+    AnreiseButtonAuswaehlen = nil;
+    [fruehesteAnreiseButton release];
+    fruehesteAnreiseButton = nil;
+    [spaetesteAnreiseButton release];
+    spaetesteAnreiseButton = nil;
+    [spaetesteAnreiseLabel release];
+    spaetesteAnreiseLabel = nil;
     [super viewDidUnload];
 }
 
@@ -160,6 +222,16 @@
     [detailDescriptionLabel release];
 	
     [datePicker release];
+    [datePicker release];
+    [datePicker release];
+    [fruehesteAnreiseLabel release];
+    [AnreiseButtonAuswaehlen release];
+
+   
+    [fruehesteAnreiseButton release];
+  
+    [spaetesteAnreiseButton release];
+    [spaetesteAnreiseLabel release];
     [super dealloc];
 }
 

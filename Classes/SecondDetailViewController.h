@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#define textLabel1	1 
+#define textLabel2	2
 
-@interface SecondDetailViewController : UIViewController
+@interface SecondDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    UITableViewCell *domizilCell;
+    NSArray *listData;
+    UILabel *firstTextLabel;
+
+} 
+
+
+@property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
+@property (nonatomic,retain) NSArray *listData;
+@property (retain, nonatomic) IBOutlet  UITableViewCell *domizilCell;
 
 @end
