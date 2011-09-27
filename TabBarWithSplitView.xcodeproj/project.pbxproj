@@ -17,6 +17,9 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		28D4B068107A5DE70093E739 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D4B067107A5DE70093E739 /* FirstView.xib */; };
+		55E9545B1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */; };
+		55E9545F1431F7D300CFE2FF /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E9545E1431F7D300CFE2FF /* Apartment.m */; };
+		55E954611431F88A00CFE2FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E954601431F88A00CFE2FF /* CoreData.framework */; };
 		7D01FDF21428857800528D28 /* SearchPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FDF01428857800528D28 /* SearchPopUpViewController.m */; };
 		7D01FDF31428857800528D28 /* SearchPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FDF11428857800528D28 /* SearchPopUpViewController.xib */; };
 		7D01FDF71428A28800528D28 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FDF61428A28800528D28 /* FirstTableViewController.m */; };
@@ -52,6 +55,10 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D4B067107A5DE70093E739 /* FirstView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55E9545A1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SAS_iPad_App.xcdatamodel; sourceTree = "<group>"; };
+		55E9545D1431F7D300CFE2FF /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
+		55E9545E1431F7D300CFE2FF /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
+		55E954601431F88A00CFE2FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7D01FDEF1428857800528D28 /* SearchPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPopUpViewController.h; path = ../SearchPopUpViewController.h; sourceTree = "<group>"; };
 		7D01FDF01428857800528D28 /* SearchPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPopUpViewController.m; path = ../SearchPopUpViewController.m; sourceTree = "<group>"; };
 		7D01FDF11428857800528D28 /* SearchPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPopUpViewController.xib; sourceTree = "<group>"; };
@@ -73,7 +80,7 @@
 		8F9537891431D492009B183B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../star.png; sourceTree = "<group>"; };
 		8FEBA37C142A10EE008F1A68 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		8FEBA37D142A10EE008F1A68 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
-		8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DomizileRootViewController.h; sourceTree = "<group>"; };
+		8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileRootViewController.h; sourceTree = "<group>"; };
 		8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileRootViewController.m; sourceTree = "<group>"; };
 		8FEBA38F142A1806008F1A68 /* SecondDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDetailViewController.h; sourceTree = "<group>"; };
 		8FEBA390142A1806008F1A68 /* SecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDetailViewController.m; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E954611431F88A00CFE2FF /* CoreData.framework in Frameworks */,
 				7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */,
 				7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -105,6 +113,7 @@
 				8FEBA390142A1806008F1A68 /* SecondDetailViewController.m */,
 				8FEBA37C142A10EE008F1A68 /* FirstDetailViewController.h */,
 				8FEBA37D142A10EE008F1A68 /* FirstDetailViewController.m */,
+				55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */,
 				8F95377D1431D37C009B183B /* ThirdDetailViewController.h */,
 				8F95377E1431D37C009B183B /* ThirdDetailViewController.m */,
 				8F95377A1431D37C009B183B /* FourthDetailViewControllern.h */,
@@ -136,6 +145,8 @@
 		29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */ = {
 			isa = PBXGroup;
 			children = (
+				55E9545D1431F7D300CFE2FF /* Apartment.h */,
+				55E9545E1431F7D300CFE2FF /* Apartment.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -175,6 +186,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55E954601431F88A00CFE2FF /* CoreData.framework */,
 				7D0CD7741427901300E9F0FD /* MapKit.framework */,
 				7D0CD7721427900A00E9F0FD /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -268,6 +280,8 @@
 				8FEBA392142A1807008F1A68 /* SecondDetailViewController.m in Sources */,
 				8F9537801431D37C009B183B /* FourthDetailViewControllern.m in Sources */,
 				8F9537821431D37C009B183B /* ThirdDetailViewController.m in Sources */,
+				55E9545B1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld in Sources */,
+				55E9545F1431F7D300CFE2FF /* Apartment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +366,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55E9545A1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodel */,
+			);
+			currentVersion = 55E9545A1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodel */;
+			name = SAS_iPad_App.xcdatamodeld;
+			path = ../SAS_iPad_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

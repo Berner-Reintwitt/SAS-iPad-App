@@ -17,6 +17,7 @@
         <attribute name="wohnlageID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="zip_code" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <fetchRequest name="FetchRequest" entity="Apartment" predicateString="exid == &quot;%@&quot;"/>
     <elements>
         <element name="Apartment" positionX="-4518" positionY="-1242" width="90" height="270"/>
     </elements>

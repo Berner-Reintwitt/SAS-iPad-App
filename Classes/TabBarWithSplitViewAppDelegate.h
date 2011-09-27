@@ -13,7 +13,7 @@
 @class FirstDetailViewController;
 
 
-@interface TabBarWithSplitViewAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+@interface TabBarWithSplitViewAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
 
@@ -27,5 +27,15 @@
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewController;
 @property (nonatomic, retain) IBOutlet DomizileRootViewController *rootViewController;
 @property (nonatomic, retain) IBOutlet FirstDetailViewController *firstDetailViewController;
+
+
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
 
 @end
