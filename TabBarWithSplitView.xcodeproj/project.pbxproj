@@ -98,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E954611431F88A00CFE2FF /* CoreData.framework in Frameworks */,
 				7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */,
 				7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -126,6 +127,8 @@
 				8F95377E1431D37C009B183B /* DomizileThirdDetailViewController.m */,
 				8F95377A1431D37C009B183B /* DomizileFourthDetailViewController.h */,
 				8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */,
+				55E9545D1431F7D300CFE2FF /* Apartment.h */,
+				55E9545E1431F7D300CFE2FF /* Apartment.m */,
 				28216C950DB411BC00E5133A /* FirstViewController.h */,
 				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				284F763F10B34E8A00D7BA5B /* SecondViewController.h */,
@@ -155,7 +158,7 @@
 		29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				8F9537781431D361009B183B /* star.png */,
+				55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -183,6 +186,7 @@
 				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
 				8FEBA391142A1806008F1A68 /* DomizileSecondDetailViewController.xib */,
 				8BB7D543133A7E600054CAC2 /* DomizileFirstDetailViewController.xib */,
+				555D33AC14321FF300B454DF /* img */,
 				28D4B067107A5DE70093E739 /* FirstView.xib */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				7D01FDF11428857800528D28 /* SearchPopUpViewController.xib */,
@@ -196,6 +200,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55E954601431F88A00CFE2FF /* CoreData.framework */,
 				7D0CD7741427901300E9F0FD /* MapKit.framework */,
 				7D0CD7721427900A00E9F0FD /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -203,6 +208,14 @@
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		555D33AC14321FF300B454DF /* img */ = {
+			isa = PBXGroup;
+			children = (
+				555D33AD1432200C00B454DF /* star.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +255,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */;
 			projectDirPath = "";
@@ -264,11 +278,11 @@
 				7D01FDF31428857800528D28 /* SearchPopUpViewController.xib in Resources */,
 				8FEBA393142A1807008F1A68 /* DomizileSecondDetailViewController.xib in Resources */,
 				8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */,
-				8F9537791431D361009B183B /* star.png in Resources */,
 				8F9537811431D37C009B183B /* DomizileFourthDetailViewController.xib in Resources */,
 				8F9537831431D37C009B183B /* DomizileThirdDetailViewController.xib in Resources */,
 				8F9537E114320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.xib in Resources */,
 				8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */,
+				555D33AE1432200C00B454DF /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +308,8 @@
 				8F9537E014320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.m in Sources */,
 				8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */,
 				8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */,
+				55E9545B1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld in Sources */,
+				55E9545F1431F7D300CFE2FF /* Apartment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55E9545A1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodel */,
+			);
+			currentVersion = 55E9545A1431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodel */;
+			path = SAS_iPad_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

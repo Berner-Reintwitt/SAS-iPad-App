@@ -9,7 +9,6 @@
 #import "DomizileFirstDetailViewController.h"
 #import "DomizileRootViewController.h"
 
-
 @interface DomizileFirstDetailViewController ()
 - (void)configureView;
 @end
