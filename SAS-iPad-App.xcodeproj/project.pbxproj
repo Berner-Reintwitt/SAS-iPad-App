@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7D8AD4231430D83800DD5861 /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8AD4221430D83800DD5861 /* Apartment.m */; };
+		7DC1333E1431C8C500B70A42 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1332D1431C8C500B70A42 /* EnhancedSplitViewController.m */; };
+		7DC1333F1431C8C500B70A42 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1332F1431C8C500B70A42 /* FirstDetailViewController.m */; };
+		7DC133401431C8C500B70A42 /* FirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC133301431C8C500B70A42 /* FirstDetailViewController.xib */; };
+		7DC133411431C8C500B70A42 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC133321431C8C500B70A42 /* FirstTableViewController.m */; };
+		7DC133421431C8C500B70A42 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC133341431C8C500B70A42 /* FirstViewController.m */; };
+		7DC133431431C8C500B70A42 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC133361431C8C500B70A42 /* RootViewController.m */; };
+		7DC133441431C8C500B70A42 /* SecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC133381431C8C500B70A42 /* SecondDetailViewController.m */; };
+		7DC133451431C8C500B70A42 /* SecondDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC133391431C8C500B70A42 /* SecondDetailViewController.xib */; };
+		7DC133461431C8C500B70A42 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1333B1431C8C500B70A42 /* SecondViewController.m */; };
+		7DC133471431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1333D1431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m */; };
 		7DDC97161430A54E0041E0ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97151430A54E0041E0ED /* UIKit.framework */; };
 		7DDC97181430A54E0041E0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97171430A54E0041E0ED /* Foundation.framework */; };
 		7DDC971A1430A54E0041E0ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC97191430A54E0041E0ED /* CoreGraphics.framework */; };
@@ -22,6 +32,24 @@
 /* Begin PBXFileReference section */
 		7D8AD4211430D83800DD5861 /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
 		7D8AD4221430D83800DD5861 /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
+		7DC1332C1431C8C500B70A42 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
+		7DC1332D1431C8C500B70A42 /* EnhancedSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancedSplitViewController.m; sourceTree = "<group>"; };
+		7DC1332E1431C8C500B70A42 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
+		7DC1332F1431C8C500B70A42 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
+		7DC133301431C8C500B70A42 /* FirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstDetailViewController.xib; sourceTree = "<group>"; };
+		7DC133311431C8C500B70A42 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
+		7DC133321431C8C500B70A42 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
+		7DC133331431C8C500B70A42 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		7DC133341431C8C500B70A42 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7DC133351431C8C500B70A42 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		7DC133361431C8C500B70A42 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7DC133371431C8C500B70A42 /* SecondDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDetailViewController.h; sourceTree = "<group>"; };
+		7DC133381431C8C500B70A42 /* SecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDetailViewController.m; sourceTree = "<group>"; };
+		7DC133391431C8C500B70A42 /* SecondDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondDetailViewController.xib; sourceTree = "<group>"; };
+		7DC1333A1431C8C500B70A42 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7DC1333B1431C8C500B70A42 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7DC1333C1431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarWithSplitViewAppDelegate.h; sourceTree = "<group>"; };
+		7DC1333D1431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarWithSplitViewAppDelegate.m; sourceTree = "<group>"; };
 		7DDC97111430A54E0041E0ED /* SAS-iPad-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAS-iPad-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDC97151430A54E0041E0ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DDC97171430A54E0041E0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,9 +80,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DC1332B1431C8C500B70A42 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7DC1332C1431C8C500B70A42 /* EnhancedSplitViewController.h */,
+				7DC1332D1431C8C500B70A42 /* EnhancedSplitViewController.m */,
+				7DC1332E1431C8C500B70A42 /* FirstDetailViewController.h */,
+				7DC1332F1431C8C500B70A42 /* FirstDetailViewController.m */,
+				7DC133301431C8C500B70A42 /* FirstDetailViewController.xib */,
+				7DC133311431C8C500B70A42 /* FirstTableViewController.h */,
+				7DC133321431C8C500B70A42 /* FirstTableViewController.m */,
+				7DC133331431C8C500B70A42 /* FirstViewController.h */,
+				7DC133341431C8C500B70A42 /* FirstViewController.m */,
+				7DC133351431C8C500B70A42 /* RootViewController.h */,
+				7DC133361431C8C500B70A42 /* RootViewController.m */,
+				7DC133371431C8C500B70A42 /* SecondDetailViewController.h */,
+				7DC133381431C8C500B70A42 /* SecondDetailViewController.m */,
+				7DC133391431C8C500B70A42 /* SecondDetailViewController.xib */,
+				7DC1333A1431C8C500B70A42 /* SecondViewController.h */,
+				7DC1333B1431C8C500B70A42 /* SecondViewController.m */,
+				7DC1333C1431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.h */,
+				7DC1333D1431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7DDC97061430A54D0041E0ED = {
 			isa = PBXGroup;
 			children = (
+				7DC1332B1431C8C500B70A42 /* Classes */,
 				7DDC971D1430A54E0041E0ED /* SAS-iPad-App */,
 				7DDC97141430A54E0041E0ED /* Frameworks */,
 				7DDC97121430A54E0041E0ED /* Products */,
@@ -158,6 +212,8 @@
 			files = (
 				7DDC97221430A54E0041E0ED /* InfoPlist.strings in Resources */,
 				8F4264731430B03A00CA5340 /* SearchPopUpViewController.xib in Resources */,
+				7DC133401431C8C500B70A42 /* FirstDetailViewController.xib in Resources */,
+				7DC133451431C8C500B70A42 /* SecondDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +228,14 @@
 				7DDC97281430A54E0041E0ED /* AppDelegate.m in Sources */,
 				7DDC972B1430A54E0041E0ED /* SAS_iPad_App.xcdatamodeld in Sources */,
 				7D8AD4231430D83800DD5861 /* Apartment.m in Sources */,
+				7DC1333E1431C8C500B70A42 /* EnhancedSplitViewController.m in Sources */,
+				7DC1333F1431C8C500B70A42 /* FirstDetailViewController.m in Sources */,
+				7DC133411431C8C500B70A42 /* FirstTableViewController.m in Sources */,
+				7DC133421431C8C500B70A42 /* FirstViewController.m in Sources */,
+				7DC133431431C8C500B70A42 /* RootViewController.m in Sources */,
+				7DC133441431C8C500B70A42 /* SecondDetailViewController.m in Sources */,
+				7DC133461431C8C500B70A42 /* SecondViewController.m in Sources */,
+				7DC133471431C8C500B70A42 /* TabBarWithSplitViewAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
