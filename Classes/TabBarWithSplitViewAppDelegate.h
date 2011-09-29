@@ -7,28 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShuttleServiceDetailViewControllerMaserati.h"
+#import "ShuttleServiceRootViewController.h"
 
 @class EnhancedSplitViewController;
 @class DomizileRootViewController;
-@class FirstDetailViewController;
+@class DomizileFirstDetailViewController;
 
 
 @interface TabBarWithSplitViewAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
 
-    EnhancedSplitViewController *splitViewController;
+    EnhancedSplitViewController *splitViewControllerDomizile;
+    EnhancedSplitViewController *splitViewControllerShuttleService;
     DomizileRootViewController *rootViewController;
-    FirstDetailViewController *firstDetailViewController;
+    DomizileFirstDetailViewController *firstDetailViewController;
+    ShuttleServiceRootViewController *shuttleServiceRootViewController;
+    ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
-@property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewController;
+@property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerDomizile;
+@property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerShuttleService;
 @property (nonatomic, retain) IBOutlet DomizileRootViewController *rootViewController;
-@property (nonatomic, retain) IBOutlet FirstDetailViewController *firstDetailViewController;
-
-
+@property (nonatomic, retain) IBOutlet DomizileFirstDetailViewController *firstDetailViewController;
+@property (nonatomic, retain) IBOutlet ShuttleServiceRootViewController *shuttleServiceRootViewController;
+@property (nonatomic, retain) IBOutlet ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -36,6 +42,5 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
 
 @end

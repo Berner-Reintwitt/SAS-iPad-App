@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SecondDetailViewController.h"
+#import "DomizileThirdDetailViewController.h"
 
-@implementation SecondDetailViewController
+@implementation DomizileThirdDetailViewController
 @synthesize firstTextLabel;
 @synthesize listData;
 @synthesize domizilCell;
@@ -42,7 +42,7 @@
     
     [super viewDidLoad];
     
-   
+    
 }
 
 - (void)viewDidUnload
@@ -64,22 +64,22 @@
     return [self.listData count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   
-      //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
-           
-        if (cell == nil) { 
-            NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
-            //cell = [[[UITableViewCell alloc]
-                            //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
-            cell=self.domizilCell;              
-                    }
     
-        firstTextLabel.text=@"hallo";
-      //  cell.imageView.image = image;
-     //   cell.detailTextLabel.text=@"Hallo";
-       // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
-        return cell;
+    //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
+    
+    if (cell == nil) { 
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+        //cell = [[[UITableViewCell alloc]
+        //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+        cell=self.domizilCell;              
+    }
+    
+    firstTextLabel.text=@"hallo";
+    //  cell.imageView.image = image;
+    //   cell.detailTextLabel.text=@"Hallo";
+    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+    return cell;
 }
 - (void)dealloc {
     [firstTextLabel release];

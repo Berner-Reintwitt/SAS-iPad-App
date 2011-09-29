@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FirstTableViewController : UIViewController {
+@interface FirstViewTableViewController : UIViewController {
     
     NSArray *listData;
     

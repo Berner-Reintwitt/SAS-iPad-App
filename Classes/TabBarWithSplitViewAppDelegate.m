@@ -7,18 +7,20 @@
 //
 
 #import "TabBarWithSplitViewAppDelegate.h"
-
 #import "DomizileRootViewController.h"
-#import "FirstDetailViewController.h"
+#import "DomizileFirstDetailViewController.h"
 #import "EnhancedSplitViewController.h"
 
 @implementation TabBarWithSplitViewAppDelegate
 
 @synthesize window;
 @synthesize tabBarController;
-@synthesize splitViewController;
+@synthesize splitViewControllerDomizile;
 @synthesize rootViewController;
 @synthesize firstDetailViewController;
+@synthesize shuttleServiceDetailViewControllerMaserati;
+@synthesize splitViewControllerShuttleService;
+@synthesize shuttleServiceRootViewController;
 
 
 
@@ -37,22 +39,76 @@
     int index = 0; 
     
     for (UIViewController *controller in tabBarController.viewControllers) {
-        if (index == 2) {
-            firstDetailViewController = [[FirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+        if (index == 1) {
+            firstDetailViewController = [[DomizileFirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+            
+            
+            
             rootViewController = [[DomizileRootViewController alloc] initWithStyle:UITableViewStylePlain];
             rootViewController.firstDetailViewController = firstDetailViewController;
             rootViewController.navigationItem.title = @"List";
-            UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
             
-            splitViewController = [[EnhancedSplitViewController alloc] init];
-            splitViewController.tabBarItem = controller.tabBarItem;
-            splitViewController.viewControllers = [NSArray arrayWithObjects:nav, firstDetailViewController, nil];
-            splitViewController.delegate = firstDetailViewController;
-            splitViewController.barButton = firstDetailViewController.barButton;
-            splitViewController.pc  =firstDetailViewController.popoverController;
-            [controllers replaceObjectAtIndex:index withObject:splitViewController];
+            
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootViewController] ;
+            
+            
+            splitViewControllerDomizile = [[EnhancedSplitViewController alloc] init];
+            
+            //setzt als TabbarItem des SplitViewControllers das tab abr item des xib Files 
+            splitViewControllerDomizile.tabBarItem = controller.tabBarItem;
+            
+            //schickt DetailView samt NavigationController an den SPlitviewController
+            splitViewControllerDomizile.viewControllers = [NSArray arrayWithObjects:nav, firstDetailViewController, nil];
+            
+            //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            splitViewControllerDomizile.delegate = firstDetailViewController;
+            splitViewControllerDomizile.barButton = firstDetailViewController.barButton;
+            splitViewControllerDomizile.pc  =firstDetailViewController.popoverController;
+            
+            
+            //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
+            
+            [controllers replaceObjectAtIndex:index withObject:splitViewControllerDomizile];
         }
+        
+        
+        
+        
+        else if (index == 3) {
+            shuttleServiceDetailViewControllerMaserati = [[ShuttleServiceDetailViewControllerMaserati alloc] initWithNibName:@"ShuttleServiceDetailViewControllerMaserati" bundle:nil];
+            
+            
+            
+            shuttleServiceRootViewController = [[ShuttleServiceRootViewController alloc] initWithStyle:UITableViewStylePlain];
+            shuttleServiceRootViewController.firstDetailViewController = shuttleServiceDetailViewControllerMaserati;
+            shuttleServiceRootViewController.navigationItem.title = @"ShuttleService";
+            
+            
+            UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:shuttleServiceRootViewController] autorelease];
+            
+            
+            splitViewControllerShuttleService = [[EnhancedSplitViewController alloc] init];
+            
+            //setzt als TabbarItem des SplitViewControllers das tab abr item des xib Files 
+             splitViewControllerShuttleService.tabBarItem = controller.tabBarItem;
+            
+            //schickt DetailView samt NavigationController an den SPlitviewController
+            splitViewControllerShuttleService.viewControllers = [NSArray arrayWithObjects:nav, shuttleServiceDetailViewControllerMaserati, nil];
+            
+            //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            splitViewControllerShuttleService.delegate = shuttleServiceDetailViewControllerMaserati;
+          
+            //  splitViewControllerShuttleService.barButton = shuttleServiceDetailViewControllerMaserati.barButton;
+           // splitViewControllerShuttleService.pc  =shuttleServiceDetailViewControllerMaserati.popoverController;
+            
+            
+            //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
+            
+            [controllers replaceObjectAtIndex:index withObject:splitViewControllerShuttleService];
+        }
+
         index++;
+        NSLog(@"%d",index);
     }
     
     tabBarController.delegate = self;
@@ -60,27 +116,29 @@
 }
 
 - (BOOL)isPortrait {
-  //  UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+   // UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     return NO;
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    if ([self isPortrait]) {
+       
+   /* if ([self isPortrait]) {
         if (viewController != splitViewController) {
             [firstDetailViewController removeBarButtonItem];
         }
         else {
             [firstDetailViewController addBarButtonItem:firstDetailViewController.barButton forPopoverController:firstDetailViewController.popoverController];
         }
-    }
+    }*/
 }
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after app launch.
-    [self makeSplitViewController];
-    
-	// Set the tab bar controller as the window's root view controller and display.
+      [self makeSplitViewController];
+    	// Set the tab bar controller as the window's root view controller and display.
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
@@ -139,7 +197,7 @@
 
 
 - (void)dealloc {
-    [splitViewController release];
+    [splitViewControllerDomizile release];
     [rootViewController release];
     [firstDetailViewController release];
     

@@ -6,14 +6,14 @@
 //  Copyright 2011 PiecesOfMyMind Software. All rights reserved.
 //
 
-#import "FirstDetailViewController.h"
+#import "DomizileFirstDetailViewController.h"
 #import "DomizileRootViewController.h"
 
-@interface FirstDetailViewController ()
+@interface DomizileFirstDetailViewController ()
 - (void)configureView;
 @end
 
-@implementation FirstDetailViewController
+@implementation DomizileFirstDetailViewController
 
 @synthesize AnreiseButtonAuswaehlen;
 @synthesize fruehesteAnreiseButton;

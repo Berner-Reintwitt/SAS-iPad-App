@@ -10,7 +10,7 @@
 #define textLabel1	1 
 #define textLabel2	2
 
-@interface SecondDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DomizileSecondDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     UITableViewCell *domizilCell;
     NSArray *listData;
