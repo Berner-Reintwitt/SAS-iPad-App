@@ -18,6 +18,7 @@
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		28D4B068107A5DE70093E739 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D4B067107A5DE70093E739 /* FirstView.xib */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
+		55D47FCB1434A64C00AB6A5C /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D47FCA1434A64C00AB6A5C /* Apartment.m */; };
 		7D01FDF21428857800528D28 /* SearchPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FDF01428857800528D28 /* SearchPopUpViewController.m */; };
 		7D01FDF31428857800528D28 /* SearchPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FDF11428857800528D28 /* SearchPopUpViewController.xib */; };
 		7D01FDF71428A28800528D28 /* FirstViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FDF61428A28800528D28 /* FirstViewTableViewController.m */; };
@@ -58,6 +59,8 @@
 		28D4B067107A5DE70093E739 /* FirstView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		55D47FC91434A64C00AB6A5C /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = SOURCE_ROOT; };
+		55D47FCA1434A64C00AB6A5C /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = SOURCE_ROOT; };
 		7D01FDEF1428857800528D28 /* SearchPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPopUpViewController.h; path = ../SearchPopUpViewController.h; sourceTree = "<group>"; };
 		7D01FDF01428857800528D28 /* SearchPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPopUpViewController.m; path = ../SearchPopUpViewController.m; sourceTree = "<group>"; };
 		7D01FDF11428857800528D28 /* SearchPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPopUpViewController.xib; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				55D47FC91434A64C00AB6A5C /* Apartment.h */,
+				55D47FCA1434A64C00AB6A5C /* Apartment.m */,
 				1D3623240D0F684500981E51 /* TabBarWithSplitViewAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
@@ -304,6 +309,7 @@
 				8F9537E014320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.m in Sources */,
 				8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */,
 				8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */,
+				55D47FCB1434A64C00AB6A5C /* Apartment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
