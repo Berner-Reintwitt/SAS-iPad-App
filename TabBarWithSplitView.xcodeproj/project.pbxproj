@@ -307,6 +307,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TabBarWithSplitView_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "TabBarWithSplitView-Info.plist";
 				PRODUCT_NAME = TabBarWithSplitView;
 			};
@@ -320,6 +321,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TabBarWithSplitView_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "TabBarWithSplitView-Info.plist";
 				PRODUCT_NAME = TabBarWithSplitView;
 				VALIDATE_PRODUCT = YES;
