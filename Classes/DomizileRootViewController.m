@@ -77,9 +77,6 @@
         [firstDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, firstDetailNavigationController, nil]];
         
-        
-        
-        
     }
     
     

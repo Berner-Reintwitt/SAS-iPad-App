@@ -7,9 +7,7 @@
 //
 
 #import "TabBarWithSplitViewAppDelegate.h"
-#import "DomizileRootViewController.h"
-#import "DomizileFirstDetailViewController.h"
-#import "EnhancedSplitViewController.h"
+
 
 @implementation TabBarWithSplitViewAppDelegate
 
@@ -21,6 +19,11 @@
 @synthesize shuttleServiceDetailViewControllerMaserati;
 @synthesize splitViewControllerShuttleService;
 @synthesize shuttleServiceRootViewController;
+@synthesize firstMonthDetailViewController;
+@synthesize splitViewControllerEvents;
+@synthesize newsDetailView;
+@synthesize newsRootViewController;
+@synthesize splitViewControllerNews;
 
 
 
@@ -74,7 +77,7 @@
         
         
         
-        else if (index == 3) {
+        else if (index == 2) {
             shuttleServiceDetailViewControllerMaserati = [[ShuttleServiceDetailViewControllerMaserati alloc] initWithNibName:@"ShuttleServiceDetailViewControllerMaserati" bundle:nil];
             
             
@@ -106,6 +109,75 @@
             
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerShuttleService];
         }
+        
+        
+        
+        else if (index == 4) {
+            firstMonthDetailViewController = [[MonatEventDetailView alloc] initWithNibName:@"MonatEventDetailView" bundle:nil];
+            
+            
+            
+            eventRootViewController = [[EventRootViewController alloc] initWithStyle:UITableViewStylePlain];
+            eventRootViewController.firstMonthDetailViewController = firstMonthDetailViewController;
+            eventRootViewController.navigationItem.title = @"Events";
+            
+            
+            UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:eventRootViewController] autorelease];
+            
+            
+            splitViewControllerEvents = [[EnhancedSplitViewController alloc] init];
+            
+            //setzt als TabbarItem des SplitViewControllers das tab abr item des xib Files 
+            splitViewControllerEvents.tabBarItem = controller.tabBarItem;
+            
+            //schickt DetailView samt NavigationController an den SPlitviewController
+            splitViewControllerEvents.viewControllers = [NSArray arrayWithObjects:nav, firstMonthDetailViewController, nil];
+            
+            //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            splitViewControllerEvents.delegate = firstMonthDetailViewController;
+            
+            //  splitViewControllerShuttleService.barButton = shuttleServiceDetailViewControllerMaserati.barButton;
+            // splitViewControllerShuttleService.pc  =shuttleServiceDetailViewControllerMaserati.popoverController;
+            
+            
+            //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
+            
+            [controllers replaceObjectAtIndex:index withObject:splitViewControllerEvents];
+        }
+
+        else if (index == 5) {
+            newsDetailView = [[NewsDetailView alloc] initWithNibName:@"NewsDetailView" bundle:nil];
+            
+            
+            
+            newsRootViewController = [[NewsRootViewController alloc] initWithStyle:UITableViewStylePlain];
+            newsRootViewController.newsDetailView = newsDetailView;
+            newsRootViewController.navigationItem.title = @"News";
+            
+            
+            UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:newsRootViewController] autorelease];
+            
+            
+            splitViewControllerNews = [[EnhancedSplitViewController alloc] init];
+            
+            //setzt als TabbarItem des SplitViewControllers das tab abr item des xib Files 
+            splitViewControllerNews.tabBarItem = controller.tabBarItem;
+            
+            //schickt DetailView samt NavigationController an den SPlitviewController
+            splitViewControllerNews.viewControllers = [NSArray arrayWithObjects:nav, newsDetailView, nil];
+            
+            //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            splitViewControllerNews.delegate = newsDetailView;
+           
+            
+            
+            //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
+            
+            [controllers replaceObjectAtIndex:index withObject:splitViewControllerNews];
+        }
+
+        
+        
 
         index++;
         NSLog(@"%d",index);
