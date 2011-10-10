@@ -9,6 +9,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 
 
+
 @implementation TabBarWithSplitViewAppDelegate
 
 @synthesize window;
@@ -43,7 +44,7 @@
     
     for (UIViewController *controller in tabBarController.viewControllers) {
         if (index == 1) {
-            firstDetailViewController = [[DomizileFirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+            firstDetailViewController = [[DomizileFirstDetailViewController alloc] initWithNibName:@"DomizileFirstDetailViewController" bundle:nil];
             
             
             
@@ -61,9 +62,16 @@
             splitViewControllerDomizile.tabBarItem = controller.tabBarItem;
             
             //schickt DetailView samt NavigationController an den SPlitviewController
-            splitViewControllerDomizile.viewControllers = [NSArray arrayWithObjects:nav, firstDetailViewController, nil];
             
+            
+            UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstDetailViewController];
+            [firstDetailViewController release];
+            [splitViewControllerDomizile setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
+
+           // splitViewControllerDomizile.viewControllers = [NSArray arrayWithObjects:nav, firstDetailViewController, nil];
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            
+            
             splitViewControllerDomizile.delegate = firstDetailViewController;
             splitViewControllerDomizile.barButton = firstDetailViewController.barButton;
             splitViewControllerDomizile.pc  =firstDetailViewController.popoverController;
@@ -96,9 +104,19 @@
              splitViewControllerShuttleService.tabBarItem = controller.tabBarItem;
             
             //schickt DetailView samt NavigationController an den SPlitviewController
-            splitViewControllerShuttleService.viewControllers = [NSArray arrayWithObjects:nav, shuttleServiceDetailViewControllerMaserati, nil];
             
+            
+            
+            UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:shuttleServiceDetailViewControllerMaserati];
+            [firstDetailViewController release];
+            [splitViewControllerShuttleService setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
+            
+            
+            //splitViewControllerShuttleService.viewControllers = [NSArray arrayWithObjects:nav,shuttleServiceDetailViewControllerMaserati, nil];
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
+            
+            
+            
             splitViewControllerShuttleService.delegate = shuttleServiceDetailViewControllerMaserati;
           
             //  splitViewControllerShuttleService.barButton = shuttleServiceDetailViewControllerMaserati.barButton;
@@ -130,8 +148,16 @@
             //setzt als TabbarItem des SplitViewControllers das tab abr item des xib Files 
             splitViewControllerEvents.tabBarItem = controller.tabBarItem;
             
+            
+            UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstMonthDetailViewController];
+            [firstMonthDetailViewController release];
+            [splitViewControllerEvents setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
+
+            
+            
+            
             //schickt DetailView samt NavigationController an den SPlitviewController
-            splitViewControllerEvents.viewControllers = [NSArray arrayWithObjects:nav, firstMonthDetailViewController, nil];
+           // splitViewControllerEvents.viewControllers = [NSArray arrayWithObjects:nav, firstMonthDetailViewController, nil];
             
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
             splitViewControllerEvents.delegate = firstMonthDetailViewController;

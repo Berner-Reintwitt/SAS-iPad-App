@@ -10,14 +10,8 @@
 
 @implementation WetterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,6 +31,7 @@
 
 - (void)viewDidUnload
 {
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,4 +43,40 @@
 	return YES;
 }
 
+- (IBAction)orteButtonWasPressed:(id)sender {
+    
+
+    popUpViewController=[[SearchPopUpViewController alloc] initWithNibName:@"WetterOrtePopUpView" bundle:nil];
+        
+    
+    
+    
+    popover=[[UIPopoverController alloc]initWithContentViewController:popUpViewController];
+    [popUpViewController release];
+    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+    
+    
+}
+
+- (IBAction)searchButtonWasPressed:(id)sender {
+    
+    
+    popUpViewController=[[SearchPopUpViewController alloc] initWithNibName:@"SearchPopUpViewController" bundle:nil];
+        
+   
+    
+    
+    popover=[[UIPopoverController alloc]initWithContentViewController:popUpViewController];
+    [popUpViewController release];
+    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
+    
+    
+    
+}
+- (void)dealloc {
+  
+    [super dealloc];
+}
 @end

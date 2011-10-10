@@ -72,7 +72,7 @@
     
    
     if(row==0){
-        firstDetailViewController=[[DomizileFirstDetailViewController alloc] initWithNibName:@"FirstDetailViewController" bundle:nil];
+        firstDetailViewController=[[DomizileFirstDetailViewController alloc] initWithNibName:@"DomizileFirstDetailViewController" bundle:nil];
         UINavigationController *firstDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:firstDetailViewController];
         [firstDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, firstDetailNavigationController, nil]];
@@ -83,7 +83,7 @@
     else if(row==1){
         
     
-    DomizileSecondDetailViewController *secondDetailViewController=[[DomizileSecondDetailViewController alloc] initWithNibName:@"SecondDetailViewController" bundle:nil];
+    DomizileSecondDetailViewController *secondDetailViewController=[[DomizileSecondDetailViewController alloc] initWithNibName:@"DomizileSecondDetailViewController" bundle:nil];
     UINavigationController *secondDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:secondDetailViewController];
     [secondDetailViewController release];
     [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, secondDetailNavigationController, nil]];
@@ -91,7 +91,7 @@
     
     
     else if (row==2){
-        DomizileThirdDetailViewController*thirdDetailViewController=[[DomizileThirdDetailViewController alloc] initWithNibName:@"ThirdDetailViewController" bundle:nil];
+        DomizileThirdDetailViewController*thirdDetailViewController=[[DomizileThirdDetailViewController alloc] initWithNibName:@"DomizileThirdDetailViewController" bundle:nil];
         UINavigationController *thirdDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:thirdDetailViewController];
         [thirdDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, thirdDetailNavigationController, nil]];
@@ -101,7 +101,7 @@
     
     
     else if (row==3){
-        DomizileFourthDetailViewController*fourthDetailViewController=[[DomizileFourthDetailViewController alloc] initWithNibName:@"FourthDetailViewControllern" bundle:nil];
+        DomizileFourthDetailViewController*fourthDetailViewController=[[DomizileFourthDetailViewController alloc] initWithNibName:@"DomizileFourthDetailViewController" bundle:nil];
         UINavigationController *fourthDetailNavigationController = [[UINavigationController alloc] initWithRootViewController:fourthDetailViewController];
         [fourthDetailViewController release];
         [self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, fourthDetailNavigationController, nil]];

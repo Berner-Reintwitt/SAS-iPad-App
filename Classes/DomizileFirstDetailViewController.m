@@ -8,6 +8,7 @@
 
 #import "DomizileFirstDetailViewController.h"
 #import "DomizileRootViewController.h"
+#import "SearchPopUpViewController.h"
 
 @interface DomizileFirstDetailViewController ()
 - (void)configureView;
@@ -21,12 +22,13 @@
 @synthesize datePicker;
 @synthesize fruehesteAnreiseLabel;
 @synthesize spaetesteAnreiseLabel;
+@synthesize popoverController;
 
 
 
 
 
-@synthesize toolbar, barButton, popoverController, detailItem, detailDescriptionLabel;
+@synthesize toolbar, barButton, detailItem, detailDescriptionLabel;
 
 
 #pragma mark -
@@ -89,12 +91,22 @@
 }
 
 - (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender {
-    [datePicker setHidden:NO]; 
-    NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
+   // [datePicker setHidden:NO]; 
+   // [calendar setHidden:NO];
+
+    
+    CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
+    
+    popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
+    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES]; 
+    
+    NSString *date= [[ NSString alloc]initWithFormat:@"%@",calenderp.date]; 
+    
     fruehesteAnreiseLabel.text =date ;
+    [fruehesteAnreiseButton setTitle:date forState:UIControlStateNormal]; 
     [fruehesteAnreiseLabel setHidden:NO];
     [AnreiseButtonAuswaehlen setHidden:NO];
-    frueherDatePicker=YES;
+    frueherDatePicker=YES; 
     
 }
 
@@ -179,34 +191,6 @@
 }
 
 
--(void)viewDidLoad{
-    
-    CLLocationManager *locationManager=[[CLLocationManager alloc] init];
-    locationManager.delegate=self;
-    mapView.showsUserLocation=TRUE;
-    locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;
-    
-    [locationManager startUpdatingLocation];
-    
-    
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-	
-	location=newLocation.coordinate;
-	//One location is obtained.. just zoom to that location
-    
-	MKCoordinateRegion region;
-	region.center=location;
-	//Set Zoom level using Span
-	MKCoordinateSpan span;
-	span.latitudeDelta=.005;
-	span.longitudeDelta=.005;
-	region.span=span;
-    
-	[mapView setRegion:region animated:TRUE]; 
-    
-}
 
 #pragma mark -
 #pragma mark Memory management
@@ -233,5 +217,8 @@
     [spaetesteAnreiseLabel release];
     [super dealloc];
 }
+
+
+
 
 @end

@@ -54,4 +54,12 @@
 	return YES;
 }
 
+
+-(CGSize)contentSizeForViewInPopover{
+    
+    CGSize cgsize ={ 300,900};
+    
+    return cgsize;
+    
+}
 @end

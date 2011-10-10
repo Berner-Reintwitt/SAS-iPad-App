@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-@interface DomizileFirstDetailViewController : UIViewController <MKMapViewDelegate,UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
+
+#import "CalendarPopUpViewController.h"
+
+@interface DomizileFirstDetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate > {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
@@ -27,6 +30,9 @@
     IBOutlet UIButton *spaetesteAnreiseButton;
     IBOutlet UILabel *spaetesteAnreiseLabel;
     Boolean frueherDatePicker;
+    TKCalendarMonthView *calendar;
+    
+    
    }
 
 @property (nonatomic, retain) IBOutlet UIPopoverController *popoverController;

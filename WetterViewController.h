@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchPopUpViewController.h"
 
-@interface WetterViewController : UIViewController
+@interface WetterViewController : UIViewController <UIPopoverControllerDelegate>{
+    
+    SearchPopUpViewController *popUpViewController;
+    SearchPopUpViewController *popUpViewController1;
+    UIPopoverController *popover;
+
+    
+    
+}
+- (IBAction)orteButtonWasPressed:(id)sender;
+- (IBAction)searchButtonWasPressed:(id)sender;
 
 @end
