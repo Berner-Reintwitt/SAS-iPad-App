@@ -30,7 +30,6 @@
     IBOutlet UIButton *spaetesteAnreiseButton;
     IBOutlet UILabel *spaetesteAnreiseLabel;
     Boolean frueherDatePicker;
-    TKCalendarMonthView *calendar;
     
     
    }
@@ -53,6 +52,7 @@
 - (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender;
 - (IBAction)fruehesteAnreiseButtonAuswaehlenWaspressed:(id)sender;
 - (IBAction)spaetesteAnreiseButtonWasPressed:(id)sender;
+- (void) frueheAnreiseDateWasPressed;
 
 
 @end

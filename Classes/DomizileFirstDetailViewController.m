@@ -97,16 +97,37 @@
     
     CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
     
+    
     popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
-    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES]; 
+       [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES]; 
     
-    NSString *date= [[ NSString alloc]initWithFormat:@"%@",calenderp.date]; 
     
-    fruehesteAnreiseLabel.text =date ;
-    [fruehesteAnreiseButton setTitle:date forState:UIControlStateNormal]; 
+    NSDate *date=[NSDate date];
+    
+    // Verhalten für den NSDateFormatter festlegen
+    [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
+    
+    // NSDateFormatter Objekt erzeugen
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init]  autorelease]; 
+    
+    // Style für das Datum festlegen    
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle]; // z.B. 08.10.2008 
+    
+    // Style für die Zeit festlegen
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle]; // keine Zeitangabe 
+    
+    // konvertiert das NSDate vom DatePicker in einen String 
+    NSString *result = [dateFormatter stringFromDate:date];
+   
+    
+    
+    
+    fruehesteAnreiseLabel.text =result ;
+    [fruehesteAnreiseButton setTitle:result forState:UIControlStateNormal]; 
     [fruehesteAnreiseLabel setHidden:NO];
     [AnreiseButtonAuswaehlen setHidden:NO];
     frueherDatePicker=YES; 
+    
     
 }
 
@@ -114,11 +135,12 @@
    
     if(frueherDatePicker){
         NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
-        fruehesteAnreiseLabel.text =date ;
+       // fruehesteAnreiseLabel.text =date ;
         [fruehesteAnreiseButton setHighlighted:NO];
         [AnreiseButtonAuswaehlen setHidden:YES];
         [datePicker setHidden:YES];
-        
+        fruehesteAnreiseLabel.text=date1;
+        [fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
     }
     
     else if (!frueherDatePicker){
@@ -143,14 +165,35 @@
 }
 
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
+   
+    
     self.barButton = barButtonItem;
     [self addBarButtonItem:barButtonItem forPopoverController:pc];
+    
+       
+        
+        
+        
+    
+
 }
 
 - (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem*)barButtonItem {
     self.barButton = barButtonItem;
     [self removeBarButtonItem];
 }
+
+
+-(void)frueheAnreiseDateWasPressed{
+    
+    [fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
+    
+}
+     
+    
+
+
+
 
 #pragma mark -
 #pragma mark Rotation support

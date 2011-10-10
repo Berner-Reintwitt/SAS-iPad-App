@@ -17,6 +17,10 @@
 #import "NewsDetailView.h"
 #import "NewsRootViewController.h"
 
+NSString *date1;
+
+
+
 @class EnhancedSplitViewController;
 @class DomizileRootViewController;
 @class DomizileFirstDetailViewController;
@@ -33,12 +37,12 @@
     EnhancedSplitViewController *splitViewControllerShuttleService;
     EnhancedSplitViewController *splitViewControllerEvents;
     EnhancedSplitViewController *splitViewControllerNews;
-    DomizileRootViewController *rootViewController;
-    DomizileFirstDetailViewController *firstDetailViewController;
     ShuttleServiceRootViewController *shuttleServiceRootViewController;
     ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;
     MonatEventDetailView *firstMonthDetailViewController;
     EventRootViewController *eventRootViewController;
+    DomizileFirstDetailViewController *firstDetailViewController;
+    DomizileRootViewController *rootViewController;
 }
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerNews;
 @property (nonatomic, retain) IBOutlet NewsRootViewController *newsRootViewController;

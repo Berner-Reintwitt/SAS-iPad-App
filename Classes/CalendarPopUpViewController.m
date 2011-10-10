@@ -8,6 +8,7 @@
 
 #import "CalendarPopUpViewController.h"
 
+
 @implementation CalendarPopUpViewController
 
 @synthesize date;
@@ -80,8 +81,33 @@
 #pragma mark TKCalendarMonthViewDelegate methods
 
 - (void)calendarMonthView:(TKCalendarMonthView *)monthView didSelectDate:(NSDate *)d {
-	date=d;
+	
     
+    
+    // Verhalten für den NSDateFormatter festlegen
+    [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
+    
+    // NSDateFormatter Objekt erzeugen
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init]  autorelease]; 
+    
+    // Style für das Datum festlegen    
+    [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+    
+    // Style für die Zeit festlegen
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle]; // keine Zeitangabe 
+    
+    // konvertiert das NSDate vom DatePicker in einen String 
+    
+   
+   NSString *st= [dateFormatter stringFromDate:d];
+    date1=[[ NSString alloc]initWithFormat:@"%@",st]; 
+    
+   
+        
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.rootViewController.firstDetailViewController frueheAnreiseDateWasPressed];
+   
+        
 }
 
 - (void)calendarMonthView:(TKCalendarMonthView *)monthView monthDidChange:(NSDate *)d {
