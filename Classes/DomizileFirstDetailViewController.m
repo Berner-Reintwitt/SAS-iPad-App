@@ -19,11 +19,13 @@
 @synthesize AnreiseButtonAuswaehlen;
 @synthesize fruehesteAnreiseButton;
 
-@synthesize datePicker;
-@synthesize fruehesteAnreiseLabel;
-@synthesize spaetesteAnreiseLabel;
 @synthesize popoverController;
-
+@synthesize frueheAnreiseIsSelected;
+@synthesize spaetesteAnreiseButton;
+@synthesize uebernachtungInkrementer;
+@synthesize uebernachtungInkrementerLabel;
+@synthesize erWachseneInkrementer;
+@synthesize erwachseneInkrementerLabel;
 
 
 
@@ -91,76 +93,37 @@
 }
 
 - (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender {
-   // [datePicker setHidden:NO]; 
-   // [calendar setHidden:NO];
-
-    
-    CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
-    
-    
-    popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
-       [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES]; 
-    
-    
-    NSDate *date=[NSDate date];
-    
-    // Verhalten für den NSDateFormatter festlegen
-    [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
-    
-    // NSDateFormatter Objekt erzeugen
-    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init]  autorelease]; 
-    
-    // Style für das Datum festlegen    
-    [dateFormatter setDateStyle:NSDateFormatterLongStyle]; // z.B. 08.10.2008 
-    
-    // Style für die Zeit festlegen
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle]; // keine Zeitangabe 
-    
-    // konvertiert das NSDate vom DatePicker in einen String 
-    NSString *result = [dateFormatter stringFromDate:date];
    
     
+  [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES]; 
     
-    
-    fruehesteAnreiseLabel.text =result ;
-    [fruehesteAnreiseButton setTitle:result forState:UIControlStateNormal]; 
-    [fruehesteAnreiseLabel setHidden:NO];
-    [AnreiseButtonAuswaehlen setHidden:NO];
-    frueherDatePicker=YES; 
-    
+    frueheAnreiseIsSelected=YES;
     
 }
 
-- (IBAction)fruehesteAnreiseButtonAuswaehlenWaspressed:(id)sender {
-   
-    if(frueherDatePicker){
-        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
-       // fruehesteAnreiseLabel.text =date ;
-        [fruehesteAnreiseButton setHighlighted:NO];
-        [AnreiseButtonAuswaehlen setHidden:YES];
-        [datePicker setHidden:YES];
-        fruehesteAnreiseLabel.text=date1;
-        [fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
-    }
-    
-    else if (!frueherDatePicker){
-        
-        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
-        spaetesteAnreiseLabel.text=date;
-        [spaetesteAnreiseButton setHighlighted:NO];
-        [AnreiseButtonAuswaehlen setHidden:YES];
-        [datePicker setHidden:YES];
 
-    }
-}
 - (IBAction)spaetesteAnreiseButtonWasPressed:(id)sender {
-        [spaetesteAnreiseLabel setHidden:NO];
-        NSLog(@"Hallo");
-        [datePicker setHidden:NO];
-        [AnreiseButtonAuswaehlen setHidden:NO];
-        NSString *date= [[ NSString alloc]initWithFormat:@"%@",datePicker.date]; 
-        spaetesteAnreiseLabel.text=date;
-        frueherDatePicker=false;
+        [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];    
+        
+        frueheAnreiseIsSelected=false;
+    
+}
+
+- (IBAction)uebernachtungStepperWasPressed:(id)sender {
+    int a= (int)uebernachtungInkrementer.value;
+    NSString *inkval= [[NSString alloc]initWithFormat:@"%d",a];
+    uebernachtungInkrementerLabel.text= inkval;
+    
+    
+}
+
+- (IBAction)erwachseneStepperWasPressed:(id)sender {
+    
+    
+    int a= (int)erWachseneInkrementer.value;
+    NSString *inkval= [[NSString alloc]initWithFormat:@"%d",a];
+    erwachseneInkrementerLabel.text=inkval;
+
     
 }
 
@@ -184,11 +147,7 @@
 }
 
 
--(void)frueheAnreiseDateWasPressed{
-    
-    [fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
-    
-}
+
      
     
 
@@ -205,6 +164,14 @@
 
 #pragma mark -
 #pragma mark View lifecycle
+-(void)viewWillAppear:(BOOL)animated{
+    
+    CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
+    
+    
+    popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
+    
+}
 
 - (void)viewDidUnload {
     self.popoverController = nil;
@@ -213,10 +180,8 @@
     self.detailItem = nil;
     self.detailDescriptionLabel = nil;
     
-    [self setDatePicker:nil];
-    [self setDatePicker:nil];
-    [datePicker release];
-    datePicker = nil;
+    
+   
    
 
     [fruehesteAnreiseLabel release];
@@ -228,8 +193,11 @@
     fruehesteAnreiseButton = nil;
     [spaetesteAnreiseButton release];
     spaetesteAnreiseButton = nil;
-    [spaetesteAnreiseLabel release];
-    spaetesteAnreiseLabel = nil;
+    
+    [self setUebernachtungInkrementer:nil];
+    [self setUebernachtungInkrementerLabel:nil];
+    [self setErWachseneInkrementer:nil];
+    [self setErwachseneInkrementerLabel:nil];
     [super viewDidUnload];
 }
 
@@ -247,17 +215,18 @@
     [detailItem release];
     [detailDescriptionLabel release];
 	
-    [datePicker release];
-    [datePicker release];
-    [datePicker release];
-    [fruehesteAnreiseLabel release];
+    
     [AnreiseButtonAuswaehlen release];
 
    
     [fruehesteAnreiseButton release];
   
     [spaetesteAnreiseButton release];
-    [spaetesteAnreiseLabel release];
+    
+    [uebernachtungInkrementer release];
+    [uebernachtungInkrementerLabel release];
+    [erWachseneInkrementer release];
+    [erwachseneInkrementerLabel release];
     [super dealloc];
 }
 

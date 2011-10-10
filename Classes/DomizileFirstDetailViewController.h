@@ -25,11 +25,13 @@
    
     IBOutlet UIButton *fruehesteAnreiseButton;
     IBOutlet UILabel *fruehesteAnreiseLabel;
-    IBOutlet UIDatePicker *datePicker;
     IBOutlet UIButton *AnreiseButtonAuswaehlen;
     IBOutlet UIButton *spaetesteAnreiseButton;
-    IBOutlet UILabel *spaetesteAnreiseLabel;
-    Boolean frueherDatePicker;
+    UIStepper *uebernachtungInkrementer;
+    UIStepper *erWachseneInkrementer;
+    UILabel *uebernachtungInkrementerLabel;
+    UILabel *erwachseneInkrementerLabel;
+    Boolean frueheAnreiseIsSelected;
     
     
    }
@@ -40,19 +42,26 @@
 
 @property (nonatomic, retain) id detailItem;
 @property (nonatomic, retain) IBOutlet UILabel *detailDescriptionLabel;
-@property (retain, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (retain, nonatomic) IBOutlet UILabel *fruehesteAnreiseLabel;
+@property  Boolean frueheAnreiseIsSelected;
+
+
 @property (retain, nonatomic) IBOutlet UIButton *AnreiseButtonAuswaehlen;
 @property (retain, nonatomic) IBOutlet UIButton *fruehesteAnreiseButton;
-@property (retain, nonatomic) IBOutlet UILabel *spaetesteAnreiseLabel;
+@property (retain, nonatomic) IBOutlet UIButton *spaetesteAnreiseButton;
+@property (retain, nonatomic) IBOutlet UIStepper *uebernachtungInkrementer;
+@property (retain, nonatomic) IBOutlet UILabel *uebernachtungInkrementerLabel;
+@property (retain, nonatomic) IBOutlet UIStepper *erWachseneInkrementer;
+@property (retain, nonatomic) IBOutlet UILabel *erwachseneInkrementerLabel;
+
 
 
 - (void)addBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc;
 - (void)removeBarButtonItem;
 - (IBAction)fruehesteAnreiseButtonWasPressed:(id)sender;
-- (IBAction)fruehesteAnreiseButtonAuswaehlenWaspressed:(id)sender;
 - (IBAction)spaetesteAnreiseButtonWasPressed:(id)sender;
-- (void) frueheAnreiseDateWasPressed;
+- (IBAction)uebernachtungStepperWasPressed:(id)sender;
+- (IBAction)erwachseneStepperWasPressed:(id)sender;
+
 
 
 @end

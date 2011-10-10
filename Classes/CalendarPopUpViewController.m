@@ -105,7 +105,15 @@
    
         
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.rootViewController.firstDetailViewController frueheAnreiseDateWasPressed];
+    
+    if(appDelegate.rootViewController.firstDetailViewController.frueheAnreiseIsSelected==YES){
+        [appDelegate.rootViewController.firstDetailViewController.fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];}
+    
+    else{
+        
+        [appDelegate.rootViewController.firstDetailViewController.spaetesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
+        
+    }
    
         
 }
