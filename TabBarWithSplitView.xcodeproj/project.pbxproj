@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* Orte.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* Orte.m */; };
-		282CCBFE0DB6C98000C4EA27 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* Home.xib */; };
+		282CCBFE0DB6C98000C4EA27 /* Home_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* Home_.xib */; };
 		284F764110B34E8A00D7BA5B /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F764010B34E8A00D7BA5B /* Home.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
@@ -77,7 +77,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28216C950DB411BC00E5133A /* Orte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orte.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* Orte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orte.m; sourceTree = "<group>"; };
-		282CCBFD0DB6C98000C4EA27 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Home.xib; path = ../Home.xib; sourceTree = "<group>"; };
+		282CCBFD0DB6C98000C4EA27 /* Home_.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Home_.xib; path = ../Home_.xib; sourceTree = "<group>"; };
 		284F763F10B34E8A00D7BA5B /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		284F764010B34E8A00D7BA5B /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -285,7 +285,7 @@
 			children = (
 				284F763F10B34E8A00D7BA5B /* Home.h */,
 				284F764010B34E8A00D7BA5B /* Home.m */,
-				282CCBFD0DB6C98000C4EA27 /* Home.xib */,
+				282CCBFD0DB6C98000C4EA27 /* Home_.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -451,7 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				282CCBFE0DB6C98000C4EA27 /* Home.xib in Resources */,
+				282CCBFE0DB6C98000C4EA27 /* Home_.xib in Resources */,
 				8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */,
 				8F9537E114320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.xib in Resources */,
 				8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */,

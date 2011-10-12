@@ -35,5 +35,7 @@
 @property (retain, nonatomic) IBOutlet UITableView *table3;
 
 - (IBAction)buttonTapped:(id)sender;
+- (IBAction)detailSucheButtonWasPressed:(id)sender;
+- (IBAction)suchenButtonWasPressed:(id)sender;
 
 @end

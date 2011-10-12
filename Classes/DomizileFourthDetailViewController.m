@@ -82,6 +82,13 @@
     // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
     return cell;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *sectionHeader = nil;
+    sectionHeader=@"Domizile";
+    return  sectionHeader;
+    
+}
 - (void)dealloc {
     [firstTextLabel release];
     [super dealloc];

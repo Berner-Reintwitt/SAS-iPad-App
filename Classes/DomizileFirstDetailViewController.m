@@ -9,6 +9,7 @@
 #import "DomizileFirstDetailViewController.h"
 #import "DomizileRootViewController.h"
 #import "SearchPopUpViewController.h"
+#import "SuchergebnisseKarte.h"
 
 
 @interface DomizileFirstDetailViewController ()
@@ -186,6 +187,8 @@
 }
 
 
+
+
 - (IBAction)urlaubsortButtonWasPressed:(id)sender {
     
     whichTablePopupView=3;
@@ -196,7 +199,14 @@
     [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
-
+- (IBAction)suchenButtonWasPressed:(id)sender {
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+    SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+    
+    suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
+    suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:suchergebnisseKarte animated:YES];
+}
 
 
 
