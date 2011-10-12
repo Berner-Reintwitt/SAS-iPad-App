@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarWithSplitViewAppDelegate.h"
 
 
 @interface SearchPopUpViewController : UIViewController {

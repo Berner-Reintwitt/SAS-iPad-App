@@ -36,7 +36,8 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+{   TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+   
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

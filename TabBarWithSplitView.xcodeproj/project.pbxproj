@@ -23,8 +23,11 @@
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
 		8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */; };
 		8F0DFC5D143C85210079589F /* OrteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5C143C85210079589F /* OrteView.xib */; };
+		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
 		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
+		8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */; };
+		8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */; };
 		8F879E15143C5983002BD6C9 /* DomizileFourthDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */; };
 		8F879E17143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */; };
 		8F9537801431D37C009B183B /* DomizileFourthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */; };
@@ -47,6 +50,10 @@
 		8FA5FC31143CAEE700743200 /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5FC27143CAEE700743200 /* TKGlobal.m */; };
 		8FA5FC32143CAEE700743200 /* UIImage+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5FC29143CAEE700743200 /* UIImage+TKCategory.m */; };
 		8FA5FC33143CAEE700743200 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5FC2B143CAEE700743200 /* UIView+TKCategory.m */; };
+		8FA8699C1445C3C1008AC064 /* SortierenNachPopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8699A1445C3C1008AC064 /* SortierenNachPopOver.m */; };
+		8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA8699B1445C3C1008AC064 /* SortierenNachPopOver.xib */; };
+		8FA869A21445CC34008AC064 /* SuchergebnisseKarte.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */; };
+		8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */; };
 		8FBC59E6143B448500529E5D /* WetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC59E4143B448500529E5D /* WetterViewController.m */; };
 		8FBC59E7143B448500529E5D /* WetterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBC59E5143B448500529E5D /* WetterViewController.xib */; };
 		8FBC59EC143B498100529E5D /* KontaktViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC59EA143B498100529E5D /* KontaktViewController.m */; };
@@ -55,7 +62,6 @@
 		8FD448F1143B2903004887B6 /* NewsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD448EF143B2902004887B6 /* NewsDetailView.m */; };
 		8FD448F2143B2903004887B6 /* NewsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD448F0143B2902004887B6 /* NewsDetailView.xib */; };
 		8FDF03C3143C51CD002985FE /* DomizileThirdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */; };
-		8FEBA380142A10EE008F1A68 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA37D142A10EE008F1A68 /* DomizileFirstDetailViewController.m */; };
 		8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */; };
 		8FEBA392142A1807008F1A68 /* DomizileSecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA390142A1806008F1A68 /* DomizileSecondDetailViewController.m */; };
 		8FF71620143B06D0005ADEDF /* MonatEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7161E143B06CF005ADEDF /* MonatEventDetailView.m */; };
@@ -88,8 +94,13 @@
 		8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabBarWithSplitView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteAuswahlPopUp.xib; sourceTree = "<group>"; };
 		8F0DFC5C143C85210079589F /* OrteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteView.xib; sourceTree = "<group>"; };
+		8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFirstDetailViewController.h; sourceTree = "<group>"; };
+		8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
 		8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileFirstDetailViewController.xib; sourceTree = "<group>"; };
 		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
+		8F7DD0F61445A8BC00AC6A11 /* ButtonsPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsPopUpViewController.h; sourceTree = "<group>"; };
+		8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsPopUpViewController.m; sourceTree = "<group>"; };
+		8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsPopUpViewController.xib; sourceTree = "<group>"; };
 		8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileFourthDetailViewController.xib; path = ../DomizileFourthDetailViewController.xib; sourceTree = "<group>"; };
 		8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileSecondDetailViewController.xib; path = ../DomizileSecondDetailViewController.xib; sourceTree = "<group>"; };
 		8F95377A1431D37C009B183B /* DomizileFourthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFourthDetailViewController.h; sourceTree = "<group>"; };
@@ -126,6 +137,12 @@
 		8FA5FC29143CAEE700743200 /* UIImage+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TKCategory.m"; path = "TapkuLibrary/UIImage+TKCategory.m"; sourceTree = SOURCE_ROOT; };
 		8FA5FC2A143CAEE700743200 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TKCategory.h"; path = "TapkuLibrary/UIView+TKCategory.h"; sourceTree = SOURCE_ROOT; };
 		8FA5FC2B143CAEE700743200 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TKCategory.m"; path = "TapkuLibrary/UIView+TKCategory.m"; sourceTree = SOURCE_ROOT; };
+		8FA869991445C3C1008AC064 /* SortierenNachPopOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortierenNachPopOver.h; sourceTree = "<group>"; };
+		8FA8699A1445C3C1008AC064 /* SortierenNachPopOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortierenNachPopOver.m; sourceTree = "<group>"; };
+		8FA8699B1445C3C1008AC064 /* SortierenNachPopOver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortierenNachPopOver.xib; sourceTree = "<group>"; };
+		8FA8699F1445CC33008AC064 /* SuchergebnisseKarte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseKarte.h; sourceTree = "<group>"; };
+		8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseKarte.m; sourceTree = "<group>"; };
+		8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseKarte.xib; sourceTree = "<group>"; };
 		8FBC59E3143B448500529E5D /* WetterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WetterViewController.h; path = ../WetterViewController.h; sourceTree = "<group>"; };
 		8FBC59E4143B448500529E5D /* WetterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WetterViewController.m; path = ../WetterViewController.m; sourceTree = "<group>"; };
 		8FBC59E5143B448500529E5D /* WetterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WetterViewController.xib; path = ../WetterViewController.xib; sourceTree = "<group>"; };
@@ -138,8 +155,6 @@
 		8FD448EF143B2902004887B6 /* NewsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailView.m; sourceTree = "<group>"; };
 		8FD448F0143B2902004887B6 /* NewsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailView.xib; sourceTree = "<group>"; };
 		8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileThirdDetailViewController.xib; path = ../DomizileThirdDetailViewController.xib; sourceTree = "<group>"; };
-		8FEBA37C142A10EE008F1A68 /* DomizileFirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFirstDetailViewController.h; sourceTree = "<group>"; };
-		8FEBA37D142A10EE008F1A68 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
 		8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileRootViewController.h; sourceTree = "<group>"; };
 		8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileRootViewController.m; sourceTree = "<group>"; };
 		8FEBA38F142A1806008F1A68 /* DomizileSecondDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileSecondDetailViewController.h; sourceTree = "<group>"; };
@@ -183,6 +198,12 @@
 				8F96715C143DE2870041C197 /* CalendarPopUpViewController.h */,
 				8F96715D143DE2870041C197 /* CalendarPopUpViewController.m */,
 				8F96715F143DE5070041C197 /* CalenderPopUpViewController.xib */,
+				8F7DD0F61445A8BC00AC6A11 /* ButtonsPopUpViewController.h */,
+				8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */,
+				8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */,
+				8FA869991445C3C1008AC064 /* SortierenNachPopOver.h */,
+				8FA8699A1445C3C1008AC064 /* SortierenNachPopOver.m */,
+				8FA8699B1445C3C1008AC064 /* SortierenNachPopOver.xib */,
 				8F0DFC58143C75A60079589F /* Home */,
 				8F879E22143C6481002BD6C9 /* Domizile */,
 				8F879E23143C6506002BD6C9 /* Orte */,
@@ -306,19 +327,22 @@
 			children = (
 				8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */,
 				8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */,
-				8FEBA37C142A10EE008F1A68 /* DomizileFirstDetailViewController.h */,
-				8FEBA37D142A10EE008F1A68 /* DomizileFirstDetailViewController.m */,
+				8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */,
+				8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */,
 				8FEBA38F142A1806008F1A68 /* DomizileSecondDetailViewController.h */,
 				8FEBA390142A1806008F1A68 /* DomizileSecondDetailViewController.m */,
 				8F95377D1431D37C009B183B /* DomizileThirdDetailViewController.h */,
 				8F95377E1431D37C009B183B /* DomizileThirdDetailViewController.m */,
 				8F95377A1431D37C009B183B /* DomizileFourthDetailViewController.h */,
 				8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */,
+				8FA8699F1445CC33008AC064 /* SuchergebnisseKarte.h */,
+				8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */,
 				8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */,
 				8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */,
 				8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */,
 				8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */,
 				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
+				8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */,
 			);
 			name = Domizile;
 			sourceTree = "<group>";
@@ -445,6 +469,9 @@
 				8FA5FC2D143CAEE700743200 /* TapkuLibrary.bundle in Resources */,
 				8F967160143DE5070041C197 /* CalenderPopUpViewController.xib in Resources */,
 				8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */,
+				8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */,
+				8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */,
+				8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +487,6 @@
 				28216C970DB411BC00E5133A /* Orte.m in Sources */,
 				284F764110B34E8A00D7BA5B /* Home.m in Sources */,
 				8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */,
-				8FEBA380142A10EE008F1A68 /* DomizileFirstDetailViewController.m in Sources */,
 				8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */,
 				8FEBA392142A1807008F1A68 /* DomizileSecondDetailViewController.m in Sources */,
 				8F9537801431D37C009B183B /* DomizileFourthDetailViewController.m in Sources */,
@@ -484,6 +510,10 @@
 				8FA5FC32143CAEE700743200 /* UIImage+TKCategory.m in Sources */,
 				8FA5FC33143CAEE700743200 /* UIView+TKCategory.m in Sources */,
 				8F96715E143DE2870041C197 /* CalendarPopUpViewController.m in Sources */,
+				8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */,
+				8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */,
+				8FA8699C1445C3C1008AC064 /* SortierenNachPopOver.m in Sources */,
+				8FA869A21445CC34008AC064 /* SuchergebnisseKarte.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

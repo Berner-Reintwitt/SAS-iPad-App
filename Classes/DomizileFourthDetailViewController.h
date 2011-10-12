@@ -21,5 +21,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
 @property (nonatomic,retain) NSArray *listData;
 @property (retain, nonatomic) IBOutlet  UITableViewCell *domizilCell;
+- (IBAction)sortierenNachWasPressed:(id)sender;
 
 @end

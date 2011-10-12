@@ -42,7 +42,7 @@ NSString *date1;
     MonatEventDetailView *firstMonthDetailViewController;
     EventRootViewController *eventRootViewController;
     DomizileFirstDetailViewController *firstDetailViewController;
-    DomizileRootViewController *rootViewController;
+    DomizileRootViewController *domizileRootViewController;
 }
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerNews;
 @property (nonatomic, retain) IBOutlet NewsRootViewController *newsRootViewController;
@@ -52,7 +52,7 @@ NSString *date1;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerDomizile;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerShuttleService;
 @property (nonatomic, retain) IBOutlet  EnhancedSplitViewController *splitViewControllerEvents;
-@property (nonatomic, retain) IBOutlet DomizileRootViewController *rootViewController;
+@property (nonatomic, retain) IBOutlet DomizileRootViewController *domizileRootViewController;
 @property (nonatomic, retain) IBOutlet DomizileFirstDetailViewController *firstDetailViewController;
 @property (nonatomic, retain) IBOutlet ShuttleServiceRootViewController *shuttleServiceRootViewController;
 @property (nonatomic, retain) IBOutlet ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;

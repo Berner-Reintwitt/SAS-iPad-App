@@ -7,6 +7,7 @@
 //
 
 #import "DomizileFourthDetailViewController.h"
+#import "SortierenNachPopOver.h"
 
 @implementation DomizileFourthDetailViewController
 @synthesize firstTextLabel;
@@ -84,5 +85,13 @@
 - (void)dealloc {
     [firstTextLabel release];
     [super dealloc];
+}
+- (IBAction)sortierenNachWasPressed:(id)sender {
+    
+    SortierenNachPopOver *sortierenNachPopOver =[[SortierenNachPopOver alloc] initWithNibName:@"SortierenNachPopOver" bundle:nil];
+    
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:sortierenNachPopOver];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+
 }
 @end

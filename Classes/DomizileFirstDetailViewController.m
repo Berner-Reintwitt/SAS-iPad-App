@@ -10,11 +10,13 @@
 #import "DomizileRootViewController.h"
 #import "SearchPopUpViewController.h"
 
+
 @interface DomizileFirstDetailViewController ()
 - (void)configureView;
 @end
 
 @implementation DomizileFirstDetailViewController
+
 
 @synthesize AnreiseButtonAuswaehlen;
 @synthesize fruehesteAnreiseButton;
@@ -26,6 +28,10 @@
 @synthesize uebernachtungInkrementerLabel;
 @synthesize erWachseneInkrementer;
 @synthesize erwachseneInkrementerLabel;
+@synthesize budgetSlider;
+@synthesize budgetTextField;
+@synthesize whichTablePopupView;
+@synthesize selectTablePopUpView;
 
 
 
@@ -127,6 +133,74 @@
     
 }
 
+- (IBAction)domizilTypWasPressed:(id)sender {
+    whichTablePopupView=0;
+    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
+
+    
+    [auswahlViewContr.table reloadData];
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    
+}
+
+- (IBAction)etageDesDomizilsWasPressed:(id)sender {
+     whichTablePopupView=1;
+    
+   ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
+     [auswahlViewContr.table reloadData];
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+   
+
+    
+    
+}
+
+- (IBAction)groesseDesDomizilsWasPressed:(id)sender {
+    
+    whichTablePopupView=2;
+    
+    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
+    [auswahlViewContr.table reloadData];
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    
+}
+
+- (IBAction)valueInTextFieldChanged:(id)sender {
+    int d= [budgetTextField.text intValue];
+    budgetSlider.value=d;
+    
+}
+
+- (IBAction)sliderValueChanged:(id)sender {
+    int sliderValue= budgetSlider.value;
+    budgetTextField.text=[NSString stringWithFormat:@"%d", sliderValue];
+
+}
+
+- (IBAction)touchResetTextField:(id)sender {
+    int a=0;
+    budgetTextField.text=nil;
+}
+
+
+- (IBAction)urlaubsortButtonWasPressed:(id)sender {
+    
+    whichTablePopupView=3;
+    
+    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
+    [auswahlViewContr.table reloadData];
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+
+
+
+
+
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
    
     
@@ -165,9 +239,10 @@
 #pragma mark -
 #pragma mark View lifecycle
 -(void)viewWillAppear:(BOOL)animated{
-    
+    whichTablePopupView=0;
     CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
     
+   
     
     popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
     
@@ -198,6 +273,9 @@
     [self setUebernachtungInkrementerLabel:nil];
     [self setErWachseneInkrementer:nil];
     [self setErwachseneInkrementerLabel:nil];
+   
+    [self setBudgetSlider:nil];
+    [self setBudgetTextField:nil];
     [super viewDidUnload];
 }
 
@@ -227,6 +305,9 @@
     [uebernachtungInkrementerLabel release];
     [erWachseneInkrementer release];
     [erwachseneInkrementerLabel release];
+    
+    [budgetSlider release];
+    [budgetTextField release];
     [super dealloc];
 }
 

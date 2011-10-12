@@ -7,6 +7,9 @@
 //
 
 #import "DomizileThirdDetailViewController.h"
+#import "SortierenNachPopOver.h"
+#import "SuchergebnisseKarte.h"
+#import "TabBarWithSplitViewAppDelegate.h"
 
 @implementation DomizileThirdDetailViewController
 @synthesize firstTextLabel;
@@ -84,5 +87,26 @@
 - (void)dealloc {
     [firstTextLabel release];
     [super dealloc];
+}
+- (IBAction)sortierenNachButtonWasPressed:(id)sender {
+    
+    
+    SortierenNachPopOver *sortierenNachPopOver =[[SortierenNachPopOver alloc] initWithNibName:@"SortierenNachPopOver" bundle:nil];
+    
+    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:sortierenNachPopOver];
+    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+- (IBAction)karteButtonWasPressed:(id)sender {
+    
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+    SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+    
+    suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
+    suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStylePartialCurl;
+    [self presentModalViewController:suchergebnisseKarte animated:YES];
+    
+    
+    
 }
 @end

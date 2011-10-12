@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-
+#import "ButtonsPopUpViewController.h"
 #import "CalendarPopUpViewController.h"
+
 
 @interface DomizileFirstDetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate > {
     
@@ -22,7 +23,7 @@
     MKMapView *mapView;
     MKPlacemark *mPlacemark;
 	CLLocationCoordinate2D location;
-   
+    Boolean whichTablePopupView ;
     IBOutlet UIButton *fruehesteAnreiseButton;
     IBOutlet UILabel *fruehesteAnreiseLabel;
     IBOutlet UIButton *AnreiseButtonAuswaehlen;
@@ -32,6 +33,9 @@
     UILabel *uebernachtungInkrementerLabel;
     UILabel *erwachseneInkrementerLabel;
     Boolean frueheAnreiseIsSelected;
+    NSInteger selectTablePopUpView ;
+    UISlider *budgetSlider;
+    UITextField *budgetTextField;
     
     
    }
@@ -43,6 +47,8 @@
 @property (nonatomic, retain) id detailItem;
 @property (nonatomic, retain) IBOutlet UILabel *detailDescriptionLabel;
 @property  Boolean frueheAnreiseIsSelected;
+@property  Boolean whichTablePopupView ;
+@property NSInteger selectTablePopUpView ;
 
 
 @property (retain, nonatomic) IBOutlet UIButton *AnreiseButtonAuswaehlen;
@@ -52,6 +58,8 @@
 @property (retain, nonatomic) IBOutlet UILabel *uebernachtungInkrementerLabel;
 @property (retain, nonatomic) IBOutlet UIStepper *erWachseneInkrementer;
 @property (retain, nonatomic) IBOutlet UILabel *erwachseneInkrementerLabel;
+@property (retain, nonatomic) IBOutlet UISlider *budgetSlider;
+@property (retain, nonatomic) IBOutlet UITextField *budgetTextField;
 
 
 
@@ -61,7 +69,14 @@
 - (IBAction)spaetesteAnreiseButtonWasPressed:(id)sender;
 - (IBAction)uebernachtungStepperWasPressed:(id)sender;
 - (IBAction)erwachseneStepperWasPressed:(id)sender;
+- (IBAction)domizilTypWasPressed:(id)sender;
+- (IBAction)etageDesDomizilsWasPressed:(id)sender;
 
+- (IBAction)urlaubsortButtonWasPressed:(id)sender;
+- (IBAction)groesseDesDomizilsWasPressed:(id)sender;
+- (IBAction)valueInTextFieldChanged:(id)sender;
+- (IBAction)sliderValueChanged:(id)sender;
+- (IBAction)touchResetTextField:(id)sender;
 
 
 @end

@@ -10,7 +10,7 @@
 #define textLabel1	1 
 #define textLabel2	2
 
-@interface DomizileSecondDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DomizileSecondDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UINavigationBarDelegate>
 {
     UITableViewCell *domizilCell;
     NSArray *listData;
@@ -22,5 +22,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
 @property (nonatomic,retain) NSArray *listData;
 @property (retain, nonatomic) IBOutlet  UITableViewCell *domizilCell;
+- (IBAction)sortierenButtonWasPressed:(id)sender;
+- (IBAction)karteButtonWasPressed:(id)sender;
 
 @end

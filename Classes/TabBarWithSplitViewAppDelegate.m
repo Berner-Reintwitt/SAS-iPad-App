@@ -15,7 +15,7 @@
 @synthesize window;
 @synthesize tabBarController;
 @synthesize splitViewControllerDomizile;
-@synthesize rootViewController;
+@synthesize domizileRootViewController;
 @synthesize firstDetailViewController;
 @synthesize shuttleServiceDetailViewControllerMaserati;
 @synthesize splitViewControllerShuttleService;
@@ -48,12 +48,12 @@
             
             
             
-            rootViewController = [[DomizileRootViewController alloc] initWithStyle:UITableViewStylePlain];
-            rootViewController.firstDetailViewController = firstDetailViewController;
-            rootViewController.navigationItem.title = @"List";
+            domizileRootViewController = [[DomizileRootViewController alloc] initWithStyle:UITableViewStylePlain];
+            domizileRootViewController.firstDetailViewController = firstDetailViewController;
+            domizileRootViewController.navigationItem.title = @"List";
             
             
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootViewController] ;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:domizileRootViewController] ;
             
             
             splitViewControllerDomizile = [[EnhancedSplitViewController alloc] init];
@@ -296,7 +296,7 @@
 
 - (void)dealloc {
     [splitViewControllerDomizile release];
-    [rootViewController release];
+    [domizileRootViewController release];
     [firstDetailViewController release];
     
     [tabBarController release];
