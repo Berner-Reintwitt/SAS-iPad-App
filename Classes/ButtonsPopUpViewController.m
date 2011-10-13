@@ -7,6 +7,7 @@
 //
 
 #import "ButtonsPopUpViewController.h"
+#import "Home.h"
 
 @implementation ButtonsPopUpViewController
 
@@ -63,17 +64,23 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if( appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==0){
+    if( appDelegate.whichTablePopUpView==0){
         return  [self.array0 count];
     }
-    else if( appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==1){
+    else if( appDelegate.whichTablePopUpView==1){
         return  [self.array1 count];
     }
-    else if( appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==2){
+    else if( appDelegate.whichTablePopUpView==2){
         return  [self.array2 count];
     }
-    else if( appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==3){
+    else if( appDelegate.whichTablePopUpView==3){
         return  [self.array3 count];
+    }
+    else if( appDelegate.whichTablePopUpView==4){
+        return  [self.array3 count];
+    }
+    else if( appDelegate.whichTablePopUpView==5){
+        return  [self.array0 count];
     }
     
     
@@ -82,21 +89,8 @@
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    if( appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==0){
-        static NSString *CellIdentifier = @"Cell";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        }
-        
-        // Configure the cell...
-        cell.textLabel.text = [array0 objectAtIndex:indexPath.row];
-        return cell;
-    }
     
-    else if(appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==1){
+   
         static NSString *CellIdentifier = @"Cell";
         
         
@@ -106,42 +100,28 @@
         if (cell == nil) {
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
-        
-        // Configure the cell...
-        cell.textLabel.text = [array1 objectAtIndex:indexPath.row];
-        return cell;
-    }
     
     
-    else if(appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==2){
-        static NSString *CellIdentifier = @"Cell";
-        
-       
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    
+        if(appDelegate.whichTablePopUpView==0){
+            cell.textLabel.text = [array0 objectAtIndex:indexPath.row];
+        }
+        else if(appDelegate.whichTablePopUpView==1){
+            cell.textLabel.text = [array1 objectAtIndex:indexPath.row];
+        }
+        else if(appDelegate.whichTablePopUpView==2){
+            cell.textLabel.text = [array2 objectAtIndex:indexPath.row];
         }
         
-        // Configure the cell...
-        cell.textLabel.text = [array2 objectAtIndex:indexPath.row];
-        return cell;
-    }
-    
-    else if(appDelegate.domizileRootViewController.firstDetailViewController.whichTablePopupView==3){
-        static NSString *CellIdentifier = @"Cell";
-        
-        
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        }
-        
-        // Configure the cell...
+         else if(appDelegate.whichTablePopUpView==3){
         cell.textLabel.text = [array3 objectAtIndex:indexPath.row];
+         }
+         else if(appDelegate.whichTablePopUpView==4){
+             cell.textLabel.text = [array3 objectAtIndex:indexPath.row];
+         }
+         else if(appDelegate.whichTablePopUpView==5){
+             cell.textLabel.text = [array0 objectAtIndex:indexPath.row];
+         }
         return cell;
     }
 
@@ -150,7 +130,7 @@
     
     
     
-}
+
 
 
 @end

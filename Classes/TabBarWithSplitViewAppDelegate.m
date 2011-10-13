@@ -25,6 +25,7 @@
 @synthesize newsDetailView;
 @synthesize newsRootViewController;
 @synthesize splitViewControllerNews;
+@synthesize whichTablePopUpView;
 
 
 

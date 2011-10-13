@@ -81,6 +81,10 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage" id="864295551">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">star.png</string>
+						</object>
 					</object>
 					<object class="IBUIPageControl" id="892369026">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -103,6 +107,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<reference key="IBUIImage" ref="864295551"/>
 					</object>
 					<object class="IBUIImageView" id="1032637266">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -112,6 +117,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<reference key="IBUIImage" ref="864295551"/>
 					</object>
 					<object class="IBUIImageView" id="962378113">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -121,6 +127,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<reference key="IBUIImage" ref="864295551"/>
 					</object>
 					<object class="IBUIImageView" id="79472524">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -130,6 +137,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<reference key="IBUIImage" ref="864295551"/>
 					</object>
 					<object class="IBUIImageView" id="676839012">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -139,6 +147,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<reference key="IBUIImage" ref="864295551"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
@@ -287,6 +296,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">star.png</string>
+			<string key="NS.object.0">{200, 200}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">931</string>
 	</data>
 </archive>

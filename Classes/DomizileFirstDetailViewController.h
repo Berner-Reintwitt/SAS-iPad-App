@@ -10,6 +10,7 @@
 #import <MapKit/Mapkit.h>
 #import "ButtonsPopUpViewController.h"
 #import "CalendarPopUpViewController.h"
+#import "TabBarWithSplitViewAppDelegate.h"
 
 
 @interface DomizileFirstDetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate > {
@@ -36,8 +37,7 @@
     NSInteger selectTablePopUpView ;
     UISlider *budgetSlider;
     UITextField *budgetTextField;
-    
-    
+       
    }
 
 @property (nonatomic, retain) IBOutlet UIPopoverController *popoverController;

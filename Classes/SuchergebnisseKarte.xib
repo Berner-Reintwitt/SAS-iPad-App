@@ -47,7 +47,6 @@
 						<string key="NSFrame">{{286, 44}, {738, 713}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -82,7 +81,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="946967562"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<array class="NSMutableArray" key="IBUIItems">
+						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="4516330">
 								<reference key="IBUINavigationBar" ref="653123176"/>
 								<string key="IBUITitle">Karte</string>
@@ -263,7 +262,7 @@
 								</object>
 							</object>
 						</array>
-						<string key="NSFrame">{{8, 99}, {278, 98}}</string>
+						<string key="NSFrame">{{20, 102}, {258, 98}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="994971085"/>
@@ -387,15 +386,10 @@
 							<reference ref="183026978"/>
 							<reference ref="653123176"/>
 							<reference ref="61811777"/>
-							<reference ref="675957073"/>
 							<reference ref="946967562"/>
+							<reference ref="675957073"/>
 						</array>
 						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="61811777"/>
-						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
@@ -476,6 +470,11 @@
 						<int key="objectID">34</int>
 						<reference key="object" ref="285581777"/>
 						<reference key="parent" ref="675957073"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">5</int>
+						<reference key="object" ref="61811777"/>
+						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
 			</object>

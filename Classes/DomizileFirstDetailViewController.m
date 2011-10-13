@@ -135,7 +135,9 @@
 }
 
 - (IBAction)domizilTypWasPressed:(id)sender {
-    whichTablePopupView=0;
+    TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+
+    appDelegate.whichTablePopUpView=0;
     ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
 
     
@@ -146,8 +148,8 @@
 }
 
 - (IBAction)etageDesDomizilsWasPressed:(id)sender {
-     whichTablePopupView=1;
-    
+     TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate]; 
+     appDelegate.whichTablePopUpView=1;    
    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
      [auswahlViewContr.table reloadData];
     UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
@@ -159,9 +161,8 @@
 }
 
 - (IBAction)groesseDesDomizilsWasPressed:(id)sender {
-    
-    whichTablePopupView=2;
-    
+     TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate]; 
+    appDelegate.whichTablePopUpView=2;    
     ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
     [auswahlViewContr.table reloadData];
     UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
@@ -190,8 +191,9 @@
 
 
 - (IBAction)urlaubsortButtonWasPressed:(id)sender {
+     TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate]; 
     
-    whichTablePopupView=3;
+    appDelegate.whichTablePopUpView=3;
     
     ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
     [auswahlViewContr.table reloadData];
@@ -200,7 +202,7 @@
 }
 
 - (IBAction)suchenButtonWasPressed:(id)sender {
-    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+    
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
     
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
@@ -289,7 +291,10 @@
     [super viewDidUnload];
 }
 
-
+-(void)viewDidLoad{
+    
+    
+}
 
 #pragma mark -
 #pragma mark Memory management

@@ -56,6 +56,7 @@
 		8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9537E9143219FA009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m */; };
 		8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9537EA143219FB009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib */; };
 		8F9586FB1446EC0D00508C2D /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9586FA1446EC0D00508C2D /* Home.xib */; };
+		8F958700144711E500508C2D /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9586FF144711E400508C2D /* pig.png */; };
 		8F96715E143DE2870041C197 /* CalendarPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F96715D143DE2870041C197 /* CalendarPopUpViewController.m */; };
 		8F967160143DE5070041C197 /* CalenderPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F96715F143DE5070041C197 /* CalenderPopUpViewController.xib */; };
 		8F9850E6143C6B7D00E12D25 /* SearchPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9850E5143C6B7D00E12D25 /* SearchPopUpViewController.m */; };
@@ -170,6 +171,7 @@
 		8F9537E9143219FA009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShuttleServiceDetailViewControllerAstonMartin.m; path = ../ShuttleServiceDetailViewControllerAstonMartin.m; sourceTree = "<group>"; };
 		8F9537EA143219FB009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShuttleServiceDetailViewControllerAstonMartin.xib; path = ../ShuttleServiceDetailViewControllerAstonMartin.xib; sourceTree = "<group>"; };
 		8F9586FA1446EC0D00508C2D /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		8F9586FF144711E400508C2D /* pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pig.png; sourceTree = SOURCE_ROOT; };
 		8F96715C143DE2870041C197 /* CalendarPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarPopUpViewController.h; sourceTree = "<group>"; };
 		8F96715D143DE2870041C197 /* CalendarPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarPopUpViewController.m; sourceTree = "<group>"; };
 		8F96715F143DE5070041C197 /* CalenderPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderPopUpViewController.xib; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F9586FF144711E400508C2D /* pig.png */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */,
 				551D58DF1447110C000F0E97 /* ApartmentModel.xcdatamodeld */,
@@ -571,6 +574,7 @@
 				8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */,
 				8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */,
 				8F9586FB1446EC0D00508C2D /* Home.xib in Resources */,
+				8F958700144711E500508C2D /* pig.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
