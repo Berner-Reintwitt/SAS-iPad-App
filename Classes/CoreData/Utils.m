@@ -8,7 +8,7 @@
 
 #import "Utils.h"
 
-NSString *DATASOURCE_URL = @"http://progro.localsite.here/DataSource.ashx";
+NSString *DATASOURCE_URL = @"http://192.168.02.23:2222/DataSource.ashx";
 
 NSString *QUERY_action = @"action";
 

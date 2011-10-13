@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShuttleServiceDetailViewControllerMaserati : UIViewController <UISplitViewControllerDelegate>
+@interface ShuttleServiceDetailViewControllerMaserati : UIViewController <UISplitViewControllerDelegate>{
+    
+    UIImageView *bigImg;
+    UIImageView *secondSmallImg;
+    UIImageView *firstSmallImg;
+
+    
+}
+@property (retain, nonatomic) IBOutlet UIImageView *bigImg;
+@property (retain, nonatomic) IBOutlet UIImageView *secondSmallImg;
+@property (retain, nonatomic) IBOutlet UIImageView *firstSmallImg;
 
 
 
