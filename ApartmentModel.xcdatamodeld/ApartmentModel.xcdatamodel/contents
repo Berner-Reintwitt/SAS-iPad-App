@@ -1,4 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="ApartmentModel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="870" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="870" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AvailabilityInfo2" syncable="YES">
+        <attribute name="bookingWeekStart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dayAvailabilty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="availabilityInfo" inverseEntity="ObjInfo2" syncable="YES"/>
+    </entity>
+    <entity name="ObjAttribute" representedClassName="ObjAttribute" syncable="YES">
+        <attribute name="id_" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="attributes" inverseEntity="ObjInfo2" syncable="YES"/>
+    </entity>
+    <entity name="ObjInfo2" representedClassName="ObjInfo2" syncable="YES">
+        <attribute name="alergic" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="animals" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="anlageID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="bed_rooms" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="erbaut" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="etage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exid" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="flags" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="googlemaps_latitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="googlemaps_longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="houseID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id_" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lageID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="land" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="living_area" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="max_persons" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mindays" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objnr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ortslageID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="persons" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="quality" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="renoviert" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rooms" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="smoking" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="typID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="wohnlageID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ObjAttribute" inverseName="parent" inverseEntity="ObjAttribute" syncable="YES"/>
+        <relationship name="availabilityInfo" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AvailabilityInfo2" inverseName="parent" inverseEntity="AvailabilityInfo2" syncable="YES"/>
+        <relationship name="pictures" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ObjPicture" inverseName="parent" inverseEntity="ObjPicture" syncable="YES"/>
+        <relationship name="priceInfo" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ObjPriceInfo" inverseName="parent" inverseEntity="ObjPriceInfo" syncable="YES"/>
+        <relationship name="texts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ObjText" inverseName="parent" inverseEntity="ObjText" syncable="YES"/>
+    </entity>
+    <entity name="ObjPicture" representedClassName="ObjPicture" syncable="YES">
+        <attribute name="big_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumb_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScaledImage" inverseName="parent" inverseEntity="ScaledImage" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="pictures" inverseEntity="ObjInfo2" syncable="YES"/>
+    </entity>
+    <entity name="ObjPriceInfo" representedClassName="ObjPriceInfo" syncable="YES">
+        <attribute name="perPers" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="prli" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="typ" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="priceInfo" inverseEntity="ObjInfo2" syncable="YES"/>
+        <relationship name="prices" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Price" inverseName="parent" inverseEntity="Price" syncable="YES"/>
+    </entity>
+    <entity name="ObjText" representedClassName="ObjText" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="texts" inverseEntity="ObjInfo2" syncable="YES"/>
+    </entity>
+    <entity name="Price" representedClassName="Price" syncable="YES">
+        <attribute name="dateFrom" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateTo" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="styp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typ" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPriceInfo" inverseName="prices" inverseEntity="ObjPriceInfo" syncable="YES"/>
+    </entity>
+    <entity name="ScaledImage" representedClassName="ScaledImage" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="mode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPicture" inverseName="images" inverseEntity="ObjPicture" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ObjAttribute" positionX="-2151" positionY="-351" width="126" height="105"/>
+        <element name="ObjInfo2" positionX="-1937" positionY="-486" width="128" height="690"/>
+        <element name="ObjPicture" positionX="-1703" positionY="-450" width="128" height="165"/>
+        <element name="ObjPriceInfo" positionX="-1773" positionY="-207" width="128" height="135"/>
+        <element name="ObjText" positionX="-2196" positionY="-99" width="128" height="105"/>
+        <element name="Price" positionX="-1512" positionY="-204" width="128" height="135"/>
+        <element name="ScaledImage" positionX="-1487" positionY="-477" width="128" height="150"/>
+        <element name="AvailabilityInfo2" positionX="-1550" positionY="36" width="128" height="120"/>
+    </elements>
 </model>
