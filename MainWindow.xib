@@ -68,13 +68,13 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 				<bool key="IBUIHorizontal">YES</bool>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="240426214">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="720455198">
-						<string key="IBUITitle">Orte</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="295385551">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="911117942">
+						<string key="IBUITitle">Home</string>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<reference key="IBUIParentViewController" ref="395037606"/>
-					<string key="IBUINibName">OrteView</string>
+					<string key="IBUINibName">Home</string>
 					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 						<int key="IBUIInterfaceOrientation">1</int>
 						<int key="interfaceOrientation">1</int>
@@ -84,20 +84,7 @@
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIViewController" id="295385551">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="911117942">
-							<string key="IBUITitle">Home</string>
-							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						</object>
-						<reference key="IBUIParentViewController" ref="395037606"/>
-						<string key="IBUINibName">SecondView</string>
-						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-							<int key="IBUIInterfaceOrientation">1</int>
-							<int key="interfaceOrientation">1</int>
-						</object>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIHorizontal">NO</bool>
-					</object>
+					<reference ref="295385551"/>
 					<object class="IBUIViewController" id="154967268">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="688540595">
 							<string key="IBUITitle">Domizile</string>
@@ -128,7 +115,20 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
-					<reference ref="240426214"/>
+					<object class="IBUIViewController" id="240426214">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="720455198">
+							<string key="IBUITitle">Orte</string>
+							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						</object>
+						<reference key="IBUIParentViewController" ref="395037606"/>
+						<string key="IBUINibName">OrteView</string>
+						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+							<int key="IBUIInterfaceOrientation">1</int>
+							<int key="interfaceOrientation">1</int>
+						</object>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<bool key="IBUIHorizontal">NO</bool>
+					</object>
 					<object class="IBUIViewController" id="87687701">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="694399266">
 							<string key="IBUITitle">Events</string>

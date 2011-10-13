@@ -58,8 +58,9 @@
 }
 
 - (IBAction)detailSucheButtonWasPressed:(id)sender {
-    
-    
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+   // UIViewController *viewcontroller=[appDelegate.tabBarController.viewControllers objectAtIndex:2];
+    appDelegate.tabBarController.selectedIndex=1;
 }
 
 
@@ -69,7 +70,7 @@
         SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
         
         suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
-        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStylePartialCurl;
         [self presentModalViewController:suchergebnisseKarte animated:YES];
     
 }
