@@ -282,8 +282,6 @@
 		29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				554F7CCE1446F70C00F9C24D /* ImageIO.framework */,
-				55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -314,6 +312,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				554F7CCE1446F70C00F9C24D /* ImageIO.framework */,
 				55D47FC71434A06600AB6A5C /* CoreData.framework */,
 				7D0CD7741427901300E9F0FD /* MapKit.framework */,
 				7D0CD7721427900A00E9F0FD /* CoreLocation.framework */,
@@ -720,17 +719,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		55E954591431F7BE00CFE2FF /* SAS_iPad_App.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-			);
-			path = SAS_iPad_App.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
