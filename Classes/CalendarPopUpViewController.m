@@ -7,6 +7,7 @@
 //
 
 #import "CalendarPopUpViewController.h"
+#import "Home.h"
 
 
 @implementation CalendarPopUpViewController
@@ -82,8 +83,8 @@
 
 - (void)calendarMonthView:(TKCalendarMonthView *)monthView didSelectDate:(NSDate *)d {
 	
-    
-    
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Home *controller = (Home *)[appDelegate.tabBarController.viewControllers objectAtIndex:0];
     // Verhalten für den NSDateFormatter festlegen
     [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
     
@@ -104,16 +105,35 @@
     
    
         
-    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    if(appDelegate.domizileRootViewController.firstDetailViewController.frueheAnreiseIsSelected==YES){
+    
+    if(appDelegate.domizileRootViewController.firstDetailViewController.frueheAnreiseIsSelected==YES&&appDelegate.tabBarController.selectedIndex==1){
         [appDelegate.domizileRootViewController.firstDetailViewController.fruehesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];}
     
-    else{
+    else if(appDelegate.domizileRootViewController.firstDetailViewController.frueheAnreiseIsSelected==NO&&appDelegate.tabBarController.selectedIndex==1){ 
         
         [appDelegate.domizileRootViewController.firstDetailViewController.spaetesteAnreiseButton setTitle:date1 forState:UIControlStateNormal];
         
     }
+    
+    
+    else if(controller.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
+        
+        
+        [controller.anreiseButton setTitle:date1 forState:UIControlStateNormal];
+    
+        
+    }
+    
+    else if(!controller.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
+        
+        
+        [controller.abreiseButton setTitle:date1 forState:UIControlStateNormal];
+        
+        
+    }
+    
+
    
         
 }

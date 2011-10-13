@@ -43,7 +43,7 @@ NSString *date1;
     EventRootViewController *eventRootViewController;
     DomizileFirstDetailViewController *firstDetailViewController;
     DomizileRootViewController *domizileRootViewController;
-}
+    }
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerNews;
 @property (nonatomic, retain) IBOutlet NewsRootViewController *newsRootViewController;
 @property (nonatomic, retain) IBOutlet NewsDetailView *newsDetailView;
@@ -60,6 +60,7 @@ NSString *date1;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property NSInteger whichTablePopUpView;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
