@@ -77,6 +77,7 @@
 - (IBAction)valueInTextFieldChanged:(id)sender;
 - (IBAction)sliderValueChanged:(id)sender;
 - (IBAction)touchResetTextField:(id)sender;
+- (IBAction)suchenButtonWasPressed:(id)sender;
 
 
 @end

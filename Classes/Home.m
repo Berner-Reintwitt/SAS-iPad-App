@@ -8,6 +8,8 @@
 
 #import "Home.h"
 #import "SearchPopUpViewController.h"
+#import "TabBarWithSplitViewAppDelegate.h"
+#import "SuchergebnisseKarte.h"
 
 @implementation Home
 @synthesize table3;
@@ -52,6 +54,24 @@
     popover=[[UIPopoverController alloc]initWithContentViewController:searchpopup];
     [searchpopup release];
     [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+}
+
+- (IBAction)detailSucheButtonWasPressed:(id)sender {
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+   // UIViewController *viewcontroller=[appDelegate.tabBarController.viewControllers objectAtIndex:2];
+    appDelegate.tabBarController.selectedIndex=1;
+}
+
+
+    
+    - (IBAction)suchenButtonWasPressed:(id)sender {
+        TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+        SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+        
+        suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
+        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStylePartialCurl;
+        [self presentModalViewController:suchergebnisseKarte animated:YES];
     
 }
 

@@ -12,7 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* Orte.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* Orte.m */; };
-		282CCBFE0DB6C98000C4EA27 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* Home.xib */; };
 		284F764110B34E8A00D7BA5B /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F764010B34E8A00D7BA5B /* Home.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
@@ -55,6 +54,7 @@
 		8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9537E314320F1E009B183B /* ShuttleServiceRootViewController.m */; };
 		8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9537E9143219FA009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m */; };
 		8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9537EA143219FB009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib */; };
+		8F9586FB1446EC0D00508C2D /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9586FA1446EC0D00508C2D /* Home.xib */; };
 		8F96715E143DE2870041C197 /* CalendarPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F96715D143DE2870041C197 /* CalendarPopUpViewController.m */; };
 		8F967160143DE5070041C197 /* CalenderPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F96715F143DE5070041C197 /* CalenderPopUpViewController.xib */; };
 		8F9850E6143C6B7D00E12D25 /* SearchPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9850E5143C6B7D00E12D25 /* SearchPopUpViewController.m */; };
@@ -95,7 +95,6 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28216C950DB411BC00E5133A /* Orte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orte.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* Orte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orte.m; sourceTree = "<group>"; };
-		282CCBFD0DB6C98000C4EA27 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Home.xib; path = ../Home.xib; sourceTree = "<group>"; };
 		284F763F10B34E8A00D7BA5B /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		284F764010B34E8A00D7BA5B /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +167,7 @@
 		8F9537E8143219FA009B183B /* ShuttleServiceDetailViewControllerAstonMartin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShuttleServiceDetailViewControllerAstonMartin.h; path = ../ShuttleServiceDetailViewControllerAstonMartin.h; sourceTree = "<group>"; };
 		8F9537E9143219FA009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShuttleServiceDetailViewControllerAstonMartin.m; path = ../ShuttleServiceDetailViewControllerAstonMartin.m; sourceTree = "<group>"; };
 		8F9537EA143219FB009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShuttleServiceDetailViewControllerAstonMartin.xib; path = ../ShuttleServiceDetailViewControllerAstonMartin.xib; sourceTree = "<group>"; };
+		8F9586FA1446EC0D00508C2D /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 		8F96715C143DE2870041C197 /* CalendarPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarPopUpViewController.h; sourceTree = "<group>"; };
 		8F96715D143DE2870041C197 /* CalendarPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarPopUpViewController.m; sourceTree = "<group>"; };
 		8F96715F143DE5070041C197 /* CalenderPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderPopUpViewController.xib; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 			children = (
 				284F763F10B34E8A00D7BA5B /* Home.h */,
 				284F764010B34E8A00D7BA5B /* Home.m */,
-				282CCBFD0DB6C98000C4EA27 /* Home.xib */,
+				8F9586FA1446EC0D00508C2D /* Home.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -548,7 +548,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				282CCBFE0DB6C98000C4EA27 /* Home.xib in Resources */,
 				8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */,
 				8F9537E114320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.xib in Resources */,
 				8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */,
@@ -569,6 +568,7 @@
 				8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */,
 				8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */,
 				8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */,
+				8F9586FB1446EC0D00508C2D /* Home.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

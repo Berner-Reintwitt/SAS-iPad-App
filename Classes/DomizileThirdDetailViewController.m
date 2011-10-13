@@ -15,6 +15,7 @@
 @synthesize firstTextLabel;
 @synthesize listData;
 @synthesize domizilCell;
+@synthesize table;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,19 +39,26 @@
 
 - (void)viewDidLoad
 {
-    
+   
     NSArray *array = [[NSArray alloc] initWithObjects:@"Sleepy", @"Sneezy",@"Bashful", @"Happy", @"Doc", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bifur", @"Bofur", @"Bombur", nil];
     self.listData = array; 
     [array release];
     
-    [super viewDidLoad];
+    [super viewDidLoad]; 
     
+    
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *sectionHeader = nil;
+    sectionHeader=@"Domizile";
+    return  sectionHeader;
     
 }
 
 - (void)viewDidUnload
 {   self.listData = nil;
     [self setFirstTextLabel:nil];
+    [self setTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -86,6 +94,7 @@
 }
 - (void)dealloc {
     [firstTextLabel release];
+    [table release];
     [super dealloc];
 }
 - (IBAction)sortierenNachButtonWasPressed:(id)sender {
