@@ -33,6 +33,9 @@ extern NSString *PICTURE_MODE_fit;
 
 NSManagedObjectModel *managedObjectModel(void);
 NSManagedObjectContext *managedObjectContext(void);
+NSPersistentStoreCoordinator *persistentStoreCoordinator(void);
+NSURL *applicationDocumentsDirectory(void);
+void saveContext(void);
 
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);

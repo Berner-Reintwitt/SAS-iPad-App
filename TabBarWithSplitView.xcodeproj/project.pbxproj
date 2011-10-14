@@ -35,7 +35,6 @@
 		554F7CC01446EE7F00F9C24D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7CAE1446EE7F00F9C24D /* Utils.m */; };
 		554F7CCF1446F70C00F9C24D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F7CCE1446F70C00F9C24D /* ImageIO.framework */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
-		55D47FCB1434A64C00AB6A5C /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D47FCA1434A64C00AB6A5C /* Apartment.m */; };
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
@@ -140,8 +139,6 @@
 		554F7CAE1446EE7F00F9C24D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = CoreData/Utils.m; sourceTree = "<group>"; };
 		554F7CCE1446F70C00F9C24D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		55D47FC91434A64C00AB6A5C /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = SOURCE_ROOT; };
-		55D47FCA1434A64C00AB6A5C /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = SOURCE_ROOT; };
 		7D0CD7721427900A00E9F0FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D0CD7741427901300E9F0FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -246,8 +243,6 @@
 			children = (
 				554F7C8A1446EE3500F9C24D /* CoreData */,
 				8F0DFCB3143CAE170079589F /* Calendar library */,
-				55D47FC91434A64C00AB6A5C /* Apartment.h */,
-				55D47FCA1434A64C00AB6A5C /* Apartment.m */,
 				1D3623240D0F684500981E51 /* TabBarWithSplitViewAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
@@ -597,7 +592,6 @@
 				8F9537E014320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.m in Sources */,
 				8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */,
 				8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */,
-				55D47FCB1434A64C00AB6A5C /* Apartment.m in Sources */,
 				8FF71620143B06D0005ADEDF /* MonatEventDetailView.m in Sources */,
 				8FF71627143B09B3005ADEDF /* EventRootViewController.m in Sources */,
 				8FD448ED143B283F004887B6 /* NewsRootViewController.m in Sources */,

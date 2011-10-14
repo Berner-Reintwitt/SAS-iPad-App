@@ -64,6 +64,8 @@
         NSLog(@"ObjListe2 parse error");
     }
     
+    
+    /*
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpictures", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
     aparser = [[ObjPictureParser alloc] initWithContext:context];
@@ -99,9 +101,8 @@
     if (!b) {
         NSLog(@"AvailabilityInfo2 parse error");
     }
-
+    */
     return s;
 }
-
 
 @end

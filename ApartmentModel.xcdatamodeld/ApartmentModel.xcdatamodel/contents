@@ -100,13 +100,13 @@
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPicture" inverseName="images" inverseEntity="ObjPicture" syncable="YES"/>
     </entity>
     <elements>
+        <element name="AvailabilityInfo2" positionX="-1559" positionY="0" width="128" height="120"/>
         <element name="ObjAttribute" positionX="-2151" positionY="-351" width="126" height="105"/>
         <element name="ObjInfo2" positionX="-1937" positionY="-486" width="128" height="690"/>
         <element name="ObjPicture" positionX="-1703" positionY="-450" width="128" height="165"/>
-        <element name="ObjPriceInfo" positionX="-1773" positionY="-207" width="128" height="135"/>
+        <element name="ObjPriceInfo" positionX="-1685" positionY="-207" width="128" height="135"/>
         <element name="ObjText" positionX="-2196" positionY="-99" width="128" height="105"/>
-        <element name="Price" positionX="-1512" positionY="-204" width="128" height="135"/>
-        <element name="ScaledImage" positionX="-1487" positionY="-477" width="128" height="150"/>
-        <element name="AvailabilityInfo2" positionX="-1550" positionY="36" width="128" height="120"/>
+        <element name="Price" positionX="-1512" positionY="-207" width="128" height="135"/>
+        <element name="ScaledImage" positionX="-1523" positionY="-450" width="128" height="150"/>
     </elements>
 </model>
