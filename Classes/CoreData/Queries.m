@@ -20,26 +20,24 @@
 
 + (ObjInfo2 *) getApartment:(NSString *)withExID context:(NSManagedObjectContext *)context {
     ObjInfo2 *result;
-    @autoreleasepool {
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
-        [fetchRequest setEntity:entity];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(exid == %@)", withExID];
-        [fetchRequest setPredicate:predicate];
-        NSError *error = nil;
-        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-        if (nil == fetchedObjects || fetchedObjects.count == 0) {
-            // Handle the error
-            NSLog(@"AbstractParser.getObjInfo2: missing exid(%s)", [withExID UTF8String]);
-            return nil;
-        }
-        [fetchRequest release];
-        if (fetchedObjects.count > 1) {
-            NSLog(@"AbstractParser.getObjInfo2: multiple exid(%s)", [withExID UTF8String]);
-            return nil;
-        }
-        result = [fetchedObjects objectAtIndex:0];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(exid == %@)", withExID];
+    [fetchRequest setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    if (nil == fetchedObjects || fetchedObjects.count == 0) {
+        // Handle the error
+        NSLog(@"AbstractParser.getObjInfo2: missing exid(%s)", [withExID UTF8String]);
+        return nil;
     }
+    //[fetchRequest release];
+    if (fetchedObjects.count > 1) {
+        NSLog(@"AbstractParser.getObjInfo2: multiple exid(%s)", [withExID UTF8String]);
+        return nil;
+    }
+    result = [fetchedObjects objectAtIndex:0];
     return result;
 }
 
@@ -64,8 +62,6 @@
         NSLog(@"ObjListe2 parse error");
     }
     
-    
-    /*
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpictures", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
     aparser = [[ObjPictureParser alloc] initWithContext:context];
@@ -101,7 +97,7 @@
     if (!b) {
         NSLog(@"AvailabilityInfo2 parse error");
     }
-    */
+
     return s;
 }
 
