@@ -7,6 +7,8 @@
 //
 
 #import "Utils.h"
+#import "Queries.h"
+
 
 NSString *DATASOURCE_URL = @"http://progro.localsite.here/DataSource.ashx";
 
@@ -102,7 +104,6 @@ NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger 
                     PICTURE_quality, [NSString stringWithFormat:@"%d", quality],
                     nil);
 }
-
 
 
 NSURL *applicationDocumentsDirectory() {

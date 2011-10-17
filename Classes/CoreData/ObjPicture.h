@@ -1,8 +1,8 @@
 //
 //  ObjPicture.h
-//  xmlLoad
+//  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 12.10.11.
+//  Created by Berndt Reinhold on 17.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -19,8 +19,8 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) ObjInfo2 *parent;
 @property (nonatomic, retain) NSSet *images;
+@property (nonatomic, retain) ObjInfo2 *parent;
 @end
 
 @interface ObjPicture (CoreDataGeneratedAccessors)
@@ -29,4 +29,5 @@
 - (void)removeImagesObject:(ScaledImage *)value;
 - (void)addImages:(NSSet *)values;
 - (void)removeImages:(NSSet *)values;
+
 @end

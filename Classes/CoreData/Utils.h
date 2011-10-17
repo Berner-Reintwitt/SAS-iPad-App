@@ -37,10 +37,16 @@ NSPersistentStoreCoordinator *persistentStoreCoordinator(void);
 NSURL *applicationDocumentsDirectory(void);
 void saveContext(void);
 
+
+
+
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);
 void logError(NSError *error);
 NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger quality, NSString *mode);
+
+
+
 
 @interface Utils : NSObject
 @end

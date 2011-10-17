@@ -17,8 +17,10 @@
 + (NSDate *)parseDate:(NSString *)text {
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
-    NSString *s = [text stringByReplacingOccurrencesOfString:@" " withString:@"T"];
+    NSString *s = [NSString stringWithString: text];
+    s = [s stringByReplacingOccurrencesOfString:@" " withString:@"T"];
     NSDate *date = [dateFormatter dateFromString:s];
+    [dateFormatter release];
     return date;
 }
 + (NSNumber *)parseBoolean:(NSString *)text { return [NSNumber numberWithBool: [@"true" compare:text] == NSOrderedSame]; }
@@ -55,14 +57,23 @@
     
     [self closeTag:elementName namespaceURI:namespaceURI qualifiedName:qName parentName:parentElement myDict:myDict parentDict:parentDict];
     
+    [myDict removeAllObjects];
+    //[myDict release];
+    //[lastElement release];
+    
 }
 
 - (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     NSString *elementName = elementStack.lastObject;
     NSMutableDictionary *parentDict = [dictionaryStack objectAtIndex:dictionaryStack.count - 2];
     NSString *value = [parentDict objectForKey:elementName];
-    value = (nil == value) ? string : [value stringByAppendingString:string];
-    [parentDict setObject:value forKey:elementName];
+    NSString *newValue;
+    if (nil == value) {
+        newValue = string;
+    } else {
+        newValue = [value stringByAppendingString:string];
+    }
+    [parentDict setObject:newValue forKey:elementName];
 }
 
 - (void) parserDidStartDocument:(NSXMLParser *)parser {

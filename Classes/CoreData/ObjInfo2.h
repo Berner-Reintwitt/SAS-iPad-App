@@ -1,8 +1,8 @@
 //
 //  ObjInfo2.h
-//  xmlLoad
+//  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 12.10.11.
+//  Created by Berndt Reinhold on 17.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -64,20 +64,25 @@
 - (void)removeAttributesObject:(ObjAttribute *)value;
 - (void)addAttributes:(NSSet *)values;
 - (void)removeAttributes:(NSSet *)values;
+
 - (void)addAvailabilityInfoObject:(AvailabilityInfo2 *)value;
 - (void)removeAvailabilityInfoObject:(AvailabilityInfo2 *)value;
 - (void)addAvailabilityInfo:(NSSet *)values;
 - (void)removeAvailabilityInfo:(NSSet *)values;
+
 - (void)addPicturesObject:(ObjPicture *)value;
 - (void)removePicturesObject:(ObjPicture *)value;
 - (void)addPictures:(NSSet *)values;
 - (void)removePictures:(NSSet *)values;
+
 - (void)addPriceInfoObject:(ObjPriceInfo *)value;
 - (void)removePriceInfoObject:(ObjPriceInfo *)value;
 - (void)addPriceInfo:(NSSet *)values;
 - (void)removePriceInfo:(NSSet *)values;
+
 - (void)addTextsObject:(ObjText *)value;
 - (void)removeTextsObject:(ObjText *)value;
 - (void)addTexts:(NSSet *)values;
 - (void)removeTexts:(NSSet *)values;
+
 @end

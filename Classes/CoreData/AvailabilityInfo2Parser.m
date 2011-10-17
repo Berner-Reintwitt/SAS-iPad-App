@@ -18,10 +18,14 @@
 
     if ([CLASS_AvailabilityInfo2 compare:elementName] == NSOrderedSame) {
         AvailabilityInfo2 *aInfo = [NSEntityDescription insertNewObjectForEntityForName:CLASS_AvailabilityInfo2 inManagedObjectContext:context];
-        aInfo.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
-        aInfo.startDate = [AbstractParser parseDate:[mDict objectForKey:NAME_startDate]];
-        aInfo.bookingWeekStart = [mDict objectForKey:NAME_BookingWeekStart];
-        aInfo.dayAvailability = [mDict objectForKey:NAME_DayAvailability];
+        NSDate *timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
+        aInfo.timestamp = timestamp;
+        NSDate *startDate = [AbstractParser parseDate:[mDict objectForKey:NAME_startDate]];
+        aInfo.startDate = startDate;
+        NSString *bookingWeekStart = [mDict objectForKey:NAME_BookingWeekStart];
+        aInfo.bookingWeekStart = bookingWeekStart;
+        NSString *dayAvailability = [mDict objectForKey:NAME_DayAvailability];
+        aInfo.dayAvailabilty = dayAvailability;
         NSString *exid = [mDict objectForKey:NAME_objectID];
         ObjInfo2 *a = [Queries getApartment:exid context:context];
         if (nil != a) {

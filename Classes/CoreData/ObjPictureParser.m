@@ -20,9 +20,17 @@
 - (void) closeTag:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName parentName:(NSString *)pName myDict:(NSMutableDictionary *) mDict parentDict:(NSMutableDictionary *) pDict {
 
     if ([CLASS_ObjPicture compare:elementName] == NSOrderedSame) {
+        
+        NSString *exid = [mDict objectForKey:NAME_exid];
+        //if ([exid compare:@"1/04"] != NSOrderedSame) return;
+        
         ObjPicture *picture = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ObjPicture inManagedObjectContext:context];
         picture.title = [mDict objectForKey:NAME_title];
-        picture.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
+        NSDate *timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
+        if (nil == timestamp) {
+            NSLog(@"no timestamp %s", [exid UTF8String]);
+        }
+        picture.timestamp = timestamp;
         picture.type = [mDict objectForKey:NAME_type];
         picture.url = [mDict objectForKey:NAME_url];
         picture.thumb_url = [mDict objectForKey:NAME_thumb_url];
@@ -63,9 +71,10 @@
 */
         }
         
-        NSString *exid = [mDict objectForKey:NAME_exid];
         ObjInfo2 *a = [Queries getApartment:exid context:context];
-        [a addPicturesObject:picture];
+        if (nil != a) {
+            [a addPicturesObject:picture];
+        }
     }
 
 }

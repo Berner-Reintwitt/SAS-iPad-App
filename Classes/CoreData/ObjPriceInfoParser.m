@@ -20,30 +20,34 @@
     
     if ([CLASS_Price compare:elementName] == NSOrderedSame) {
         Price *price = [NSEntityDescription insertNewObjectForEntityForName:CLASS_Price inManagedObjectContext:context];
-        price.dateFrom = [AbstractParser parseDate:[mDict objectForKey:NAME_dateFrom]];
-        price.dateTo = [AbstractParser parseDate:[mDict objectForKey:NAME_dateTo]];
-        price.styp = [mDict objectForKey:NAME_styp];
-        price.typ = [mDict objectForKey:NAME_typ];
-        price.price = [AbstractParser parseFloat:[mDict objectForKey:NAME_price]];
-        NSMutableSet *prices = [pDict objectForKey:SET_Price];
-        if (nil == prices) {
-            prices = [NSMutableSet setWithCapacity:20];
-            [pDict setObject:prices forKey:SET_Price];
+            if (nil != price) {
+                price.dateFrom = [AbstractParser parseDate:[mDict objectForKey:NAME_dateFrom]];
+                price.dateTo = [AbstractParser parseDate:[mDict objectForKey:NAME_dateTo]];
+                price.styp = [mDict objectForKey:NAME_styp];
+                price.typ = [mDict objectForKey:NAME_typ];
+                price.price = [AbstractParser parseFloat:[mDict objectForKey:NAME_price]];
+                NSMutableSet *prices = [pDict objectForKey:SET_Price];
+                if (nil == prices) {
+                    prices = [NSMutableSet setWithCapacity:20];
+                    [pDict setObject:prices forKey:SET_Price];
+                }
+                [prices addObject:price];
         }
-        [prices addObject:price];
-        
        
     } else if ([CLASS_ObjPriceInfo compare:elementName] == NSOrderedSame) {
         ObjPriceInfo *pInfo = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ObjPriceInfo inManagedObjectContext:context];
-        pInfo.typ = [mDict objectForKey:NAME_prli];
-        pInfo.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
-        pInfo.prli = [AbstractParser parseInt: [mDict objectForKey:NAME_prli]];
-        pInfo.prices = [mDict objectForKey:SET_Price];
-        NSString *exid = [mDict objectForKey:NAME_exid];
-        
-        ObjInfo2 *a = [Queries getApartment:exid context:context];
-        [a addPriceInfoObject:pInfo];
-        
+        if (nil != pInfo) {
+            pInfo.typ = [mDict objectForKey:NAME_prli];
+            pInfo.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
+            pInfo.prli = [AbstractParser parseInt: [mDict objectForKey:NAME_prli]];
+            pInfo.prices = [mDict objectForKey:SET_Price];
+            NSString *exid = [mDict objectForKey:NAME_exid];
+            
+            ObjInfo2 *a = [Queries getApartment:exid context:context];
+            if (nil != a) {
+                [a addPriceInfoObject:pInfo];            
+            }
+        }
     }
     
 }

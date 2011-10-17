@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "ObjInfo2.h"
 
+void startImport(void);
+
+
 @interface Queries : NSObject
 
 + (ObjInfo2 *) getApartment:(NSString *)withExID context:(NSManagedObjectContext *)context;
 
 + (ObjInfo2 *) newApartment:(NSManagedObjectContext *)context;
 
-+ (BOOL) initialImport:(NSManagedObjectContext *)context;
++ (void) initialImport:(NSManagedObjectContext *)context;
 
 @end

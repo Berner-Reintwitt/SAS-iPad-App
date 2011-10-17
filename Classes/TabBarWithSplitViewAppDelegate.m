@@ -237,10 +237,7 @@
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    [Queries initialImport:managedObjectContext()];
-//    saveContext(); 
-    
-    
+    startImport();
     
     return YES;
 }

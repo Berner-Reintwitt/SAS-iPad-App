@@ -54,15 +54,12 @@ NSString *date1;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerDomizile;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerShuttleService;
-@property (nonatomic, retain) IBOutlet  EnhancedSplitViewController *splitViewControllerEvents;
+@property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerEvents;
 @property (nonatomic, retain) IBOutlet DomizileRootViewController *domizileRootViewController;
 @property (nonatomic, retain) IBOutlet DomizileFirstDetailViewController *firstDetailViewController;
 @property (nonatomic, retain) IBOutlet ShuttleServiceRootViewController *shuttleServiceRootViewController;
 @property (nonatomic, retain) IBOutlet ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;
 @property (nonatomic, retain) IBOutlet MonatEventDetailView *firstMonthDetailViewController;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property NSInteger whichTablePopUpView;
 
 @end
