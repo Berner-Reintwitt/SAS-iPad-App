@@ -1,8 +1,8 @@
 //
 //  AvailabilityInfo2.h
-//  xmlLoad
+//  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 12.10.11.
+//  Created by Berndt Reinhold on 17.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @interface AvailabilityInfo2 : NSManagedObject
 
 @property (nonatomic, retain) NSString * bookingWeekStart;
-@property (nonatomic, retain) NSString * dayAvailability;
+@property (nonatomic, retain) NSString * dayAvailabilty;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) ObjInfo2 *parent;
