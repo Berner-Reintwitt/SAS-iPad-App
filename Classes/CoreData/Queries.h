@@ -11,7 +11,6 @@
 
 void startImport(void);
 
-
 @interface Queries : NSObject
 
 + (ObjInfo2 *) getApartment:(NSString *)withExID context:(NSManagedObjectContext *)context;

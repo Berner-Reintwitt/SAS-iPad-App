@@ -84,7 +84,7 @@ NSData *readData(NSString *url, NSString *action, ...) {
     va_end(argumentList);
     
     NSURL *url_query = [NSURL URLWithString: query];
-    NSURLRequest *request = [NSURLRequest requestWithURL: url_query];
+	NSURLRequest *request = [NSURLRequest requestWithURL: url_query];
     NSError *error = nil;
     NSURLResponse *response;
     result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
@@ -151,12 +151,12 @@ NSManagedObjectModel *managedObjectModel() {
  If the coordinator doesn't already exist, it is created and the application's store added to it.
  */
 NSPersistentStoreCoordinator *persistentStoreCoordinator() {
-    static NSPersistentStoreCoordinator *__persistentStoreCoordinator;
-    if (__persistentStoreCoordinator != nil) {
-        return __persistentStoreCoordinator;
-    }
+	static NSPersistentStoreCoordinator *__persistentStoreCoordinator;
+	if (__persistentStoreCoordinator != nil) {
+		return __persistentStoreCoordinator;
+	}
     
-    NSURL *storeURL = [applicationDocumentsDirectory() URLByAppendingPathComponent:@"Apartments.sqlite"];
+	NSURL *storeURL = [applicationDocumentsDirectory() URLByAppendingPathComponent:@"Apartments.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel()];
@@ -210,39 +210,39 @@ void saveContext() {
 
 
 /*
-static NSArray *fetchAll(NSManagedObjectContext *context, NSString *entityName) {
-    //NSManagedObjectContext *context = <#Get the context#>;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSError *error = nil;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    if (fetchedObjects == nil) {
-        // Handle the error
-    }
-    [fetchRequest release];    
-    return fetchedObjects;
-}
-
-static NSArray *fetchAllAndSort(NSManagedObjectContext *context, NSString *entityName, NSString *sortKey) {
-    //NSManagedObjectContext *context = <#Get the context#>;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    NSError *error = nil;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    if (fetchedObjects == nil) {
-        // Handle the error
-    }
-    [fetchRequest release];
-    [sortDescriptor release];
-    [sortDescriptors release];    
-    return fetchedObjects;
-}
-*/
+ static NSArray *fetchAll(NSManagedObjectContext *context, NSString *entityName) {
+ //NSManagedObjectContext *context = <#Get the context#>;
+ NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+ NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+ [fetchRequest setEntity:entity];
+ NSError *error = nil;
+ NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+ if (fetchedObjects == nil) {
+ // Handle the error
+ }
+ [fetchRequest release];    
+ return fetchedObjects;
+ }
+ 
+ static NSArray *fetchAllAndSort(NSManagedObjectContext *context, NSString *entityName, NSString *sortKey) {
+ //NSManagedObjectContext *context = <#Get the context#>;
+ NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+ NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+ [fetchRequest setEntity:entity];
+ NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES];
+ NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+ [fetchRequest setSortDescriptors:sortDescriptors];
+ NSError *error = nil;
+ NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+ if (fetchedObjects == nil) {
+ // Handle the error
+ }
+ [fetchRequest release];
+ [sortDescriptor release];
+ [sortDescriptors release];    
+ return fetchedObjects;
+ }
+ */
 
 
 

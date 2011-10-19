@@ -8,8 +8,6 @@
 
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "CoreData/Queries.h"
-#import "CoreData/Utils.h"
-
 
 @implementation TabBarWithSplitViewAppDelegate
 
