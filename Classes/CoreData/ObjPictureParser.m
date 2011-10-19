@@ -40,35 +40,18 @@
         NSString *url = picture.big_url;
         if (nil == url || url.length == 0) url = picture.url;
         if (nil == url || url.length == 0) url = picture.thumb_url;
-        
         if (nil != url && url.length > 0) {
-/*
             ScaledImage *image = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ScaledImage inManagedObjectContext:context];
             image.data = readData(DATASOURCE_URL, ACTION_picture, PICTURE_url, EndcodeBase16(url), PICTURE_mode, PICTURE_MODE_original, nil);
-
-            
-            CFDataRef dataRef = (CFDataRef) image.data;
-            
-            CGDataProviderRef dataProviderRef = CGDataProviderCreateWithCFData(dataRef);
-
-            CFDictionaryRef dictionaryRef = NULL;
-
-            CGImageSourceRef imgSourceRef = CGImageSourceCreateWithData(dataRef, dictionaryRef);
-            
-            
-            CGImageRef imgRef = CGImageCreateWithJPEGDataProvider(dataProviderRef, NULL, true, kCGRenderingIntentDefault);
-           
-            
-            
-            
-//            image.width = [NSNumber numberWithInt:(int) ([img size].width)];  
-//            image.height = [NSNumber numberWithInt:(int) ([img size].height)];
+            UIImage *ui = [UIImage imageWithData:image.data];
+            CGSize size = ui.size;
+            image.width = [NSNumber numberWithFloat: size.width];  
+            image.height = [NSNumber numberWithFloat: size.height];
             image.mode = @"original";
             image.quality = [NSNumber numberWithInt: 100]; // TODO: echten Wert feststellen
             image.timestamp = [NSDate date];
             [picture addImagesObject:image];
-//            [img release];
-*/
+            //[ui release];
         }
         
         ObjInfo2 *a = [Queries getApartment:exid context:context];
