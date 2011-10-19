@@ -7,6 +7,13 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="availabilityInfo" inverseEntity="ObjInfo2" syncable="YES"/>
     </entity>
+    <entity name="KeyValueData" syncable="YES">
+        <attribute name="key" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Binary" syncable="YES"/>
+        <fetchedProperty name="getValue" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="KeyValueData" predicateString="key=@key"/>
+        </fetchedProperty>
+    </entity>
     <entity name="ObjAttribute" representedClassName="ObjAttribute" syncable="YES">
         <attribute name="id_" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
@@ -108,5 +115,6 @@
         <element name="ObjText" positionX="-2196" positionY="-99" width="128" height="105"/>
         <element name="Price" positionX="-1512" positionY="-207" width="128" height="135"/>
         <element name="ScaledImage" positionX="-1523" positionY="-450" width="128" height="150"/>
+        <element name="KeyValueData" positionX="160" positionY="192" width="128" height="104"/>
     </elements>
 </model>
