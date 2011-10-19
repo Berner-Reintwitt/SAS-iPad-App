@@ -36,6 +36,7 @@
 		554F7CCF1446F70C00F9C24D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F7CCE1446F70C00F9C24D /* ImageIO.framework */; };
 		559A78421448839F009754FC /* libdispatch.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A78411448839F009754FC /* libdispatch.dylib */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
+		55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6226144F039900C90EA4 /* KeyValueData.m */; };
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
@@ -141,6 +142,8 @@
 		554F7CCE1446F70C00F9C24D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		559A78411448839F009754FC /* libdispatch.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdispatch.dylib; path = usr/lib/system/libdispatch.dylib; sourceTree = SDKROOT; };
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		55DE6225144F039900C90EA4 /* KeyValueData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueData.h; path = CoreData/KeyValueData.h; sourceTree = "<group>"; };
+		55DE6226144F039900C90EA4 /* KeyValueData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueData.m; path = CoreData/KeyValueData.m; sourceTree = "<group>"; };
 		7D0CD7721427900A00E9F0FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D0CD7741427901300E9F0FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -365,6 +368,8 @@
 				55196942144C66BF00021F34 /* Price.m */,
 				55196944144C66C000021F34 /* ScaledImage.h */,
 				55196945144C66C000021F34 /* ScaledImage.m */,
+				55DE6225144F039900C90EA4 /* KeyValueData.h */,
+				55DE6226144F039900C90EA4 /* KeyValueData.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 				55196940144C66BE00021F34 /* ObjText.m in Sources */,
 				55196943144C66BF00021F34 /* Price.m in Sources */,
 				55196946144C66C000021F34 /* ScaledImage.m in Sources */,
+				55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

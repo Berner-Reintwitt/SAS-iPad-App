@@ -100,6 +100,7 @@ NSString *NAME_mode = @"mode";
 NSString *NAME_data = @"data";
 
 
+NSString *CLASS_KeyValueData = @"KeyValueData";
 
 
 @implementation StringConsts

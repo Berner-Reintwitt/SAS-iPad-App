@@ -13,9 +13,11 @@ void startImport(void);
 
 @interface Queries : NSObject
 
-+ (ObjInfo2 *) getApartment:(NSString *)withExID context:(NSManagedObjectContext *)context;
++ (ObjInfo2 *) getApartment:(NSManagedObjectContext *)context withExID:(NSString *)exid;
 
-+ (ObjInfo2 *) newApartment:(NSManagedObjectContext *)context;
++ (NSArray *) getAllApartments:(NSManagedObjectContext *)context;
+
++ (NSInteger) countApartments:(NSManagedObjectContext *)context;
 
 + (void) initialImport:(NSManagedObjectContext *)context;
 

@@ -16,50 +16,78 @@
 #import "AvailabilityInfo2Parser.h"
 #import "StringConsts.h"
 
-
-
-
 static void __startImport(void *ctx) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    NSManagedObjectContext *context =  (NSManagedObjectContext *) ctx;
-    [Queries initialImport: context];
+    
+	NSManagedObjectContext *context =  (NSManagedObjectContext *) ctx;
+	
+	[[context undoManager] disableUndoRegistration];
+	
+    [Queries initialImport: context]; // make changes for which undo operations are not to be recorded
+
+	[[context undoManager] enableUndoRegistration];	
+
+	saveContext();
+	
     [pool release];
 }
 
 void startImport(void) {
-    dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async_f(aQueue, managedObjectContext(), &__startImport);
+	NSManagedObjectContext *context = managedObjectContext();
+	if ([Queries countApartments:context] <= 0) {
+		dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+		dispatch_async_f(aQueue, context, &__startImport);
+	}
 }
-
 
 @implementation Queries
 
-+ (ObjInfo2 *) getApartment:(NSString *)withExID context:(NSManagedObjectContext *)context {
++ (ObjInfo2 *) getApartment:(NSManagedObjectContext *)context withExID:(NSString *)exid {
     ObjInfo2 *result;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(exid == %@)", withExID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(exid == %@)", exid];
     [fetchRequest setPredicate:predicate];
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     [fetchRequest release];
     if (nil == fetchedObjects || fetchedObjects.count == 0) {
         // Handle the error
-        NSLog(@"AbstractParser.getObjInfo2: missing exid(%s)", [withExID UTF8String]);
+        NSLog(@"AbstractParser.getObjInfo2: missing exid(%s)", [exid UTF8String]);
         return nil;
     }
     if (fetchedObjects.count > 1) {
-        NSLog(@"AbstractParser.getObjInfo2: multiple exid(%s)", [withExID UTF8String]);
+        NSLog(@"AbstractParser.getObjInfo2: multiple exid(%s)", [exid UTF8String]);
         //return nil;
     }
     result = [fetchedObjects objectAtIndex:0];
     return result;
 }
 
-+ (ObjInfo2 *) newApartment:(NSManagedObjectContext *)context {
-    ObjInfo2 *apartment = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
-    return [apartment retain];
++ (NSArray *) getAllApartments:(NSManagedObjectContext *)context {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+	[fetchRequest setPredicate:nil];
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+    [fetchRequest release];
+    return result;
+}
+
++ (NSInteger) countApartments:(NSManagedObjectContext *)context {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+	[fetchRequest setPredicate:nil];
+    NSError *error = nil;
+    NSInteger result = [context countForFetchRequest:fetchRequest error:&error];
+	if (nil != error) {
+		result = -1;
+	}
+    [fetchRequest release];
+    return result;
 }
 
 + (void) initialImport:(NSManagedObjectContext *)context {
@@ -81,7 +109,7 @@ void startImport(void) {
     }
     [pXML release];
     [aparser release];
-    saveContext();
+    [context processPendingChanges];
     
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpictures", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
@@ -95,7 +123,7 @@ void startImport(void) {
     }
     [pXML release];
     [aparser release];
-    saveContext();
+    [context processPendingChanges];
 
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objtexts", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
@@ -109,7 +137,7 @@ void startImport(void) {
     }
     [pXML release];
     [aparser release];
-    saveContext();
+    [context processPendingChanges];
 
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpricelists", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
@@ -123,7 +151,7 @@ void startImport(void) {
     }
     [pXML release];
     [aparser release];
-    saveContext();
+    [context processPendingChanges];
  
     
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"availabilityinfo", nil);
@@ -138,7 +166,7 @@ void startImport(void) {
     }
     [pXML release];
     [aparser release];
-    saveContext();
+    [context processPendingChanges];
 
     if (!s) {
         NSLog(@"inport failed");

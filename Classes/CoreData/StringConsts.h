@@ -107,6 +107,7 @@ extern NSString *NAME_height;
 extern NSString *NAME_mode;
 extern NSString *NAME_data;
 
+extern NSString *CLASS_KeyValueData;
 
 @interface StringConsts : NSObject
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ImageIO/ImageIO.h>
+#import "ScaledImage.h"
 
 extern NSString *DATASOURCE_URL;
 
@@ -37,16 +39,20 @@ NSPersistentStoreCoordinator *persistentStoreCoordinator(void);
 NSURL *applicationDocumentsDirectory(void);
 void saveContext(void);
 
-
-
+NSData *getData(NSManagedObjectContext *context, NSString *key);
+void setData(NSManagedObjectContext *context, NSString *key, NSData *data);
 
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);
 void logError(NSError *error);
 NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger quality, NSString *mode);
 
+NSString *NewUUID();
 
+NSData *getData(NSManagedObjectContext *context, NSString *key);
+void setData(NSManagedObjectContext *context, NSString *key, NSData *value);
 
+UIImage *getCFImageRef(ScaledImage *scaledImage);
 
 @interface Utils : NSObject
 @end

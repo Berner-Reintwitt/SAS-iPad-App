@@ -8,6 +8,8 @@
 
 #import "Utils.h"
 #import "Queries.h"
+#import "KeyValueData.h"
+#import "StringConsts.h"
 
 
 NSString *DATASOURCE_URL = @"http://progro.localsite.here/DataSource.ashx";
@@ -50,11 +52,64 @@ NSString *EndcodeBase16(NSString *string) {
     return result;
 }
 
+NSString *NewUUID() {
+	CFUUIDRef uid = CFMakeCollectable(CFUUIDCreate(NULL));
+	CFStringRef uidStr = CFMakeCollectable(CFUUIDCreateString(NULL, uid));
+	NSString *result = [[NSString alloc] initWithString:(NSString *)uidStr];
+	[(id)uid release];
+	[(id)uidStr release];
+	return result;
+}
 
 void logError(NSError *error) {
     NSString *domain = [error domain];
     NSInteger code = [error code];
     NSLog(@"*** domain(%s) code(%d)", [domain UTF8String], code);
+}
+
+NSData *getData(NSManagedObjectContext *context, NSString *key) {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_KeyValueData inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(key == %@)", key];
+    [fetchRequest setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    [fetchRequest release];
+    if (nil == fetchedObjects || fetchedObjects.count == 0) {
+        // Handle the error
+        NSLog(@"Utils.m - getData: missing key (%s)", [key UTF8String]);
+        return nil;
+    }
+    if (fetchedObjects.count > 1) {
+        NSLog(@"Utils.m - getData: multiple keys (%s)", [key UTF8String]);
+        return nil;
+    }
+	KeyValueData *result = [fetchedObjects objectAtIndex:0];
+    return result.value;
+}
+
+void setData(NSManagedObjectContext *context, NSString *key, NSData *value) {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_KeyValueData inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(key == %@)", key];
+    [fetchRequest setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    [fetchRequest release];
+    if (nil == fetchedObjects || fetchedObjects.count == 0) {
+        // Handle the error
+        NSLog(@"Utils.m - getData: missing key (%s)", [key UTF8String]);
+        return;
+    }
+    if (fetchedObjects.count > 1) {
+        NSLog(@"Utils.m - getData: multiple keys (%s)", [key UTF8String]);
+        return;
+    }
+	KeyValueData *result = [fetchedObjects objectAtIndex:0];
+    result.value = value;
+	[context processPendingChanges];
 }
 
 
@@ -206,6 +261,13 @@ void saveContext() {
             abort();
         } 
     }
+}
+
+
+UIImage *getCFImageRef(ScaledImage *scaledImage) {
+	UIImage *result;
+	UIImage *ui = [UIImage imageWithData:scaledImage.data];
+	return result;
 }
 
 

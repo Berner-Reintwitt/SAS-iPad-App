@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <ImageIO/ImageIO.h>
 #import "ObjPictureParser.h"
 #import "ObjInfo2.h"
 #import "ObjPicture.h"
@@ -13,7 +14,6 @@
 #import "StringConsts.h"
 #import "Utils.h"
 #import "Queries.h"
-#import <ImageIO/ImageIO.h>
 
 @implementation ObjPictureParser
 
