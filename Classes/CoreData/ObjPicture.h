@@ -2,7 +2,7 @@
 //  ObjPicture.h
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 17.10.11.
+//  Created by Berndt Reinhold on 20.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * url;
+@property (nonatomic, retain) NSNumber * serial;
 @property (nonatomic, retain) NSSet *images;
 @property (nonatomic, retain) ObjInfo2 *parent;
 @end

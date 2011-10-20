@@ -16,7 +16,6 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		55196931144C66B600021F34 /* AvailabilityInfo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196930144C66B600021F34 /* AvailabilityInfo2.m */; };
-		55196934144C66B900021F34 /* ObjPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196933144C66B800021F34 /* ObjPicture.m */; };
 		55196937144C66BA00021F34 /* ObjAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196936144C66BA00021F34 /* ObjAttribute.m */; };
 		5519693A144C66BB00021F34 /* ObjInfo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196939144C66BB00021F34 /* ObjInfo2.m */; };
 		5519693D144C66BD00021F34 /* ObjPriceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519693C144C66BC00021F34 /* ObjPriceInfo.m */; };
@@ -37,6 +36,7 @@
 		559A78421448839F009754FC /* libdispatch.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A78411448839F009754FC /* libdispatch.dylib */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
 		55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6226144F039900C90EA4 /* KeyValueData.m */; };
+		55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623114504B7500C90EA4 /* ObjPicture.m */; };
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
@@ -108,8 +108,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5519692F144C66B500021F34 /* AvailabilityInfo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailabilityInfo2.h; path = CoreData/AvailabilityInfo2.h; sourceTree = "<group>"; usesTabs = 1; };
 		55196930144C66B600021F34 /* AvailabilityInfo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailabilityInfo2.m; path = CoreData/AvailabilityInfo2.m; sourceTree = "<group>"; usesTabs = 1; };
-		55196932144C66B800021F34 /* ObjPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjPicture.h; path = CoreData/ObjPicture.h; sourceTree = "<group>"; usesTabs = 1; };
-		55196933144C66B800021F34 /* ObjPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjPicture.m; path = CoreData/ObjPicture.m; sourceTree = "<group>"; usesTabs = 1; };
 		55196935144C66B900021F34 /* ObjAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjAttribute.h; path = CoreData/ObjAttribute.h; sourceTree = "<group>"; usesTabs = 1; };
 		55196936144C66BA00021F34 /* ObjAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjAttribute.m; path = CoreData/ObjAttribute.m; sourceTree = "<group>"; usesTabs = 1; };
 		55196938144C66BB00021F34 /* ObjInfo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjInfo2.h; path = CoreData/ObjInfo2.h; sourceTree = "<group>"; usesTabs = 1; };
@@ -146,6 +144,8 @@
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		55DE6225144F039900C90EA4 /* KeyValueData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueData.h; path = CoreData/KeyValueData.h; sourceTree = "<group>"; };
 		55DE6226144F039900C90EA4 /* KeyValueData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueData.m; path = CoreData/KeyValueData.m; sourceTree = "<group>"; };
+		55DE623014504B7500C90EA4 /* ObjPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjPicture.h; path = CoreData/ObjPicture.h; sourceTree = "<group>"; };
+		55DE623114504B7500C90EA4 /* ObjPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjPicture.m; path = CoreData/ObjPicture.m; sourceTree = "<group>"; };
 		7D0CD7721427900A00E9F0FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D0CD7741427901300E9F0FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -359,8 +359,6 @@
 				554F7CAE1446EE7F00F9C24D /* Utils.m */,
 				5519692F144C66B500021F34 /* AvailabilityInfo2.h */,
 				55196930144C66B600021F34 /* AvailabilityInfo2.m */,
-				55196932144C66B800021F34 /* ObjPicture.h */,
-				55196933144C66B800021F34 /* ObjPicture.m */,
 				55196935144C66B900021F34 /* ObjAttribute.h */,
 				55196936144C66BA00021F34 /* ObjAttribute.m */,
 				55196938144C66BB00021F34 /* ObjInfo2.h */,
@@ -375,6 +373,8 @@
 				55196945144C66C000021F34 /* ScaledImage.m */,
 				55DE6225144F039900C90EA4 /* KeyValueData.h */,
 				55DE6226144F039900C90EA4 /* KeyValueData.m */,
+				55DE623014504B7500C90EA4 /* ObjPicture.h */,
+				55DE623114504B7500C90EA4 /* ObjPicture.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -640,7 +640,6 @@
 				554F7CC01446EE7F00F9C24D /* Utils.m in Sources */,
 				551D58E11447110C000F0E97 /* ApartmentModel.xcdatamodeld in Sources */,
 				55196931144C66B600021F34 /* AvailabilityInfo2.m in Sources */,
-				55196934144C66B900021F34 /* ObjPicture.m in Sources */,
 				55196937144C66BA00021F34 /* ObjAttribute.m in Sources */,
 				5519693A144C66BB00021F34 /* ObjInfo2.m in Sources */,
 				5519693D144C66BD00021F34 /* ObjPriceInfo.m in Sources */,
@@ -649,6 +648,7 @@
 				55196946144C66C000021F34 /* ScaledImage.m in Sources */,
 				55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */,
 				8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */,
+				55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
