@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "AbstractParser.h"
 
-@interface ObjPictureParser : AbstractParser
+@interface ObjPictureParser : AbstractParser {
+	NSInteger serial;
+}
 
 - (void) closeTag:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName parentName:(NSString *)pName myDict:(NSMutableDictionary *) mDict parentDict:(NSMutableDictionary *) pDict;
 

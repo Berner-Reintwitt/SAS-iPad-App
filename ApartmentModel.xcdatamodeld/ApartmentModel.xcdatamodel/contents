@@ -67,6 +67,7 @@
     </entity>
     <entity name="ObjPicture" representedClassName="ObjPicture" syncable="YES">
         <attribute name="big_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="thumb_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>

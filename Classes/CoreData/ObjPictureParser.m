@@ -36,7 +36,7 @@
         picture.thumb_url = [mDict objectForKey:NAME_thumb_url];
         picture.big_url = [mDict objectForKey:NAME_big_url];
         picture.images = [NSSet set];
-        
+		picture.serial = [NSNumber numberWithInt:++serial];
         NSString *url = picture.big_url;
         if (nil == url || url.length == 0) url = picture.url;
         if (nil == url || url.length == 0) url = picture.thumb_url;
