@@ -11,6 +11,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SuchergebnisseKarte.h"
 #import "CoreData/ObjInfo2.h"
+#import "CoreData/ObjInfo2+Extensions.h"
 #import "CoreData/Queries.h"
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
@@ -71,41 +72,38 @@
 
 #pragma mark - #pragma mark Table View Data Source Methods 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
-    return [self.listData count];
+    return [Queries countApartments:managedObjectContext()];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-      //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
+    //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
            
-        if (cell == nil) { 
-            NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
-            //cell = [[[UITableViewCell alloc]
-                            //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
-            cell=self.domizilCell;              
-                    }
-        NSUInteger row = [indexPath row];
-    NSArray * apartments= [Queries getAllApartments:managedObjectContext()];
-    ObjInfo2 *obj=[apartments objectAtIndex:row];
-    NSArray *objpics=obj.pictures.allObjects;
+    if (cell == nil) { 
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+        //cell = [[[UITableViewCell alloc]
+        //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+        cell = self.domizilCell;              
+    }
+
+    NSUInteger row = [indexPath row];
+    NSArray * apartments = [Queries getAllApartments:managedObjectContext()];
+    ObjInfo2 *obj = [apartments objectAtIndex:row];
+    NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
-    ScaledImage *scalepic=pic.images.anyObject;
-    UIImage * img=getCFImageRef(scalepic);
-    UIImage *img2=[UIImage imageNamed:@"pig.png"];  
+    ScaledImage *scalepic = pic.images.anyObject;
+    UIImage *img = getCFImageRef(scalepic);
+    //UIImage *img2=[UIImage imageNamed:@"pig.png"];  
     
- 
     
     [domizilImageView setImage:img];
     
+    firstTextLabel.text = obj.name;
     
-    
-    
-        firstTextLabel.text=obj.name;
-    
-      //  cell.imageView.image = image;
-     //   cell.detailTextLabel.text=@"Hallo";
-       // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
-        return cell;
+    //  cell.imageView.image = image;
+    //   cell.detailTextLabel.text=@"Hallo";
+    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
