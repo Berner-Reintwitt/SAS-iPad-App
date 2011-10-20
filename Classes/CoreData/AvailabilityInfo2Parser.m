@@ -27,7 +27,7 @@
         NSString *dayAvailability = [mDict objectForKey:NAME_DayAvailability];
         aInfo.dayAvailabilty = dayAvailability;
         NSString *exid = [mDict objectForKey:NAME_objectID];
-        ObjInfo2 *a = [Queries getApartment:exid context:context];
+        ObjInfo2 *a = [Queries getApartment:context	withExID:exid];
         if (nil != a) {
             [a addAvailabilityInfoObject:aInfo];
         } else {

@@ -54,10 +54,14 @@
             //[ui release];
         }
         
-        ObjInfo2 *a = [Queries getApartment:exid context:context];
+        ObjInfo2 *a = [Queries getApartment:context withExID:exid];
         if (nil != a) {
             [a addPicturesObject:picture];
         }
+		else{
+			
+			NSLog(@"missing xid(%s)",[exid UTF8String]);
+		}
     }
 
 }

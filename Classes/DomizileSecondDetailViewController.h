@@ -15,6 +15,7 @@
     UITableViewCell *domizilCell;
     NSArray *listData;
     UILabel *firstTextLabel;
+    UIImageView *domizilImageView;
 
 } 
 
@@ -22,6 +23,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
 @property (nonatomic,retain) NSArray *listData;
 @property (retain, nonatomic) IBOutlet  UITableViewCell *domizilCell;
+@property (retain, nonatomic) IBOutlet UIImageView *domizilImageView;
 - (IBAction)sortierenButtonWasPressed:(id)sender;
 - (IBAction)karteButtonWasPressed:(id)sender;
 

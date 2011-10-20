@@ -12,11 +12,16 @@
 @interface SuchergebnisseHausDetail : UIViewController <TKCalendarMonthViewDataSource,TKCalendarMonthViewDelegate>
 {
     TKCalendarMonthViewController *calender;
+    UIScrollView *scrollView;
+    UIPageControl *pageControl;
     
     
     
 }
 
 @property (nonatomic, retain) TKCalendarMonthViewController *calender;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (retain, nonatomic) IBOutlet UIPageControl *pageControl;
+- (IBAction)changePage:(id)sender;
 
 @end

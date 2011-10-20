@@ -266,7 +266,10 @@ void saveContext() {
 
 UIImage *getCFImageRef(ScaledImage *scaledImage) {
 	UIImage *result;
+	id t=scaledImage.data;
 	UIImage *ui = [UIImage imageWithData:scaledImage.data];
+	
+	[result retain];
 	return result;
 }
 

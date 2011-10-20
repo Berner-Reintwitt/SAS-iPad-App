@@ -35,7 +35,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUITableViewCell" id="248446230">
@@ -51,6 +51,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{660, 84}, {29, 31}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="46833235"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -84,6 +85,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{36, 20}, {186, 144}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="157480332"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -98,6 +100,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{525, 20}, {70, 21}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="819988912"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -127,6 +130,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{517, 133}, {78, 37}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<int key="IBUIContentHorizontalAlignment">0</int>
@@ -147,6 +151,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{261, 15}, {221, 169}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="978317147"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -170,6 +175,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{504, 49}, {151, 79}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="67682737"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -196,8 +202,9 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrameSize">{768, 190}</string>
+								<string key="NSFrameSize">{320, 190}</string>
 								<reference key="NSSuperview" ref="248446230"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="977597581"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -212,6 +219,7 @@
 						</array>
 						<string key="NSFrame">{{25, 236}, {719, 236}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="99098375"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<reference key="IBUIContentView" ref="99098375"/>
@@ -219,6 +227,8 @@
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="248446230"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -250,6 +260,14 @@
 						<reference key="destination" ref="157480332"/>
 					</object>
 					<int key="connectionID">15</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">domizilImageView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="977597581"/>
+					</object>
+					<int key="connectionID">17</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -285,10 +303,10 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="67682737"/>
 							<reference ref="978317147"/>
-							<reference ref="977597581"/>
 							<reference ref="46833235"/>
-							<reference ref="157480332"/>
 							<reference ref="819988912"/>
+							<reference ref="157480332"/>
+							<reference ref="977597581"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">DomizilCell</string>
@@ -344,16 +362,60 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">15</int>
+			<int key="maxID">17</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">DomizileSecondDetailViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="karteButtonWasPressed:">id</string>
+						<string key="sortierenButtonWasPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="karteButtonWasPressed:">
+							<string key="name">karteButtonWasPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="sortierenButtonWasPressed:">
+							<string key="name">sortierenButtonWasPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="domizilCell">UITableViewCell</string>
+						<string key="domizilImageView">UIImageView</string>
+						<string key="firstTextLabel">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="domizilCell">
+							<string key="name">domizilCell</string>
+							<string key="candidateClassName">UITableViewCell</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="domizilImageView">
+							<string key="name">domizilImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="firstTextLabel">
+							<string key="name">firstTextLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/DomizileSecondDetailViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">star.png</string>
-			<string key="NS.object.0">{320, 305}</string>
+			<string key="NS.object.0">{200, 200}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">931</string>
 	</data>

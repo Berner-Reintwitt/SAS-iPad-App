@@ -10,11 +10,17 @@
 #import "SortierenNachPopOver.h"
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SuchergebnisseKarte.h"
+#import "CoreData/ObjInfo2.h"
+#import "CoreData/Queries.h"
+#import "CoreData/Utils.h"
+#import "CoreData/ObjPicture.h"
+#import "CoreData/ScaledImage.h"
 
 @implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
 @synthesize listData;
 @synthesize domizilCell;
+@synthesize domizilImageView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,6 +57,7 @@
 - (void)viewDidUnload
 {   self.listData = nil;
     [self setFirstTextLabel:nil];
+    [self setDomizilImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -77,8 +84,24 @@
                             //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
             cell=self.domizilCell;              
                     }
+        NSUInteger row = [indexPath row];
+    NSArray * apartments= [Queries getAllApartments:managedObjectContext()];
+    ObjInfo2 *obj=[apartments objectAtIndex:row];
+    NSArray *objpics=obj.pictures.allObjects;
+    ObjPicture *pic = [objpics objectAtIndex:0];
+    ScaledImage *scalepic=pic.images.anyObject;
+    UIImage * img=getCFImageRef(scalepic);
+    UIImage *img2=[UIImage imageNamed:@"pig.png"];  
     
-        firstTextLabel.text=@"hallo";
+ 
+    
+    [domizilImageView setImage:img];
+    
+    
+    
+    
+        firstTextLabel.text=obj.name;
+    
       //  cell.imageView.image = image;
      //   cell.detailTextLabel.text=@"Hallo";
        // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
@@ -93,6 +116,7 @@
 }
 - (void)dealloc {
     [firstTextLabel release];
+    [domizilImageView release];
     [super dealloc];
 }
 - (IBAction)sortierenButtonWasPressed:(id)sender {

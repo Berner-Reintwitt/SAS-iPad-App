@@ -22,7 +22,7 @@
         text.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
         text.text = [mDict objectForKey:NAME_text];
         NSString *exid = [mDict objectForKey:NAME_exid];        
-        ObjInfo2 *a = [Queries getApartment:exid context:context];
+        ObjInfo2 *a = [Queries getApartment:context withExID:exid];
         if (nil != a) {
             [a addTextsObject:text];
         }

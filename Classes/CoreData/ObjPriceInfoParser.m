@@ -43,7 +43,7 @@
             pInfo.prices = [mDict objectForKey:SET_Price];
             NSString *exid = [mDict objectForKey:NAME_exid];
             
-            ObjInfo2 *a = [Queries getApartment:exid context:context];
+            ObjInfo2 *a = [Queries getApartment:context	withExID:exid];
             if (nil != a) {
                 [a addPriceInfoObject:pInfo];            
             }
