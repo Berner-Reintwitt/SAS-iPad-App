@@ -45,6 +45,7 @@ NSString *date1;
     EventRootViewController *eventRootViewController;
     DomizileFirstDetailViewController *firstDetailViewController;
     DomizileRootViewController *domizileRootViewController;
+    
 }
 
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerNews;

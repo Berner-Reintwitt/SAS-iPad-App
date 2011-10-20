@@ -17,5 +17,6 @@
 - (IBAction)zurueckWasPressed:(id)sender;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *zurueckNavigationButtonItem;
 - (IBAction)suchergebnisseButtonWasPressed:(id)sender;
+- (IBAction)detailAnsichtWasPressed:(id)sender;
 
 @end

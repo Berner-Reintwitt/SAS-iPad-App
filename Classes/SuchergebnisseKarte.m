@@ -9,6 +9,7 @@
 #import "SuchergebnisseKarte.h"
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SortierenNachPopOver.h"
+#import "SuchergebnisseHausDetail.h"
 
 @implementation SuchergebnisseKarte
 @synthesize zurueckNavigationButtonItem;
@@ -68,6 +69,18 @@
     
     UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:sortierenNachPopOver];
     [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    
+}
+
+- (IBAction)detailAnsichtWasPressed:(id)sender {
+    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tabBarController.selectedViewController dismissModalViewControllerAnimated:YES];
+    SuchergebnisseHausDetail *suchergebnissHaus=[[SuchergebnisseHausDetail alloc]initWithNibName:@"SuchergebnisseHausDetail" bundle:nil];
+    
+    suchergebnissHaus.modalPresentationStyle=UIModalPresentationFullScreen;
+    suchergebnissHaus.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+    
+    [appDelegate.tabBarController.selectedViewController presentModalViewController:[appDelegate.tabBarController.viewControllers objectAtIndex:0] animated:YES];
     
 }
 @end

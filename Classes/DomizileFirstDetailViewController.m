@@ -10,6 +10,7 @@
 #import "DomizileRootViewController.h"
 #import "SearchPopUpViewController.h"
 #import "SuchergebnisseKarte.h"
+#import "SuchergebnisseHausDetail.h"
 
 
 @interface DomizileFirstDetailViewController ()
@@ -204,10 +205,12 @@
 - (IBAction)suchenButtonWasPressed:(id)sender {
     
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-    
+    SuchergebnisseHausDetail *sucherg=[[SuchergebnisseHausDetail alloc]initWithNibName:@"SuchergebnisseHausDetail" bundle:nil];
+    sucherg.modalPresentationStyle=UIModalPresentationFullScreen;
+    sucherg.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
     suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:suchergebnisseKarte animated:YES];
+    [self presentModalViewController:sucherg animated:YES];
 }
 
 

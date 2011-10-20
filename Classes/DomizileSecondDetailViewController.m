@@ -90,12 +90,12 @@
     NSArray *objpics=obj.pictures.allObjects;
     ObjPicture *pic = [objpics objectAtIndex:0];
     ScaledImage *scalepic=pic.images.anyObject;
-    UIImage * img=getCFImageRef(scalepic);
+  //  UIImage * img=getCFImageRef(scalepic);
     UIImage *img2=[UIImage imageNamed:@"pig.png"];  
     
  
     
-    [domizilImageView setImage:img];
+    [domizilImageView setImage:img2];
     
     
     
