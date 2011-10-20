@@ -240,7 +240,7 @@ NSPersistentStoreCoordinator *persistentStoreCoordinator() {
          
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }    
     
     return __persistentStoreCoordinator;
