@@ -451,12 +451,12 @@
 				8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */,
 				8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */,
 				8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */,
+				8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */,
 				8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */,
 				8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */,
 				8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */,
 				8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */,
 				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
-				8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */,
 			);
 			name = Domizile;
 			sourceTree = "<group>";

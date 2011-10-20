@@ -12,7 +12,7 @@
 #import "SuchergebnisseHausDetail.h"
 
 @implementation SuchergebnisseKarte
-@synthesize zurueckNavigationButtonItem;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,13 +35,18 @@
 
 - (void)viewDidLoad
 {   
+    button=[[UIBarButtonItem alloc]initWithTitle:@"zurück" style:UIBarButtonItemStyleBordered target:self action:@selector (zurueckWasPressed:)];
+    [button setTitle:@"zurück"];
+                       
+    self.navigationItem.leftBarButtonItem=button;
+    [button setTag:1];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
-    [self setZurueckNavigationButtonItem:nil];
+   
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -53,15 +58,15 @@
 	return YES;
 }
 
-- (IBAction)zurueckWasPressed:(id)sender {
-    TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+- (void)zurueckWasPressed:(id)sender {
+        TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.domizileRootViewController.splitViewController dismissModalViewControllerAnimated:YES];
     NSLog(@"Hallo0");
     
     
 }
 - (void)dealloc {
-    [zurueckNavigationButtonItem release];
+   
     [super dealloc];
 }
 - (IBAction)suchergebnisseButtonWasPressed:(id)sender {
@@ -74,13 +79,17 @@
 
 - (IBAction)detailAnsichtWasPressed:(id)sender {
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.tabBarController.selectedViewController dismissModalViewControllerAnimated:YES];
+    
+    
     SuchergebnisseHausDetail *suchergebnissHaus=[[SuchergebnisseHausDetail alloc]initWithNibName:@"SuchergebnisseHausDetail" bundle:nil];
     
-    suchergebnissHaus.modalPresentationStyle=UIModalPresentationFullScreen;
-    suchergebnissHaus.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+   // suchergebnissHaus.modalPresentationStyle=UIModalPresentationFullScreen;
+    //suchergebnissHaus.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
     
-    [appDelegate.tabBarController.selectedViewController presentModalViewController:[appDelegate.tabBarController.viewControllers objectAtIndex:0] animated:YES];
+   
     
+    [navigationControllerModalViews pushViewController:suchergebnissHaus animated:YES];
 }
+
+
 @end

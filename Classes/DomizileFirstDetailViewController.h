@@ -13,7 +13,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 
 
-@interface DomizileFirstDetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate > {
+@interface DomizileFirstDetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate,UINavigationBarDelegate > {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
@@ -78,6 +78,7 @@
 - (IBAction)sliderValueChanged:(id)sender;
 - (IBAction)touchResetTextField:(id)sender;
 - (IBAction)suchenButtonWasPressed:(id)sender;
+- (IBAction)zurueckButtonwasPressed:(id)sender;
 
 
 @end

@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SuchergebnisseKarte : UIViewController<UITableViewDelegate, UITableViewDataSource>{
-    UIBarButtonItem *zurueckNavigationButtonItem;
+@interface SuchergebnisseKarte : UIViewController<UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate>{
+    
+    UIBarButtonItem *button;
 
     
     
 }
 - (IBAction)zurueckWasPressed:(id)sender;
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *zurueckNavigationButtonItem;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *button;
 - (IBAction)suchergebnisseButtonWasPressed:(id)sender;
 - (IBAction)detailAnsichtWasPressed:(id)sender;
+
 
 @end

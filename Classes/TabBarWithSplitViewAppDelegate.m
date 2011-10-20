@@ -231,9 +231,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
     navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:suchergebnisseKarte];
-    navigationControllerModalViews.modalPresentationStyle=UIModalPresentationFullScreen;
-    navigationControllerModalViews.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    //navigationControllerModalViews.navigationBar.
+    navigationControllerModalViews.modalPresentationStyle=UIModalPresentationCurrentContext;
+    navigationControllerModalViews.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+    
+    
+    
     // Override point for customization after app launch.
     [self makeSplitViewController];
     // Set the tab bar controller as the window's root view controller and display.
