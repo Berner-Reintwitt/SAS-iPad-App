@@ -91,12 +91,9 @@
         suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
         suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStylePartialCurl;
         
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:suchergebnisseKarte];
         
-        // You can even set the style of stuff before you show it
-        navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 
-        [self presentModalViewController:navigationController animated:YES];
+        [self presentModalViewController:suchergebnisseKarte animated:YES];
         
     
 }

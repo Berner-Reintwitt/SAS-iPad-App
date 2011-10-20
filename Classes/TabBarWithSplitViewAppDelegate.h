@@ -20,6 +20,8 @@
 #import "NewsRootViewController.h"
 
 NSString *date1;
+UINavigationController *navigationControllerModalViews;
+
 
 
 
@@ -30,7 +32,7 @@ NSString *date1;
 
 
 
-@interface TabBarWithSplitViewAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
+@interface TabBarWithSplitViewAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,UINavigationBarDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
     NewsRootViewController *newsRootViewController;
@@ -45,7 +47,7 @@ NSString *date1;
     EventRootViewController *eventRootViewController;
     DomizileFirstDetailViewController *firstDetailViewController;
     DomizileRootViewController *domizileRootViewController;
-    
+        
 }
 
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerNews;
@@ -61,6 +63,7 @@ NSString *date1;
 @property (nonatomic, retain) IBOutlet ShuttleServiceRootViewController *shuttleServiceRootViewController;
 @property (nonatomic, retain) IBOutlet ShuttleServiceDetailViewControllerMaserati *shuttleServiceDetailViewControllerMaserati;
 @property (nonatomic, retain) IBOutlet MonatEventDetailView *firstMonthDetailViewController;
+@property (nonatomic, retain) UINavigationController *navigationControllerModalViews;
 @property NSInteger whichTablePopUpView;
 
 @end

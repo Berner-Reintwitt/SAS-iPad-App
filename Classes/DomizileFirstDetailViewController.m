@@ -203,14 +203,15 @@
 }
 
 - (IBAction)suchenButtonWasPressed:(id)sender {
-    
-    SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+    TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+   // SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
     SuchergebnisseHausDetail *sucherg=[[SuchergebnisseHausDetail alloc]initWithNibName:@"SuchergebnisseHausDetail" bundle:nil];
-    sucherg.modalPresentationStyle=UIModalPresentationFullScreen;
-    sucherg.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
-    suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:sucherg animated:YES];
+    UINavigationController *navcontr=[[UINavigationController alloc]initWithRootViewController:sucherg];
+    //sucherg.modalPresentationStyle=UIModalPresentationFullScreen;
+    //sucherg.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+   // suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
+    //suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:navigationControllerModalViews animated:YES];
 }
 
 

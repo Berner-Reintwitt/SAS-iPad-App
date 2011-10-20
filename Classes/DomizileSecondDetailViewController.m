@@ -71,10 +71,12 @@
 
 #pragma mark - #pragma mark Table View Data Source Methods 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
-    return [self.listData count];
+    apartments= [Queries getAllApartments:managedObjectContext()];
+    NSInteger count=[apartments count];
+    return [apartments count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+        apartments= [Queries getAllApartments:managedObjectContext()];
       //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
            
@@ -85,17 +87,17 @@
             cell=self.domizilCell;              
                     }
         NSUInteger row = [indexPath row];
-    NSArray * apartments= [Queries getAllApartments:managedObjectContext()];
+    
     ObjInfo2 *obj=[apartments objectAtIndex:row];
     NSArray *objpics=obj.pictures.allObjects;
     ObjPicture *pic = [objpics objectAtIndex:0];
     ScaledImage *scalepic=pic.images.anyObject;
-  //  UIImage * img=getCFImageRef(scalepic);
+    UIImage * img=getCFImageRef(scalepic);
     UIImage *img2=[UIImage imageNamed:@"pig.png"];  
     
  
     
-    [domizilImageView setImage:img2];
+    [domizilImageView setImage:img];
     
     
     

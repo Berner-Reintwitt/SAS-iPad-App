@@ -16,7 +16,7 @@
     NSArray *listData;
     UILabel *firstTextLabel;
     UIImageView *domizilImageView;
-
+    NSArray * apartments;
 } 
 
 
