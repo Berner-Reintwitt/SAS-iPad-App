@@ -17,6 +17,7 @@
 #import "CoreData/ObjPicture.h"
 #import "CoreData/ScaledImage.h"
 #import "SuchergebnisseHausDetail.h"
+#import "CoreData/ScaledImage+Extensions.h"
 
 @implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
