@@ -11,12 +11,10 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SuchergebnisseKarte.h"
 #import "CoreData/ObjInfo2.h"
-#import "CoreData/ObjInfo2+Extensions.h"
 #import "CoreData/Queries.h"
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
 #import "CoreData/ScaledImage.h"
-#import "CoreData/ScaledImage+Extensions.h"
 
 @implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
@@ -73,50 +71,56 @@
 
 #pragma mark - #pragma mark Table View Data Source Methods 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
-    return [Queries countApartments:managedObjectContext()];
+    apartments= [Queries getAllApartments:managedObjectContext()];
+    NSInteger count=[apartments count];
+    return [apartments count];
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   
-    //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
+        apartments= [Queries getAllApartments:managedObjectContext()];
+      //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
            
-    if (cell == nil) { 
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
-        //cell = [[[UITableViewCell alloc]
-        //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
-        cell = self.domizilCell;              
-    }
-
-    NSUInteger row = [indexPath row];
-    NSArray *apartments = [Queries getAllApartmentsOrderedByExID:managedObjectContext()];
-    ObjInfo2 *obj = [apartments objectAtIndex:row];
-    NSArray *objpics = [obj OrderedPictures];
+        if (cell == nil) { 
+            NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+            //cell = [[[UITableViewCell alloc]
+                            //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+            cell=self.domizilCell;              
+                    }
+        NSUInteger row = [indexPath row];
+    
+    ObjInfo2 *obj=[apartments objectAtIndex:row];
+    NSArray *objpics=obj.pictures.allObjects;
     ObjPicture *pic = [objpics objectAtIndex:0];
-    ScaledImage *scalepic = pic.images.anyObject;
-    UIImage *img = [scalepic getImage];
+    ScaledImage *scalepic=pic.images.anyObject;
+    UIImage * img=getCFImageRef(scalepic);
+    UIImage *img2=[UIImage imageNamed:@"pig.png"];  
+    
+ 
+    
     [domizilImageView setImage:img];
     
-    firstTextLabel.text = obj.name;
     
-    //  cell.imageView.image = image;
-    //   cell.detailTextLabel.text=@"Hallo";
-    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
-    return cell;
+    
+    
+        firstTextLabel.text=obj.name;
+    
+      //  cell.imageView.image = image;
+     //   cell.detailTextLabel.text=@"Hallo";
+       // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+        return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSString *sectionHeader = nil;
     sectionHeader=@"Domizile";
     return  sectionHeader;
+    
 }
-
 - (void)dealloc {
     [firstTextLabel release];
     [domizilImageView release];
     [super dealloc];
 }
-
 - (IBAction)sortierenButtonWasPressed:(id)sender {
     
    SortierenNachPopOver *sortierenNachPopOver =[[SortierenNachPopOver alloc] initWithNibName:@"SortierenNachPopOver" bundle:nil];
@@ -133,6 +137,9 @@
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
     [self presentModalViewController:suchergebnisseKarte animated:YES];
    // [self.view addSubview:suchergebnisseKarte.view];
+    
 }
+
+
 
 @end
