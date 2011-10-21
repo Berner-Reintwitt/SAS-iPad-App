@@ -7,11 +7,16 @@
 //
 
 #import "ObjInfo2.h"
+#import "SearchParameters.h"
 
 @interface ObjInfo2 (Extensions)
 
 - (NSArray *) OrderedPictures;
 
 + (NSArray *) AllApartments;
+
+
++ (NSArray *) LocalSearch:(SearchParameters *)sparam;
+
 
 @end

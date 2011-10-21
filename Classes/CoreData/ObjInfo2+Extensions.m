@@ -39,6 +39,30 @@ static NSInteger picSort(id pic1, id pic2, void *context) {
     return result;
 }
 
++ (NSArray *) LocalSearch:(SearchParameters *)sparam {
+    
+    NSArray *all = [ObjInfo2 AllApartments];
+    /*
+    NSExpression *lhs = [NSExpression expressionForKeyPath:NAME_max_persons];
+    NSExpression *gtPersons = [NSExpression expressionForConstantValue:[NSNumber numberWithInt: sparam.adults + sparam.children]];
+    NSPredicate *gtPersonsPred = [NSComparisonPredicate
+                                  predicateWithLeftExpression:lhs
+                                  rightExpression:gtPersons
+                                  modifier:NSDirectPredicateModifier
+                                  type:NSGreaterThanPredicateOperatorType
+                                  options:0];
+    */
+    NSPredicate *pred = [NSPredicate
+                         predicateWithFormat:@"(max_persons >= %@)"
+                         arguments:[NSNumber numberWithInt:sparam.adults + sparam.children]
+                         ];
+    
+    
+    NSArray *result = [all filteredArrayUsingPredicate: pred];
+    
+    return result;
+    
+}
 
 
 

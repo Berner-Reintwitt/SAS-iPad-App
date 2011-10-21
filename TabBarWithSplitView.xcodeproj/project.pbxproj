@@ -664,6 +664,7 @@
 				55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */,
 				8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */,
 				55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */,
+				8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */,
 				55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */,
 				55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */,
 			);
