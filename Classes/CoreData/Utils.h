@@ -52,7 +52,15 @@ NSString *NewUUID();
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *value);
 
-UIImage *getCFImageRef(ScaledImage *scaledImage);
+UIImage *scaleImage(UIImage *image);
+
+
+
+
+
+
+
+
 
 @interface Utils : NSObject
 @end

@@ -16,6 +16,7 @@
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
 #import "CoreData/ScaledImage.h"
+#import "CoreData/ScaledImage+Extensions.h"
 
 @implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
@@ -74,6 +75,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
     return [Queries countApartments:managedObjectContext()];
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
@@ -87,15 +89,12 @@
     }
 
     NSUInteger row = [indexPath row];
-    NSArray * apartments = [Queries getAllApartments:managedObjectContext()];
+    NSArray *apartments = [Queries getAllApartmentsOrderedByExID:managedObjectContext()];
     ObjInfo2 *obj = [apartments objectAtIndex:row];
     NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
     ScaledImage *scalepic = pic.images.anyObject;
-    UIImage *img = getCFImageRef(scalepic);
-    //UIImage *img2=[UIImage imageNamed:@"pig.png"];  
-    
-    
+    UIImage *img = [scalepic getImage];
     [domizilImageView setImage:img];
     
     firstTextLabel.text = obj.name;
@@ -106,17 +105,18 @@
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *sectionHeader = nil;
     sectionHeader=@"Domizile";
     return  sectionHeader;
-    
 }
+
 - (void)dealloc {
     [firstTextLabel release];
     [domizilImageView release];
     [super dealloc];
 }
+
 - (IBAction)sortierenButtonWasPressed:(id)sender {
     
    SortierenNachPopOver *sortierenNachPopOver =[[SortierenNachPopOver alloc] initWithNibName:@"SortierenNachPopOver" bundle:nil];
@@ -133,6 +133,6 @@
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
     [self presentModalViewController:suchergebnisseKarte animated:YES];
    // [self.view addSubview:suchergebnisseKarte.view];
-    
 }
+
 @end
