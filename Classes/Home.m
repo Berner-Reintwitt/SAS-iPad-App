@@ -94,14 +94,15 @@
         
         //appDelegate.window.rootViewController=navigationControllerModalViews;
         
-        [self presentModalViewController:navigationControllerModalViews animated:YES];
+        [self.navigationController pushViewController:suchergebnisseKarte animated:YES];
         
     
 }
 
 - (IBAction)erwachseneStepperWasPressed:(id)sender {
     erwachseneLabel.text =[[NSString alloc]initWithFormat:@"%d",(int)erwachseneStepper.value];
-    
+   
+    param.adults=erwachseneStepper.value;
 }
 
 - (IBAction)uebernachtungStepperWasPressed:(id)sender {
@@ -159,6 +160,8 @@
     self.listData1=array1;
     self.listData2=array2;
     self.listData3=array3;
+    
+    param=[SearchParameters globalSearchParameters ];
     cellCount=0;
     zielPopOver=YES;
     

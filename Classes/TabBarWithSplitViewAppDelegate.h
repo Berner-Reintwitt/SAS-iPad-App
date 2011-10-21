@@ -18,6 +18,7 @@
 #import "EventRootViewController.h"
 #import "NewsDetailView.h"
 #import "NewsRootViewController.h"
+#import "SearchParameters.h"
 
 NSString *date1;
 UINavigationController *navigationControllerModalViews;
@@ -47,6 +48,9 @@ UINavigationController *navigationControllerModalViews;
     EventRootViewController *eventRootViewController;
     DomizileFirstDetailViewController *firstDetailViewController;
     DomizileRootViewController *domizileRootViewController;
+    NSMutableArray *controllers;
+    
+    
         
 }
 
@@ -65,5 +69,7 @@ UINavigationController *navigationControllerModalViews;
 @property (nonatomic, retain) IBOutlet MonatEventDetailView *firstMonthDetailViewController;
 @property (nonatomic, retain) UINavigationController *navigationControllerModalViews;
 @property NSInteger whichTablePopUpView;
+@property (nonatomic, retain) NSMutableArray *controllers;
+
 
 @end

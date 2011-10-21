@@ -84,7 +84,9 @@
 - (void)calendarMonthView:(TKCalendarMonthView *)monthView didSelectDate:(NSDate *)d {
 	
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Home *controller = (Home *)[appDelegate.tabBarController.viewControllers objectAtIndex:0];
+    UINavigationController *nav = (UINavigationController *)[appDelegate.tabBarController.viewControllers objectAtIndex:0];
+    Home *h=(Home *)[nav.viewControllers objectAtIndex:0] ;
+                                           
     // Verhalten für den NSDateFormatter festlegen
     [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
     
@@ -117,18 +119,27 @@
     }
     
     
-    else if(controller.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
+    else if(h.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
         
         
-        [controller.anreiseButton setTitle:date1 forState:UIControlStateNormal];
-    
+        [h.anreiseButton setTitle:date1 forState:UIControlStateNormal];
+        SearchParameters *param=[SearchParameters globalSearchParameters];
+        param.dateFrom=d;
+        
         
     }
     
-    else if(!controller.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
+    else if(!h.anreiseButtonIsSelected&&appDelegate.tabBarController.selectedIndex==0){ 
         
         
-        [controller.abreiseButton setTitle:date1 forState:UIControlStateNormal];
+        
+        SearchParameters *param=[SearchParameters globalSearchParameters];
+        param.dateTo=d;
+        if(param.dateTo.timeIntervalSince1970>param.dateFrom.timeIntervalSince1970){
+           
+            [h.abreiseButton setTitle:date1 forState:UIControlStateNormal];
+        }
+        NSLog(@"%@",param.dateTo);
         
         
     }

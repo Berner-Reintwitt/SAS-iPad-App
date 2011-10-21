@@ -89,12 +89,7 @@
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    
-   
         static NSString *CellIdentifier = @"Cell";
-        
-        
-        
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
         if (cell == nil) {
@@ -125,8 +120,56 @@
         return cell;
     }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+   SearchParameters * param=[SearchParameters globalSearchParameters ];
+    if(appDelegate.whichTablePopUpView==4){
+        
+        param.city=[array3 objectAtIndex:indexPath.row];
+        NSString *s=[array3 objectAtIndex:indexPath.row];
+        NSLog(param.city);
+    }
     
+    else if (appDelegate.whichTablePopUpView==5){
+        if(indexPath.row==1){
+            param.groupID=12010;
+            }
+    }
+        
+    else if (appDelegate.whichTablePopUpView==5){
+        if(indexPath.row==2){
+            param.groupID=12005;
+            }
+    }
+    
+    else if (appDelegate.whichTablePopUpView==5){
+            if(indexPath.row==3){
+                param.groupID=12001;
+                }
+    }
+    
+     else if (appDelegate.whichTablePopUpView==5){
+            if(indexPath.row==4){
+                param.groupID=12014;
+                    
+            }
+     }
+     else if (appDelegate.whichTablePopUpView==5){
+            if(indexPath.row==5){
+                param.groupID=10016;
+            }   
+     }
+    
+     else if (appDelegate.whichTablePopUpView==5){
+         if(indexPath.row==6){
+             param.groupID=12011;
+         }   
+     }
+    
+
+
+}
+
     
     
     
