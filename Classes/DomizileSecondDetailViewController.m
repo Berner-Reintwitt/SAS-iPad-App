@@ -11,6 +11,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SuchergebnisseKarte.h"
 #import "CoreData/ObjInfo2.h"
+#import "CoreData/ObjInfo2+Extensions.h"
 #import "CoreData/Queries.h"
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
@@ -89,12 +90,12 @@
                     }
         NSUInteger row = [indexPath row];
     
-    ObjInfo2 *obj=[apartments objectAtIndex:row];
-    NSArray *objpics=obj.pictures.allObjects;
+    ObjInfo2 *obj = [apartments objectAtIndex:row];
+    NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
-    ScaledImage *scalepic=pic.images.anyObject;
-    UIImage * img=getCFImageRef(scalepic);
-    UIImage *img2=[UIImage imageNamed:@"pig.png"];  
+    ScaledImage *scalepic = pic.images.anyObject;
+    UIImage * img =[scalepic getImage];
+    //    UIImage *img2 = [UIImage imageNamed:@"pig.png"];  
     
  
     
@@ -103,7 +104,7 @@
     
     
     
-        firstTextLabel.text=obj.name;
+    firstTextLabel.text=obj.name;
     
       //  cell.imageView.image = image;
      //   cell.detailTextLabel.text=@"Hallo";

@@ -40,6 +40,10 @@ void startImport(void) {
 	}
 }
 
+static NSInteger orderByExid(id obj1, id obj2, void *context) {
+	return [((ObjInfo2 *) obj1).exid compare:((ObjInfo2 *) obj2).exid];
+}
+
 @implementation Queries
 
 + (ObjInfo2 *) getApartment:(NSManagedObjectContext *)context withExID:(NSString *)exid {
@@ -76,6 +80,12 @@ void startImport(void) {
     return result;
 }
 
++ (NSArray *) getAllApartmentsOrderedByExID:(NSManagedObjectContext *)context {
+	NSArray *unorderedApartments = [Queries getAllApartments:context];
+	NSArray *orderedApartments = [unorderedApartments sortedArrayUsingFunction:orderByExid context:NULL];
+	return orderedApartments;
+}
+
 + (NSInteger) countApartments:(NSManagedObjectContext *)context {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
@@ -91,7 +101,6 @@ void startImport(void) {
 }
 
 + (void) initialImport:(NSManagedObjectContext *)context {
-
     NSData *xmlData;
     NSXMLParser *pXML;
     AbstractParser *aparser;

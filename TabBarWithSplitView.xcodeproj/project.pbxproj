@@ -37,6 +37,8 @@
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
 		55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6226144F039900C90EA4 /* KeyValueData.m */; };
 		55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623114504B7500C90EA4 /* ObjPicture.m */; };
+		55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */; };
+		55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */; };
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
@@ -149,6 +151,10 @@
 		55DE6226144F039900C90EA4 /* KeyValueData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueData.m; path = CoreData/KeyValueData.m; sourceTree = "<group>"; };
 		55DE623014504B7500C90EA4 /* ObjPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjPicture.h; path = CoreData/ObjPicture.h; sourceTree = "<group>"; };
 		55DE623114504B7500C90EA4 /* ObjPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjPicture.m; path = CoreData/ObjPicture.m; sourceTree = "<group>"; };
+		55DE6237145060F200C90EA4 /* ObjInfo2+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjInfo2+Extensions.h"; path = "CoreData/ObjInfo2+Extensions.h"; sourceTree = "<group>"; };
+		55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjInfo2+Extensions.m"; path = "CoreData/ObjInfo2+Extensions.m"; sourceTree = "<group>"; };
+		55DE623A1450722B00C90EA4 /* ScaledImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ScaledImage+Extensions.h"; path = "CoreData/ScaledImage+Extensions.h"; sourceTree = "<group>"; };
+		55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ScaledImage+Extensions.m"; path = "CoreData/ScaledImage+Extensions.m"; sourceTree = "<group>"; };
 		7D0CD7721427900A00E9F0FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D0CD7741427901300E9F0FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -350,40 +356,44 @@
 			children = (
 				554F7C8C1446EE7F00F9C24D /* AbstractParser.h */,
 				554F7C8D1446EE7F00F9C24D /* AbstractParser.m */,
+				5519692F144C66B500021F34 /* AvailabilityInfo2.h */,
+				55196930144C66B600021F34 /* AvailabilityInfo2.m */,
 				554F7C901446EE7F00F9C24D /* AvailabilityInfo2Parser.h */,
 				554F7C911446EE7F00F9C24D /* AvailabilityInfo2Parser.m */,
+				55DE6225144F039900C90EA4 /* KeyValueData.h */,
+				55DE6226144F039900C90EA4 /* KeyValueData.m */,
+				55196935144C66B900021F34 /* ObjAttribute.h */,
+				55196936144C66BA00021F34 /* ObjAttribute.m */,
+				55DE6237145060F200C90EA4 /* ObjInfo2+Extensions.h */,
+				55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */,
+				55196938144C66BB00021F34 /* ObjInfo2.h */,
+				55196939144C66BB00021F34 /* ObjInfo2.m */,
 				554F7C971446EE7F00F9C24D /* ObjInfo2Parser.h */,
 				554F7C981446EE7F00F9C24D /* ObjInfo2Parser.m */,
+				55DE623014504B7500C90EA4 /* ObjPicture.h */,
+				55DE623114504B7500C90EA4 /* ObjPicture.m */,
 				554F7C9B1446EE7F00F9C24D /* ObjPictureParser.h */,
 				554F7C9C1446EE7F00F9C24D /* ObjPictureParser.m */,
+				5519693B144C66BC00021F34 /* ObjPriceInfo.h */,
+				5519693C144C66BC00021F34 /* ObjPriceInfo.m */,
 				554F7C9F1446EE7F00F9C24D /* ObjPriceInfoParser.h */,
 				554F7CA01446EE7F00F9C24D /* ObjPriceInfoParser.m */,
+				5519693E144C66BD00021F34 /* ObjText.h */,
+				5519693F144C66BE00021F34 /* ObjText.m */,
 				554F7CA31446EE7F00F9C24D /* ObjTextParser.h */,
 				554F7CA41446EE7F00F9C24D /* ObjTextParser.m */,
+				55196941144C66BE00021F34 /* Price.h */,
+				55196942144C66BF00021F34 /* Price.m */,
 				554F7CA71446EE7F00F9C24D /* Queries.h */,
 				554F7CA81446EE7F00F9C24D /* Queries.m */,
+				55DE623A1450722B00C90EA4 /* ScaledImage+Extensions.h */,
+				55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */,
+				55196944144C66C000021F34 /* ScaledImage.h */,
+				55196945144C66C000021F34 /* ScaledImage.m */,
 				554F7CAB1446EE7F00F9C24D /* StringConsts.h */,
 				554F7CAC1446EE7F00F9C24D /* StringConsts.m */,
 				554F7CAD1446EE7F00F9C24D /* Utils.h */,
 				554F7CAE1446EE7F00F9C24D /* Utils.m */,
-				5519692F144C66B500021F34 /* AvailabilityInfo2.h */,
-				55196930144C66B600021F34 /* AvailabilityInfo2.m */,
-				55196935144C66B900021F34 /* ObjAttribute.h */,
-				55196936144C66BA00021F34 /* ObjAttribute.m */,
-				55196938144C66BB00021F34 /* ObjInfo2.h */,
-				55196939144C66BB00021F34 /* ObjInfo2.m */,
-				5519693B144C66BC00021F34 /* ObjPriceInfo.h */,
-				5519693C144C66BC00021F34 /* ObjPriceInfo.m */,
-				5519693E144C66BD00021F34 /* ObjText.h */,
-				5519693F144C66BE00021F34 /* ObjText.m */,
-				55196941144C66BE00021F34 /* Price.h */,
-				55196942144C66BF00021F34 /* Price.m */,
-				55196944144C66C000021F34 /* ScaledImage.h */,
-				55196945144C66C000021F34 /* ScaledImage.m */,
-				55DE6225144F039900C90EA4 /* KeyValueData.h */,
-				55DE6226144F039900C90EA4 /* KeyValueData.m */,
-				55DE623014504B7500C90EA4 /* ObjPicture.h */,
-				55DE623114504B7500C90EA4 /* ObjPicture.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -663,6 +673,8 @@
 				8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */,
 				55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */,
 				8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */,
+				55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */,
+				55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

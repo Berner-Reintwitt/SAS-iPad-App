@@ -17,6 +17,8 @@ void startImport(void);
 
 + (NSArray *) getAllApartments:(NSManagedObjectContext *)context;
 
++ (NSArray *) getAllApartmentsOrderedByExID:(NSManagedObjectContext *)context;
+
 + (NSInteger) countApartments:(NSManagedObjectContext *)context;
 
 + (void) initialImport:(NSManagedObjectContext *)context;

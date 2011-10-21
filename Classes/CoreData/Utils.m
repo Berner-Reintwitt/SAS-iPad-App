@@ -6,6 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+
+#import <CoreGraphics/CGContext.h>
+
 #import "Utils.h"
 #import "Queries.h"
 #import "KeyValueData.h"
@@ -264,11 +267,59 @@ void saveContext() {
 }
 
 
-UIImage *getCFImageRef(ScaledImage *scaledImage) {
-	UIImage *result;
-	NSData *imageData = scaledImage.data;
-	result = [UIImage imageWithData:imageData];
-	return result;
+CGImageRef CreateScaledCGImageFromCGImage(CGImageRef image, float scale) {
+	// Create the bitmap context
+	CGContextRef    context = NULL;
+	void *          bitmapData;
+	
+	// Get image width, height. We'll use the entire image.
+	int width = CGImageGetWidth(image) * scale;
+	int height = CGImageGetHeight(image) * scale;
+	
+	// Declare the number of bytes per row. Each pixel in the bitmap in this
+	// example is represented by 4 bytes; 8 bits each of red, green, blue, and
+	// alpha.
+	int bitmapBytesPerRow   = (width * 4);
+	int bitmapByteCount     = (bitmapBytesPerRow * height);
+	
+	// Allocate memory for image data. This is the destination in memory
+	// where any drawing to the bitmap context will be rendered.
+	bitmapData = malloc( bitmapByteCount );
+	if (bitmapData == NULL) {
+		return nil;
+	}
+	
+	// Create the bitmap context. We want pre-multiplied ARGB, 8-bits
+	// per component. Regardless of what the source image format is
+	// (CMYK, Grayscale, and so on) it will be converted over to the format
+	// specified here by CGBitmapContextCreate.
+	CGColorSpaceRef colorspace = CGImageGetColorSpace(image);
+	context = CGBitmapContextCreate(bitmapData, width, height, 8, bitmapBytesPerRow, colorspace, kCGImageAlphaNoneSkipFirst);
+	CGColorSpaceRelease(colorspace);
+	
+	if (context == NULL) {
+		// error creating context
+		return nil;
+	}
+	
+	CGContextSetInterpolationQuality(context, kCGInterpolationLow);
+	
+	// Draw the image to the bitmap context. Once we draw, the memory
+	// allocated for the context for rendering will then contain the
+	// raw image data in the specified color space.
+	CGContextDrawImage(context, CGRectMake(0, 0, width, height), image);
+	
+	CGImageRef imgRef = CGBitmapContextCreateImage(context);
+	CGContextRelease(context);
+	free(bitmapData);
+	
+	return imgRef;
+}
+
+
+
+UIImage *scaleImage(UIImage *image) {
+	
 }
 
 
