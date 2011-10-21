@@ -16,7 +16,7 @@
     NSArray *listData;
     UILabel *firstTextLabel;
     UIImageView *domizilImageView;
-
+    NSArray * apartments;
 } 
 
 
@@ -26,5 +26,6 @@
 @property (retain, nonatomic) IBOutlet UIImageView *domizilImageView;
 - (IBAction)sortierenButtonWasPressed:(id)sender;
 - (IBAction)karteButtonWasPressed:(id)sender;
+
 
 @end

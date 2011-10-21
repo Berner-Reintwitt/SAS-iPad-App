@@ -11,7 +11,7 @@
 @implementation SuchergebnisseHausDetail
 
 @synthesize calender;
-@synthesize scrollView;
+@synthesize myscrollView;
 @synthesize pageControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,28 +34,29 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{   NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
+{   NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor blackColor],nil];
     for (int i = 0; i < colors.count; i++) {
         CGRect frame;
-        frame.origin.x = self.scrollView.frame.size.width * i;
+        frame.origin.x = self.myscrollView.frame.size.width * i;
         frame.origin.y = 0;
-        frame.size = self.scrollView.frame.size;
+        frame.size = self.myscrollView.frame.size;
         
         UIView *subview = [[UIView alloc] initWithFrame:frame];
         subview.backgroundColor = [colors objectAtIndex:i];
-        [self.scrollView addSubview:subview];
+        [self.myscrollView addSubview:subview];
+        pageControl.numberOfPages=[colors count];
         [subview release];
         
     // Do any additional setup after loading the view from its nib.
     }
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * colors.count, self.scrollView.frame.size.height);
+    self.myscrollView.contentSize = CGSizeMake(self.myscrollView.frame.size.width * colors.count, self.myscrollView.frame.size.height);
     [super viewDidLoad];
 }
 
 - (void)viewDidUnload
 {   [calender.view setFrame:CGRectMake(600, 500, calender.view.frame.size.width, calender.view.frame.size.height)];
      
-    [self setScrollView:nil];
+    [self setMyscrollView:nil];
     [self setPageControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -67,33 +68,34 @@
     // Return YES for supported orientations
 	return YES;
 }
-- (void)scrollViewDidScroll:(UIScrollView *)sender {
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     // Update the page when more than 50% of the previous/next page is visible
-    CGFloat pageWidth = self.scrollView.frame.size.width;
-    int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    self.pageControl.currentPage = page;
+    CGFloat pageWidth = myscrollView.frame.size.width;
+    int page = floor((myscrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    pageControl.currentPage = page;
+
 }
 
 - (void)dealloc {
-    [scrollView release];
+    [myscrollView release];
     [pageControl release];
     [super dealloc];
 }
 - (IBAction)changePage:(id)sender {
     CGRect frame;
-    frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
+    frame.origin.x = self.myscrollView.frame.size.width * self.pageControl.currentPage;
     frame.origin.y = 0;
-    frame.size = self.scrollView.frame.size;
-    [self.scrollView scrollRectToVisible:frame animated:YES];
+    frame.size = self.myscrollView.frame.size;
+    [self.myscrollView scrollRectToVisible:frame animated:YES];
     
     
 }
-/*
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     pageControlBeingUsed = NO;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     pageControlBeingUsed = NO;
-}*/
+}
 @end

@@ -10,6 +10,7 @@
 #import "DomizileRootViewController.h"
 #import "SearchPopUpViewController.h"
 #import "SuchergebnisseKarte.h"
+#import "SuchergebnisseHausDetail.h"
 
 
 @interface DomizileFirstDetailViewController ()
@@ -159,6 +160,10 @@
     
     
 }
+-(void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item{
+    
+    
+}
 
 - (IBAction)groesseDesDomizilsWasPressed:(id)sender {
      TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate]; 
@@ -202,12 +207,16 @@
 }
 
 - (IBAction)suchenButtonWasPressed:(id)sender {
-    
+    TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-    
+   
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
     suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:suchergebnisseKarte animated:YES];
+   
+    //appDelegate.window.rootViewController=navigationControllerModalViews;
+    
+    [self presentModalViewController:navigationControllerModalViews animated:YES];
+    
 }
 
 
@@ -290,6 +299,8 @@
     [self setBudgetTextField:nil];
     [super viewDidUnload];
 }
+
+
 
 -(void)viewDidLoad{
     

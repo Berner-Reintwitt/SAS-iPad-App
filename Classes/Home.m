@@ -86,11 +86,16 @@
     
     - (IBAction)suchenButtonWasPressed:(id)sender {
         
+        
         SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
         
         suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
-        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStylePartialCurl;
-        [self presentModalViewController:suchergebnisseKarte animated:YES];
+        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+        
+        //appDelegate.window.rootViewController=navigationControllerModalViews;
+        
+        [self presentModalViewController:navigationControllerModalViews animated:YES];
+        
     
 }
 
