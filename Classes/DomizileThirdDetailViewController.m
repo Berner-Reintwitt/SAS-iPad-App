@@ -80,7 +80,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
     
     if (cell == nil) { 
-        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCellThirdViewController" owner:self options:nil];
+        
+
         //cell = [[[UITableViewCell alloc]
         //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
         cell=self.domizilCell;              

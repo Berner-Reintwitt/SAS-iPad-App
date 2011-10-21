@@ -15,6 +15,7 @@
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
 #import "CoreData/ScaledImage.h"
+#import "SuchergebnisseHausDetail.h"
 
 @implementation DomizileSecondDetailViewController
 @synthesize firstTextLabel;
@@ -139,7 +140,13 @@
    // [self.view addSubview:suchergebnisseKarte.view];
     
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SuchergebnisseHausDetail *hausdet=[[SuchergebnisseHausDetail alloc]initWithNibName:@"SuchergebnisseHausDetail" bundle:nil];
+    [self.view addSubview:hausdet.view];
+    
+    
+}
 
 
 @end

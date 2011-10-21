@@ -48,6 +48,8 @@
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
 		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
 		8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43F9A31451779000EBD6C0 /* SearchParameters.m */; };
+		8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */; };
+		8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */; };
 		8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */; };
 		8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */; };
 		8F879E15143C5983002BD6C9 /* DomizileFourthDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */; };
@@ -163,6 +165,8 @@
 		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
 		8F43F9A21451779000EBD6C0 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchParameters.h; sourceTree = "<group>"; };
 		8F43F9A31451779000EBD6C0 /* SearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchParameters.m; sourceTree = "<group>"; };
+		8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizilCellThirdViewController.xib; sourceTree = "<group>"; };
+		8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizilCellFourthViewController.xib; sourceTree = "<group>"; };
 		8F7DD0F61445A8BC00AC6A11 /* ButtonsPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsPopUpViewController.h; sourceTree = "<group>"; };
 		8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsPopUpViewController.m; sourceTree = "<group>"; };
 		8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsPopUpViewController.xib; sourceTree = "<group>"; };
@@ -462,6 +466,8 @@
 				8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */,
 				8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */,
 				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
+				8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */,
+				8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */,
 			);
 			name = Domizile;
 			sourceTree = "<group>";
@@ -593,6 +599,8 @@
 				8F9586FB1446EC0D00508C2D /* Home.xib in Resources */,
 				8F958700144711E500508C2D /* pig.png in Resources */,
 				8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */,
+				8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */,
+				8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

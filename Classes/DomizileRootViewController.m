@@ -12,7 +12,7 @@
 
 @implementation DomizileRootViewController
 @synthesize firstDetailViewController;
-@synthesize secondDetailViewController;
+//@synthesize secondDetailViewController;
 @synthesize array1;
 
 //@synthesize splitViewController;

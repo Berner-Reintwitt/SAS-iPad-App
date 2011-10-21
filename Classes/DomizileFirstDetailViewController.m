@@ -210,12 +210,12 @@
     TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
    
-   // suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
-    //suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+    suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
+    suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
    
         
      
-     [appDelegate.tabBarController presentModalViewController:navigationControllerModalViews animated:YES];
+     [appDelegate.tabBarController presentModalViewController:suchergebnisseKarte animated:YES];
     
     
 }
