@@ -8,6 +8,9 @@
 
 #import "ObjInfo2+Extensions.h"
 #import "ObjPicture.h"
+#import "Utils.h"
+#import "StringConsts.h"
+
 
 static NSInteger picSort(id pic1, id pic2, void *context) {
     int v1 = [((ObjPicture *) pic1).serial intValue];
@@ -22,5 +25,21 @@ static NSInteger picSort(id pic1, id pic2, void *context) {
     NSArray *ordered = [unordered sortedArrayUsingFunction:picSort context:NULL];   
     return ordered;
 }
+
+
++ (NSArray *) AllApartments {
+    NSManagedObjectContext *context = managedObjectContext();
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:CLASS_ObjInfo2 inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+	[fetchRequest setPredicate:nil];
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+    [fetchRequest release];
+    return result;
+}
+
+
+
 
 @end

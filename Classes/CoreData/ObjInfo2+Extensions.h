@@ -12,4 +12,6 @@
 
 - (NSArray *) OrderedPictures;
 
++ (NSArray *) AllApartments;
+
 @end
