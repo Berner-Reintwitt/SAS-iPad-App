@@ -38,7 +38,7 @@
     button=[[UIBarButtonItem alloc]initWithTitle:@"zurück" style:UIBarButtonItemStyleBordered target:self action:@selector (zurueckWasPressed:)];
     [button setTitle:@"zurück"];
                        
-    self.navigationItem.leftBarButtonItem=button;
+   // self.navigationItem.leftBarButtonItem=button;
     [button setTag:1];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

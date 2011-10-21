@@ -9,6 +9,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "CoreData/Queries.h"
 #import "SuchergebnisseKarte.h"
+#import "Home.h"
 
 @implementation TabBarWithSplitViewAppDelegate
 
@@ -26,6 +27,8 @@
 @synthesize newsRootViewController;
 @synthesize splitViewControllerNews;
 @synthesize whichTablePopUpView;
+@synthesize controllers;
+
 
 
 #pragma mark -
@@ -33,7 +36,7 @@
 
 
 - (void) makeSplitViewController {
-    NSMutableArray *controllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
+    controllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
     
     int index = 0; 
     
@@ -71,7 +74,7 @@
             splitViewControllerDomizile.barButton = firstDetailViewController.barButton;
             splitViewControllerDomizile.pc  =firstDetailViewController.popoverController;
             
-            
+        
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
             
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerDomizile];
@@ -205,7 +208,7 @@
     }
     
     tabBarController.delegate = self;
-    tabBarController.viewControllers = controllers;
+   // tabBarController.viewControllers = controllers;
 }
 
 
@@ -230,14 +233,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-    navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:suchergebnisseKarte];
+    Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
+    
+    navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:home];
     navigationControllerModalViews.modalPresentationStyle=UIModalPresentationCurrentContext;
     navigationControllerModalViews.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
-    
+    navigationControllerModalViews.tabBarItem.title=@"Home";
+    [self makeSplitViewController];
+    [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];
+    tabBarController.viewControllers = controllers;
+    //tabBarController.viewControllers=controllers;
     
     
     // Override point for customization after app launch.
-    [self makeSplitViewController];
+    
     // Set the tab bar controller as the window's root view controller and display.
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

@@ -27,7 +27,7 @@ Boolean zielPopOver;
     UIButton *anreiseButton;
     UIButton *abreiseButton;
     Boolean anreiseButtonIsSelected;
-
+    SearchParameters * param;
    
     
     

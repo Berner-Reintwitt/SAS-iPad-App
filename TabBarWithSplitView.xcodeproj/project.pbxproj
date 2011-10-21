@@ -47,6 +47,7 @@
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
 		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
+		8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43F9A31451779000EBD6C0 /* SearchParameters.m */; };
 		8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */; };
 		8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */; };
 		8F879E15143C5983002BD6C9 /* DomizileFourthDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */; };
@@ -160,6 +161,8 @@
 		8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
 		8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileFirstDetailViewController.xib; sourceTree = "<group>"; };
 		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
+		8F43F9A21451779000EBD6C0 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchParameters.h; sourceTree = "<group>"; };
+		8F43F9A31451779000EBD6C0 /* SearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchParameters.m; sourceTree = "<group>"; };
 		8F7DD0F61445A8BC00AC6A11 /* ButtonsPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsPopUpViewController.h; sourceTree = "<group>"; };
 		8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsPopUpViewController.m; sourceTree = "<group>"; };
 		8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsPopUpViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				8F0DFCB3143CAE170079589F /* Calendar library */,
 				1D3623240D0F684500981E51 /* TabBarWithSplitViewAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */,
+				8F43F9A21451779000EBD6C0 /* SearchParameters.h */,
+				8F43F9A31451779000EBD6C0 /* SearchParameters.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
 				8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */,
 				8F9850E4143C6B7D00E12D25 /* SearchPopUpViewController.h */,
@@ -649,6 +654,7 @@
 				55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */,
 				8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */,
 				55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */,
+				8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
