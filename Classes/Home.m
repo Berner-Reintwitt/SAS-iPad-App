@@ -84,19 +84,15 @@
 
 
     
-    - (IBAction)suchenButtonWasPressed:(id)sender {
+- (IBAction)suchenButtonWasPressed:(id)sender {
+    SuchergebnisseKarte *suchergebnisseKarte = [[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
         
+    suchergebnisseKarte.modalPresentationStyle = UIModalPresentationFullScreen;
+    suchergebnisseKarte.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         
-        SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+    //appDelegate.window.rootViewController=navigationControllerModalViews;
         
-        suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
-        suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-        
-        //appDelegate.window.rootViewController=navigationControllerModalViews;
-        
-        [self.navigationController pushViewController:suchergebnisseKarte animated:YES];
-        
-    
+    [self.navigationController pushViewController:suchergebnisseKarte animated:YES];
 }
 
 - (IBAction)erwachseneStepperWasPressed:(id)sender {

@@ -78,38 +78,32 @@
     return [apartments count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        apartments= [Queries getAllApartments:managedObjectContext()];
-      //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
+    apartments = [Queries getAllApartments:managedObjectContext()];
+    //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizilCell"];
            
-        if (cell == nil) { 
-            NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
-            //cell = [[[UITableViewCell alloc]
-                            //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
-            cell=self.domizilCell;              
-                    }
-        NSUInteger row = [indexPath row];
+    if (cell == nil) { 
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizilCell" owner:self options:nil];
+        //cell = [[[UITableViewCell alloc]
+        //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+        cell = self.domizilCell;              
+    }
+    NSUInteger row = [indexPath row];
     
     ObjInfo2 *obj = [apartments objectAtIndex:row];
     NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
     ScaledImage *scalepic = pic.images.anyObject;
-    UIImage * img =[scalepic getImage];
-    //    UIImage *img2 = [UIImage imageNamed:@"pig.png"];  
-    
- 
-    
+    UIImage * img = [scalepic getImage];
+    // UIImage *img2 = [UIImage imageNamed:@"pig.png"];
+
     [domizilImageView setImage:img];
-    
-    
-    
-    
     firstTextLabel.text=obj.name;
     
-      //  cell.imageView.image = image;
-     //   cell.detailTextLabel.text=@"Hallo";
-       // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
-        return cell;
+    // cell.imageView.image = image;
+    // cell.detailTextLabel.text=@"Hallo";
+    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
