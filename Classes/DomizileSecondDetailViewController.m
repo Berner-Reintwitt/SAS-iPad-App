@@ -94,8 +94,12 @@
     ObjInfo2 *obj = [apartments objectAtIndex:row];
     NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
-    ScaledImage *scalepic = pic.images.anyObject;
-    UIImage * img = [scalepic getImage];
+    
+    UIImage *img = [pic GetScaledImage:250 withHeight:190 withMode:ScaleModeCrop];
+    
+    
+    //ScaledImage *scalepic = pic.images.anyObject;
+    //UIImage * img = [scalepic getImage];
     // UIImage *img2 = [UIImage imageNamed:@"pig.png"];
 
     [domizilImageView setImage:img];

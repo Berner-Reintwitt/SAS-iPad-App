@@ -283,14 +283,14 @@ CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth
 			dstRatio = ((double) dstWidth) / ((double) dstHeight);
 			if (srcRatio > dstRatio) {
 				cropTop = 0;
-				cropHeight = srcHeight;
-				cropWidth = (int) round(srcHeight * dstRatio);
-				cropLeft = (srcWidth - cropWidth) / 2;
+				cropHeight = dstHeight;
+				cropWidth = (int) round(dstHeight * srcRatio);
+				cropLeft = (dstWidth - cropWidth) / 2;
 			} else {
 				cropLeft = 0;
-				cropWidth = srcWidth;
-				cropHeight = (int) round(srcWidth / dstRatio);
-				cropTop = (srcHeight - cropHeight) / 2;
+				cropWidth = dstWidth;
+				cropHeight = (int) round(dstWidth / srcRatio);
+				cropTop = (dstHeight - cropHeight) / 2;
 			}
 			break;
 		case ScaleModeLetterbox:
@@ -304,7 +304,7 @@ CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth
 			} else {
 				cropTop = 0;
 				cropHeight = dstHeight;
-				cropWidth = (int) round(dstHeight * srcRatio);
+				cropWidth = (int) round(dstWidth * srcRatio / dstRatio);
 				cropLeft = (dstWidth - cropWidth) / 2;
 			}
 			break;
@@ -347,7 +347,12 @@ CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth
 		return nil;
 	}
 	
-	CGContextSetInterpolationQuality(context, kCGInterpolationLow);
+
+	CGContextSetRGBFillColor(context, 1, 1, 1, 1);
+	CGContextFillRect(context, CGRectMake(0, 0, dstWidth, dstHeight));
+	
+	
+	CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
 	
 	// Draw the image to the bitmap context. Once we draw, the memory
 	// allocated for the context for rendering will then contain the
