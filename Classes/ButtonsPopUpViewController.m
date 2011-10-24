@@ -62,28 +62,25 @@
 	return YES;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     TabBarWithSplitViewAppDelegate *appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if( appDelegate.whichTablePopUpView==0){
-        return  [self.array0 count];
-    }
-    else if( appDelegate.whichTablePopUpView==1){
-        return  [self.array1 count];
-    }
-    else if( appDelegate.whichTablePopUpView==2){
-        return  [self.array2 count];
-    }
-    else if( appDelegate.whichTablePopUpView==3){
-        return  [self.array3 count];
-    }
-    else if( appDelegate.whichTablePopUpView==4){
-        return  [self.array3 count];
-    }
-    else if( appDelegate.whichTablePopUpView==5){
-        return  [self.array0 count];
-    }
     
     
+    switch (appDelegate.whichTablePopUpView) {
+        case 0:
+        case 5:
+            return [self.array0 count];
+        case 1:
+            return [self.array1 count];
+        case 2:
+            return [self.array2 count];
+        case 3:
+        case 4:
+            return [self.array3 count];
+        default:
+            return 0;
+            break;
+    }
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -266,15 +266,60 @@ void saveContext() {
     }
 }
 
-
-CGImageRef CreateScaledCGImageFromCGImage(CGImageRef image, float scale) {
+CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth, int dstHeight, ScaleModes mode) {
 	// Create the bitmap context
-	CGContextRef    context = NULL;
-	void *          bitmapData;
+	CGContextRef context = NULL;
+	void *bitmapData;
+	
+	int srcWidth = CGImageGetWidth(image);
+	int srcHeight = CGImageGetHeight(image);
+	double srcRatio, dstRatio;
+
+	int cropLeft, cropTop, cropWidth, cropHeight;
+
+	switch (mode) {
+		case ScaleModeCrop:
+			srcRatio = ((double) srcWidth) / ((double) srcHeight);
+			dstRatio = ((double) dstWidth) / ((double) dstHeight);
+			if (srcRatio > dstRatio) {
+				cropTop = 0;
+				cropHeight = srcHeight;
+				cropWidth = (int) round(srcHeight * dstRatio);
+				cropLeft = (srcWidth - cropWidth) / 2;
+			} else {
+				cropLeft = 0;
+				cropWidth = srcWidth;
+				cropHeight = (int) round(srcWidth / dstRatio);
+				cropTop = (srcHeight - cropHeight) / 2;
+			}
+			break;
+		case ScaleModeLetterbox:
+			srcRatio = ((double) srcWidth) / ((double) srcHeight);
+			dstRatio = ((double) dstWidth) / ((double) dstHeight);
+			if (srcRatio > dstRatio) {
+				cropLeft = 0;
+				cropWidth = dstWidth;
+				cropHeight = (int) round(dstWidth / srcRatio);
+				cropTop = (dstHeight - cropHeight) / 2;
+			} else {
+				cropTop = 0;
+				cropHeight = dstHeight;
+				cropWidth = (int) round(dstHeight * srcRatio);
+				cropLeft = (dstWidth - cropWidth) / 2;
+			}
+			break;
+		case ScaleModeFit:
+		default:
+			cropLeft = cropTop = 0;
+			cropWidth = dstWidth;
+			cropHeight = dstHeight;
+			break;
+	}
+	
 	
 	// Get image width, height. We'll use the entire image.
-	int width = CGImageGetWidth(image) * scale;
-	int height = CGImageGetHeight(image) * scale;
+	int width = dstWidth;
+	int height = dstHeight;
 	
 	// Declare the number of bytes per row. Each pixel in the bitmap in this
 	// example is represented by 4 bytes; 8 bits each of red, green, blue, and
@@ -307,7 +352,7 @@ CGImageRef CreateScaledCGImageFromCGImage(CGImageRef image, float scale) {
 	// Draw the image to the bitmap context. Once we draw, the memory
 	// allocated for the context for rendering will then contain the
 	// raw image data in the specified color space.
-	CGContextDrawImage(context, CGRectMake(0, 0, width, height), image);
+	CGContextDrawImage(context, CGRectMake(cropLeft, cropTop, cropWidth, cropHeight), image);
 	
 	CGImageRef imgRef = CGBitmapContextCreateImage(context);
 	CGContextRelease(context);
@@ -315,13 +360,6 @@ CGImageRef CreateScaledCGImageFromCGImage(CGImageRef image, float scale) {
 	
 	return imgRef;
 }
-
-
-
-UIImage *scaleImage(UIImage *image) {
-	
-}
-
 
 /*
  static NSArray *fetchAll(NSManagedObjectContext *context, NSString *entityName) {

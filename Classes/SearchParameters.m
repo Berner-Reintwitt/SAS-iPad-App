@@ -8,23 +8,15 @@
 
 #import "SearchParameters.h"
 
-@implementation SearchParameters
-
-{
-    
-    
-    
+@implementation SearchParameters {
 }
 
 + (SearchParameters *) globalSearchParameters{
-    
-    static SearchParameters * __spar;
-    if (nil==__spar){
-        __spar= [[SearchParameters alloc]init];
+    static SearchParameters *__spar;
+    if (nil == __spar){
+        __spar = [[SearchParameters alloc] init];
     }
-    
     return __spar;
-    
 }
 
 @synthesize exIDs,city,rooms,adults,dateTo,groupID,maxCost,maxSize,minSize,rangeTo,children,dateFrom,merkmale,rangeFrom,dateToFest,minHitRate,wohnlageID,datefromfest,minQualitaet,AlternativeSearch;

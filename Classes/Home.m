@@ -12,6 +12,9 @@
 #import "SuchergebnisseKarte.h"
 #import "ButtonsPopUpViewController.h"
 
+#import "CoreData/ObjInfo2+Extensions.h"
+
+
 @implementation Home
 @synthesize table3;
 @synthesize erwachseneStepper;
@@ -37,11 +40,11 @@
 //    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidChangeStatusBarOrientationNotification object:self userInfo:nil];
 //}
 
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     [self setTable1:nil];
     [self setTable2:nil];
     [self setTable3:nil];
@@ -54,7 +57,7 @@
     [super viewDidUnload];
 }
 
-- (void)dealloc {
+- (void) dealloc {
     [table1 release];
     [table2 release];
     [table3 release];
@@ -67,7 +70,7 @@
     [super dealloc];
 }
 
-- (IBAction)buttonTapped:(id)sender {
+- (IBAction) buttonTapped:(id)sender {
     
     SearchPopUpViewController *searchpopup=[[ SearchPopUpViewController alloc]init];
     popover=[[UIPopoverController alloc]initWithContentViewController:searchpopup];
@@ -76,15 +79,13 @@
     
 }
 
-- (IBAction)detailSucheButtonWasPressed:(id)sender {
+- (IBAction) detailSucheButtonWasPressed:(id)sender {
     
    // UIViewController *viewcontroller=[appDelegate.tabBarController.viewControllers objectAtIndex:2];
     appDelegate.tabBarController.selectedIndex=1;
 }
-
-
-    
-- (IBAction)suchenButtonWasPressed:(id)sender {
+   
+- (IBAction) suchenButtonWasPressed:(id)sender {
     SuchergebnisseKarte *suchergebnisseKarte = [[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
         
     suchergebnisseKarte.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -92,38 +93,39 @@
         
     //appDelegate.window.rootViewController=navigationControllerModalViews;
         
+    
+    NSArray *searchResultList = [ObjInfo2 LocalSearch:[SearchParameters globalSearchParameters]];
+    
+    
+    
     [self.navigationController pushViewController:suchergebnisseKarte animated:YES];
 }
 
-- (IBAction)erwachseneStepperWasPressed:(id)sender {
+- (IBAction) erwachseneStepperWasPressed:(id)sender {
     erwachseneLabel.text =[[NSString alloc]initWithFormat:@"%d",(int)erwachseneStepper.value];
    
     param.adults=erwachseneStepper.value;
 }
 
-- (IBAction)uebernachtungStepperWasPressed:(id)sender {
+- (IBAction) uebernachtungStepperWasPressed:(id)sender {
     
     uebernachtungLabel.text=[[NSString alloc]initWithFormat:@"%d",(int)uebernachtungStepper.value];
     
     
 }
 
-- (IBAction)zielButtonWasPressed:(id)sender {
+- (IBAction) zielButtonWasPressed:(id)sender {
     appDelegate.whichTablePopUpView=4;
     ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
-    
     
     [auswahlViewContr.table reloadData];
     UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
     [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
     
-
-    
-    
 }
 
-- (IBAction)domizilTypButtonWasPressed:(id)sender {
-    appDelegate.whichTablePopUpView=5;
+- (IBAction) domizilTypButtonWasPressed:(id)sender {
+    appDelegate.whichTablePopUpView = 5;
     ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
  
     [auswahlViewContr.table reloadData];
@@ -131,23 +133,23 @@
     [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
-- (IBAction)anreiseButtonIsPressed:(id)sender {
-    anreiseButtonIsSelected=YES;
+- (IBAction) anreiseButtonIsPressed:(id)sender {
+    anreiseButtonIsSelected = YES;
     CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
      UIPopoverController * popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
     [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
     
 }
 
-- (IBAction)abreiseButtonIsPressed:(id)sender {
-    anreiseButtonIsSelected=NO;
+- (IBAction) abreiseButtonIsPressed:(id)sender {
+    anreiseButtonIsSelected = NO;
     CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
     UIPopoverController * popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
     [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
--(void)viewDidLoad{
-    anreiseButtonIsSelected=YES;
+- (void) viewDidLoad {
+    anreiseButtonIsSelected = YES;
     appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
     NSArray *array1=[[NSArray alloc]initWithObjects:@"Paul",@"Paul1",@"Paul2",@"Paul4",@"Paul5",nil];
     NSArray *array2=[[NSArray alloc]initWithObjects:@"Hallo",@"Hallo1",@"Hallo2",@"Hallo3",@"Hallo4",@"Hallo5",@"Hallo6",@"Hallo7",@"Hallo8",@"Hallo9",@"Hallo10",@"Hallo11",nil];
@@ -162,65 +164,49 @@
     zielPopOver=YES;
     
     [super viewDidLoad];
-    
-    
 }
 
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    if(tableView == table1) {cellCount=[self.listData1 count];return  cellCount;}
-    else if( tableView == table2) {cellCount=[self.listData2 count];return  cellCount;}
-    else if( tableView == table3) {cellCount=[self.listData3 count];return  cellCount;}
-    
-    
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == table1) {
+        cellCount = [self.listData1 count];
+    } else if (tableView == table2) {
+        cellCount = [self.listData2 count];
+    } else if (tableView == table3) {
+        cellCount = [self.listData3 count];
+    }
+    return  cellCount;
 }
 
--(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    
+    UITableViewCell *cell = nil;
 
     if (tableView == table1) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-                if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        }
-    
-    // Configure the cell...
-	 cell.textLabel.text = [listData1 objectAtIndex:indexPath.row];
-    return cell;
-
-    }
-    
-    else if (tableView == table2) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
-        
+        // Configure the cell...
+        cell.textLabel.text = [listData1 objectAtIndex:indexPath.row];
+    }
+    else if (tableView == table2) {
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        }
         // Configure the cell...
         cell.textLabel.text = [listData2 objectAtIndex:indexPath.row];
-        return cell;       
     }
-    
     else if (tableView == table3) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
-        
         // Configure the cell...
         cell.textLabel.text = [listData3 objectAtIndex:indexPath.row];
-        return cell;       
     }
-
-    
-    
-    }
+    return cell;
+}
 
 @end

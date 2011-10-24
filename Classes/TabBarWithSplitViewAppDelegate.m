@@ -8,6 +8,7 @@
 
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "CoreData/Queries.h"
+#import "CoreData/Utils.h"
 #import "SuchergebnisseKarte.h"
 #import "Home.h"
 

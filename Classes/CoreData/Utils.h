@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <ImageIO/ImageIO.h>
-#import "ScaledImage.h"
+
+#import "ObjPicture+Extensions.h"
 
 extern NSString *DATASOURCE_URL;
 
@@ -52,13 +53,7 @@ NSString *NewUUID();
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *value);
 
-UIImage *scaleImage(UIImage *image);
-
-
-
-
-
-
+CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth, int dstHeight, ScaleModes mode);
 
 
 

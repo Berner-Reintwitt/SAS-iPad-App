@@ -18,6 +18,20 @@ static NSInteger picSort(id pic1, id pic2, void *context) {
     return v1 < v2 ? NSOrderedAscending : v1 > v2 ? NSOrderedDescending : NSOrderedSame;
 }
 
+static NSPredicate *maxPersons(int actPersons) {
+    NSExpression *leftSide = [NSExpression expressionForKeyPath: NAME_max_persons];
+    NSExpression *rightSide = [NSExpression expressionForConstantValue: [NSNumber numberWithInt: actPersons]];
+    NSPredicate *result = [NSComparisonPredicate
+                          predicateWithLeftExpression: leftSide
+                          rightExpression: rightSide
+                          modifier: NSDirectPredicateModifier
+                          type: NSGreaterThanOrEqualToPredicateOperatorType
+                          options: 0];
+    return result;
+}
+
+//static NSPredicate *exid(
+
 @implementation ObjInfo2 (Extensions)
 
 - (NSArray *) OrderedPictures {
@@ -42,23 +56,12 @@ static NSInteger picSort(id pic1, id pic2, void *context) {
 + (NSArray *) LocalSearch:(SearchParameters *)sparam {
     
     NSArray *all = [ObjInfo2 AllApartments];
-    /*
-    NSExpression *lhs = [NSExpression expressionForKeyPath:NAME_max_persons];
-    NSExpression *gtPersons = [NSExpression expressionForConstantValue:[NSNumber numberWithInt: sparam.adults + sparam.children]];
-    NSPredicate *gtPersonsPred = [NSComparisonPredicate
-                                  predicateWithLeftExpression:lhs
-                                  rightExpression:gtPersons
-                                  modifier:NSDirectPredicateModifier
-                                  type:NSGreaterThanPredicateOperatorType
-                                  options:0];
-    */
-    NSPredicate *pred = [NSPredicate
-                         predicateWithFormat:@"(max_persons >= %@)"
-                         arguments:[NSNumber numberWithInt:sparam.adults + sparam.children]
-                         ];
+
     
     
-    NSArray *result = [all filteredArrayUsingPredicate: pred];
+    NSPredicate *persons = maxPersons(sparam.adults + sparam.children);
+    
+    NSArray *result = [all filteredArrayUsingPredicate: persons];
     
     return result;
     

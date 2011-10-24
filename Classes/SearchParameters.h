@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SearchParameters : NSObject{
-    
+@interface SearchParameters : NSObject {
     NSSet *exIDs;
     NSSet *merkmale;
     NSDate *dateFrom;
@@ -30,8 +29,8 @@
     int     wohnlageID;
     BOOL    AlternativeSearch;
     double  minHitRate;
-    
 }
+
 @property (nonatomic,retain) NSSet *exIDs;
 @property (nonatomic,retain) NSSet *merkmale;
 @property (nonatomic,retain) NSDate *dateFrom;;
@@ -53,7 +52,6 @@
 @property  BOOL     AlternativeSearch;
 @property  double    minHitRate;
 
-
-
  + (SearchParameters *) globalSearchParameters; 
+
 @end

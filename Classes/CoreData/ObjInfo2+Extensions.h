@@ -15,8 +15,6 @@
 
 + (NSArray *) AllApartments;
 
-
 + (NSArray *) LocalSearch:(SearchParameters *)sparam;
-
 
 @end

@@ -39,6 +39,7 @@
 		55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623114504B7500C90EA4 /* ObjPicture.m */; };
 		55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */; };
 		55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */; };
+		55DE627814557FB200C90EA4 /* ObjPicture+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE627714557FB100C90EA4 /* ObjPicture+Extensions.m */; };
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
@@ -155,6 +156,8 @@
 		55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjInfo2+Extensions.m"; path = "CoreData/ObjInfo2+Extensions.m"; sourceTree = "<group>"; };
 		55DE623A1450722B00C90EA4 /* ScaledImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ScaledImage+Extensions.h"; path = "CoreData/ScaledImage+Extensions.h"; sourceTree = "<group>"; };
 		55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ScaledImage+Extensions.m"; path = "CoreData/ScaledImage+Extensions.m"; sourceTree = "<group>"; };
+		55DE627614557FAF00C90EA4 /* ObjPicture+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjPicture+Extensions.h"; path = "CoreData/ObjPicture+Extensions.h"; sourceTree = "<group>"; };
+		55DE627714557FB100C90EA4 /* ObjPicture+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjPicture+Extensions.m"; path = "CoreData/ObjPicture+Extensions.m"; sourceTree = "<group>"; };
 		7D0CD7721427900A00E9F0FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D0CD7741427901300E9F0FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
@@ -370,6 +373,8 @@
 				55196939144C66BB00021F34 /* ObjInfo2.m */,
 				554F7C971446EE7F00F9C24D /* ObjInfo2Parser.h */,
 				554F7C981446EE7F00F9C24D /* ObjInfo2Parser.m */,
+				55DE627614557FAF00C90EA4 /* ObjPicture+Extensions.h */,
+				55DE627714557FB100C90EA4 /* ObjPicture+Extensions.m */,
 				55DE623014504B7500C90EA4 /* ObjPicture.h */,
 				55DE623114504B7500C90EA4 /* ObjPicture.m */,
 				554F7C9B1446EE7F00F9C24D /* ObjPictureParser.h */,
@@ -675,6 +680,7 @@
 				8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */,
 				55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */,
 				55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */,
+				55DE627814557FB200C90EA4 /* ObjPicture+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
