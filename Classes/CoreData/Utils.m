@@ -304,7 +304,7 @@ CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth
 			} else {
 				cropTop = 0;
 				cropHeight = dstHeight;
-				cropWidth = (int) round(dstWidth * srcRatio / dstRatio);
+				cropWidth = (int) round(dstHeight * srcRatio);
 				cropLeft = (dstWidth - cropWidth) / 2;
 			}
 			break;
