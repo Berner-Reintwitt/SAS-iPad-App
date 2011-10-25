@@ -57,7 +57,7 @@ static NSInteger orderByExid(id obj1, id obj2, void *context) {
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     [fetchRequest release];
     if (nil == fetchedObjects || fetchedObjects.count == 0) {
-        // Handle the error
+        // Handle the error 
         NSLog(@"AbstractParser.getObjInfo2: missing exid(%s)", [exid UTF8String]);
         return nil;
     }

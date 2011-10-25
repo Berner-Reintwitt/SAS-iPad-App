@@ -23,6 +23,11 @@
 		55196943144C66BF00021F34 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196942144C66BF00021F34 /* Price.m */; };
 		55196946144C66C000021F34 /* ScaledImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55196945144C66C000021F34 /* ScaledImage.m */; };
 		551D58E11447110C000F0E97 /* ApartmentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 551D58DF1447110C000F0E97 /* ApartmentModel.xcdatamodeld */; };
+		553206871456E636002E8D79 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206861456E636002E8D79 /* Search.m */; };
+		5532068B1456E6B2002E8D79 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068A1456E6B2002E8D79 /* SearchResult.m */; };
+		5532068E1456E95B002E8D79 /* SearchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068D1456E95B002E8D79 /* SearchFilter.m */; };
+		553206911456EFAD002E8D79 /* SearchFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206901456EFAD002E8D79 /* SearchFilterChain.m */; };
+		553206941457113F002E8D79 /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 553206931457113F002E8D79 /* Apartments.sqlite */; };
 		554F7CAF1446EE7F00F9C24D /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C8D1446EE7F00F9C24D /* AbstractParser.m */; };
 		554F7CB11446EE7F00F9C24D /* AvailabilityInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C911446EE7F00F9C24D /* AvailabilityInfo2Parser.m */; };
 		554F7CB51446EE7F00F9C24D /* ObjInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C981446EE7F00F9C24D /* ObjInfo2Parser.m */; };
@@ -130,6 +135,15 @@
 		55196944144C66C000021F34 /* ScaledImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScaledImage.h; path = CoreData/ScaledImage.h; sourceTree = "<group>"; usesTabs = 1; };
 		55196945144C66C000021F34 /* ScaledImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScaledImage.m; path = CoreData/ScaledImage.m; sourceTree = "<group>"; usesTabs = 1; };
 		551D58E01447110C000F0E97 /* ApartmentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApartmentModel.xcdatamodel; sourceTree = "<group>"; };
+		553206851456E636002E8D79 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Search.h; path = CoreData/Search.h; sourceTree = "<group>"; };
+		553206861456E636002E8D79 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Search.m; path = CoreData/Search.m; sourceTree = "<group>"; };
+		553206891456E6B2002E8D79 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResult.h; path = CoreData/SearchResult.h; sourceTree = "<group>"; };
+		5532068A1456E6B2002E8D79 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResult.m; path = CoreData/SearchResult.m; sourceTree = "<group>"; };
+		5532068C1456E95B002E8D79 /* SearchFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilter.h; path = CoreData/SearchFilter.h; sourceTree = "<group>"; };
+		5532068D1456E95B002E8D79 /* SearchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilter.m; path = CoreData/SearchFilter.m; sourceTree = "<group>"; };
+		5532068F1456EFAD002E8D79 /* SearchFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilterChain.h; path = CoreData/SearchFilterChain.h; sourceTree = "<group>"; };
+		553206901456EFAD002E8D79 /* SearchFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilterChain.m; path = CoreData/SearchFilterChain.m; sourceTree = "<group>"; };
+		553206931457113F002E8D79 /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = rsrc/Apartments.sqlite; sourceTree = "<group>"; };
 		554F7C8C1446EE7F00F9C24D /* AbstractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractParser.h; path = CoreData/AbstractParser.h; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C8D1446EE7F00F9C24D /* AbstractParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractParser.m; path = CoreData/AbstractParser.m; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C901446EE7F00F9C24D /* AvailabilityInfo2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailabilityInfo2Parser.h; path = CoreData/AvailabilityInfo2Parser.h; sourceTree = "<group>"; usesTabs = 1; };
@@ -350,6 +364,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				559A78411448839F009754FC /* libdispatch.dylib */,
 				554F7CCE1446F70C00F9C24D /* ImageIO.framework */,
 				55D47FC71434A06600AB6A5C /* CoreData.framework */,
 				7D0CD7741427901300E9F0FD /* MapKit.framework */,
@@ -402,6 +417,14 @@
 				55DE623B1450722C00C90EA4 /* ScaledImage+Extensions.m */,
 				55196944144C66C000021F34 /* ScaledImage.h */,
 				55196945144C66C000021F34 /* ScaledImage.m */,
+				553206851456E636002E8D79 /* Search.h */,
+				553206861456E636002E8D79 /* Search.m */,
+				5532068C1456E95B002E8D79 /* SearchFilter.h */,
+				5532068D1456E95B002E8D79 /* SearchFilter.m */,
+				5532068F1456EFAD002E8D79 /* SearchFilterChain.h */,
+				553206901456EFAD002E8D79 /* SearchFilterChain.m */,
+				553206891456E6B2002E8D79 /* SearchResult.h */,
+				5532068A1456E6B2002E8D79 /* SearchResult.m */,
 				554F7CAB1446EE7F00F9C24D /* StringConsts.h */,
 				554F7CAC1446EE7F00F9C24D /* StringConsts.m */,
 				554F7CAD1446EE7F00F9C24D /* Utils.h */,

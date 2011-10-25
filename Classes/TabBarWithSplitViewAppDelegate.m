@@ -36,6 +36,26 @@
 #pragma mark Application lifecycle
 
 
+
+- (void) copyDatabaseIfNeeded {
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"Apartments" ofType:@"sqlite"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *destinationPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Apartments.sqlite"];
+    
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    
+    if (![fileManager fileExistsAtPath:destinationPath]) {
+        [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+    }
+    
+}
+
+
+
+
+
 - (void) makeSplitViewController {
     controllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
     
@@ -252,7 +272,10 @@
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    startImport();
+    //startImport();
+    
+    
+    [self copyDatabaseIfNeeded];
     
     return YES;
 }
