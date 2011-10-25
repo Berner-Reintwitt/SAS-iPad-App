@@ -11,6 +11,7 @@
 #import "TabBarWithSplitViewAppDelegate.h"
 #import "SuchergebnisseKarte.h"
 #import "ButtonsPopUpViewController.h"
+#import "SuchergebnisseDomizil.h"
 
 #import "CoreData/ObjInfo2+Extensions.h"
 
@@ -96,9 +97,14 @@
     
     NSArray *searchResultList = [ObjInfo2 LocalSearch:[SearchParameters globalSearchParameters]];
     
+    SuchergebnisseDomizil *suchergdom=[[SuchergebnisseDomizil alloc]initWithNibName:@"SuchergebnisseDomizil" bundle:nil];
+    [self.view addSubview:suchergdom.view];
     
     
-    [self.navigationController pushViewController:suchergebnisseKarte animated:YES];
+    
+    //[self.navigationController pushViewController:suchergebnisseKarte animated:YES];
+    
+    
 }
 
 - (IBAction) erwachseneStepperWasPressed:(id)sender {

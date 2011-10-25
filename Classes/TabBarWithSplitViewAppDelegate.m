@@ -245,7 +245,7 @@
     tabBarController.viewControllers = controllers;
     //tabBarController.viewControllers=controllers;
     
-    [self transferDb];
+    //[self transferDb];
     // Override point for customization after app launch.
     
     // Set the tab bar controller as the window's root view controller and display.

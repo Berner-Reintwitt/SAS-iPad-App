@@ -11,6 +11,7 @@
 #import "SearchPopUpViewController.h"
 #import "SuchergebnisseKarte.h"
 #import "SuchergebnisseHausDetail.h"
+#import "SuchergebnisseDomizil.h"
 
 
 @interface DomizileFirstDetailViewController ()
@@ -214,9 +215,9 @@
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
     suchergebnisseKarte.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
    
+    SuchergebnisseDomizil *suchergdom=[[SuchergebnisseDomizil alloc]initWithNibName:@"SuchergebnisseDomizil" bundle:nil];
     
-    
-    
+   // [self.view addSubview:suchergdom.view];
      
      [appDelegate.tabBarController presentModalViewController:suchergebnisseKarte animated:YES];
     

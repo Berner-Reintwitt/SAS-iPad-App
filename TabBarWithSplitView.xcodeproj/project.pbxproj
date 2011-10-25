@@ -49,6 +49,8 @@
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
 		8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C8C1457048E00B1684C /* Apartments.sqlite */; };
 		8F357C90145704B100B1684C /* ApartmentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */; };
+		8F357C9414570F6000B1684C /* SuchergebnisseDomizil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */; };
+		8F357C9514570F6000B1684C /* SuchergebnisseDomizil.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C9314570F6000B1684C /* SuchergebnisseDomizil.xib */; };
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
 		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
 		8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43F9A31451779000EBD6C0 /* SearchParameters.m */; };
@@ -172,6 +174,9 @@
 		8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
 		8F357C8C1457048E00B1684C /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = "../../Library/Application Support/iPhone Simulator/5.0/Applications/Apartments.sqlite"; sourceTree = "<group>"; };
 		8F357C8F145704B100B1684C /* ApartmentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApartmentModel.xcdatamodel; sourceTree = "<group>"; };
+		8F357C9114570F6000B1684C /* SuchergebnisseDomizil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseDomizil.h; sourceTree = "<group>"; };
+		8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseDomizil.m; sourceTree = "<group>"; };
+		8F357C9314570F6000B1684C /* SuchergebnisseDomizil.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseDomizil.xib; sourceTree = "<group>"; };
 		8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileFirstDetailViewController.xib; sourceTree = "<group>"; };
 		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
 		8F43F9A21451779000EBD6C0 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchParameters.h; sourceTree = "<group>"; };
@@ -462,6 +467,8 @@
 		8F879E22143C6481002BD6C9 /* Domizile */ = {
 			isa = PBXGroup;
 			children = (
+				8F357C9114570F6000B1684C /* SuchergebnisseDomizil.h */,
+				8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */,
 				8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */,
 				8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */,
 				8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */,
@@ -476,6 +483,7 @@
 				8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */,
 				8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */,
 				8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */,
+				8F357C9314570F6000B1684C /* SuchergebnisseDomizil.xib */,
 				8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */,
 				8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */,
 				8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */,
@@ -619,6 +627,7 @@
 				8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */,
 				8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */,
 				8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */,
+				8F357C9514570F6000B1684C /* SuchergebnisseDomizil.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +694,7 @@
 				55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */,
 				55DE627814557FB200C90EA4 /* ObjPicture+Extensions.m in Sources */,
 				8F357C90145704B100B1684C /* ApartmentModel.xcdatamodeld in Sources */,
+				8F357C9414570F6000B1684C /* SuchergebnisseDomizil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
