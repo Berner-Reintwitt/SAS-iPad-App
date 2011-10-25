@@ -109,5 +109,12 @@ extern NSString *NAME_data;
 
 extern NSString *CLASS_KeyValueData;
 
+
+extern NSString *NAME_alergic;
+extern NSString *NAME_animals;
+extern NSString *NAME_smoking;
+
+
+
 @interface StringConsts : NSObject
 @end
