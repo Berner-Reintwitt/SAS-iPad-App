@@ -322,7 +322,6 @@
 		29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				559A78411448839F009754FC /* libdispatch.dylib */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -355,6 +354,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				559A78411448839F009754FC /* libdispatch.dylib */,
 				554F7CCE1446F70C00F9C24D /* ImageIO.framework */,
 				55D47FC71434A06600AB6A5C /* CoreData.framework */,
 				7D0CD7741427901300E9F0FD /* MapKit.framework */,
