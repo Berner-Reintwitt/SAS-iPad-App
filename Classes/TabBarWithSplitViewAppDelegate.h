@@ -70,6 +70,7 @@ UINavigationController *navigationControllerModalViews;
 @property (nonatomic, retain) UINavigationController *navigationControllerModalViews;
 @property NSInteger whichTablePopUpView;
 @property (nonatomic, retain) NSMutableArray *controllers;
+-(BOOL)transferDb;
 
 
 @end

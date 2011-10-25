@@ -33,7 +33,6 @@
 		554F7CBF1446EE7F00F9C24D /* StringConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7CAC1446EE7F00F9C24D /* StringConsts.m */; };
 		554F7CC01446EE7F00F9C24D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7CAE1446EE7F00F9C24D /* Utils.m */; };
 		554F7CCF1446F70C00F9C24D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F7CCE1446F70C00F9C24D /* ImageIO.framework */; };
-		559A78421448839F009754FC /* libdispatch.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A78411448839F009754FC /* libdispatch.dylib */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
 		55DE6227144F039A00C90EA4 /* KeyValueData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6226144F039900C90EA4 /* KeyValueData.m */; };
 		55DE623214504B7500C90EA4 /* ObjPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE623114504B7500C90EA4 /* ObjPicture.m */; };
@@ -48,6 +47,8 @@
 		8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */; };
 		8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */; };
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
+		8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C8C1457048E00B1684C /* Apartments.sqlite */; };
+		8F357C90145704B100B1684C /* ApartmentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */; };
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
 		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
 		8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43F9A31451779000EBD6C0 /* SearchParameters.m */; };
@@ -102,7 +103,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TabBarWithSplitViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarWithSplitViewAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarWithSplitViewAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* TabBarWithSplitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarWithSplitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* SASTEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SASTEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28216C950DB411BC00E5133A /* Orte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orte.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* Orte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orte.m; sourceTree = "<group>"; };
@@ -146,7 +147,6 @@
 		554F7CAD1446EE7F00F9C24D /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = CoreData/Utils.h; sourceTree = "<group>"; usesTabs = 1; };
 		554F7CAE1446EE7F00F9C24D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = CoreData/Utils.m; sourceTree = "<group>"; usesTabs = 1; };
 		554F7CCE1446F70C00F9C24D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		559A78411448839F009754FC /* libdispatch.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdispatch.dylib; path = usr/lib/system/libdispatch.dylib; sourceTree = SDKROOT; };
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		55DE6225144F039900C90EA4 /* KeyValueData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueData.h; path = CoreData/KeyValueData.h; sourceTree = "<group>"; };
 		55DE6226144F039900C90EA4 /* KeyValueData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueData.m; path = CoreData/KeyValueData.m; sourceTree = "<group>"; };
@@ -170,6 +170,8 @@
 		8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseHausDetail.xib; sourceTree = SOURCE_ROOT; };
 		8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFirstDetailViewController.h; sourceTree = "<group>"; };
 		8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
+		8F357C8C1457048E00B1684C /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = "../../Library/Application Support/iPhone Simulator/5.0/Applications/Apartments.sqlite"; sourceTree = "<group>"; };
+		8F357C8F145704B100B1684C /* ApartmentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApartmentModel.xcdatamodel; sourceTree = "<group>"; };
 		8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileFirstDetailViewController.xib; sourceTree = "<group>"; };
 		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
 		8F43F9A21451779000EBD6C0 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchParameters.h; sourceTree = "<group>"; };
@@ -251,7 +253,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559A78421448839F009754FC /* libdispatch.dylib in Frameworks */,
 				554F7CCF1446F70C00F9C24D /* ImageIO.framework in Frameworks */,
 				55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */,
 				7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */,
@@ -302,7 +303,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* TabBarWithSplitView.app */,
+				1D6058910D05DD3D006BFB54 /* SASTEST.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,7 +311,7 @@
 		29B97314FDCFA39411CA2CEA /* TabBarWithSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				559A78411448839F009754FC /* libdispatch.dylib */,
+				8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -332,6 +333,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F357C8C1457048E00B1684C /* Apartments.sqlite */,
 				8F9586FF144711E400508C2D /* pig.png */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */,
@@ -554,7 +556,7 @@
 			);
 			name = TabBarWithSplitView;
 			productName = TabBarWithSplitView;
-			productReference = 1D6058910D05DD3D006BFB54 /* TabBarWithSplitView.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* SASTEST.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -616,6 +618,7 @@
 				8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */,
 				8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */,
 				8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */,
+				8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +684,7 @@
 				55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */,
 				55DE623C1450722D00C90EA4 /* ScaledImage+Extensions.m in Sources */,
 				55DE627814557FB200C90EA4 /* ObjPicture+Extensions.m in Sources */,
+				8F357C90145704B100B1684C /* ApartmentModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +696,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Johannes Böhler (2HFU3U2WKV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johannes Böhler (2HFU3U2WKV)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
@@ -706,7 +712,9 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
-				PRODUCT_NAME = TabBarWithSplitView;
+				PRODUCT_NAME = SASTEST;
+				PROVISIONING_PROFILE = "E1544EFA-9216-40E2-B9E1-49DD12674E22";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E1544EFA-9216-40E2-B9E1-49DD12674E22";
 			};
 			name = Debug;
 		};
@@ -715,6 +723,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Johannes Böhler (2HFU3U2WKV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johannes Böhler (2HFU3U2WKV)";
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -727,7 +737,9 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
-				PRODUCT_NAME = TabBarWithSplitView;
+				PRODUCT_NAME = SASTEST;
+				PROVISIONING_PROFILE = "E1544EFA-9216-40E2-B9E1-49DD12674E22";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E1544EFA-9216-40E2-B9E1-49DD12674E22";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -789,6 +801,16 @@
 				551D58E01447110C000F0E97 /* ApartmentModel.xcdatamodel */,
 			);
 			currentVersion = 551D58E01447110C000F0E97 /* ApartmentModel.xcdatamodel */;
+			path = ApartmentModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8F357C8F145704B100B1684C /* ApartmentModel.xcdatamodel */,
+			);
+			currentVersion = 8F357C8F145704B100B1684C /* ApartmentModel.xcdatamodel */;
 			path = ApartmentModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

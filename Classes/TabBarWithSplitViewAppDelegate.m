@@ -245,7 +245,7 @@
     tabBarController.viewControllers = controllers;
     //tabBarController.viewControllers=controllers;
     
-    
+    [self transferDb];
     // Override point for customization after app launch.
     
     // Set the tab bar controller as the window's root view controller and display.
@@ -306,6 +306,26 @@
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
     */
 }
+- (BOOL)transferDb {
+    NSError **error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"Apartments.sqlite"]; 
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSLog(@"Path doesnt exist");
+    if ([fileManager fileExistsAtPath: path])
+    {
+        NSString *bundle =  [[ NSBundle mainBundle] pathForResource:@"preferenze" ofType:@"plist"];
+        [fileManager copyItemAtPath:bundle toPath:path error:error];
+        return YES;
+        NSLog(@"Path exists");
+        
+    }
+   NSLog(@"Path doesnt exist");
+    return NO;
+}
+
 
 
 - (void)dealloc {
