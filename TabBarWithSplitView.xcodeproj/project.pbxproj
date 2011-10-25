@@ -27,6 +27,7 @@
 		5532068B1456E6B2002E8D79 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068A1456E6B2002E8D79 /* SearchResult.m */; };
 		5532068E1456E95B002E8D79 /* SearchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068D1456E95B002E8D79 /* SearchFilter.m */; };
 		553206911456EFAD002E8D79 /* SearchFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206901456EFAD002E8D79 /* SearchFilterChain.m */; };
+		553206941457113F002E8D79 /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 553206931457113F002E8D79 /* Apartments.sqlite */; };
 		554F7CAF1446EE7F00F9C24D /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C8D1446EE7F00F9C24D /* AbstractParser.m */; };
 		554F7CB11446EE7F00F9C24D /* AvailabilityInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C911446EE7F00F9C24D /* AvailabilityInfo2Parser.m */; };
 		554F7CB51446EE7F00F9C24D /* ObjInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C981446EE7F00F9C24D /* ObjInfo2Parser.m */; };
@@ -139,6 +140,7 @@
 		5532068D1456E95B002E8D79 /* SearchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilter.m; path = CoreData/SearchFilter.m; sourceTree = "<group>"; };
 		5532068F1456EFAD002E8D79 /* SearchFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilterChain.h; path = CoreData/SearchFilterChain.h; sourceTree = "<group>"; };
 		553206901456EFAD002E8D79 /* SearchFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilterChain.m; path = CoreData/SearchFilterChain.m; sourceTree = "<group>"; };
+		553206931457113F002E8D79 /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = rsrc/Apartments.sqlite; sourceTree = "<group>"; };
 		554F7C8C1446EE7F00F9C24D /* AbstractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractParser.h; path = CoreData/AbstractParser.h; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C8D1446EE7F00F9C24D /* AbstractParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractParser.m; path = CoreData/AbstractParser.m; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C901446EE7F00F9C24D /* AvailabilityInfo2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailabilityInfo2Parser.h; path = CoreData/AvailabilityInfo2Parser.h; sourceTree = "<group>"; usesTabs = 1; };
@@ -343,6 +345,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				553206931457113F002E8D79 /* Apartments.sqlite */,
 				8F9586FF144711E400508C2D /* pig.png */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */,
@@ -636,6 +639,7 @@
 				8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */,
 				8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */,
 				8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */,
+				553206941457113F002E8D79 /* Apartments.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
