@@ -2,7 +2,7 @@
 //  Price.m
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 17.10.11.
+//  Created by Berndt Reinhold on 26.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic price;
 @dynamic styp;
 @dynamic typ;
+@dynamic md5hash;
 @dynamic parent;
 
 @end

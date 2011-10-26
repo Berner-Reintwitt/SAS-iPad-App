@@ -2,7 +2,7 @@
 //  ObjPicture.m
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 20.10.11.
+//  Created by Berndt Reinhold on 26.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,12 +14,13 @@
 @implementation ObjPicture
 
 @dynamic big_url;
+@dynamic serial;
 @dynamic thumb_url;
 @dynamic timestamp;
 @dynamic title;
 @dynamic type;
 @dynamic url;
-@dynamic serial;
+@dynamic md5hash;
 @dynamic images;
 @dynamic parent;
 

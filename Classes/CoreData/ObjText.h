@@ -2,7 +2,7 @@
 //  ObjText.h
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 17.10.11.
+//  Created by Berndt Reinhold on 26.10.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSDate * timestamp;
+@property (nonatomic, retain) NSData * md5hash;
 @property (nonatomic, retain) ObjInfo2 *parent;
 
 @end
