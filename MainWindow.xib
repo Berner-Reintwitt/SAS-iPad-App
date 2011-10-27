@@ -71,6 +71,10 @@
 				<object class="IBUIViewController" key="IBUISelectedViewController" id="295385551">
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="911117942">
 						<string key="IBUITitle">Home</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">home_btn_tabbar.png</string>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<reference key="IBUIParentViewController" ref="395037606"/>
@@ -104,6 +108,10 @@
 					<object class="IBUIViewController" id="167871423">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="999168367">
 							<string key="IBUITitle">ShuttleService</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">shuttle_btn_tabbar.png</string>
+							</object>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						</object>
 						<reference key="IBUIToolbarItems" ref="0"/>
@@ -118,6 +126,10 @@
 					<object class="IBUIViewController" id="240426214">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="720455198">
 							<string key="IBUITitle">Orte</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">orte_btn_tabbar.png</string>
+							</object>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						</object>
 						<reference key="IBUIParentViewController" ref="395037606"/>
@@ -160,7 +172,11 @@
 					<object class="IBUIViewController" id="1021830418">
 						<string key="IBUITitle">Wetter</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="29172515">
-							<string key="IBUITitle">Item</string>
+							<string key="IBUITitle">Wetter</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">wetter_btn_tabbar.png</string>
+							</object>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						</object>
 						<reference key="IBUIToolbarItems" ref="0"/>
@@ -176,6 +192,10 @@
 					<object class="IBUIViewController" id="297688779">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="749419558">
 							<string key="IBUITitle">Kontakt</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">kontakt_btn_tabbar.png</string>
+							</object>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						</object>
 						<reference key="IBUIToolbarItems" ref="0"/>
@@ -496,6 +516,25 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>home_btn_tabbar.png</string>
+				<string>kontakt_btn_tabbar.png</string>
+				<string>orte_btn_tabbar.png</string>
+				<string>shuttle_btn_tabbar.png</string>
+				<string>wetter_btn_tabbar.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{31, 30}</string>
+				<string>{40, 30}</string>
+				<string>{40, 30}</string>
+				<string>{40, 30}</string>
+				<string>{40, 30}</string>
+			</object>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">931</string>
 	</data>
 </archive>

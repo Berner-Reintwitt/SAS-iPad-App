@@ -17,21 +17,17 @@
 
 
 @implementation Home
+
 @synthesize table3;
-@synthesize erwachseneStepper;
-@synthesize uebernachtungStepper;
-@synthesize uebernachtungLabel;
-@synthesize erwachseneLabel;
-@synthesize anreiseButton;
-@synthesize abreiseButton;
-@synthesize zielPopOver;
-@synthesize  popover;
+@synthesize popover;
+@synthesize  popoverController;
 @synthesize listData1;
 @synthesize listData2;
 @synthesize listData3;
 @synthesize table1;
 @synthesize table2;
-@synthesize anreiseButtonIsSelected;
+
+@synthesize homePop;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
@@ -49,12 +45,8 @@
     [self setTable1:nil];
     [self setTable2:nil];
     [self setTable3:nil];
-    [self setErwachseneStepper:nil];
-    [self setUebernachtungStepper:nil];
-    [self setUebernachtungLabel:nil];
-    [self setErwachseneLabel:nil];
-    [self setAnreiseButton:nil];
-    [self setAbreiseButton:nil];
+  
+
     [super viewDidUnload];
 }
 
@@ -62,101 +54,26 @@
     [table1 release];
     [table2 release];
     [table3 release];
-    [erwachseneStepper release];
-    [uebernachtungStepper release];
-    [uebernachtungLabel release];
-    [erwachseneLabel release];
-    [anreiseButton release];
-    [abreiseButton release];
+
+
     [super dealloc];
 }
 
-- (IBAction) buttonTapped:(id)sender {
+/*- (IBAction) buttonTapped:(id)sender {
     
     SearchPopUpViewController *searchpopup=[[ SearchPopUpViewController alloc]init];
     popover=[[UIPopoverController alloc]initWithContentViewController:searchpopup];
     [searchpopup release];
     [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     
-}
+}*/
 
-- (IBAction) detailSucheButtonWasPressed:(id)sender {
-    
-   // UIViewController *viewcontroller=[appDelegate.tabBarController.viewControllers objectAtIndex:2];
-    appDelegate.tabBarController.selectedIndex=1;
-}
-   
-- (IBAction) suchenButtonWasPressed:(id)sender {
-    SuchergebnisseKarte *suchergebnisseKarte = [[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-        
-    suchergebnisseKarte.modalPresentationStyle = UIModalPresentationFullScreen;
-    suchergebnisseKarte.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        
-    //appDelegate.window.rootViewController=navigationControllerModalViews;
-        
-    
-    NSArray *searchResultList = [ObjInfo2 LocalSearch:[SearchParameters globalSearchParameters]];
-    
-    SuchergebnisseDomizil *suchergdom=[[SuchergebnisseDomizil alloc]initWithNibName:@"SuchergebnisseDomizil" bundle:nil];
-    [self.view addSubview:suchergdom.view];
-    
-    
-    
-    //[self.navigationController pushViewController:suchergebnisseKarte animated:YES];
-    
-    
-}
 
-- (IBAction) erwachseneStepperWasPressed:(id)sender {
-    erwachseneLabel.text =[[NSString alloc]initWithFormat:@"%d",(int)erwachseneStepper.value];
-   
-    param.adults=erwachseneStepper.value;
-}
-
-- (IBAction) uebernachtungStepperWasPressed:(id)sender {
-    
-    uebernachtungLabel.text=[[NSString alloc]initWithFormat:@"%d",(int)uebernachtungStepper.value];
-    
-    
-}
-
-- (IBAction) zielButtonWasPressed:(id)sender {
-    appDelegate.whichTablePopUpView=4;
-    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
-    
-    [auswahlViewContr.table reloadData];
-    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
-    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-    
-}
-
-- (IBAction) domizilTypButtonWasPressed:(id)sender {
-    appDelegate.whichTablePopUpView = 5;
-    ButtonsPopUpViewController *auswahlViewContr =[[ButtonsPopUpViewController alloc] initWithNibName:@"ButtonsPopUpViewController" bundle:nil];
- 
-    [auswahlViewContr.table reloadData];
-    UIPopoverController *popoverControllerDomiz=[[UIPopoverController alloc] initWithContentViewController:auswahlViewContr];
-    [popoverControllerDomiz presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-}
-
-- (IBAction) anreiseButtonIsPressed:(id)sender {
-    anreiseButtonIsSelected = YES;
-    CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
-     UIPopoverController * popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
-    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-    
-}
-
-- (IBAction) abreiseButtonIsPressed:(id)sender {
-    anreiseButtonIsSelected = NO;
-    CalendarPopUpViewController *calenderp=[[CalendarPopUpViewController alloc] initWithNibName:@"CalenderPopUpViewController" bundle:nil];
-    UIPopoverController * popoverController=[[UIPopoverController alloc]initWithContentViewController:calenderp];
-    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-}
 
 - (void) viewDidLoad {
-    anreiseButtonIsSelected = YES;
+    
     appDelegate = (TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];  
+    homePop=[[HomePopUpViewController alloc]initWithNibName:@"HomePopUpViewController" bundle:nil];
     NSArray *array1=[[NSArray alloc]initWithObjects:@"Paul",@"Paul1",@"Paul2",@"Paul4",@"Paul5",nil];
     NSArray *array2=[[NSArray alloc]initWithObjects:@"Hallo",@"Hallo1",@"Hallo2",@"Hallo3",@"Hallo4",@"Hallo5",@"Hallo6",@"Hallo7",@"Hallo8",@"Hallo9",@"Hallo10",@"Hallo11",nil];
     NSArray *array3=[[NSArray alloc]initWithObjects:@"Pallim",@"Pallim2",@"Pallim3",@"Pallim4",@"Pallim5",nil];
@@ -214,5 +131,16 @@
     }
     return cell;
 }
+
+-(void)searchPopUpViewWasPressed:(id)sender{
+    
+    
+    
+   popoverController=[[UIPopoverController alloc] initWithContentViewController:homePop];
+    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+    
+}
+
 
 @end

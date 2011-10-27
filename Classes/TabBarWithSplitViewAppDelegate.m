@@ -47,7 +47,23 @@
     NSError *error;
     
     if (![fileManager fileExistsAtPath:destinationPath]) {
+        
+        
+        
         [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+    }
+    
+    else {
+        
+        NSDictionary *dict=[fileManager fileAttributesAtPath:destinationPath traverseLink:NO];
+        NSNumber *number = [dict objectForKey:NSFileSize];
+        if(nil!=number&&[number intValue]<500000){
+            
+            [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+            
+        }
+        
+        
     }
     
 }
@@ -94,6 +110,8 @@
             splitViewControllerDomizile.delegate = firstDetailViewController;
             splitViewControllerDomizile.barButton = firstDetailViewController.barButton;
             splitViewControllerDomizile.pc  =firstDetailViewController.popoverController;
+            UIImage *img= [UIImage imageNamed:@"domizile_btn_tabbar.png"];
+            splitViewControllerDomizile.tabBarItem.image=img;
             
         
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
@@ -140,7 +158,9 @@
           
             //  splitViewControllerShuttleService.barButton = shuttleServiceDetailViewControllerMaserati.barButton;
            // splitViewControllerShuttleService.pc  =shuttleServiceDetailViewControllerMaserati.popoverController;
-            
+            UIImage *img= [UIImage imageNamed:@"shuttle_btn_tabbar.png"];
+            splitViewControllerShuttleService.tabBarItem.image=img;
+
             
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
             
@@ -173,7 +193,8 @@
             [splitViewControllerEvents setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
 
             
-            
+            UIImage *img= [UIImage imageNamed:@"events_btn_tabbar.png"];
+            splitViewControllerEvents.tabBarItem.image=img;
             
             //schickt DetailView samt NavigationController an den SPlitviewController
            // splitViewControllerEvents.viewControllers = [NSArray arrayWithObjects:nav, firstMonthDetailViewController, nil];
@@ -213,7 +234,8 @@
             
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
             splitViewControllerNews.delegate = newsDetailView;
-           
+            UIImage *img= [UIImage imageNamed:@"news_btn_tabbar.png"];
+            splitViewControllerNews.tabBarItem.image=img;
             
             
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
@@ -254,18 +276,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-    Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
+  /*  Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
     
     navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:home];
     navigationControllerModalViews.modalPresentationStyle=UIModalPresentationCurrentContext;
     navigationControllerModalViews.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     navigationControllerModalViews.tabBarItem.title=@"Home";
-    [self makeSplitViewController];
-    [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];
-    tabBarController.viewControllers = controllers;
-    //tabBarController.viewControllers=controllers;
+    UIImage *img= [UIImage imageNamed:@"home_btn_tabbar.png"];
+    navigationControllerModalViews.tabBarItem.image=img;
     
-    //[self transferDb];
+    [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];*/
+    [self makeSplitViewController];
+    tabBarController.viewControllers = controllers;
+   
+    
+    
     // Override point for customization after app launch.
     
     // Set the tab bar controller as the window's root view controller and display.
