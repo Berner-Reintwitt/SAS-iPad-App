@@ -78,7 +78,7 @@
     int index = 0; 
     
     for (UIViewController *controller in tabBarController.viewControllers) {
-        if (index == 1) {
+      /*  if (index == 1) {
             firstDetailViewController = [[DomizileFirstDetailViewController alloc] initWithNibName:@"DomizileFirstDetailViewController" bundle:nil];
             
             
@@ -122,7 +122,7 @@
         
         
         
-        else if (index == 2) {
+         if (index == 2) {
             shuttleServiceDetailViewControllerMaserati = [[ShuttleServiceDetailViewControllerMaserati alloc] initWithNibName:@"ShuttleServiceDetailViewControllerMaserati" bundle:nil];
             
             
@@ -167,9 +167,9 @@
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerShuttleService];
         }
         
+        */
         
-        
-        else if (index == 4) {
+         if (index == 3) {
             firstMonthDetailViewController = [[MonatEventDetailView alloc] initWithNibName:@"MonatEventDetailView" bundle:nil];
             
             
@@ -193,7 +193,7 @@
             [splitViewControllerEvents setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
 
             
-            UIImage *img= [UIImage imageNamed:@"events_btn_tabbar.png"];
+            UIImage *img= [UIImage imageNamed:@"events_btn.png"];
             splitViewControllerEvents.tabBarItem.image=img;
             
             //schickt DetailView samt NavigationController an den SPlitviewController
@@ -211,7 +211,7 @@
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerEvents];
         }
 
-        else if (index == 5) {
+        else if (index == 4) {
             newsDetailView = [[NewsDetailView alloc] initWithNibName:@"NewsDetailView" bundle:nil];
             
             
@@ -234,7 +234,7 @@
             
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
             splitViewControllerNews.delegate = newsDetailView;
-            UIImage *img= [UIImage imageNamed:@"news_btn_tabbar.png"];
+            UIImage *img= [UIImage imageNamed:@"news_btn.png"];
             splitViewControllerNews.tabBarItem.image=img;
             
             
@@ -249,9 +249,9 @@
         index++;
         NSLog(@"%d",index);
     }
-    
+    tabBarController.viewControllers = controllers;
     tabBarController.delegate = self;
-   // tabBarController.viewControllers = controllers;
+    
 }
 
 
@@ -259,6 +259,8 @@
    // UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     return NO;
 }
+
+
 
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
@@ -275,8 +277,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-    SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-  /*  Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
+   /* SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+    Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
     
     navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:home];
     navigationControllerModalViews.modalPresentationStyle=UIModalPresentationCurrentContext;
@@ -287,16 +289,17 @@
     
     [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];*/
     [self makeSplitViewController];
-    tabBarController.viewControllers = controllers;
+   
    
     
     
     // Override point for customization after app launch.
     
     // Set the tab bar controller as the window's root view controller and display.
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-
+    
     //startImport();
     
     

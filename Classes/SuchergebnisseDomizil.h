@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SuchergebnisseDomizil : UIViewController
+@interface SuchergebnisseDomizil : UIViewController<UIScrollViewDelegate>{
+    
+    UIScrollView *scrollView;
+    
+}
+- (IBAction)scroll:(id)sender;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
