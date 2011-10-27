@@ -47,7 +47,23 @@
     NSError *error;
     
     if (![fileManager fileExistsAtPath:destinationPath]) {
+        
+        
+        
         [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+    }
+    
+    else {
+        
+        NSDictionary *dict=[fileManager fileAttributesAtPath:destinationPath traverseLink:NO];
+        NSNumber *number = [dict objectForKey:NSFileSize];
+        if(nil!=number&&[number intValue]<500000){
+            
+            [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+            
+        }
+        
+        
     }
     
 }
@@ -62,7 +78,7 @@
     int index = 0; 
     
     for (UIViewController *controller in tabBarController.viewControllers) {
-        if (index == 1) {
+      /*  if (index == 1) {
             firstDetailViewController = [[DomizileFirstDetailViewController alloc] initWithNibName:@"DomizileFirstDetailViewController" bundle:nil];
             
             
@@ -94,6 +110,8 @@
             splitViewControllerDomizile.delegate = firstDetailViewController;
             splitViewControllerDomizile.barButton = firstDetailViewController.barButton;
             splitViewControllerDomizile.pc  =firstDetailViewController.popoverController;
+            UIImage *img= [UIImage imageNamed:@"domizile_btn_tabbar.png"];
+            splitViewControllerDomizile.tabBarItem.image=img;
             
         
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
@@ -104,7 +122,7 @@
         
         
         
-        else if (index == 2) {
+         if (index == 2) {
             shuttleServiceDetailViewControllerMaserati = [[ShuttleServiceDetailViewControllerMaserati alloc] initWithNibName:@"ShuttleServiceDetailViewControllerMaserati" bundle:nil];
             
             
@@ -140,16 +158,18 @@
           
             //  splitViewControllerShuttleService.barButton = shuttleServiceDetailViewControllerMaserati.barButton;
            // splitViewControllerShuttleService.pc  =shuttleServiceDetailViewControllerMaserati.popoverController;
-            
+            UIImage *img= [UIImage imageNamed:@"shuttle_btn_tabbar.png"];
+            splitViewControllerShuttleService.tabBarItem.image=img;
+
             
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
             
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerShuttleService];
         }
         
+        */
         
-        
-        else if (index == 4) {
+         if (index == 3) {
             firstMonthDetailViewController = [[MonatEventDetailView alloc] initWithNibName:@"MonatEventDetailView" bundle:nil];
             
             
@@ -173,7 +193,8 @@
             [splitViewControllerEvents setViewControllers:[NSArray arrayWithObjects:nav, firstDetailNavigationController, nil]];
 
             
-            
+            UIImage *img= [UIImage imageNamed:@"events_btn.png"];
+            splitViewControllerEvents.tabBarItem.image=img;
             
             //schickt DetailView samt NavigationController an den SPlitviewController
            // splitViewControllerEvents.viewControllers = [NSArray arrayWithObjects:nav, firstMonthDetailViewController, nil];
@@ -190,7 +211,7 @@
             [controllers replaceObjectAtIndex:index withObject:splitViewControllerEvents];
         }
 
-        else if (index == 5) {
+        else if (index == 4) {
             newsDetailView = [[NewsDetailView alloc] initWithNibName:@"NewsDetailView" bundle:nil];
             
             
@@ -213,7 +234,8 @@
             
             //firstDetailViewController ist die Delegate des SlitViewControllers und erhält dessen Nachrichten
             splitViewControllerNews.delegate = newsDetailView;
-           
+            UIImage *img= [UIImage imageNamed:@"news_btn.png"];
+            splitViewControllerNews.tabBarItem.image=img;
             
             
             //der Controller welcher bisher in der Tabbar registriert ist wird überschrieben
@@ -227,9 +249,9 @@
         index++;
         NSLog(@"%d",index);
     }
-    
+    tabBarController.viewControllers = controllers;
     tabBarController.delegate = self;
-   // tabBarController.viewControllers = controllers;
+    
 }
 
 
@@ -237,6 +259,8 @@
    // UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     return NO;
 }
+
+
 
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
@@ -253,25 +277,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-    SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
+   /* SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
     Home *home =[[Home alloc]initWithNibName:@"Home" bundle:nil];
     
     navigationControllerModalViews=[[UINavigationController alloc]initWithRootViewController:home];
     navigationControllerModalViews.modalPresentationStyle=UIModalPresentationCurrentContext;
     navigationControllerModalViews.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     navigationControllerModalViews.tabBarItem.title=@"Home";
+    UIImage *img= [UIImage imageNamed:@"home_btn_tabbar.png"];
+    navigationControllerModalViews.tabBarItem.image=img;
+    
+    [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];*/
     [self makeSplitViewController];
-    [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];
-    tabBarController.viewControllers = controllers;
-    //tabBarController.viewControllers=controllers;
+   
+   
     
     
     // Override point for customization after app launch.
     
     // Set the tab bar controller as the window's root view controller and display.
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-
+    
     //startImport();
     
     
@@ -329,6 +357,26 @@
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
     */
 }
+- (BOOL)transferDb {
+    NSError **error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"Apartments.sqlite"]; 
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSLog(@"Path doesnt exist");
+    if ([fileManager fileExistsAtPath: path])
+    {
+        NSString *bundle =  [[ NSBundle mainBundle] pathForResource:@"preferenze" ofType:@"plist"];
+        [fileManager copyItemAtPath:bundle toPath:path error:error];
+        return YES;
+        NSLog(@"Path exists");
+        
+    }
+   NSLog(@"Path doesnt exist");
+    return NO;
+}
+
 
 
 - (void)dealloc {

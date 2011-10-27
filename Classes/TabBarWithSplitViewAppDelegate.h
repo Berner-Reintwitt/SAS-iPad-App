@@ -19,6 +19,7 @@
 #import "NewsDetailView.h"
 #import "NewsRootViewController.h"
 #import "SearchParameters.h"
+#import "TabBarSubclass.h"
 
 NSString *date1;
 UINavigationController *navigationControllerModalViews;
@@ -35,7 +36,7 @@ UINavigationController *navigationControllerModalViews;
 
 @interface TabBarWithSplitViewAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,UINavigationBarDelegate> {
     UIWindow *window;
-    UITabBarController *tabBarController;
+    TabBarSubclass *tabBarController;
     NewsRootViewController *newsRootViewController;
     NewsDetailView *newsDetailView;
     EnhancedSplitViewController *splitViewControllerDomizile;
@@ -58,7 +59,7 @@ UINavigationController *navigationControllerModalViews;
 @property (nonatomic, retain) IBOutlet NewsRootViewController *newsRootViewController;
 @property (nonatomic, retain) IBOutlet NewsDetailView *newsDetailView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+@property (nonatomic, retain) IBOutlet TabBarSubclass *tabBarController;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerDomizile;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerShuttleService;
 @property (nonatomic, retain) IBOutlet EnhancedSplitViewController *splitViewControllerEvents;
@@ -70,6 +71,7 @@ UINavigationController *navigationControllerModalViews;
 @property (nonatomic, retain) UINavigationController *navigationControllerModalViews;
 @property NSInteger whichTablePopUpView;
 @property (nonatomic, retain) NSMutableArray *controllers;
+-(BOOL)transferDb;
 
 
 @end

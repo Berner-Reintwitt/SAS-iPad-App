@@ -82,7 +82,7 @@
 									<object class="IBUIImageView" id="977597581">
 										<reference key="NSNextResponder" ref="99098375"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{5, 10}, {250, 190}}</string>
+										<string key="NSFrame">{{0, 5}, {250, 190}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
 										<reference key="NSNextKeyView" ref="157480332"/>
 										<bool key="IBUIOpaque">NO</bool>
@@ -127,7 +127,6 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{517, 133}, {78, 37}}</string>
 										<reference key="NSSuperview" ref="99098375"/>
-										<reference key="NSNextKeyView"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<int key="IBUIContentHorizontalAlignment">0</int>
@@ -197,7 +196,7 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrameSize">{320, 190}</string>
+								<string key="NSFrameSize">{768, 190}</string>
 								<reference key="NSSuperview" ref="248446230"/>
 								<reference key="NSNextKeyView" ref="977597581"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -367,7 +366,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">star.png</string>
-			<string key="NS.object.0">{200, 200}</string>
+			<string key="NS.object.0">{320, 305}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">931</string>
 	</data>
