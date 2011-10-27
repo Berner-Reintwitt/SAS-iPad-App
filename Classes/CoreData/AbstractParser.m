@@ -25,6 +25,11 @@
 }
 + (NSNumber *)parseBoolean:(NSString *)text { return [NSNumber numberWithBool: [@"true" compare:text] == NSOrderedSame]; }
 
++ (NSData *)parseBase64:(NSString *)text {
+	
+	return nil;
+}
+
 - (id)initWithContext:(NSManagedObjectContext *)ctx {
     context = ctx;
     return self;
