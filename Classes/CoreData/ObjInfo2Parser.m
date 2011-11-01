@@ -64,7 +64,7 @@
             apartment.flags = [AbstractParser parseInt:[mDict objectForKey:NAME_flags]];
             apartment.googlemaps_latitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_googlemaps_latitude]];
             apartment.googlemaps_longitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_googlemaps_longitude]];
-            
+            apartment.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
             NSMutableSet *set = [mDict objectForKey:NAME_AttributeSet];
             if (nil != set) [apartment addAttributes:set];
         } else {

@@ -26,6 +26,7 @@
                 price.styp = [mDict objectForKey:NAME_styp];
                 price.typ = [mDict objectForKey:NAME_typ];
                 price.price = [AbstractParser parseFloat:[mDict objectForKey:NAME_price]];
+				price.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
                 NSMutableSet *prices = [pDict objectForKey:SET_Price];
                 if (nil == prices) {
                     prices = [NSMutableSet setWithCapacity:20];
@@ -41,6 +42,7 @@
             pInfo.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
             pInfo.prli = [AbstractParser parseInt: [mDict objectForKey:NAME_prli]];
             pInfo.prices = [mDict objectForKey:SET_Price];
+			pInfo.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
             NSString *exid = [mDict objectForKey:NAME_exid];
             
             ObjInfo2 *a = [Queries getApartment:context	withExID:exid];

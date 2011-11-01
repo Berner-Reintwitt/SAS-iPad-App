@@ -21,6 +21,7 @@
         text.key = [mDict objectForKey:NAME_key];
         text.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
         text.text = [mDict objectForKey:NAME_text];
+		text.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
         NSString *exid = [mDict objectForKey:NAME_exid];        
         ObjInfo2 *a = [Queries getApartment:context withExID:exid];
         if (nil != a) {

@@ -26,6 +26,8 @@
         aInfo.bookingWeekStart = bookingWeekStart;
         NSString *dayAvailability = [mDict objectForKey:NAME_DayAvailability];
         aInfo.dayAvailabilty = dayAvailability;
+		NSMutableData *md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
+		aInfo.md5hash = md5hash;
         NSString *exid = [mDict objectForKey:NAME_objectID];
         ObjInfo2 *a = [Queries getApartment:context	withExID:exid];
         if (nil != a) {

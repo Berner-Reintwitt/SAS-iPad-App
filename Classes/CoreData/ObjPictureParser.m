@@ -35,6 +35,7 @@
         picture.url = [mDict objectForKey:NAME_url];
         picture.thumb_url = [mDict objectForKey:NAME_thumb_url];
         picture.big_url = [mDict objectForKey:NAME_big_url];
+		picture.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
         picture.images = [NSSet set];
 		picture.serial = [NSNumber numberWithInt:++serial];
         NSString *url = picture.big_url;
