@@ -91,8 +91,6 @@ NSString *NAME_DayAvailability = @"DayAvailability";
 
 NSString *SET_Price = @"SET_Price";
 
-
-
 NSString *CLASS_ScaledImage = @"ScaledImage";
 NSString *NAME_width = @"width";
 NSString *NAME_height = @"height";
@@ -101,6 +99,23 @@ NSString *NAME_data = @"data";
 
 
 NSString *CLASS_KeyValueData = @"KeyValueData";
+
+
+
+NSString *Name_attributes = @"attributes";
+NSString *Name_availabilityinfo = @"availabilityinfo";
+NSString *Name_data = @"data";
+NSString *Name_details = @"details";
+NSString *Name_deep = @"deep";
+NSString *Name_exid = @"exid";
+NSString *Name_mode = @"mode";
+NSString *Name_md5 = @"md5";
+NSString *Name_obj = @"obj";
+NSString *Name_pictures = @"pictures";
+NSString *Name_price = @"price";
+NSString *Name_priceinfo = @"priceinfo";
+NSString *Name_shallow = @"shallow";
+NSString *Name_source = @"source";
 
 
 @implementation StringConsts

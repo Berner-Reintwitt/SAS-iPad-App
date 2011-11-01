@@ -116,5 +116,23 @@ extern NSString *NAME_smoking;
 
 
 
+extern NSString *Name_attributes;
+extern NSString *Name_availabilityinfo;
+extern NSString *Name_data;
+extern NSString *Name_details;
+extern NSString *Name_deep;
+extern NSString *Name_exid;
+extern NSString *Name_mode;
+extern NSString *Name_md5;
+extern NSString *Name_obj;
+extern NSString *Name_pictures;
+extern NSString *Name_price;
+extern NSString *Name_priceinfo;
+extern NSString *Name_shallow;
+extern NSString *Name_source;
+
+
+
+
 @interface StringConsts : NSObject
 @end

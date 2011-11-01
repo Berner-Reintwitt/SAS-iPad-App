@@ -13,6 +13,8 @@
 
 - (NSArray *) OrderedPictures;
 
+- (NSMutableData *) deepMd5Hash;
+
 + (NSArray *) AllApartments;
 
 + (NSArray *) LocalSearch:(SearchParameters *)sparam;

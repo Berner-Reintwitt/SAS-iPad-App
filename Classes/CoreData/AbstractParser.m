@@ -24,11 +24,19 @@
     return date;
 }
 + (NSNumber *)parseBoolean:(NSString *)text { return [NSNumber numberWithBool: [@"true" compare:text] == NSOrderedSame]; }
-
-+ (NSData *)parseBase64:(NSString *)text {
-	
-	return nil;
++ (NSMutableData *)parseBase16:(NSString *)base16 {
+	NSAssert(nil != base16 && base16.length == 32, @"argument exception");
+	NSMutableData *result = [NSMutableData dataWithCapacity:16];
+	Byte *buffer = [result mutableBytes];
+	for (int i = 15; i >= 0; --i) {
+		buffer[i] = (Byte) (
+			((([base16 characterAtIndex:i * 2] - 'A') & 0xf) << 4) |
+			(([base16 characterAtIndex:i * 2 + 1] - 'A') & 0xf)
+		);
+	}
+	return result;
 }
+
 
 - (id)initWithContext:(NSManagedObjectContext *)ctx {
     context = ctx;

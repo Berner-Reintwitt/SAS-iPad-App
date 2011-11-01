@@ -43,6 +43,8 @@ void saveContext(void);
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *data);
 
+void XorMd5Hash(NSMutableData *a, NSData *b);
+
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);
 void logError(NSError *error);

@@ -55,6 +55,34 @@ NSString *EndcodeBase16(NSString *string) {
     return result;
 }
 
+
+void XorMd5Hash(NSMutableData *a, NSData *b) {
+	NSCAssert(nil != a && 16 == a.length && nil != b && 16 == b.length, @"argument exception");
+	Byte *bufa = [a mutableBytes];
+	const Byte *bufb = [b bytes];
+	for (int i = 15; i >= 0; --i) {
+		bufa[i] ^= bufb[i];
+	} 
+}
+
+NSMutableData *CreateXorMd5Hash(NSData *a, NSData *b) {
+	NSMutableData *result = [NSMutableData dataWithData:a];
+	XorMd5Hash(result, b);
+	return result;
+}
+
+NSString *XorEncodedMd5Hash(NSString *a, NSString *b) {
+	if (nil == a || nil == b || a.length != 32 || b.length != 32) {
+		NSLog(@"argument exception");
+		exit(1);
+	}
+	unichar buffer[32];
+	for (int i = 31; i >= 0; --i) {
+		buffer[i] = (64 | ([a characterAtIndex:i] - 1) ^ ([b characterAtIndex:i] - 1)) + 1;
+	}
+	return [NSString stringWithCharacters:buffer length:32];
+}
+
 NSString *NewUUID() {
 	CFUUIDRef uid = CFMakeCollectable(CFUUIDCreate(NULL));
 	CFStringRef uidStr = CFMakeCollectable(CFUUIDCreateString(NULL, uid));

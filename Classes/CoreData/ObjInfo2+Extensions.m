@@ -6,8 +6,13 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+
+#import "AvailabilityInfo2.h"
+#import "ObjAttribute.h"
 #import "ObjInfo2+Extensions.h"
-#import "ObjPicture.h"
+#import "ObjPicture+Extensions.h"
+#import "ObjPriceInfo+Extensions.h"
+#import "ObjText.h"
 #import "Utils.h"
 #import "StringConsts.h"
 
@@ -40,6 +45,15 @@ static NSPredicate *maxPersons(int actPersons) {
     return ordered;
 }
 
+- (NSMutableData *) deepMd5Hash {
+    NSMutableData *result = [NSMutableData dataWithData: self.md5hash];
+    for (AvailabilityInfo2 *a in self.availabilityInfo) XorMd5Hash(result, a.md5hash);
+    for (ObjAttribute *a in self.attributes) XorMd5Hash(result, a.md5hash);
+    for (ObjPicture *p in self.pictures) XorMd5Hash(result, p.md5hash);
+    for (ObjPriceInfo *p in self.priceInfo) XorMd5Hash(result, [p deepMd5Hash]);
+    for (ObjText *t in self.texts) XorMd5Hash(result, t.md5hash);
+    return result;
+}
 
 + (NSArray *) AllApartments {
     NSManagedObjectContext *context = managedObjectContext();

@@ -28,6 +28,8 @@
 		553206A914586EDA002E8D79 /* ObjText.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206A814586ED9002E8D79 /* ObjText.m */; };
 		553206AC14586EDC002E8D79 /* AvailabilityInfo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206AB14586EDB002E8D79 /* AvailabilityInfo2.m */; };
 		553206AF14586EDD002E8D79 /* ScaledImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206AE14586EDD002E8D79 /* ScaledImage.m */; };
+		55367576145EDF22008C045E /* SuchergebnisseDomizil1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */; };
+		5536757A1460192B008C045E /* ObjPriceInfo+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 553675791460192A008C045E /* ObjPriceInfo+Extensions.m */; };
 		554F7CAF1446EE7F00F9C24D /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C8D1446EE7F00F9C24D /* AbstractParser.m */; };
 		554F7CB11446EE7F00F9C24D /* AvailabilityInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C911446EE7F00F9C24D /* AvailabilityInfo2Parser.m */; };
 		554F7CB51446EE7F00F9C24D /* ObjInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C981446EE7F00F9C24D /* ObjInfo2Parser.m */; };
@@ -149,6 +151,9 @@
 		553206AB14586EDB002E8D79 /* AvailabilityInfo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailabilityInfo2.m; path = CoreData/AvailabilityInfo2.m; sourceTree = "<group>"; };
 		553206AD14586EDC002E8D79 /* ScaledImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScaledImage.h; path = CoreData/ScaledImage.h; sourceTree = "<group>"; };
 		553206AE14586EDD002E8D79 /* ScaledImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScaledImage.m; path = CoreData/ScaledImage.m; sourceTree = "<group>"; };
+		55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseDomizil1.xib; sourceTree = "<group>"; };
+		553675781460192A008C045E /* ObjPriceInfo+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjPriceInfo+Extensions.h"; path = "CoreData/ObjPriceInfo+Extensions.h"; sourceTree = "<group>"; };
+		553675791460192A008C045E /* ObjPriceInfo+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjPriceInfo+Extensions.m"; path = "CoreData/ObjPriceInfo+Extensions.m"; sourceTree = "<group>"; };
 		554F7C8C1446EE7F00F9C24D /* AbstractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractParser.h; path = CoreData/AbstractParser.h; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C8D1446EE7F00F9C24D /* AbstractParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractParser.m; path = CoreData/AbstractParser.m; sourceTree = "<group>"; usesTabs = 1; };
 		554F7C901446EE7F00F9C24D /* AvailabilityInfo2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailabilityInfo2Parser.h; path = CoreData/AvailabilityInfo2Parser.h; sourceTree = "<group>"; usesTabs = 1; };
@@ -411,6 +416,8 @@
 				5532069914586ED0002E8D79 /* ObjPicture.m */,
 				554F7C9B1446EE7F00F9C24D /* ObjPictureParser.h */,
 				554F7C9C1446EE7F00F9C24D /* ObjPictureParser.m */,
+				553675781460192A008C045E /* ObjPriceInfo+Extensions.h */,
+				553675791460192A008C045E /* ObjPriceInfo+Extensions.m */,
 				553206A114586ED5002E8D79 /* ObjPriceInfo.h */,
 				553206A214586ED6002E8D79 /* ObjPriceInfo.m */,
 				554F7C9F1446EE7F00F9C24D /* ObjPriceInfoParser.h */,
@@ -529,6 +536,7 @@
 				8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */,
 				8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */,
 				8F9236E414598309004DF57E /* SuchergebnisseDomizil.xib */,
+				55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */,
 			);
 			name = Domizile;
 			sourceTree = "<group>";
@@ -667,6 +675,7 @@
 				8FF188FC1458532600786888 /* HomePopUpViewController.xib in Resources */,
 				8F9236E514598309004DF57E /* SuchergebnisseDomizil.xib in Resources */,
 				8F0FB2B814599CBD007311D2 /* web_stuff in Resources */,
+				55367576145EDF22008C045E /* SuchergebnisseDomizil1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +748,7 @@
 				8F357C9414570F6000B1684C /* SuchergebnisseDomizil.m in Sources */,
 				8FF188FB1458532600786888 /* HomePopUpViewController.m in Sources */,
 				8FB97A2614596562005F3739 /* TabBarSubclass.m in Sources */,
+				5536757A1460192B008C045E /* ObjPriceInfo+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

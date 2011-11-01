@@ -8,6 +8,10 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="availabilityInfo" inverseEntity="ObjInfo2" syncable="YES"/>
     </entity>
+    <entity name="ImageData" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ScaledImage" inverseName="imageData" inverseEntity="ScaledImage" syncable="YES"/>
+    </entity>
     <entity name="KeyValueData" representedClassName="KeyValueData" syncable="YES">
         <attribute name="key" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -106,12 +110,12 @@
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPriceInfo" inverseName="prices" inverseEntity="ObjPriceInfo" syncable="YES"/>
     </entity>
     <entity name="ScaledImage" representedClassName="ScaledImage" syncable="YES">
-        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="mode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="imageData" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ImageData" inverseName="parent" inverseEntity="ImageData" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPicture" inverseName="images" inverseEntity="ObjPicture" syncable="YES"/>
     </entity>
     <fetchRequest name="getDataForKey" entity="KeyValueData" predicateString="key == &quot;%@&quot;"/>
@@ -125,5 +129,6 @@
         <element name="ObjText" positionX="-2196" positionY="-99" width="128" height="120"/>
         <element name="Price" positionX="-1521" positionY="0" width="128" height="150"/>
         <element name="ScaledImage" positionX="-1514" positionY="-321" width="128" height="150"/>
+        <element name="ImageData" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

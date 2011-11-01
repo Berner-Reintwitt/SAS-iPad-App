@@ -24,7 +24,10 @@
 
 + (NSNumber *)parseBoolean:(NSString *)text;
 
-+ (NSData *)parseBase64:(NSString *)text;
++ (NSMutableData *)parseBase16:(NSString *)base16;
+
+
+
 
 - (id) initWithContext:(NSManagedObjectContext *)ctx;
 
