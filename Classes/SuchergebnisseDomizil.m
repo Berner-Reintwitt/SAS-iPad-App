@@ -7,6 +7,14 @@
 //
 
 #import "SuchergebnisseDomizil.h"
+#import "CoreData/ObjInfo2.h"
+#import "CoreData/ObjInfo2+Extensions.h"
+#import "CoreData/Queries.h"
+#import "CoreData/Utils.h"
+#import "CoreData/ObjPicture.h"
+#import "CoreData/ScaledImage.h"
+#import "SuchergebnisseHausDetail.h"
+#import "CoreData/ScaledImage+Extensions.h"
 
 @implementation SuchergebnisseDomizil
 @synthesize mapView;
@@ -14,6 +22,9 @@
 @synthesize myscrollView;
 @synthesize pageControl;
 @synthesize scrollView;
+@synthesize domizilImageView;
+@synthesize domizilCell;
+@synthesize firstTextLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +46,18 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{   scrollView.frame = CGRectMake( 0,0,1024 , 748);
+{   
+   // scrollView=[[UIScrollView alloc]init];
+    CGRect tablerect=CGRectMake(680, 150, 350, 695);
+    
+    table=[[UITableView alloc]initWithFrame:tablerect ];
+    table.dataSource=self;
+    table.delegate=self;
+    table.rowHeight=92;
+    [scrollView addSubview:table];
+    
+    
+    scrollView.frame = CGRectMake( 0,0,1024 , 748);
     
     //---set the content size of the scroll view---
     [scrollView setContentSize:CGSizeMake(1900, 748)];
@@ -86,7 +108,7 @@
 - (IBAction)scroll:(id)sender {
     
     CGRect frame;
-    frame.origin.x = mapView.frame.size.width+50;
+    frame.origin.x = mapView.frame.size.width;
     //frame.origin.y = 0;
     frame.origin.y=0;
     frame.size = CGSizeMake(1024, 748);
@@ -113,16 +135,12 @@
 
     [scrollView release];
     [mapView release];
-    [table release];
+    
     [myscrollView release];
     [pageControl release];
     [super dealloc];
 }
-- (IBAction)switchFrame:(id)sender {
-    
-    scrollView.frame=CGRectMake(mapView.frame.size.width, 0, 1024, 748);
-    
-}
+
 
 
 
@@ -145,6 +163,58 @@
     
     
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
+    apartments= [Queries getAllApartments:managedObjectContext()];
+    NSInteger count=[apartments count];
+    return [apartments count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    apartments = [Queries getAllApartments:managedObjectContext()];
+    //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizileCell"];
+    
+    if (cell == nil) { 
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"DomizileCell" owner:self options:nil];
+        //cell = [[[UITableViewCell alloc]
+        //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
+        cell = self.domizilCell;              
+    }
+    NSUInteger row = [indexPath row];
+    
+    ObjInfo2 *obj = [apartments objectAtIndex:row];
+    NSArray *objpics = [obj OrderedPictures];
+    ObjPicture *pic = [objpics objectAtIndex:0];
+    
+    UIImage *img = [pic GetScaledImage:250 withHeight:190 withMode:ScaleModeCrop];
+    
+    
+    //ScaledImage *scalepic = pic.images.anyObject;
+    //UIImage * img = [scalepic getImage];
+    // UIImage *img2 = [UIImage imageNamed:@"pig.png"];
+    
+    [domizilImageView setImage:img];
+    firstTextLabel.text=obj.name;
+    
+    // cell.imageView.image = image;
+    // cell.detailTextLabel.text=@"Hallo";
+    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    CGRect frame;
+    frame.origin.x = mapView.frame.size.width;
+    //frame.origin.y = 0;
+    frame.origin.y=0;
+    frame.size = CGSizeMake(1024, 748);
+    [self.scrollView scrollRectToVisible:frame animated:YES];    
+    
+    
+}
+
 
 
 

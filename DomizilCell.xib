@@ -196,7 +196,7 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrameSize">{768, 190}</string>
+								<string key="NSFrameSize">{320, 190}</string>
 								<reference key="NSSuperview" ref="248446230"/>
 								<reference key="NSNextKeyView" ref="977597581"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -366,7 +366,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">star.png</string>
-			<string key="NS.object.0">{320, 305}</string>
+			<string key="NS.object.0">{200, 200}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">931</string>
 	</data>
