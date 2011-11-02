@@ -25,6 +25,9 @@
 @synthesize domizilImageView;
 @synthesize domizilCell;
 @synthesize firstTextLabel;
+@synthesize reiseZeit;
+@synthesize personen;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,6 +85,27 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    SearchParameters *param=[SearchParameters globalSearchParameters];
+    
+    [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4]; 
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init]  autorelease];    
+    [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle]; 
+    NSString *dateFrom= [dateFormatter stringFromDate:[param dateFrom]];
+    NSString *dateTo= [dateFormatter stringFromDate:[param dateTo]];
+    
+    
+
+    NSString *a=[NSString stringWithFormat:@"%@%@%@%@",@"Reisezeit: ",dateFrom,@" - ",dateTo];
+    reiseZeit.text=(@"%@",a);
+    NSString *b=[NSString stringWithFormat:@"%@%d%@%d%@",@"Personen: ",[param adults],@" Erwachsene / ",[param children],@" Kinder "];
+    personen.text=b;
+    
+    
+}
+
 - (void)viewDidUnload
 {   
     
@@ -89,6 +113,8 @@
     [self setPageControl:nil];
     [self setMyscrollView:nil];
     [self setPageControl:nil];
+    [self setReiseZeit:nil];
+    [self setPersonen:nil];
     [super viewDidUnload];
     [self setScrollView:nil];
     [self setMapView:nil];
@@ -131,6 +157,8 @@
     
     [myscrollView release];
     [pageControl release];
+    [reiseZeit release];
+    [personen release];
     [super dealloc];
 
     [scrollView release];

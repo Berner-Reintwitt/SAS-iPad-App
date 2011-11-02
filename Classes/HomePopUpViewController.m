@@ -59,29 +59,10 @@
 }
 
 
-- (IBAction) detailSucheButtonWasPressed:(id)sender {
-     
-    // UIViewController *viewcontroller=[appDelegate.tabBarController.viewControllers objectAtIndex:2];
-    appDelegate.tabBarController.selectedIndex=1;
-}
+
 
 - (IBAction) suchenButtonWasPressed:(id)sender {
-   /* SuchergebnisseKarte *suchergebnisseKarte = [[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
-    
-    suchergebnisseKarte.modalPresentationStyle = UIModalPresentationFullScreen;
-    suchergebnisseKarte.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-    //appDelegate.window.rootViewController=navigationControllerModalViews;
-    
-    
-    NSArray *searchResultList = [ObjInfo2 LocalSearch:[SearchParameters globalSearchParameters]];
-    
-    SuchergebnisseDomizil *suchergdom=[[SuchergebnisseDomizil alloc]initWithNibName:@"SuchergebnisseDomizil" bundle:nil];
-    // [self.view addSubview:suchergdom.view];
-    
-    
-    
-    [self.navigationController pushViewController:suchergebnisseKarte animated:YES];*/
+ 
     
     
     Home *home =(Home *)[appDelegate.tabBarController.viewControllers objectAtIndex:0];

@@ -20,7 +20,8 @@
     UIImageView *domizilImageView;
     UITableViewCell *domizilCell;
     UILabel *firstTextLabel;
-
+    UILabel *reiseZeit;
+    UILabel *personen;
     
     
 }
@@ -35,5 +36,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *domizilImageView;
 @property (retain, nonatomic) IBOutlet  UITableViewCell *domizilCell;
 @property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
+@property (retain, nonatomic) IBOutlet UILabel *reiseZeit;
+@property (retain, nonatomic) IBOutlet UILabel *personen;
 
 @end
