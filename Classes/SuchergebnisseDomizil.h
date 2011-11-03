@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
+#import "CoreData/ObjInfo2.h"
+#import "CoreData/ObjInfo2+Extensions.h"
+#import "ObjText.h"
 
-@interface SuchergebnisseDomizil : UIViewController<UIScrollViewDelegate, UITableViewDelegate,UITableViewDataSource>{
+@interface SuchergebnisseDomizil : UIViewController<UIScrollViewDelegate, UITableViewDelegate,UITableViewDataSource, MKMapViewDelegate>{
     
     UIScrollView *scrollView;
     MKMapView *mapView;
@@ -21,12 +24,22 @@
     UITableViewCell *domizilCell;
     UILabel *firstTextLabel;
     UILabel *reiseZeit;
-    UILabel *personen;
-    
+    UILabel *personenLabel;
+    UILabel *preisProWoche;
+    UILabel *raueme;
+    int row;
+    int cellcounter;
+    MKPointAnnotation *annot;
+    NSMutableDictionary *annotAppartmentDict;
+    ObjInfo2 *currentObj;
+    Boolean detailViewIsActive;
+    UITextView *objektBeschreibung;
+   
     
 }
-- (IBAction)scroll:(id)sender;
+
 - (IBAction)srollBack:(id)sender;
+-(void)fillDetailInfo:(int)rownumber;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
@@ -38,5 +51,11 @@
 @property (retain, nonatomic) IBOutlet UILabel *firstTextLabel;
 @property (retain, nonatomic) IBOutlet UILabel *reiseZeit;
 @property (retain, nonatomic) IBOutlet UILabel *personen;
+@property (retain, nonatomic) IBOutlet UILabel *preisProWoche;
+@property (retain, nonatomic) IBOutlet UILabel *raueme;
+@property (retain, nonatomic) IBOutlet UILabel *personenLabel;
+@property (retain, nonatomic) IBOutlet UILabel *qualitaet;
+@property (retain, nonatomic)  NSMutableDictionary *annotAppartmentDict;
+@property (retain, nonatomic) IBOutlet UITextView *objektBeschreibung;
 
 @end

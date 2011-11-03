@@ -7,8 +7,7 @@
 //
 
 #import "SuchergebnisseDomizil.h"
-#import "CoreData/ObjInfo2.h"
-#import "CoreData/ObjInfo2+Extensions.h"
+
 #import "CoreData/Queries.h"
 #import "CoreData/Utils.h"
 #import "CoreData/ObjPicture.h"
@@ -27,6 +26,12 @@
 @synthesize firstTextLabel;
 @synthesize reiseZeit;
 @synthesize personen;
+@synthesize qualitaet;
+@synthesize preisProWoche;
+@synthesize raueme;
+@synthesize personenLabel;
+@synthesize annotAppartmentDict;
+@synthesize objektBeschreibung;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,7 +54,7 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{   
+{   detailViewIsActive=false;
    // scrollView=[[UIScrollView alloc]init];
     CGRect tablerect=CGRectMake(680, 150, 350, 695);
     
@@ -57,7 +62,12 @@
     table.dataSource=self;
     table.delegate=self;
     table.rowHeight=92;
+    table.separatorColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+   
+    
     [scrollView addSubview:table];
+    row= -5;
+    cellcounter=0;
     
     
     scrollView.frame = CGRectMake( 0,0,1024 , 748);
@@ -65,7 +75,7 @@
     //---set the content size of the scroll view---
     [scrollView setContentSize:CGSizeMake(1900, 748)];
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor blackColor],nil];
-    for (int i = 0; i < colors.count; i++) {
+    /*for (int i = 0; i < colors.count; i++) {
         CGRect frame;
         frame.origin.x = self.myscrollView.frame.size.width * i;
         frame.origin.y = 0;
@@ -79,7 +89,48 @@
         
         // Do any additional setup after loading the view from its nib.
     }
-    self.myscrollView.contentSize = CGSizeMake(self.myscrollView.frame.size.width * colors.count, self.myscrollView.frame.size.height);
+    self.myscrollView.contentSize = CGSizeMake(self.myscrollView.frame.size.width * colors.count, self.myscrollView.frame.size.height);*/
+    
+    
+    
+    
+    
+    
+    //MapView mit den in der Tabelle enthaltenen Domizilen initialisieren
+    ObjInfo2 *obj ;
+    CLLocationCoordinate2D a;
+    apartments= [Queries getAllApartments:managedObjectContext()];
+    
+    for(obj in apartments){
+        
+        // [apartments objectAtIndex:obj];
+        
+        a.latitude=obj.googlemaps_latitude.doubleValue;
+        a.longitude= obj.googlemaps_longitude.doubleValue;
+        
+        annot = [[MKPointAnnotation alloc]init] ;
+        annot.coordinate=a;
+        annot.title=obj.name;
+        annot.subtitle=@"frei";
+        
+        
+        [annotAppartmentDict setObject:obj forKey:annot]; 
+        
+        
+        
+        [mapView selectAnnotation:annot animated:YES];
+        [self.mapView addAnnotation : annot];
+        
+        
+        
+    }
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude =54.9333333;
+    zoomLocation.longitude=8.3166667;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(a, 5000, 5000);
+    MKCoordinateRegion adjustedRegion = [mapView regionThatFits:viewRegion];                
+    [mapView setRegion:adjustedRegion animated:YES];  
+    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -114,7 +165,13 @@
     [self setMyscrollView:nil];
     [self setPageControl:nil];
     [self setReiseZeit:nil];
+    [self setPersonenLabel:nil];
     [self setPersonen:nil];
+    [self setPreisProWoche:nil];
+    [self setRaueme:nil];
+    [self setPersonenLabel:nil];
+    [self setQualitaet:nil];
+    [self setObjektBeschreibung:nil];
     [super viewDidUnload];
     [self setScrollView:nil];
     [self setMapView:nil];
@@ -131,16 +188,17 @@
 }
 
 
-- (IBAction)scroll:(id)sender {
+- (void)sroll {
     
     CGRect frame;
     frame.origin.x = mapView.frame.size.width;
-    //frame.origin.y = 0;
+    
     frame.origin.y=0;
     frame.size = CGSizeMake(1024, 748);
+    
     [self.scrollView scrollRectToVisible:frame animated:YES];
     
-   // [scrollview scrollRectToVisible:CGRectMake(340, 750, 1024, 768) animated:YES];
+    
     
 }
 
@@ -158,7 +216,13 @@
     [myscrollView release];
     [pageControl release];
     [reiseZeit release];
+    [personenLabel release];
+    [preisProWoche release];
+    [raueme release];
+    [personenLabel release];
     [personen release];
+    [qualitaet release];
+    [objektBeschreibung release];
     [super dealloc];
 
     [scrollView release];
@@ -198,7 +262,11 @@
     return [apartments count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     apartments = [Queries getAllApartments:managedObjectContext()];
+    
+    
+    
     //  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DomizileCell"];
     
@@ -208,40 +276,159 @@
         //initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DomizilCell"] autorelease];
         cell = self.domizilCell;              
     }
-    NSUInteger row = [indexPath row];
     
-    ObjInfo2 *obj = [apartments objectAtIndex:row];
+    
+    ObjInfo2 *obj = [apartments objectAtIndex:indexPath.row];
     NSArray *objpics = [obj OrderedPictures];
     ObjPicture *pic = [objpics objectAtIndex:0];
     
     UIImage *img = [pic GetScaledImage:250 withHeight:190 withMode:ScaleModeCrop];
-    
-    
-    //ScaledImage *scalepic = pic.images.anyObject;
-    //UIImage * img = [scalepic getImage];
-    // UIImage *img2 = [UIImage imageNamed:@"pig.png"];
+
     
     [domizilImageView setImage:img];
     firstTextLabel.text=obj.name;
     
-    // cell.imageView.image = image;
-    // cell.detailTextLabel.text=@"Hallo";
-    // NSUInteger row = [indexPath row]; cell.textLabel.text = [listData objectAtIndex:row]; 
+    
+    raueme.text =[NSString stringWithFormat:@"%@%@",@"Räume : ",[obj.rooms stringValue]];
+    
+    
+    personenLabel.text=[NSString stringWithFormat:@"%@%@",@"Personen : ",[obj.persons stringValue]];    
+    
+    NSArray *array = table.indexPathsForSelectedRows;
+    
+
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    CGRect frame;
-    frame.origin.x = mapView.frame.size.width;
-    //frame.origin.y = 0;
-    frame.origin.y=0;
-    frame.size = CGSizeMake(1024, 748);
-    [self.scrollView scrollRectToVisible:frame animated:YES];    
+    if (row==indexPath.row){ 
+        CGRect frame;
+        frame.origin.x = mapView.frame.size.width;
+        
+        frame.origin.y=0;
+        frame.size = CGSizeMake(1024, 748);
+        
+        [self.scrollView scrollRectToVisible:frame animated:YES];
+        
+        [self fillDetailInfo:indexPath.row];
+        
+         
+       
+    }
+    
+    else {row=indexPath.row;
+        [self fillDetailInfo:indexPath.row];
+            
+        
+    }
+    
+}
+
+/*
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+     NSLog(@"bla");
+    ObjInfo2 *apartment= [annotAppartmentDict objectForKey:view.annotation];
+    if(apartment ==nil){
+        
+        
+        NSLog(@"Fehler");
+    }
+    
+    
+    else {
+        
+        NSLog(@"funktioniert");
+    }
+    
+}*/
+    
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    NSLog(@"bla");
+    ObjInfo2 *apartment= [annotAppartmentDict objectForKey:view.annotation];
+    if(apartment ==nil){
+        
+        
+        NSLog(@"Fehler");
+    }
+    
+    
+    else {
+        
+        NSLog(@"funktioniert");
+    }
+
     
     
 }
+    
+  
+-(void)fillDetailInfo:(int)rownumber{
+    
+    apartments = [Queries getAllApartments:managedObjectContext()];
+    currentObj =[apartments objectAtIndex:row];
+    NSArray*objPics=currentObj.OrderedPictures;
+    
+    
+    
+    
+    UIImage *img=[[UIImage alloc]init];
+    
+    
+    for(int i=0; i<[objPics count];i++){
+        NSString *textDescription=nil;
+        for(ObjText *ot in currentObj.texts){
+            
+            if([ot.key compare:@"DESCRIPTION"]==NSOrderedSame){
+                textDescription=ot.text;
+                break;
+                
+            }
+            
+            if(textDescription==nil){
+                
+                textDescription=@"Ein Domizil zum Wohlfühlen"; 
+                
+                
+            }
+        }
+            
+        objektBeschreibung.text=textDescription;
+        ObjPicture *pic = [objPics objectAtIndex:i];
+        CGRect frame;
+        frame.origin.x = self.myscrollView.frame.size.width * i;
+        frame.origin.y = 0;
+        frame.size = self.myscrollView.frame.size;
+        
+        
+        img = [pic GetScaledImage:666 withHeight:272 withMode:ScaleModeCrop];
+        UIImageView *imgView=[[UIImageView alloc]initWithFrame:frame];
+        imgView.image=img;
+        
+        [self.myscrollView addSubview:imgView];
+        
+        
+        
+        // Do any additional setup after loading the view from its nib.
+    }
+    self.myscrollView.contentSize = CGSizeMake(self.myscrollView.frame.size.width * objPics.count, self.myscrollView.frame.size.height);
+    
+    
+   
+    
+}
+    
+
+
+
+    
+
+
+
 
 
 

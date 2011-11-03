@@ -51,7 +51,6 @@
 										<string key="NSFrame">{{6, 1}, {128, 90}}</string>
 										<reference key="NSSuperview" ref="917804161"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -118,7 +117,7 @@
 									<object class="IBUILabel" id="550298223">
 										<reference key="NSNextResponder" ref="917804161"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{142, 43}, {67, 16}}</string>
+										<string key="NSFrame">{{142, 43}, {95, 16}}</string>
 										<reference key="NSSuperview" ref="917804161"/>
 										<reference key="NSWindow"/>
 										<string key="NSReuseIdentifierKey">_NS:345</string>
@@ -139,7 +138,7 @@
 									<object class="IBUILabel" id="666304333">
 										<reference key="NSNextResponder" ref="917804161"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{142, 60}, {67, 16}}</string>
+										<string key="NSFrame">{{142, 60}, {106, 16}}</string>
 										<reference key="NSSuperview" ref="917804161"/>
 										<reference key="NSWindow"/>
 										<string key="NSReuseIdentifierKey">_NS:345</string>
@@ -250,6 +249,38 @@
 					</object>
 					<int key="connectionID">18</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">preisProWoche</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="65938547"/>
+					</object>
+					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">raueme</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="550298223"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">personenLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="666304333"/>
+					</object>
+					<int key="connectionID">22</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">qualitaet</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="446670987"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -342,7 +373,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -370,6 +401,12 @@
 						<string key="mapView">MKMapView</string>
 						<string key="myscrollView">UIScrollView</string>
 						<string key="pageControl">UIPageControl</string>
+						<string key="personen">UILabel</string>
+						<string key="personenLabel">UILabel</string>
+						<string key="preisProWoche">UILabel</string>
+						<string key="qualitaet">UILabel</string>
+						<string key="raueme">UILabel</string>
+						<string key="reiseZeit">UILabel</string>
 						<string key="scrollView">UIScrollView</string>
 						<string key="table">UITableView</string>
 					</dictionary>
@@ -397,6 +434,30 @@
 						<object class="IBToOneOutletInfo" key="pageControl">
 							<string key="name">pageControl</string>
 							<string key="candidateClassName">UIPageControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="personen">
+							<string key="name">personen</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="personenLabel">
+							<string key="name">personenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="preisProWoche">
+							<string key="name">preisProWoche</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="qualitaet">
+							<string key="name">qualitaet</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="raueme">
+							<string key="name">raueme</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="reiseZeit">
+							<string key="name">reiseZeit</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollView">
 							<string key="name">scrollView</string>
