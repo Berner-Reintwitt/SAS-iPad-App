@@ -34,6 +34,7 @@
     ObjInfo2 *currentObj;
     Boolean detailViewIsActive;
     UITextView *objektBeschreibung;
+    UIWebView *webView;
    
     
 }
@@ -57,5 +58,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *qualitaet;
 @property (retain, nonatomic)  NSMutableDictionary *annotAppartmentDict;
 @property (retain, nonatomic) IBOutlet UITextView *objektBeschreibung;
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 @end

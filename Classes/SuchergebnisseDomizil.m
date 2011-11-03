@@ -32,6 +32,7 @@
 @synthesize personenLabel;
 @synthesize annotAppartmentDict;
 @synthesize objektBeschreibung;
+@synthesize webView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -172,6 +173,7 @@
     [self setPersonenLabel:nil];
     [self setQualitaet:nil];
     [self setObjektBeschreibung:nil];
+    [self setWebView:nil];
     [super viewDidUnload];
     [self setScrollView:nil];
     [self setMapView:nil];
@@ -223,6 +225,7 @@
     [personen release];
     [qualitaet release];
     [objektBeschreibung release];
+    [webView release];
     [super dealloc];
 
     [scrollView release];
@@ -398,6 +401,7 @@
         }
             
         objektBeschreibung.text=textDescription;
+        [webView loadHTMLString:textDescription baseURL:nil];
         ObjPicture *pic = [objPics objectAtIndex:i];
         CGRect frame;
         frame.origin.x = self.myscrollView.frame.size.width * i;
