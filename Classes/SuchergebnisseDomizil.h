@@ -12,7 +12,7 @@
 #import "CoreData/ObjInfo2+Extensions.h"
 #import "ObjText.h"
 
-@interface SuchergebnisseDomizil : UIViewController<UIScrollViewDelegate, UITableViewDelegate,UITableViewDataSource, MKMapViewDelegate>{
+@interface SuchergebnisseDomizil : UIViewController<UIScrollViewDelegate, UITableViewDelegate,UITableViewDataSource, MKMapViewDelegate, UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
     
     UIScrollView *scrollView;
     MKMapView *mapView;
@@ -31,10 +31,15 @@
     int cellcounter;
     MKPointAnnotation *annot;
     NSMutableDictionary *annotAppartmentDict;
+    NSMutableDictionary *apartmentAnnotDict;
     ObjInfo2 *currentObj;
     Boolean detailViewIsActive;
     UITextView *objektBeschreibung;
     UIWebView *webView;
+    IBOutlet UILabel *eckdatenWohnfl;
+    
+    IBOutlet UILabel *eckdatenRaeume;
+    IBOutlet UILabel *eckdatenPersonen;
    
     
 }
@@ -42,7 +47,9 @@
 - (IBAction)srollBack:(id)sender;
 -(void)fillDetailInfo:(int)rownumber;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
-
+@property (retain, nonatomic) IBOutlet UILabel *eckdatenPersonen;
+@property (retain, nonatomic) IBOutlet UILabel *eckdatenWohnfl;
+@property (retain, nonatomic) IBOutlet UILabel *eckdatenRaeume;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property (retain, nonatomic) IBOutlet UITableView *table;
 @property (retain, nonatomic) IBOutlet UIScrollView *myscrollView;
@@ -57,7 +64,9 @@
 @property (retain, nonatomic) IBOutlet UILabel *personenLabel;
 @property (retain, nonatomic) IBOutlet UILabel *qualitaet;
 @property (retain, nonatomic)  NSMutableDictionary *annotAppartmentDict;
+@property (retain, nonatomic)  NSMutableDictionary *appartmentAnnotDict;
 @property (retain, nonatomic) IBOutlet UITextView *objektBeschreibung;
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
+
 
 @end
