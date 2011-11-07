@@ -10,7 +10,7 @@
 #import <MapKit/Mapkit.h>
 #define METERS_PER_MILE 1609.344
 
-@interface Orte : UIViewController <MKMapViewDelegate,UIPopoverControllerDelegate, UISplitViewControllerDelegate>{
+@interface Orte : UIViewController <MKMapViewDelegate,UIPopoverControllerDelegate, UISplitViewControllerDelegate, UITableViewDelegate,UITableViewDataSource>{
     
     UIPopoverController *popover;
     
@@ -26,7 +26,10 @@
     CLLocationCoordinate2D Westerland;
     CLLocationCoordinate2D Munkmarsch;
     CLLocationCoordinate2D Hoernum;
+    NSArray *orte;
 }
+
+@property (nonatomic, retain)  NSArray *orte;
 @property (nonatomic, retain) UIPopoverController *popover;
 - (IBAction)buttonPressed:(id)sender;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;

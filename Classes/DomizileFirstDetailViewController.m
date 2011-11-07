@@ -9,7 +9,7 @@
 #import "DomizileFirstDetailViewController.h"
 #import "DomizileRootViewController.h"
 #import "SearchPopUpViewController.h"
-#import "SuchergebnisseKarte.h"
+//#import "SuchergebnisseKarte.h"
 #import "SuchergebnisseHausDetail.h"
 #import "SuchergebnisseDomizil.h"
 
@@ -209,7 +209,7 @@
 
 - (IBAction)suchenButtonWasPressed:(id)sender {
 
-    TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
+    /*TabBarWithSplitViewAppDelegate * appDelegate=(TabBarWithSplitViewAppDelegate *)[[UIApplication sharedApplication] delegate];
     SuchergebnisseKarte *suchergebnisseKarte=[[SuchergebnisseKarte alloc]initWithNibName:@"SuchergebnisseKarte" bundle:nil];
    
     suchergebnisseKarte.modalPresentationStyle=UIModalPresentationFullScreen;
@@ -219,7 +219,7 @@
     
    // [self.view addSubview:suchergdom.view];
      
-     [appDelegate.tabBarController presentModalViewController:suchergebnisseKarte animated:YES];
+     [appDelegate.tabBarController presentModalViewController:suchergebnisseKarte animated:YES];*/
     
     
 }

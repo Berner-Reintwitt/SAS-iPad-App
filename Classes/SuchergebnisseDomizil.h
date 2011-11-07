@@ -40,12 +40,19 @@
     
     IBOutlet UILabel *eckdatenRaeume;
     IBOutlet UILabel *eckdatenPersonen;
+    Boolean rowwasselected;
+    IBOutlet UILabel *domizilNameLabelueberBild;
+   
    
     
 }
 
+- (IBAction)searchResultsButtonWasPressed:(id)sender;
+
 - (IBAction)srollBack:(id)sender;
 -(void)fillDetailInfo:(int)rownumber;
+@property (retain, nonatomic) IBOutlet UILabel *domizilNameLabelueberBild;
+
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) IBOutlet UILabel *eckdatenPersonen;
 @property (retain, nonatomic) IBOutlet UILabel *eckdatenWohnfl;

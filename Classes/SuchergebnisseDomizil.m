@@ -20,6 +20,7 @@
 @synthesize table;
 @synthesize myscrollView;
 @synthesize pageControl;
+@synthesize domizilNameLabelueberBild;
 @synthesize scrollView;
 @synthesize eckdatenPersonen;
 @synthesize eckdatenRaeume;
@@ -107,9 +108,9 @@
     apartments= [Queries getAllApartments:managedObjectContext()];
     [apartments retain];
     annotAppartmentDict = [NSMutableDictionary dictionaryWithCapacity:300];
-    annotAppartmentDict=[NSMutableDictionary dictionaryWithCapacity:300];
+    appartmentAnnotDict=[NSMutableDictionary dictionaryWithCapacity:300];
     [annotAppartmentDict retain];
-    [annotAppartmentDict retain];
+    [appartmentAnnotDict retain];
     for(obj in apartments){
         
         // [apartments objectAtIndex:obj];
@@ -189,6 +190,8 @@
     [self setEckdatenPersonen:nil];
     [eckdatenWohnfl release];
     eckdatenWohnfl = nil;
+    [self setDomizilNameLabelueberBild:nil];
+    
     [super viewDidUnload];
     [self setScrollView:nil];
     [self setMapView:nil];
@@ -219,6 +222,12 @@
     
 }
 
+- (IBAction)searchResultsButtonWasPressed:(id)sender {
+    
+    [self srollBack:sender];
+    
+}
+
 - (IBAction)srollBack:(id)sender {
     
     CGRect frame;
@@ -245,6 +254,8 @@
     [eckdatenRaeume release];
     [eckdatenPersonen release];
     [eckdatenWohnfl release];
+    [domizilNameLabelueberBild release];
+   
     [super dealloc];
 
     [scrollView release];
@@ -327,36 +338,36 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    if (row==indexPath.row){ 
-        CGRect frame;
-        frame.origin.x = mapView.frame.size.width+10;
-        
-        frame.origin.y=0;
-        frame.size = CGSizeMake(1024, 748);
-        
-        [self.scrollView scrollRectToVisible:frame animated:YES];
-        
-        [self fillDetailInfo:indexPath.row];
-        
-         
-       
-    }
-    
-    else {row=indexPath.row;
+    if (row!=indexPath.row)
+        {row=indexPath.row;
         
         ObjInfo2 *obj=[apartments objectAtIndex:row];
         
         
         MKPointAnnotation *pointann=[appartmentAnnotDict objectForKey:obj.exid];
+        [mapView selectAnnotation:pointann animated:NO];
+        //rowwasselected=true;
+       // [self fillDetailInfo:indexPath.row];
         
-        [mapView selectAnnotation:pointann animated:YES];
-       // [self mapView:mapView didSelectAnnotationView:[pointann ]; 
-        [self fillDetailInfo:indexPath.row];
-          
         
     }
+
+    else { 
+        CGRect frame;
+        frame.origin.x = mapView.frame.size.width+10;
+        
+        frame.origin.y=0;
+        frame.size = CGSizeMake(1024, 748);
+        [self fillDetailInfo:indexPath.row];
+        [self.scrollView scrollRectToVisible:frame animated:YES];
+        
+        
+        
+         
+       
+    }
     
+        
 }
 
 
@@ -395,9 +406,11 @@
         
         NSIndexPath *path= [NSIndexPath indexPathForRow:rownumber inSection:0];
        
-        
+         
     [table selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionTop];
-        [self tableView:table didSelectRowAtIndexPath:path];
+    
+    //if(rowwasselected==false)[self tableView:table didSelectRowAtIndexPath:path];
+       
         
     }
     
@@ -436,9 +449,11 @@
         
         
         NSIndexPath *path= [NSIndexPath indexPathForRow:rownumber inSection:0];
+        [self tableView:table didSelectRowAtIndexPath:path];
+        [self tableView:table didSelectRowAtIndexPath:path];
+            
         
-        [self tableView:table didSelectRowAtIndexPath:path];
-        [self tableView:table didSelectRowAtIndexPath:path];
+        
         
     }
 
@@ -447,9 +462,11 @@
     
 }
 
+
+
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
     MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
-    annView.pinColor = MKPinAnnotationColorPurple;
+    annView.pinColor = MKPinAnnotationColorRed;
     
     UIButton *advertButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     advertButton.frame = CGRectMake(0, 0, 25, 25);
@@ -523,12 +540,13 @@
         // Do any additional setup after loading the view from its nib.
     }
     self.myscrollView.contentSize = CGSizeMake(self.myscrollView.frame.size.width * objPics.count, self.myscrollView.frame.size.height);
-    
+    domizilNameLabelueberBild.text=currentObj.name;
     objektBeschreibung.text=textDescription;
     [webView loadHTMLString:textDescription baseURL:nil];
     eckdatenWohnfl.text=currentObj.living_area.stringValue;
     eckdatenRaeume.text=[NSString stringWithFormat:@"%@%@", currentObj.rooms.stringValue,@" m²"]  ;
     eckdatenPersonen.text=currentObj.persons.stringValue;
+    
    
     
 }
