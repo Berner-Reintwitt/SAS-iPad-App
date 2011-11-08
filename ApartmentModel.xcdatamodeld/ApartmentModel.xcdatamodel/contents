@@ -8,7 +8,7 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjInfo2" inverseName="availabilityInfo" inverseEntity="ObjInfo2" syncable="YES"/>
     </entity>
-    <entity name="ImageData" syncable="YES">
+    <entity name="ImageData" representedClassName="ImageData" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ScaledImage" inverseName="imageData" inverseEntity="ScaledImage" syncable="YES"/>
     </entity>
@@ -115,12 +115,13 @@
         <attribute name="quality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="imageData" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ImageData" inverseName="parent" inverseEntity="ImageData" syncable="YES"/>
+        <relationship name="imageData" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ImageData" inverseName="parent" inverseEntity="ImageData" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ObjPicture" inverseName="images" inverseEntity="ObjPicture" syncable="YES"/>
     </entity>
     <fetchRequest name="getDataForKey" entity="KeyValueData" predicateString="key == &quot;%@&quot;"/>
     <elements>
         <element name="AvailabilityInfo2" positionX="-1703" positionY="-477" width="128" height="135"/>
+        <element name="ImageData" positionX="160" positionY="192" width="128" height="75"/>
         <element name="KeyValueData" positionX="160" positionY="192" width="128" height="75"/>
         <element name="ObjAttribute" positionX="-2151" positionY="-351" width="126" height="120"/>
         <element name="ObjInfo2" positionX="-1937" positionY="-486" width="128" height="734"/>
@@ -129,6 +130,5 @@
         <element name="ObjText" positionX="-2196" positionY="-99" width="128" height="120"/>
         <element name="Price" positionX="-1521" positionY="0" width="128" height="150"/>
         <element name="ScaledImage" positionX="-1514" positionY="-321" width="128" height="150"/>
-        <element name="ImageData" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

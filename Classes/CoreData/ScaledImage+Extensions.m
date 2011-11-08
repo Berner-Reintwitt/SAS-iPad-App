@@ -7,12 +7,12 @@
 //
 
 #import "ScaledImage+Extensions.h"
-
+#import "ImageData.h"
 @implementation ScaledImage (Extensions)
 
 - (UIImage *) getImage {
 	UIImage *result;
-	NSData *imageData = self.data;
+	NSData *imageData = self.imageData.data;
 	result = [UIImage imageWithData:imageData];
 	return result;
 }

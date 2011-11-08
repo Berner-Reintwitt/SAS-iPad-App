@@ -12,6 +12,7 @@
 #import "ObjInfo2+Extensions.h"
 #import "ObjPicture+Extensions.h"
 #import "ObjPriceInfo+Extensions.h"
+#import "Price.h"
 #import "ObjText.h"
 #import "Utils.h"
 #import "StringConsts.h"
@@ -81,6 +82,35 @@ static NSPredicate *maxPersons(int actPersons) {
     
 }
 
+- (double) FinalCleaningPrice {
+    for (ObjPriceInfo *pi in self.priceInfo) {
+        for (Price *p in pi.prices) {
+            if ([@"ER" compare:p.typ] == NSOrderedSame) {
+                return [p.price doubleValue];
+            }
+        }
+    }
+    return 0;
+}
 
+- (double) LowestPricePerWeek {
+    
+    double fc = [self FinalCleaningPrice];
+    if (0 == fc) return 0;
+
+    NSNumber *lowest;
+    
+    for (ObjPriceInfo *pi in self.priceInfo) {
+        for (Price *p in pi.prices) {
+            if ([@"TP" compare:p.typ] == NSOrderedSame && (nil == lowest || [lowest compare:p.price] == NSOrderedDescending)) {
+                lowest = p.price;
+            }
+        }
+    }
+    
+    if (nil == lowest) return 0;
+    double result = [lowest doubleValue] * 7 + fc + 19.0;
+    return result;
+}
 
 @end

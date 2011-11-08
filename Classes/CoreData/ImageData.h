@@ -1,5 +1,5 @@
 //
-//  KeyValueData.h
+//  ImageData.h
 //  TabBarWithSplitView
 //
 //  Created by Berndt Reinhold on 08.11.11.
@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class ScaledImage;
 
-@interface KeyValueData : NSManagedObject
+@interface ImageData : NSManagedObject
 
-@property (nonatomic, retain) NSString * key;
-@property (nonatomic, retain) NSData * value;
+@property (nonatomic, retain) NSData * data;
+@property (nonatomic, retain) ScaledImage *parent;
 
 @end

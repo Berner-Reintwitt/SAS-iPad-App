@@ -2,7 +2,7 @@
 //  ObjInfo2.m
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 26.10.11.
+//  Created by Berndt Reinhold on 08.11.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -37,6 +37,7 @@
 @dynamic land;
 @dynamic living_area;
 @dynamic max_persons;
+@dynamic md5hash;
 @dynamic mindays;
 @dynamic name;
 @dynamic objnr;
@@ -54,7 +55,6 @@
 @dynamic typID;
 @dynamic wohnlageID;
 @dynamic zipcode;
-@dynamic md5hash;
 @dynamic attributes;
 @dynamic availabilityInfo;
 @dynamic pictures;

@@ -2,7 +2,7 @@
 //  ObjPriceInfo.m
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 26.10.11.
+//  Created by Berndt Reinhold on 08.11.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,11 +13,11 @@
 
 @implementation ObjPriceInfo
 
+@dynamic md5hash;
 @dynamic perPers;
 @dynamic prli;
 @dynamic timestamp;
 @dynamic typ;
-@dynamic md5hash;
 @dynamic parent;
 @dynamic prices;
 

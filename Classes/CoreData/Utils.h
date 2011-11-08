@@ -33,31 +33,24 @@ extern NSString *PICTURE_MODE_crop;
 extern NSString *PICTURE_MODE_letterbox;
 extern NSString *PICTURE_MODE_fit;
 
-
 NSManagedObjectModel *managedObjectModel(void);
 NSManagedObjectContext *managedObjectContext(void);
 NSPersistentStoreCoordinator *persistentStoreCoordinator(void);
 NSURL *applicationDocumentsDirectory(void);
 void saveContext(void);
-
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *data);
-
 void XorMd5Hash(NSMutableData *a, NSData *b);
-
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);
 void logError(NSError *error);
 NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger quality, NSString *mode);
-
 NSString *NewUUID();
-
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *value);
-
 CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth, int dstHeight, ScaleModes mode);
-
-
+NSData *DecodeAP16(NSString *baseAP16Code);
 
 @interface Utils : NSObject
+
 @end

@@ -11,9 +11,18 @@
 @implementation AbstractParser
 
 
-+ (NSNumber *)parseInt:(NSString *)text { return [NSNumber numberWithInt:[text intValue]]; }
-+ (NSNumber *)parseFloat:(NSString *)text { return [NSNumber numberWithFloat:[text floatValue]]; }
-+ (NSDecimalNumber *)parseDecimalNumber:(NSString *)text { return [NSDecimalNumber decimalNumberWithString:text]; }
++ (NSNumber *)parseInt:(NSString *)text {
+	return [NSNumber numberWithInt:[text intValue]];
+}
+
++ (NSNumber *)parseFloat:(NSString *)text {
+	return [NSNumber numberWithFloat:[text floatValue]];
+}
+
++ (NSDecimalNumber *)parseDecimalNumber:(NSString *)text {
+	return [NSDecimalNumber decimalNumberWithString:text];
+}
+
 + (NSDate *)parseDate:(NSString *)text {
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
@@ -23,10 +32,14 @@
     [dateFormatter release];
     return date;
 }
-+ (NSNumber *)parseBoolean:(NSString *)text { return [NSNumber numberWithBool: [@"true" compare:text] == NSOrderedSame]; }
+
++ (NSNumber *)parseBoolean:(NSString *)text {
+	return [NSNumber numberWithBool: [@"true" compare:text] == NSOrderedSame];
+}
+
 + (NSMutableData *)parseBase16:(NSString *)base16 {
 	NSAssert(nil != base16 && base16.length == 32, @"argument exception");
-	NSMutableData *result = [NSMutableData dataWithCapacity:16];
+	NSMutableData *result = [NSMutableData dataWithLength:16];
 	Byte *buffer = [result mutableBytes];
 	for (int i = 15; i >= 0; --i) {
 		buffer[i] = (Byte) (

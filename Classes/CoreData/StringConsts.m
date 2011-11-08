@@ -118,5 +118,7 @@ NSString *Name_shallow = @"shallow";
 NSString *Name_source = @"source";
 
 
+NSString *CLASS_ImageData = @"ImageData";
+
 @implementation StringConsts
 @end

@@ -2,7 +2,7 @@
 //  ObjInfo2.h
 //  TabBarWithSplitView
 //
-//  Created by Berndt Reinhold on 26.10.11.
+//  Created by Berndt Reinhold on 08.11.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -34,6 +34,7 @@
 @property (nonatomic, retain) NSString * land;
 @property (nonatomic, retain) NSNumber * living_area;
 @property (nonatomic, retain) NSNumber * max_persons;
+@property (nonatomic, retain) NSData * md5hash;
 @property (nonatomic, retain) NSNumber * mindays;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * objnr;
@@ -51,7 +52,6 @@
 @property (nonatomic, retain) NSNumber * typID;
 @property (nonatomic, retain) NSNumber * wohnlageID;
 @property (nonatomic, retain) NSNumber * zipcode;
-@property (nonatomic, retain) NSData * md5hash;
 @property (nonatomic, retain) NSSet *attributes;
 @property (nonatomic, retain) NSSet *availabilityInfo;
 @property (nonatomic, retain) NSSet *pictures;

@@ -132,7 +132,7 @@ extern NSString *Name_shallow;
 extern NSString *Name_source;
 
 
-
+extern NSString *CLASS_ImageData;
 
 @interface StringConsts : NSObject
 @end

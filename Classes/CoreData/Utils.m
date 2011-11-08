@@ -15,9 +15,9 @@
 #import "StringConsts.h"
 
 
-NSString *DATASOURCE_URL = @"http://progro.localsite.here/DataSource.ashx";
+NSString *DATASOURCE_URL = @"http://feder-mirror.local/Query.ashx";
 
-NSString *QUERY_action = @"action";
+NSString *QUERY_action = @"source";
 
 NSString *ACTION_import = @"import";
 NSString *IMPORT_name = @"name";
@@ -53,6 +53,18 @@ NSString *EndcodeBase16(NSString *string) {
     }
     NSString *result = [NSString stringWithUTF8String:dst];
     return result;
+}
+
+NSData *DecodeAP16(NSString *baseAP16Code) {
+	NSMutableData *result = [NSMutableData dataWithLength:baseAP16Code.length / 2];
+	char *buffer = [result mutableBytes];
+	for (int i = baseAP16Code.length / 2 - 1; i >= 0; --i) {
+		buffer[i] = (char) (
+			(([baseAP16Code characterAtIndex:i * 2 + 0] | 32) - 'a' & 0xf) << 4 |
+			(([baseAP16Code characterAtIndex:i * 2 + 1] | 32) - 'a' & 0xf)
+		);
+	}
+	return result;
 }
 
 
@@ -178,6 +190,11 @@ NSData *readData(NSString *url, NSString *action, ...) {
         logError(error);
     }
     return result;
+}
+
+
+void bla() {
+	
 }
 
 

@@ -1,4 +1,4 @@
-//
+NSData *DecodeAP16(NSString *baseAP16Code)//
 //  Queries.m
 //  xmlLoad
 //
@@ -15,6 +15,7 @@
 #import "ObjPriceInfoParser.h"
 #import "AvailabilityInfo2Parser.h"
 #import "StringConsts.h"
+#import "XPathQuery.h"
 
 static void __startImport(void *ctx) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -104,8 +105,9 @@ static NSInteger orderByExid(id obj1, id obj2, void *context) {
     NSData *xmlData;
     NSXMLParser *pXML;
     AbstractParser *aparser;
-    BOOL b, s;
+    BOOL b, s = TRUE;
 
+	
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objliste2", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
     aparser = [[ObjInfo2Parser alloc] initWithContext:context];
@@ -120,34 +122,7 @@ static NSInteger orderByExid(id obj1, id obj2, void *context) {
     [aparser release];
     [context processPendingChanges];
     
-    xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpictures", nil);
-    pXML = [[NSXMLParser alloc] initWithData: xmlData];
-    aparser = [[ObjPictureParser alloc] initWithContext:context];
-    [pXML setDelegate: aparser];
-    s &= (b = [pXML parse]);
-    if (!b) {
-        NSLog(@"ObjPicture parse error");
-    } else {
-        NSLog(@"ObjPicture imported");
-    }
-    [pXML release];
-    [aparser release];
-    [context processPendingChanges];
-
-    xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objtexts", nil);
-    pXML = [[NSXMLParser alloc] initWithData: xmlData];
-    aparser = [[ObjTextParser alloc] initWithContext:context];
-    [pXML setDelegate: aparser];
-    s &= (b = [pXML parse]);
-    if (!b) {
-        NSLog(@"ObjText parse error");
-    } else {
-        NSLog(@"ObjText imported");
-    }
-    [pXML release];
-    [aparser release];
-    [context processPendingChanges];
-
+	
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpricelists", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
     aparser = [[ObjPriceInfoParser alloc] initWithContext:context];
@@ -162,7 +137,7 @@ static NSInteger orderByExid(id obj1, id obj2, void *context) {
     [aparser release];
     [context processPendingChanges];
  
-    
+
     xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"availabilityinfo", nil);
     pXML = [[NSXMLParser alloc] initWithData: xmlData];
     aparser = [[AvailabilityInfo2Parser alloc] initWithContext:context];
@@ -177,10 +152,68 @@ static NSInteger orderByExid(id obj1, id obj2, void *context) {
     [aparser release];
     [context processPendingChanges];
 
+ 
+    xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objtexts", nil);
+    pXML = [[NSXMLParser alloc] initWithData: xmlData];
+    aparser = [[ObjTextParser alloc] initWithContext:context];
+    [pXML setDelegate: aparser];
+    s &= (b = [pXML parse]);
+    if (!b) {
+        NSLog(@"ObjText parse error");
+    } else {
+		NSLog(@"ObjText imported");
+		
+	}
+    [pXML release];
+    [aparser release];
+    [context processPendingChanges];
+	
+    
+	xmlData = readData(DATASOURCE_URL, ACTION_import, IMPORT_name, @"objpictures", nil);
+    pXML = [[NSXMLParser alloc] initWithData: xmlData];
+    aparser = [[ObjPictureParser alloc] initWithContext:context];
+    [pXML setDelegate: aparser];
+    s &= (b = [pXML parse]);
+    if (!b) {
+        NSLog(@"ObjPicture parse error");
+    } else {
+        NSLog(@"ObjPicture imported");
+    }
+    [pXML release];
+    [aparser release];
+    [context processPendingChanges];
+
+	
     if (!s) {
         NSLog(@"inport failed");
-    }
+    } else {
+		NSError *error = nil;
+		if ([context save:&error] != YES) {
+			NSLog(@"can't save context");
+			if (nil != error) {
+				NSLog(@"%s", [error.localizedDescription UTF8String]);
+			}
+		}
+	}
     
+}
+
++ (void) incrementalImport:(NSManagedObjectContext *)context {
+	NSMutableData *deep = [NSMutableData dataWithLength:16];
+	for (ObjInfo2 *oi2 in [Queries getAllApartments:context]) {
+		XorMd5Hash(deep, oi2.md5hash);
+	}
+	
+	NSData *summary = readData(DATASOURCE_URL, @"obj", @"mode", @"summary", nil);
+	
+	NSArray *root = PerformXMLXPathQuery(summary, @"/summary");
+	
+	NSDictionary *top = [root objectAtIndex:0];
+	
+	NSString *sumBase16 = [top objectForKey:@"nodeContent"];
+	
+	NSData *summaryMd5 = DecodeAP16(sumBase16);
+	
 }
 
 @end

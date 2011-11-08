@@ -23,4 +23,6 @@ void startImport(void);
 
 + (void) initialImport:(NSManagedObjectContext *)context;
 
++ (void) incrementalImport:(NSManagedObjectContext *)context;
+
 @end

@@ -62,17 +62,18 @@
             apartment.renoviert = [AbstractParser parseInt:[mDict objectForKey:NAME_renoviert]];
             apartment.timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
             apartment.flags = [AbstractParser parseInt:[mDict objectForKey:NAME_flags]];
-            apartment.googlemaps_latitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_googlemaps_latitude]];
-            apartment.googlemaps_longitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_googlemaps_longitude]];
+            apartment.googlemaps_latitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_latitude]];
+            apartment.googlemaps_longitude = [AbstractParser parseDecimalNumber:[mDict objectForKey:NAME_longitude]];
             apartment.md5hash = [AbstractParser parseBase16:[mDict objectForKey:Name_md5]];
             NSMutableSet *set = [mDict objectForKey:NAME_AttributeSet];
             if (nil != set) [apartment addAttributes:set];
+            //NSLog(@"apartment %s created", [exid UTF8String]);
         } else {
             NSLog(@"can't create apartment");
             abort();
         }
 
-    } else if ([NAME_googlemaps compare:elementName] == NSOrderedSame) { //  </googlemaps>: propagate googlemaps coordinates to parent node
+    } else if ([NAME_googlemaps compare:elementName] == NSOrderedSame) { //  </googlemaps>: propagate coordinates to parent node
         NSString *lon = [mDict objectForKey:NAME_longitude];
         if (nil == lon) { NSLog(@"no longitude value"); return; }
         NSString *lat = [mDict objectForKey:NAME_latitude];
@@ -87,13 +88,15 @@
         NSString *s_label = [mDict objectForKey:NAME_label];
         if (nil == s_label) { NSLog(@"no attribute label"); return; }
         NSString *s_value = [mDict objectForKey:NAME_value];
+		NSString *md5 = [mDict objectForKey:Name_md5];
 
         // add ObjAttribute to attributes
         ObjAttribute *a = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ObjAttribute inManagedObjectContext:context];
         a.id_ = [NSNumber numberWithInt:[s_id intValue]];          
         a.label = s_label;
         a.value = (nil == s_value) ? @"" : s_value;
-        
+        a.md5hash = [AbstractParser parseBase16:md5];
+		
         mutSet = [pDict objectForKey:NAME_AttributeSet];
         if (nil == mutSet) {
             mutSet = [NSMutableSet setWithCapacity:16];
@@ -102,7 +105,7 @@
         [mutSet addObject:a];
 
     
-    } else if ([NAME_attributes compare:elementName] == NSOrderedSame || [NAME_entfernung compare:elementName] == NSOrderedSame) { //  </attributes> | </entfernung>: propagate attribute set to parent node
+    } else if ([NAME_attributes compare:elementName] == NSOrderedSame) { //  </attributes>: propagate attribute set to parent node
         mutSet = [mDict objectForKey:NAME_AttributeSet];
         if (nil != mutSet) {
             NSMutableSet *oldSet = [pDict objectForKey:NAME_AttributeSet];

@@ -19,4 +19,6 @@
 
 + (NSArray *) LocalSearch:(SearchParameters *)sparam;
 
+- (double) LowestPricePerWeek;
+
 @end

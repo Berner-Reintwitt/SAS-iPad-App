@@ -20,7 +20,8 @@
         AvailabilityInfo2 *aInfo = [NSEntityDescription insertNewObjectForEntityForName:CLASS_AvailabilityInfo2 inManagedObjectContext:context];
         NSDate *timestamp = [AbstractParser parseDate:[mDict objectForKey:NAME_timestamp]];
         aInfo.timestamp = timestamp;
-        NSDate *startDate = [AbstractParser parseDate:[mDict objectForKey:NAME_startDate]];
+		NSString *startDate_str = [mDict objectForKey:NAME_startDate];
+        NSDate *startDate = [AbstractParser parseDate:startDate_str];
         aInfo.startDate = startDate;
         NSString *bookingWeekStart = [mDict objectForKey:NAME_BookingWeekStart];
         aInfo.bookingWeekStart = bookingWeekStart;
