@@ -10,7 +10,7 @@
 #import "SearchParameters.h"
 
 
-@interface SearchResult : NSObject {
+@interface Search_Result : NSObject {
     
     NSDate *dateFrom;
     NSDate *dateTo;
@@ -23,7 +23,6 @@
 }
 
 @property (nonatomic,retain) SearchParameters *spar;
-
 @property (nonatomic,retain) NSDate *dateFrom;
 @property (nonatomic,retain) NSDate *dateTo;
 @property  double  price;

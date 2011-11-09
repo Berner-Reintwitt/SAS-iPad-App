@@ -48,7 +48,7 @@
 							<object class="IBMKMapView" id="758395004">
 								<reference key="NSNextResponder" ref="446017367"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{5, 31}, {673, 663}}</string>
+								<string key="NSFrame">{{5, 33}, {673, 665}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
 								<reference key="NSNextKeyView" ref="602673199"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -183,7 +183,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{211, 3}, {113, 27}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
@@ -204,7 +203,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{1029, 423}, {661, 259}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:693</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -5077,6 +5075,24 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">suchButtonWasPressed:</string>
+						<reference key="source" ref="71632447"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">134</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">alleDomizileWasPressed:</string>
+						<reference key="source" ref="46330058"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">133</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">searchResultsButtonWasPressed:</string>
 						<reference key="source" ref="434552269"/>
 						<reference key="destination" ref="372490531"/>
@@ -5117,7 +5133,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="object" ref="446017367"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="71632447"/>
-							<reference ref="758395004"/>
 							<reference ref="957629353"/>
 							<reference ref="754137207"/>
 							<reference ref="251485483"/>
@@ -5130,6 +5145,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<reference ref="602673199"/>
 							<reference ref="874808673"/>
 							<reference ref="966995855"/>
+							<reference ref="758395004"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -5298,7 +5314,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">131</int>
+			<int key="maxID">134</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

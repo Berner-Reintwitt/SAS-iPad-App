@@ -68,6 +68,9 @@
     Home *home =(Home *)[appDelegate.tabBarController.viewControllers objectAtIndex:0];
     [home.popoverController dismissPopoverAnimated:YES];
     appDelegate.tabBarController.selectedIndex=1;
+    
+    
+    
 }
 
 

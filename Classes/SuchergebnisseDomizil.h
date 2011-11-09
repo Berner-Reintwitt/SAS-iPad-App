@@ -37,15 +37,16 @@
     UITextView *objektBeschreibung;
     UIWebView *webView;
     IBOutlet UILabel *eckdatenWohnfl;
-    
     IBOutlet UILabel *eckdatenRaeume;
     IBOutlet UILabel *eckdatenPersonen;
     Boolean rowwasselected;
     IBOutlet UILabel *domizilNameLabelueberBild;
-   
+    Boolean alleDomizile;
    
     
 }
+- (IBAction)alleDomizileWasPressed:(id)sender;
+- (IBAction)suchButtonWasPressed:(id)sender;
 
 - (IBAction)searchResultsButtonWasPressed:(id)sender;
 

@@ -106,6 +106,7 @@
 		B4A619B71464071D00B9E4FF /* shaddow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A91464071D00B9E4FF /* shaddow_right.png */; };
 		B4A619B81464071D00B9E4FF /* suche_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619AA1464071D00B9E4FF /* suche_btn.png */; };
 		B4A619B914640AA500B9E4FF /* ApartmentModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */; };
+		B4A8EBF4146AD5F000A8E11B /* Search_Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8EBF3146AD5F000A8E11B /* Search_Result.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -269,6 +270,8 @@
 		B4A619A81464071D00B9E4FF /* shaddow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shaddow_left.png; sourceTree = "<group>"; };
 		B4A619A91464071D00B9E4FF /* shaddow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shaddow_right.png; sourceTree = "<group>"; };
 		B4A619AA1464071D00B9E4FF /* suche_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suche_btn.png; sourceTree = "<group>"; };
+		B4A8EBF2146AD5F000A8E11B /* Search_Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_Result.h; sourceTree = "<group>"; };
+		B4A8EBF3146AD5F000A8E11B /* Search_Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_Result.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,8 +301,6 @@
 				1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */,
 				8FB97A2314596562005F3739 /* TabBarSubclass.h */,
 				8FB97A2414596562005F3739 /* TabBarSubclass.m */,
-				8F43F9A21451779000EBD6C0 /* SearchParameters.h */,
-				8F43F9A31451779000EBD6C0 /* SearchParameters.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
 				8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */,
 				8F9850E4143C6B7D00E12D25 /* SearchPopUpViewController.h */,
@@ -429,8 +430,12 @@
 				5532068D1456E95B002E8D79 /* SearchFilter.m */,
 				5532068F1456EFAD002E8D79 /* SearchFilterChain.h */,
 				553206901456EFAD002E8D79 /* SearchFilterChain.m */,
+				8F43F9A21451779000EBD6C0 /* SearchParameters.h */,
+				8F43F9A31451779000EBD6C0 /* SearchParameters.m */,
 				553206891456E6B2002E8D79 /* SearchResult.h */,
 				5532068A1456E6B2002E8D79 /* SearchResult.m */,
+				B4A8EBF2146AD5F000A8E11B /* Search_Result.h */,
+				B4A8EBF3146AD5F000A8E11B /* Search_Result.m */,
 				554F7CAB1446EE7F00F9C24D /* StringConsts.h */,
 				554F7CAC1446EE7F00F9C24D /* StringConsts.m */,
 				554F7CAD1446EE7F00F9C24D /* Utils.h */,
@@ -748,6 +753,7 @@
 				8F357C9414570F6000B1684C /* SuchergebnisseDomizil.m in Sources */,
 				8FF188FB1458532600786888 /* HomePopUpViewController.m in Sources */,
 				8FB97A2614596562005F3739 /* TabBarSubclass.m in Sources */,
+				B4A8EBF4146AD5F000A8E11B /* Search_Result.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
