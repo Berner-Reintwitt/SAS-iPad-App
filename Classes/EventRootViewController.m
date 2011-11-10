@@ -15,6 +15,10 @@
 @synthesize secondMonthDetailViewController;
 @synthesize array1;
 @synthesize splitViewController;
+@synthesize cellTextfield;
+@synthesize tableViewCell;
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,7 +48,8 @@
 */
 
 - (void)viewDidLoad
-{    array1=[[NSArray alloc]initWithObjects:@"November 2011",@"Dezember 2011",@"Januar 2012",@"Februar 2012",nil];
+{   self.tableView.rowHeight=100; 
+    array1=[[NSArray alloc]initWithObjects:@"November 2011",@"Dezember 2011",@"Januar 2012",@"Februar 2012",@"März 2012",@"April 2012",@"Mai 2012",@"Juni 2012",@"Juli 2012",@"August 2012",@"September 2012",nil];
     self.clearsSelectionOnViewWillAppear = NO;
     self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     self.navigationItem.title=@"Events";
@@ -55,6 +60,9 @@
 
 - (void)viewDidUnload
 {
+    [self setCellTextfield:nil];
+    
+    [self setTableViewCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -82,16 +90,19 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"CellIdentifier";
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = nil;
     
-    // Dequeue or create a cell of the appropriate type.
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"EventRootControllerTableCell" owner:self options:nil];
+        cell = self.tableViewCell;
     }
-    // Configure the cell.
-    cell.textLabel.text = [array1 objectAtIndex:indexPath.row];
+    // Configure the cell...
+    self.cellTextfield.text = [array1 objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -126,10 +137,7 @@
         
         
     }
-    firstMonthDetailViewController.listData=array;
-    
-    [firstMonthDetailViewController.table reloadData];
-   
+       
    
     
     
@@ -138,4 +146,10 @@
 }
 
 
+- (void)dealloc {
+    [cellTextfield release];
+   
+    [tableViewCell release];
+    [super dealloc];
+}
 @end

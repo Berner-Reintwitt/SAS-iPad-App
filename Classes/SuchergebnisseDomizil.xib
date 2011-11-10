@@ -50,7 +50,7 @@
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{5, 33}, {673, 665}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
-								<reference key="NSNextKeyView" ref="602673199"/>
+								<reference key="NSNextKeyView" ref="434552269"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -183,6 +183,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{211, 3}, {113, 27}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
+								<reference key="NSNextKeyView" ref="383667771"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
@@ -203,6 +204,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{1029, 423}, {661, 259}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:693</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -4839,6 +4841,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{686, 31}, {272, 105}}</string>
 								<reference key="NSSuperview" ref="446017367"/>
+								<reference key="NSNextKeyView" ref="602673199"/>
 								<string key="NSReuseIdentifierKey">_NS:241</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -4920,9 +4923,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 								<reference key="IBUIFont" ref="101638024"/>
 							</object>
 						</array>
-						<string key="NSFrameSize">{1900, 752}</string>
+						<string key="NSFrame">{{-900, 0}, {1900, 752}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="71632447"/>
+						<reference key="IBUIBackgroundColor" ref="499553699"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>

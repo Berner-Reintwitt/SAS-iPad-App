@@ -94,38 +94,34 @@
     [appartmentAnnotDict retain];
     
    
-    
+  //  [self getSearchResults];
      
-    
-    
-    
+    for(int i=0;i<[[Search_Result mySearchresults]count];i++){
+        Search_Result *res=[[Search_Result mySearchresults] objectAtIndex:i];
+        obj=[Queries getApartment:managedObjectContext() withExID:res.exid];
         
-        for(int i=0;i<[[Search_Result mySearchresults]count];i++){
-            Search_Result *res=[[Search_Result mySearchresults] objectAtIndex:i];
-            obj=[Queries getApartment:managedObjectContext() withExID:res.exid];
-            
-            
-            a.latitude=obj.googlemaps_latitude.doubleValue;
-            a.longitude= obj.googlemaps_longitude.doubleValue;
-            
-            annot = [[MKPointAnnotation alloc]init] ;
-            annot.coordinate=a;
-            annot.title=obj.name;
-            annot.subtitle=@"frei";
-            NSString *title=[ annot title];
-            
-            [annotAppartmentDict setObject:obj forKey:annot.title]; 
-            [appartmentAnnotDict setObject:annot forKey:obj.exid]; 
-            
-            
-            
-            [mapView selectAnnotation:annot animated:YES];
-            [self.mapView addAnnotation : annot];
-            
-            
-            
-        }
         
+        a.latitude=obj.googlemaps_latitude.doubleValue;
+        a.longitude= obj.googlemaps_longitude.doubleValue;
+        
+        annot = [[MKPointAnnotation alloc]init] ;
+        annot.coordinate=a;
+        annot.title=obj.name;
+        annot.subtitle=@"frei";
+        NSString *title=[ annot title];
+        
+        [annotAppartmentDict setObject:obj forKey:annot.title]; 
+        [appartmentAnnotDict setObject:annot forKey:obj.exid]; 
+        
+        
+        
+        [mapView selectAnnotation:annot animated:YES];
+        [self.mapView addAnnotation : annot];
+        
+        
+        
+    }
+     
         
         
         
@@ -145,6 +141,40 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+
+-(void) getSearchResults{
+    
+    ObjInfo2 *obj ;
+    CLLocationCoordinate2D a;
+
+    
+    for(int i=0;i<[[Search_Result mySearchresults]count];i++){
+        Search_Result *res=[[Search_Result mySearchresults] objectAtIndex:i];
+        obj=[Queries getApartment:managedObjectContext() withExID:res.exid];
+        
+        
+        a.latitude=obj.googlemaps_latitude.doubleValue;
+        a.longitude= obj.googlemaps_longitude.doubleValue;
+        
+        annot = [[MKPointAnnotation alloc]init] ;
+        annot.coordinate=a;
+        annot.title=obj.name;
+        annot.subtitle=@"frei";
+        NSString *title=[ annot title];
+        
+        [annotAppartmentDict setObject:obj forKey:annot.title]; 
+        [appartmentAnnotDict setObject:annot forKey:obj.exid]; 
+        
+        
+        
+        [mapView selectAnnotation:annot animated:YES];
+        [self.mapView addAnnotation : annot];
+        
+        
+        
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -260,17 +290,19 @@
     
     alleDomizile=false;
     [table reloadData];
-    NSArray *annotAr=[[NSArray alloc]init];
-    for(int i=0;i<[apartmentAnnotDict count];i++){
-        
-       annotAr= [apartmentAnnotDict mutableArrayValueForKey:[apartments objectAtIndex:i]];
-        
-        
-        
-    }
+    NSMutableArray *annotAr=[[NSMutableArray alloc]initWithCapacity:300];
     
     
-    [mapView removeAnnotations:annotAr];
+    /*for(int i=0;i<[apartmentAnnotDict count];i++){
+        ObjInfo2 *obj = [apartments objectAtIndex:i];
+        //MKPointAnnotation *panno=[apartmentAnnotDict objectForKey:obj.exid];
+       // [annotAr addObject: panno];
+    
+    }*/
+    
+   
+    [mapView removeAnnotations:mapView.annotations];
+    [self getSearchResults];
      [table reloadData];
 }
 
@@ -436,6 +468,7 @@
             }
             
             else{
+                
                 Search_Result *res=[[Search_Result mySearchresults] objectAtIndex:row];
                 obj=[Queries getApartment:managedObjectContext() withExID:res.exid];
             }
@@ -531,7 +564,7 @@
     NSIndexPath *path= [NSIndexPath indexPathForRow:rownumber inSection:0];
     
     
-    [table selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionTop];
+    [table selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionMiddle];
     
     
 }

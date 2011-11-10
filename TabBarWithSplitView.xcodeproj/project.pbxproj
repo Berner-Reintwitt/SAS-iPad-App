@@ -42,7 +42,6 @@
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
-		8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */; };
 		8F0DFC5D143C85210079589F /* OrteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5C143C85210079589F /* OrteView.xib */; };
 		8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */; };
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
@@ -91,6 +90,16 @@
 		8FF71627143B09B3005ADEDF /* EventRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF71626143B09B3005ADEDF /* EventRootViewController.m */; };
 		B4495683146192AD00E5DE49 /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B4495682146192AD00E5DE49 /* Apartments.sqlite */; };
 		B44956851461938700E5DE49 /* DomizileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44956841461938700E5DE49 /* DomizileCell.xib */; };
+		B47DA637146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png in Resources */ = {isa = PBXBuildFile; fileRef = B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */; };
+		B47DA63A146BE1BA00B310DE /* OrteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */; };
+		B47DA643146BF38400B310DE /* GastronomieSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B47DA641146BF38400B310DE /* GastronomieSubView.m */; };
+		B47DA644146BF38400B310DE /* GastronomieSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA642146BF38400B310DE /* GastronomieSubView.xib */; };
+		B47DA646146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */; };
+		B47DA64A146BFA3F00B310DE /* BilderGallerieSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */; };
+		B47DA64B146BFA3F00B310DE /* BilderGallerieSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */; };
+		B47DA64D146C0AD200B310DE /* NewsRootViewContrTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */; };
+		B47DA64F146C11C700B310DE /* EventRootControllerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */; };
+		B47DA651146C15B900B310DE /* MonatEventDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */; };
 		B4A619AB1464071D00B9E4FF /* bg_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199C1464071D00B9E4FF /* bg_ipad.png */; };
 		B4A619AC1464071D00B9E4FF /* einstell_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199D1464071D00B9E4FF /* einstell_btn.png */; };
 		B4A619AD1464071D00B9E4FF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199E1464071D00B9E4FF /* logo.png */; };
@@ -181,7 +190,6 @@
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
 		8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancedSplitViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabBarWithSplitView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteAuswahlPopUp.xib; sourceTree = "<group>"; };
 		8F0DFC5C143C85210079589F /* OrteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteView.xib; sourceTree = "<group>"; };
 		8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseHausDetail.h; sourceTree = SOURCE_ROOT; };
 		8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseHausDetail.m; sourceTree = SOURCE_ROOT; };
@@ -256,6 +264,18 @@
 		8FF71626143B09B3005ADEDF /* EventRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRootViewController.m; sourceTree = "<group>"; };
 		B4495682146192AD00E5DE49 /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = rsrc/Apartments.sqlite; sourceTree = "<group>"; };
 		B44956841461938700E5DE49 /* DomizileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileCell.xib; sourceTree = "<group>"; };
+		B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bildschirmfoto 2011-11-10 um 11.35.25.png"; sourceTree = SOURCE_ROOT; };
+		B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteTableViewCell.xib; sourceTree = "<group>"; };
+		B47DA640146BF38400B310DE /* GastronomieSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GastronomieSubView.h; sourceTree = "<group>"; };
+		B47DA641146BF38400B310DE /* GastronomieSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GastronomieSubView.m; sourceTree = "<group>"; };
+		B47DA642146BF38400B310DE /* GastronomieSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GastronomieSubView.xib; sourceTree = "<group>"; };
+		B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GastronomieSubViewTableViewCell.xib; sourceTree = "<group>"; };
+		B47DA647146BFA3F00B310DE /* BilderGallerieSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BilderGallerieSubView.h; sourceTree = "<group>"; };
+		B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BilderGallerieSubView.m; sourceTree = "<group>"; };
+		B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BilderGallerieSubView.xib; sourceTree = "<group>"; };
+		B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsRootViewContrTableCell.xib; sourceTree = "<group>"; };
+		B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRootControllerTableCell.xib; sourceTree = "<group>"; };
+		B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonatEventDetailTableCell.xib; sourceTree = "<group>"; };
 		B4A6199C1464071D00B9E4FF /* bg_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ipad.png; sourceTree = "<group>"; };
 		B4A6199D1464071D00B9E4FF /* einstell_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = einstell_btn.png; sourceTree = "<group>"; };
 		B4A6199E1464071D00B9E4FF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -524,7 +544,14 @@
 				28216C950DB411BC00E5133A /* Orte.h */,
 				28216C960DB411BC00E5133A /* Orte.m */,
 				8F0DFC5C143C85210079589F /* OrteView.xib */,
-				8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */,
+				B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */,
+				B47DA640146BF38400B310DE /* GastronomieSubView.h */,
+				B47DA641146BF38400B310DE /* GastronomieSubView.m */,
+				B47DA642146BF38400B310DE /* GastronomieSubView.xib */,
+				B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */,
+				B47DA647146BFA3F00B310DE /* BilderGallerieSubView.h */,
+				B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */,
+				B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */,
 			);
 			name = Orte;
 			sourceTree = "<group>";
@@ -549,9 +576,11 @@
 			children = (
 				8FF71625143B09B2005ADEDF /* EventRootViewController.h */,
 				8FF71626143B09B3005ADEDF /* EventRootViewController.m */,
+				B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */,
 				8FF7161D143B06CF005ADEDF /* MonatEventDetailView.h */,
 				8FF7161E143B06CF005ADEDF /* MonatEventDetailView.m */,
 				8FF7161F143B06CF005ADEDF /* MonatEventDetailView.xib */,
+				B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -561,6 +590,7 @@
 			children = (
 				8FD448EB143B283E004887B6 /* NewsRootViewController.h */,
 				8FD448EC143B283E004887B6 /* NewsRootViewController.m */,
+				B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */,
 				8FD448EE143B2902004887B6 /* NewsDetailView.h */,
 				8FD448EF143B2902004887B6 /* NewsDetailView.m */,
 				8FD448F0143B2902004887B6 /* NewsDetailView.xib */,
@@ -571,6 +601,7 @@
 		B4A6199B1464071D00B9E4FF /* web_stuff */ = {
 			isa = PBXGroup;
 			children = (
+				B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */,
 				B4A6199C1464071D00B9E4FF /* bg_ipad.png */,
 				B4A6199D1464071D00B9E4FF /* einstell_btn.png */,
 				B4A6199E1464071D00B9E4FF /* logo.png */,
@@ -662,7 +693,6 @@
 				8F879E17143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib in Resources */,
 				8F9850E8143C6C5400E12D25 /* WetterOrtePopUpView.xib in Resources */,
 				8F9850EA143C707300E12D25 /* WetterSearchPopUpViewController.xib in Resources */,
-				8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */,
 				8F0DFC5D143C85210079589F /* OrteView.xib in Resources */,
 				8FA5FC2D143CAEE700743200 /* TapkuLibrary.bundle in Resources */,
 				8F967160143DE5070041C197 /* CalenderPopUpViewController.xib in Resources */,
@@ -689,6 +719,14 @@
 				B4A619B61464071D00B9E4FF /* shaddow_left.png in Resources */,
 				B4A619B71464071D00B9E4FF /* shaddow_right.png in Resources */,
 				B4A619B81464071D00B9E4FF /* suche_btn.png in Resources */,
+				B47DA637146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png in Resources */,
+				B47DA63A146BE1BA00B310DE /* OrteTableViewCell.xib in Resources */,
+				B47DA644146BF38400B310DE /* GastronomieSubView.xib in Resources */,
+				B47DA646146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib in Resources */,
+				B47DA64B146BFA3F00B310DE /* BilderGallerieSubView.xib in Resources */,
+				B47DA64D146C0AD200B310DE /* NewsRootViewContrTableCell.xib in Resources */,
+				B47DA64F146C11C700B310DE /* EventRootControllerTableCell.xib in Resources */,
+				B47DA651146C15B900B310DE /* MonatEventDetailTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +792,8 @@
 				8FF188FB1458532600786888 /* HomePopUpViewController.m in Sources */,
 				8FB97A2614596562005F3739 /* TabBarSubclass.m in Sources */,
 				B4A8EBF4146AD5F000A8E11B /* Search_Result.m in Sources */,
+				B47DA643146BF38400B310DE /* GastronomieSubView.m in Sources */,
+				B47DA64A146BFA3F00B310DE /* BilderGallerieSubView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

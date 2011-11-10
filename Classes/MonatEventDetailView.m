@@ -9,9 +9,12 @@
 #import "MonatEventDetailView.h"
 
 @implementation MonatEventDetailView
+@synthesize detailTable;
 
 @synthesize listData;
 @synthesize table;
+@synthesize detailTableCell;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +52,8 @@
 - (void)viewDidUnload
 {
     [self setTable:nil];
+    [self setDetailTableCell:nil];
+    [self setDetailTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -70,31 +75,48 @@
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = nil;
+    
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"] autorelease];
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"MonatEventDetailTableCell" owner:self options:nil];
+        cell = self.detailTableCell;
     }
-    
     // Configure the cell...
-    
-        cell.textLabel.text = [listData objectAtIndex:indexPath.row];
-    
-   /* else if (a==1){
-             NSLog(@"ich war hier");
-         cell.textLabel.text = [array2 objectAtIndex:indexPath.row];}*/
         
-    
     return cell;
 
     }
 
 
-    
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //If this is the selected index we need to return the height of the cell
+    //in relation to the label height otherwise we just return the minimum label height with padding
+    if(selectedIndex == indexPath.row)
+    {
+        return [self getLabelHeightForIndex:indexPath.row] + COMMENT_LABEL_PADDING * 2;
+    }
+    else {
+        return COMMENT_LABEL_MIN_HEIGHT + COMMENT_LABEL_PADDING * 2;
+    }
+}
     
 
 - (void)dealloc {
     [table release];
+    [detailTableCell release];
+    [detailTable release];
     [super dealloc];
+}
+- (IBAction)detailsWasPressed:(id)sender {
+    
+    [sender resignFirstResponder];
+    
+    
 }
 @end

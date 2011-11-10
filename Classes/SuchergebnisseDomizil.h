@@ -47,7 +47,7 @@
 }
 - (IBAction)alleDomizileWasPressed:(id)sender;
 - (IBAction)suchButtonWasPressed:(id)sender;
-
+-(void) getSearchResults;
 - (IBAction)searchResultsButtonWasPressed:(id)sender;
 
 - (IBAction)srollBack:(id)sender;
