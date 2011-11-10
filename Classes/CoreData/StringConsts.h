@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
+#define initApartmentCapacity 300
+
+
+
+
+
 // string constants
 extern NSString *CLASS_ObjInfo2;
 
@@ -133,6 +139,12 @@ extern NSString *Name_source;
 
 
 extern NSString *CLASS_ImageData;
+
+
+extern NSString *XML_NodeName;
+extern NSString *XML_NodeContent;
+extern NSString *XML_NodeChildNodes;
+
 
 @interface StringConsts : NSObject
 @end

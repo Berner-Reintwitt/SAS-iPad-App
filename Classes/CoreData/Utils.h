@@ -49,7 +49,15 @@ NSString *NewUUID();
 NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *value);
 CGImageRef CreateScaledCGImageFromCGImageWithMode(CGImageRef image, int dstWidth, int dstHeight, ScaleModes mode);
+
 NSData *DecodeAP16(NSString *baseAP16Code);
+NSString *EncodeAP16(NSData *md5Data);
+
+NSString *parseExidFromTag(NSString *tag);
+NSString *createExidParamString(NSEnumerator *enumerator);
+
+
+BOOL containsPattern(NSString *source, NSString *pattern);
 
 @interface Utils : NSObject
 

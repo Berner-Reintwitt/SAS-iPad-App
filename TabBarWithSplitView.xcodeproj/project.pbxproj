@@ -42,6 +42,10 @@
 		554F7CC01446EE7F00F9C24D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7CAE1446EE7F00F9C24D /* Utils.m */; };
 		554F7CCF1446F70C00F9C24D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F7CCE1446F70C00F9C24D /* ImageIO.framework */; };
 		559D8E8C1462F60D00E98261 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 559D8E8B1462F60D00E98261 /* XPathQuery.m */; };
+		55C701D2146BEEFA00B2F3E3 /* Price+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C701D1146BEEFA00B2F3E3 /* Price+Extensions.m */; };
+		55C701D6146BF7FA00B2F3E3 /* ObjText+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C701D5146BF7F900B2F3E3 /* ObjText+Extensions.m */; };
+		55C701D9146BFBB200B2F3E3 /* AvailabilityInfo2+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C701D8146BFBB100B2F3E3 /* AvailabilityInfo2+Extensions.m */; };
+		55C701DC146C04E500B2F3E3 /* ObjAttribute+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C701DB146C04E300B2F3E3 /* ObjAttribute+Extensions.m */; };
 		55CE11881462F31200A9D308 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CE11871462F31100A9D308 /* libxml2.dylib */; };
 		55D47FC81434A06600AB6A5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D47FC71434A06600AB6A5C /* CoreData.framework */; };
 		55DE6239145060F300C90EA4 /* ObjInfo2+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE6238145060F200C90EA4 /* ObjInfo2+Extensions.m */; };
@@ -180,6 +184,14 @@
 		554F7CCE1446F70C00F9C24D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		559D8E8A1462F60D00E98261 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		559D8E8B1462F60D00E98261 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		55C701D0146BEEFA00B2F3E3 /* Price+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Price+Extensions.h"; path = "CoreData/Price+Extensions.h"; sourceTree = "<group>"; };
+		55C701D1146BEEFA00B2F3E3 /* Price+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Price+Extensions.m"; path = "CoreData/Price+Extensions.m"; sourceTree = "<group>"; };
+		55C701D4146BF7F800B2F3E3 /* ObjText+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjText+Extensions.h"; path = "CoreData/ObjText+Extensions.h"; sourceTree = "<group>"; };
+		55C701D5146BF7F900B2F3E3 /* ObjText+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjText+Extensions.m"; path = "CoreData/ObjText+Extensions.m"; sourceTree = "<group>"; };
+		55C701D7146BFBAF00B2F3E3 /* AvailabilityInfo2+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AvailabilityInfo2+Extensions.h"; path = "CoreData/AvailabilityInfo2+Extensions.h"; sourceTree = "<group>"; };
+		55C701D8146BFBB100B2F3E3 /* AvailabilityInfo2+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AvailabilityInfo2+Extensions.m"; path = "CoreData/AvailabilityInfo2+Extensions.m"; sourceTree = "<group>"; };
+		55C701DA146C04E200B2F3E3 /* ObjAttribute+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjAttribute+Extensions.h"; path = "CoreData/ObjAttribute+Extensions.h"; sourceTree = "<group>"; };
+		55C701DB146C04E300B2F3E3 /* ObjAttribute+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjAttribute+Extensions.m"; path = "CoreData/ObjAttribute+Extensions.m"; sourceTree = "<group>"; };
 		55CE11871462F31100A9D308 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		55D47FC71434A06600AB6A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		55DE6237145060F200C90EA4 /* ObjInfo2+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjInfo2+Extensions.h"; path = "CoreData/ObjInfo2+Extensions.h"; sourceTree = "<group>"; };
@@ -407,6 +419,8 @@
 			children = (
 				554F7C8C1446EE7F00F9C24D /* AbstractParser.h */,
 				554F7C8D1446EE7F00F9C24D /* AbstractParser.m */,
+				55C701D7146BFBAF00B2F3E3 /* AvailabilityInfo2+Extensions.h */,
+				55C701D8146BFBB100B2F3E3 /* AvailabilityInfo2+Extensions.m */,
 				5511E0CE146992B30032B590 /* AvailabilityInfo2.h */,
 				5511E0CF146992B30032B590 /* AvailabilityInfo2.m */,
 				554F7C901446EE7F00F9C24D /* AvailabilityInfo2Parser.h */,
@@ -415,6 +429,8 @@
 				5511E0CC146992B30032B590 /* ImageData.m */,
 				5511E0BC146992B20032B590 /* KeyValueData.h */,
 				5511E0BD146992B20032B590 /* KeyValueData.m */,
+				55C701DA146C04E200B2F3E3 /* ObjAttribute+Extensions.h */,
+				55C701DB146C04E300B2F3E3 /* ObjAttribute+Extensions.m */,
 				5511E0B6146992B10032B590 /* ObjAttribute.h */,
 				5511E0B7146992B20032B590 /* ObjAttribute.m */,
 				55DE6237145060F200C90EA4 /* ObjInfo2+Extensions.h */,
@@ -435,10 +451,14 @@
 				5511E0C9146992B30032B590 /* ObjPriceInfo.m */,
 				554F7C9F1446EE7F00F9C24D /* ObjPriceInfoParser.h */,
 				554F7CA01446EE7F00F9C24D /* ObjPriceInfoParser.m */,
+				55C701D4146BF7F800B2F3E3 /* ObjText+Extensions.h */,
+				55C701D5146BF7F900B2F3E3 /* ObjText+Extensions.m */,
 				5511E0BF146992B20032B590 /* ObjText.h */,
 				5511E0C0146992B20032B590 /* ObjText.m */,
 				554F7CA31446EE7F00F9C24D /* ObjTextParser.h */,
 				554F7CA41446EE7F00F9C24D /* ObjTextParser.m */,
+				55C701D0146BEEFA00B2F3E3 /* Price+Extensions.h */,
+				55C701D1146BEEFA00B2F3E3 /* Price+Extensions.m */,
 				5511E0C2146992B30032B590 /* Price.h */,
 				5511E0C3146992B30032B590 /* Price.m */,
 				554F7CA71446EE7F00F9C24D /* Queries.h */,
@@ -773,6 +793,10 @@
 				5511E0CA146992B30032B590 /* ObjPriceInfo.m in Sources */,
 				5511E0CD146992B30032B590 /* ImageData.m in Sources */,
 				5511E0D0146992B30032B590 /* AvailabilityInfo2.m in Sources */,
+				55C701D2146BEEFA00B2F3E3 /* Price+Extensions.m in Sources */,
+				55C701D6146BF7FA00B2F3E3 /* ObjText+Extensions.m in Sources */,
+				55C701D9146BFBB200B2F3E3 /* AvailabilityInfo2+Extensions.m in Sources */,
+				55C701DC146C04E500B2F3E3 /* ObjAttribute+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

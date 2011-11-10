@@ -67,6 +67,18 @@ NSData *DecodeAP16(NSString *baseAP16Code) {
 	return result;
 }
 
+NSString *EncodeAP16(NSData *md5Data) {
+	NSCAssert(nil != md5Data && 16 == md5Data.length, @"argument exception");
+	unichar buffer[32];
+	const Byte *source = [md5Data bytes];
+	for (int i = 15; i >= 0; --i) {
+		Byte b = source[i];
+		buffer[i * 2 + 0] = 'A' + ((b >> 4) & 0xf);
+		buffer[i * 2 + 1] = 'A' + ((b >> 0) & 0xf);
+	}
+	return [NSString stringWithCharacters:buffer length:32];
+}
+
 
 void XorMd5Hash(NSMutableData *a, NSData *b) {
 	NSCAssert(nil != a && 16 == a.length && nil != b && 16 == b.length, @"argument exception");
@@ -193,9 +205,38 @@ NSData *readData(NSString *url, NSString *action, ...) {
 }
 
 
-void bla() {
-	
+NSString *parseExidFromTag(NSString *tag) {
+	NSRange r = [tag rangeOfString:@"."];
+	if (r.location == NSNotFound) {
+		return nil;
+	}
+	NSString *result = [[tag substringFromIndex:r.location + 1] stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
+	return result;
 }
+
+
+BOOL containsPattern(NSString *source, NSString *pattern) {
+	return
+	nil != source &&
+	nil != pattern &&
+	NSNotFound != [source rangeOfString:pattern options:NSCaseInsensitiveSearch | NSLiteralSearch].location;
+}
+
+
+NSString *createExidParamString(NSEnumerator *enumerator) {
+	NSMutableString *result = [NSMutableString stringWithCapacity:32];
+	BOOL first = true;
+	for (NSString *exid in enumerator) {
+		if (first) {
+			first = false;
+		} else {
+			[result appendString:@","];
+		}
+		[result appendString:[exid stringByReplacingOccurrencesOfString:@"/" withString:@"-"]];
+	}
+	return result;
+}
+
 
 
 NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger quality, NSString *mode) {

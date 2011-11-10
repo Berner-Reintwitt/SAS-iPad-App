@@ -13,11 +13,23 @@
 
 - (NSArray *) OrderedPictures;
 
+- (NSMutableData *) picturesMd5Deep;
+
+- (NSMutableData *) textsMd5Deep;
+
+- (NSMutableData *) priceInfoMd5Deep;
+
+- (NSMutableData *) availabilityInfoMd5Deep;
+
+- (NSMutableData *) attributesMd5Deep;
+
 - (NSMutableData *) deepMd5Hash;
 
 + (NSArray *) AllApartments;
 
 + (NSArray *) LocalSearch:(SearchParameters *)sparam;
+
+- (void) updateFromXmlNodes:(NSArray *)nodes withContext:(NSManagedObjectContext *)context;
 
 - (double) LowestPricePerWeek;
 

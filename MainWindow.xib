@@ -67,13 +67,12 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 				<bool key="IBUIHorizontal">YES</bool>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="297688779">
-					<string key="IBUITitle">Kontakt</string>
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="749419558">
-						<string key="IBUITitle">Kontakt</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="638559282">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="362369485">
+						<string key="IBUITitle">Domizile</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">kontakt_btn.png</string>
+							<string key="NSResourceName">domizile_btn.png</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -81,7 +80,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 					</object>
 					<reference key="IBUIParentViewController" ref="395037606"/>
-					<string key="IBUINibName">KontaktViewController</string>
+					<string key="IBUINibName">SuchergebnisseDomizil</string>
 					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 						<int key="IBUIInterfaceOrientation">1</int>
 						<int key="interfaceOrientation">1</int>
@@ -111,25 +110,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
-					<object class="IBUIViewController" id="638559282">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="362369485">
-							<string key="IBUITitle">Domizile</string>
-							<object class="NSCustomResource" key="IBUIImage">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">domizile_btn.png</string>
-							</object>
-							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						</object>
-						<reference key="IBUIToolbarItems" ref="0"/>
-						<reference key="IBUIParentViewController" ref="395037606"/>
-						<string key="IBUINibName">SuchergebnisseDomizil</string>
-						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-							<int key="IBUIInterfaceOrientation">1</int>
-							<int key="interfaceOrientation">1</int>
-						</object>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIHorizontal">NO</bool>
-					</object>
+					<reference ref="638559282"/>
 					<object class="IBUIViewController" id="240426214">
 						<string key="IBUITitle">Orte</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="720455198">
@@ -197,7 +178,26 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
-					<reference ref="297688779"/>
+					<object class="IBUIViewController" id="297688779">
+						<string key="IBUITitle">Kontakt</string>
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="749419558">
+							<string key="IBUITitle">Kontakt</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">kontakt_btn.png</string>
+							</object>
+							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						</object>
+						<reference key="IBUIToolbarItems" ref="0"/>
+						<reference key="IBUIParentViewController" ref="395037606"/>
+						<string key="IBUINibName">KontaktViewController</string>
+						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+							<int key="IBUIInterfaceOrientation">1</int>
+							<int key="interfaceOrientation">1</int>
+						</object>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<bool key="IBUIHorizontal">NO</bool>
+					</object>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="116321709">
 					<reference key="NSNextResponder"/>

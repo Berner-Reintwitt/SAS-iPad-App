@@ -16,14 +16,6 @@
 #import "Utils.h"
 #import "Queries.h"
 
-
-BOOL containsPattern(NSString *source, NSString *pattern) {
-	return
-		nil != source &&
-		nil != pattern &&
-		NSNotFound != [source rangeOfString:pattern options:NSCaseInsensitiveSearch | NSLiteralSearch].location;
-}
-
 @implementation ObjPictureParser
 
 - (void) closeTag:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName parentName:(NSString *)pName myDict:(NSMutableDictionary *) mDict parentDict:(NSMutableDictionary *) pDict {
@@ -66,6 +58,12 @@ BOOL containsPattern(NSString *source, NSString *pattern) {
 			}
 		}
 
+		const Byte *data_bytes = [data bytes];
+		if (data_bytes[0] == '<') {
+			NSLog(@"no image data at '%s'", [url UTF8String]);
+			return;
+		}
+		
 		ScaledImage *image = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ScaledImage inManagedObjectContext:context];
 		image.imageData = [NSEntityDescription insertNewObjectForEntityForName:CLASS_ImageData inManagedObjectContext:context];
 		image.imageData.data = data;

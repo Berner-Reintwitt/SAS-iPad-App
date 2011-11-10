@@ -41,30 +41,24 @@
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"Apartments" ofType:@"sqlite"];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *destinationPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Apartments.sqlite"];
-    
-    
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
     
+    [Queries incrementalImport:managedObjectContext()];
+    
     if (![fileManager fileExistsAtPath:destinationPath]) {
-        
-        
-        
         [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+        //[Queries initialImport:managedObjectContext()];
+    } else {
+        NSDictionary *dict = [fileManager fileAttributesAtPath:destinationPath traverseLink:NO];
+        NSNumber *number = [dict objectForKey:NSFileSize];
+        if (nil != number && [number intValue] < 500000){
+            [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+        }        
     }
     
-    else {
-        
-        NSDictionary *dict=[fileManager fileAttributesAtPath:destinationPath traverseLink:NO];
-        NSNumber *number = [dict objectForKey:NSFileSize];
-        if(nil!=number&&[number intValue]<500000){
-            
-            [fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
-            
-        }
-        
-        
-    }
+    
     
 }
 

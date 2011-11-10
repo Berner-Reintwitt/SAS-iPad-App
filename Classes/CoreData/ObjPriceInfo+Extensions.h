@@ -12,4 +12,6 @@
 
 - (NSMutableData *) deepMd5Hash;
 
++ (ObjPriceInfo *) parseFromXmlNodes:(NSArray *)nodes withContext:(NSManagedObjectContext *)context;
+
 @end

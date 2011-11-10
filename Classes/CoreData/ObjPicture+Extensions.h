@@ -18,4 +18,7 @@ typedef enum {
 
 - (UIImage *) GetScaledImage:(int)width withHeight:(int)height withMode:(ScaleModes)mode;
 
++ (ObjPicture *) parseFromXmlNodes:(NSArray *)nodes withContext:(NSManagedObjectContext *)context;
+
+
 @end

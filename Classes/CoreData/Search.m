@@ -9,17 +9,20 @@
 #import "Search.h"
 #import "ObjInfo2+Extensions.h"
 #import "SearchResult.h"
+#import "Utils.h"
+#import "XPathQuery.h"
 
 @implementation Search
 
 + (NSEnumerator *) SearchWithParameters:(SearchParameters *)spar {
 
+    NSData *rawXml = readData(@"http://feder-mirror.local/Search.ashx", @"search", @"f", @"20120101", @"t", @"20120108", @"a", @"2", nil);
+    NSArray *result = PerformXMLXPathQuery(rawXml, @"/ArrayOfObjInfo/ObjInfo");
     
     
     
-    NSArray *allApartments = [ObjInfo2 AllApartments];
     
-    return nil;
+    
 }
 
 @end

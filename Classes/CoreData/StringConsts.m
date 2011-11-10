@@ -120,5 +120,14 @@ NSString *Name_source = @"source";
 
 NSString *CLASS_ImageData = @"ImageData";
 
+
+NSString *XML_NodeName = @"nodeName";
+NSString *XML_NodeContent = @"nodeContent";
+NSString *XML_NodeChildNodes = @"nodeChildArray";
+
+
+
+
+
 @implementation StringConsts
 @end
