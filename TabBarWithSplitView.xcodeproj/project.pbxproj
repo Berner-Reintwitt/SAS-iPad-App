@@ -29,7 +29,6 @@
 		5532068B1456E6B2002E8D79 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068A1456E6B2002E8D79 /* SearchResult.m */; };
 		5532068E1456E95B002E8D79 /* SearchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532068D1456E95B002E8D79 /* SearchFilter.m */; };
 		553206911456EFAD002E8D79 /* SearchFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 553206901456EFAD002E8D79 /* SearchFilterChain.m */; };
-		55367576145EDF22008C045E /* SuchergebnisseDomizil1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */; };
 		5536757A1460192B008C045E /* ObjPriceInfo+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 553675791460192A008C045E /* ObjPriceInfo+Extensions.m */; };
 		554F7CAF1446EE7F00F9C24D /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C8D1446EE7F00F9C24D /* AbstractParser.m */; };
 		554F7CB11446EE7F00F9C24D /* AvailabilityInfo2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F7C911446EE7F00F9C24D /* AvailabilityInfo2Parser.m */; };
@@ -56,7 +55,6 @@
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
 		8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */; };
 		8F0DFC5D143C85210079589F /* OrteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5C143C85210079589F /* OrteView.xib */; };
-		8F0FB2B814599CBD007311D2 /* web_stuff in Resources */ = {isa = PBXBuildFile; fileRef = 8F0FB2B714599CBD007311D2 /* web_stuff */; };
 		8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */; };
 		8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */; };
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
@@ -160,7 +158,6 @@
 		5532068D1456E95B002E8D79 /* SearchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilter.m; path = CoreData/SearchFilter.m; sourceTree = "<group>"; };
 		5532068F1456EFAD002E8D79 /* SearchFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilterChain.h; path = CoreData/SearchFilterChain.h; sourceTree = "<group>"; };
 		553206901456EFAD002E8D79 /* SearchFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilterChain.m; path = CoreData/SearchFilterChain.m; sourceTree = "<group>"; };
-		55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseDomizil1.xib; sourceTree = "<group>"; };
 		553675781460192A008C045E /* ObjPriceInfo+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjPriceInfo+Extensions.h"; path = "CoreData/ObjPriceInfo+Extensions.h"; sourceTree = "<group>"; };
 		553675791460192A008C045E /* ObjPriceInfo+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ObjPriceInfo+Extensions.m"; path = "CoreData/ObjPriceInfo+Extensions.m"; sourceTree = "<group>"; };
 		554F7C8C1446EE7F00F9C24D /* AbstractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractParser.h; path = CoreData/AbstractParser.h; sourceTree = "<group>"; usesTabs = 1; };
@@ -207,7 +204,6 @@
 		8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabBarWithSplitView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteAuswahlPopUp.xib; sourceTree = "<group>"; };
 		8F0DFC5C143C85210079589F /* OrteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteView.xib; sourceTree = "<group>"; };
-		8F0FB2B714599CBD007311D2 /* web_stuff */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web_stuff; path = rsrc/web_stuff; sourceTree = "<group>"; };
 		8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseHausDetail.h; sourceTree = SOURCE_ROOT; };
 		8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseHausDetail.m; sourceTree = SOURCE_ROOT; };
 		8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseHausDetail.xib; sourceTree = SOURCE_ROOT; };
@@ -389,7 +385,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8F0FB2B714599CBD007311D2 /* web_stuff */,
 				8FF188F614584A6A00786888 /* star.png */,
 				8F357C8C1457048E00B1684C /* Apartments.sqlite */,
 				8F9586FF144711E400508C2D /* pig.png */,
@@ -578,7 +573,6 @@
 				8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */,
 				8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */,
 				8F9236E414598309004DF57E /* SuchergebnisseDomizil.xib */,
-				55367575145EDF22008C045E /* SuchergebnisseDomizil1.xib */,
 			);
 			name = Domizile;
 			sourceTree = "<group>";
@@ -716,8 +710,6 @@
 				8FF188F714584A6A00786888 /* star.png in Resources */,
 				8FF188FC1458532600786888 /* HomePopUpViewController.xib in Resources */,
 				8F9236E514598309004DF57E /* SuchergebnisseDomizil.xib in Resources */,
-				8F0FB2B814599CBD007311D2 /* web_stuff in Resources */,
-				55367576145EDF22008C045E /* SuchergebnisseDomizil1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
