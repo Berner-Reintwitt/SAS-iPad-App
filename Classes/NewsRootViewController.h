@@ -17,10 +17,13 @@
        NSArray *array1;
     EnhancedSplitViewController *splitViewController;
     NewsDetailView *newsDetailView;
+    IBOutlet UITableViewCell *tableCell;
+
 }
 
 @property (nonatomic, retain) IBOutlet NewsDetailView *newsDetailView;
 @property (nonatomic, retain) IBOutlet NSArray *array1;
 @property (nonatomic, assign) IBOutlet EnhancedSplitViewController *splitViewController;
+@property (retain, nonatomic) IBOutlet UITableViewCell *tableCell;
 
 @end

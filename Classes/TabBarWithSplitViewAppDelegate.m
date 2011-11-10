@@ -282,6 +282,7 @@
     navigationControllerModalViews.tabBarItem.image=img;
     
     [controllers replaceObjectAtIndex:0 withObject:navigationControllerModalViews];*/
+    
     [self makeSplitViewController];
    
    

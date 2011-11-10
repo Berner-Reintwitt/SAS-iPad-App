@@ -15,10 +15,18 @@
     NSArray *listData;
     NSArray *array2;
     UITableView *table;
+    IBOutlet UITableViewCell *detailTableCell;
+    NSInteger selectedIndex;
+    
+
 }
 
 
 @property (nonatomic, retain) NSArray *listData;
 @property (retain, nonatomic) IBOutlet UITableView *table;
+@property (retain, nonatomic) IBOutlet UITableViewCell *detailTableCell;
+- (IBAction)detailsWasPressed:(id)sender;
+@property (retain, nonatomic) IBOutlet UITableView *detailTable;
+
 
 @end

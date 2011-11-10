@@ -53,26 +53,17 @@
 		7D0CD7731427900A00E9F0FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7721427900A00E9F0FD /* CoreLocation.framework */; };
 		7D0CD7751427901300E9F0FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CD7741427901300E9F0FD /* MapKit.framework */; };
 		8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */; };
-		8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */; };
 		8F0DFC5D143C85210079589F /* OrteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0DFC5C143C85210079589F /* OrteView.xib */; };
 		8F17A8AB1450195200C4F72E /* SuchergebnisseHausDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */; };
-		8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */; };
 		8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */; };
-		8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C8C1457048E00B1684C /* Apartments.sqlite */; };
 		8F357C90145704B100B1684C /* ApartmentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */; };
 		8F357C9414570F6000B1684C /* SuchergebnisseDomizil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */; };
 		8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */; };
-		8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F42647F1430D19200CA5340 /* DomizilCell.xib */; };
 		8F43F9A41451779100EBD6C0 /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43F9A31451779000EBD6C0 /* SearchParameters.m */; };
-		8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */; };
-		8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */; };
 		8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */; };
 		8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */; };
-		8F879E15143C5983002BD6C9 /* DomizileFourthDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */; };
 		8F879E17143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */; };
 		8F9236E514598309004DF57E /* SuchergebnisseDomizil.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9236E414598309004DF57E /* SuchergebnisseDomizil.xib */; };
-		8F9537801431D37C009B183B /* DomizileFourthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */; };
-		8F9537821431D37C009B183B /* DomizileThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F95377E1431D37C009B183B /* DomizileThirdDetailViewController.m */; };
 		8F9537E014320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9537DE14320EE5009B183B /* ShuttleServiceDetailViewControllerMaserati.m */; };
 		8F9537E114320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9537DF14320EE5009B183B /* ShuttleServiceDetailViewControllerMaserati.xib */; };
 		8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9537E314320F1E009B183B /* ShuttleServiceRootViewController.m */; };
@@ -95,8 +86,6 @@
 		8FA5FC33143CAEE700743200 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5FC2B143CAEE700743200 /* UIView+TKCategory.m */; };
 		8FA8699C1445C3C1008AC064 /* SortierenNachPopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8699A1445C3C1008AC064 /* SortierenNachPopOver.m */; };
 		8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA8699B1445C3C1008AC064 /* SortierenNachPopOver.xib */; };
-		8FA869A21445CC34008AC064 /* SuchergebnisseKarte.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */; };
-		8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */; };
 		8FB97A2614596562005F3739 /* TabBarSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB97A2414596562005F3739 /* TabBarSubclass.m */; };
 		8FBC59E6143B448500529E5D /* WetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC59E4143B448500529E5D /* WetterViewController.m */; };
 		8FBC59E7143B448500529E5D /* WetterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBC59E5143B448500529E5D /* WetterViewController.xib */; };
@@ -105,15 +94,39 @@
 		8FD448ED143B283F004887B6 /* NewsRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD448EC143B283E004887B6 /* NewsRootViewController.m */; };
 		8FD448F1143B2903004887B6 /* NewsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD448EF143B2902004887B6 /* NewsDetailView.m */; };
 		8FD448F2143B2903004887B6 /* NewsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD448F0143B2902004887B6 /* NewsDetailView.xib */; };
-		8FDF03C3143C51CD002985FE /* DomizileThirdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */; };
-		8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */; };
-		8FEBA392142A1807008F1A68 /* DomizileSecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEBA390142A1806008F1A68 /* DomizileSecondDetailViewController.m */; };
-		8FF188F714584A6A00786888 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF188F614584A6A00786888 /* star.png */; };
 		8FF188FB1458532600786888 /* HomePopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF188F91458532600786888 /* HomePopUpViewController.m */; };
 		8FF188FC1458532600786888 /* HomePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF188FA1458532600786888 /* HomePopUpViewController.xib */; };
 		8FF71620143B06D0005ADEDF /* MonatEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7161E143B06CF005ADEDF /* MonatEventDetailView.m */; };
 		8FF71621143B06D0005ADEDF /* MonatEventDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF7161F143B06CF005ADEDF /* MonatEventDetailView.xib */; };
 		8FF71627143B09B3005ADEDF /* EventRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF71626143B09B3005ADEDF /* EventRootViewController.m */; };
+		B4495683146192AD00E5DE49 /* Apartments.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B4495682146192AD00E5DE49 /* Apartments.sqlite */; };
+		B44956851461938700E5DE49 /* DomizileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44956841461938700E5DE49 /* DomizileCell.xib */; };
+		B47DA637146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png in Resources */ = {isa = PBXBuildFile; fileRef = B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */; };
+		B47DA63A146BE1BA00B310DE /* OrteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */; };
+		B47DA643146BF38400B310DE /* GastronomieSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B47DA641146BF38400B310DE /* GastronomieSubView.m */; };
+		B47DA644146BF38400B310DE /* GastronomieSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA642146BF38400B310DE /* GastronomieSubView.xib */; };
+		B47DA646146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */; };
+		B47DA64A146BFA3F00B310DE /* BilderGallerieSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */; };
+		B47DA64B146BFA3F00B310DE /* BilderGallerieSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */; };
+		B47DA64D146C0AD200B310DE /* NewsRootViewContrTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */; };
+		B47DA64F146C11C700B310DE /* EventRootControllerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */; };
+		B47DA651146C15B900B310DE /* MonatEventDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */; };
+		B4A619AB1464071D00B9E4FF /* bg_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199C1464071D00B9E4FF /* bg_ipad.png */; };
+		B4A619AC1464071D00B9E4FF /* einstell_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199D1464071D00B9E4FF /* einstell_btn.png */; };
+		B4A619AD1464071D00B9E4FF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6199E1464071D00B9E4FF /* logo.png */; };
+		B4A619AE1464071D00B9E4FF /* domizile_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A01464071D00B9E4FF /* domizile_btn.png */; };
+		B4A619AF1464071D00B9E4FF /* events_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A11464071D00B9E4FF /* events_btn.png */; };
+		B4A619B01464071D00B9E4FF /* home_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A21464071D00B9E4FF /* home_btn.png */; };
+		B4A619B11464071D00B9E4FF /* kontakt_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A31464071D00B9E4FF /* kontakt_btn.png */; };
+		B4A619B21464071D00B9E4FF /* news_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A41464071D00B9E4FF /* news_btn.png */; };
+		B4A619B31464071D00B9E4FF /* orte_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A51464071D00B9E4FF /* orte_btn.png */; };
+		B4A619B41464071D00B9E4FF /* shuttle_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A61464071D00B9E4FF /* shuttle_btn.png */; };
+		B4A619B51464071D00B9E4FF /* wetter_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A71464071D00B9E4FF /* wetter_btn.png */; };
+		B4A619B61464071D00B9E4FF /* shaddow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A81464071D00B9E4FF /* shaddow_left.png */; };
+		B4A619B71464071D00B9E4FF /* shaddow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619A91464071D00B9E4FF /* shaddow_right.png */; };
+		B4A619B81464071D00B9E4FF /* suche_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A619AA1464071D00B9E4FF /* suche_btn.png */; };
+		B4A619B914640AA500B9E4FF /* ApartmentModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 8F357C8E145704B100B1684C /* ApartmentModel.xcdatamodeld */; };
+		B4A8EBF4146AD5F000A8E11B /* Search_Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8EBF3146AD5F000A8E11B /* Search_Result.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,33 +215,22 @@
 		8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedSplitViewController.h; sourceTree = "<group>"; };
 		8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancedSplitViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TabBarWithSplitView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabBarWithSplitView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteAuswahlPopUp.xib; sourceTree = "<group>"; };
 		8F0DFC5C143C85210079589F /* OrteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteView.xib; sourceTree = "<group>"; };
 		8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseHausDetail.h; sourceTree = SOURCE_ROOT; };
 		8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseHausDetail.m; sourceTree = SOURCE_ROOT; };
-		8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseHausDetail.xib; sourceTree = SOURCE_ROOT; };
 		8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFirstDetailViewController.h; sourceTree = "<group>"; };
 		8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFirstDetailViewController.m; sourceTree = "<group>"; };
-		8F357C8C1457048E00B1684C /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = "../../Library/Application Support/iPhone Simulator/5.0/Applications/Apartments.sqlite"; sourceTree = "<group>"; };
 		8F357C8F145704B100B1684C /* ApartmentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApartmentModel.xcdatamodel; sourceTree = "<group>"; };
 		8F357C9114570F6000B1684C /* SuchergebnisseDomizil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseDomizil.h; sourceTree = "<group>"; };
 		8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseDomizil.m; sourceTree = "<group>"; };
 		8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileFirstDetailViewController.xib; sourceTree = "<group>"; };
-		8F42647F1430D19200CA5340 /* DomizilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizilCell.xib; path = ../DomizilCell.xib; sourceTree = "<group>"; };
 		8F43F9A21451779000EBD6C0 /* SearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchParameters.h; sourceTree = "<group>"; };
 		8F43F9A31451779000EBD6C0 /* SearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchParameters.m; sourceTree = "<group>"; };
-		8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizilCellThirdViewController.xib; sourceTree = "<group>"; };
-		8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizilCellFourthViewController.xib; sourceTree = "<group>"; };
 		8F7DD0F61445A8BC00AC6A11 /* ButtonsPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsPopUpViewController.h; sourceTree = "<group>"; };
 		8F7DD0F71445A8BC00AC6A11 /* ButtonsPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsPopUpViewController.m; sourceTree = "<group>"; };
 		8F7DD0F81445A8BC00AC6A11 /* ButtonsPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsPopUpViewController.xib; sourceTree = "<group>"; };
-		8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileFourthDetailViewController.xib; path = ../DomizileFourthDetailViewController.xib; sourceTree = "<group>"; };
 		8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileSecondDetailViewController.xib; path = ../DomizileSecondDetailViewController.xib; sourceTree = "<group>"; };
 		8F9236E414598309004DF57E /* SuchergebnisseDomizil.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseDomizil.xib; sourceTree = "<group>"; };
-		8F95377A1431D37C009B183B /* DomizileFourthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileFourthDetailViewController.h; sourceTree = "<group>"; };
-		8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileFourthDetailViewController.m; sourceTree = "<group>"; };
-		8F95377D1431D37C009B183B /* DomizileThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileThirdDetailViewController.h; sourceTree = "<group>"; };
-		8F95377E1431D37C009B183B /* DomizileThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileThirdDetailViewController.m; sourceTree = "<group>"; };
 		8F9537DD14320EE4009B183B /* ShuttleServiceDetailViewControllerMaserati.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuttleServiceDetailViewControllerMaserati.h; sourceTree = "<group>"; };
 		8F9537DE14320EE5009B183B /* ShuttleServiceDetailViewControllerMaserati.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuttleServiceDetailViewControllerMaserati.m; sourceTree = "<group>"; };
 		8F9537DF14320EE5009B183B /* ShuttleServiceDetailViewControllerMaserati.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShuttleServiceDetailViewControllerMaserati.xib; sourceTree = "<group>"; };
@@ -264,9 +266,6 @@
 		8FA869991445C3C1008AC064 /* SortierenNachPopOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortierenNachPopOver.h; sourceTree = "<group>"; };
 		8FA8699A1445C3C1008AC064 /* SortierenNachPopOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortierenNachPopOver.m; sourceTree = "<group>"; };
 		8FA8699B1445C3C1008AC064 /* SortierenNachPopOver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortierenNachPopOver.xib; sourceTree = "<group>"; };
-		8FA8699F1445CC33008AC064 /* SuchergebnisseKarte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuchergebnisseKarte.h; sourceTree = "<group>"; };
-		8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuchergebnisseKarte.m; sourceTree = "<group>"; };
-		8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuchergebnisseKarte.xib; sourceTree = "<group>"; };
 		8FB97A2314596562005F3739 /* TabBarSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarSubclass.h; sourceTree = "<group>"; };
 		8FB97A2414596562005F3739 /* TabBarSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarSubclass.m; sourceTree = "<group>"; };
 		8FBC59E3143B448500529E5D /* WetterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WetterViewController.h; path = ../WetterViewController.h; sourceTree = "<group>"; };
@@ -280,12 +279,6 @@
 		8FD448EE143B2902004887B6 /* NewsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailView.h; sourceTree = "<group>"; };
 		8FD448EF143B2902004887B6 /* NewsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailView.m; sourceTree = "<group>"; };
 		8FD448F0143B2902004887B6 /* NewsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailView.xib; sourceTree = "<group>"; };
-		8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DomizileThirdDetailViewController.xib; path = ../DomizileThirdDetailViewController.xib; sourceTree = "<group>"; };
-		8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileRootViewController.h; sourceTree = "<group>"; };
-		8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileRootViewController.m; sourceTree = "<group>"; };
-		8FEBA38F142A1806008F1A68 /* DomizileSecondDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomizileSecondDetailViewController.h; sourceTree = "<group>"; };
-		8FEBA390142A1806008F1A68 /* DomizileSecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomizileSecondDetailViewController.m; sourceTree = "<group>"; };
-		8FF188F614584A6A00786888 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = "../SAS Sammel verz/Arbeit/SAS-iPad-App1/star.png"; sourceTree = "<group>"; };
 		8FF188F81458532500786888 /* HomePopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePopUpViewController.h; sourceTree = "<group>"; };
 		8FF188F91458532600786888 /* HomePopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePopUpViewController.m; sourceTree = "<group>"; };
 		8FF188FA1458532600786888 /* HomePopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePopUpViewController.xib; sourceTree = "<group>"; };
@@ -294,6 +287,36 @@
 		8FF7161F143B06CF005ADEDF /* MonatEventDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonatEventDetailView.xib; sourceTree = "<group>"; };
 		8FF71625143B09B2005ADEDF /* EventRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRootViewController.h; sourceTree = "<group>"; };
 		8FF71626143B09B3005ADEDF /* EventRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRootViewController.m; sourceTree = "<group>"; };
+		B4495682146192AD00E5DE49 /* Apartments.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apartments.sqlite; path = rsrc/Apartments.sqlite; sourceTree = "<group>"; };
+		B44956841461938700E5DE49 /* DomizileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomizileCell.xib; sourceTree = "<group>"; };
+		B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bildschirmfoto 2011-11-10 um 11.35.25.png"; sourceTree = SOURCE_ROOT; };
+		B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrteTableViewCell.xib; sourceTree = "<group>"; };
+		B47DA640146BF38400B310DE /* GastronomieSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GastronomieSubView.h; sourceTree = "<group>"; };
+		B47DA641146BF38400B310DE /* GastronomieSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GastronomieSubView.m; sourceTree = "<group>"; };
+		B47DA642146BF38400B310DE /* GastronomieSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GastronomieSubView.xib; sourceTree = "<group>"; };
+		B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GastronomieSubViewTableViewCell.xib; sourceTree = "<group>"; };
+		B47DA647146BFA3F00B310DE /* BilderGallerieSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BilderGallerieSubView.h; sourceTree = "<group>"; };
+		B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BilderGallerieSubView.m; sourceTree = "<group>"; };
+		B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BilderGallerieSubView.xib; sourceTree = "<group>"; };
+		B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsRootViewContrTableCell.xib; sourceTree = "<group>"; };
+		B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRootControllerTableCell.xib; sourceTree = "<group>"; };
+		B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonatEventDetailTableCell.xib; sourceTree = "<group>"; };
+		B4A6199C1464071D00B9E4FF /* bg_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ipad.png; sourceTree = "<group>"; };
+		B4A6199D1464071D00B9E4FF /* einstell_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = einstell_btn.png; sourceTree = "<group>"; };
+		B4A6199E1464071D00B9E4FF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B4A619A01464071D00B9E4FF /* domizile_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = domizile_btn.png; sourceTree = "<group>"; };
+		B4A619A11464071D00B9E4FF /* events_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events_btn.png; sourceTree = "<group>"; };
+		B4A619A21464071D00B9E4FF /* home_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn.png; sourceTree = "<group>"; };
+		B4A619A31464071D00B9E4FF /* kontakt_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kontakt_btn.png; sourceTree = "<group>"; };
+		B4A619A41464071D00B9E4FF /* news_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_btn.png; sourceTree = "<group>"; };
+		B4A619A51464071D00B9E4FF /* orte_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orte_btn.png; sourceTree = "<group>"; };
+		B4A619A61464071D00B9E4FF /* shuttle_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuttle_btn.png; sourceTree = "<group>"; };
+		B4A619A71464071D00B9E4FF /* wetter_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wetter_btn.png; sourceTree = "<group>"; };
+		B4A619A81464071D00B9E4FF /* shaddow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shaddow_left.png; sourceTree = "<group>"; };
+		B4A619A91464071D00B9E4FF /* shaddow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shaddow_right.png; sourceTree = "<group>"; };
+		B4A619AA1464071D00B9E4FF /* suche_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suche_btn.png; sourceTree = "<group>"; };
+		B4A8EBF2146AD5F000A8E11B /* Search_Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_Result.h; sourceTree = "<group>"; };
+		B4A8EBF3146AD5F000A8E11B /* Search_Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_Result.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,8 +348,6 @@
 				1D3623250D0F684500981E51 /* TabBarWithSplitViewAppDelegate.m */,
 				8FB97A2314596562005F3739 /* TabBarSubclass.h */,
 				8FB97A2414596562005F3739 /* TabBarSubclass.m */,
-				8F43F9A21451779000EBD6C0 /* SearchParameters.h */,
-				8F43F9A31451779000EBD6C0 /* SearchParameters.m */,
 				8BEF8B34135A238D003FED72 /* EnhancedSplitViewController.h */,
 				8BEF8B35135A238D003FED72 /* EnhancedSplitViewController.m */,
 				8F9850E4143C6B7D00E12D25 /* SearchPopUpViewController.h */,
@@ -468,8 +489,12 @@
 				5532068D1456E95B002E8D79 /* SearchFilter.m */,
 				5532068F1456EFAD002E8D79 /* SearchFilterChain.h */,
 				553206901456EFAD002E8D79 /* SearchFilterChain.m */,
+				8F43F9A21451779000EBD6C0 /* SearchParameters.h */,
+				8F43F9A31451779000EBD6C0 /* SearchParameters.m */,
 				553206891456E6B2002E8D79 /* SearchResult.h */,
 				5532068A1456E6B2002E8D79 /* SearchResult.m */,
+				B4A8EBF2146AD5F000A8E11B /* Search_Result.h */,
+				B4A8EBF3146AD5F000A8E11B /* Search_Result.m */,
 				554F7CAB1446EE7F00F9C24D /* StringConsts.h */,
 				554F7CAC1446EE7F00F9C24D /* StringConsts.m */,
 				554F7CAD1446EE7F00F9C24D /* Utils.h */,
@@ -549,29 +574,13 @@
 			children = (
 				8F357C9114570F6000B1684C /* SuchergebnisseDomizil.h */,
 				8F357C9214570F6000B1684C /* SuchergebnisseDomizil.m */,
-				8FEBA37E142A10EE008F1A68 /* DomizileRootViewController.h */,
-				8FEBA388142A15D7008F1A68 /* DomizileRootViewController.m */,
 				8F190DE5144593820089F277 /* DomizileFirstDetailViewController.h */,
 				8F190DE6144593820089F277 /* DomizileFirstDetailViewController.m */,
-				8FEBA38F142A1806008F1A68 /* DomizileSecondDetailViewController.h */,
-				8FEBA390142A1806008F1A68 /* DomizileSecondDetailViewController.m */,
-				8F95377D1431D37C009B183B /* DomizileThirdDetailViewController.h */,
-				8F95377E1431D37C009B183B /* DomizileThirdDetailViewController.m */,
-				8F95377A1431D37C009B183B /* DomizileFourthDetailViewController.h */,
-				8F95377B1431D37C009B183B /* DomizileFourthDetailViewController.m */,
-				8FA8699F1445CC33008AC064 /* SuchergebnisseKarte.h */,
-				8FA869A01445CC33008AC064 /* SuchergebnisseKarte.m */,
 				8F17A8A81450195200C4F72E /* SuchergebnisseHausDetail.h */,
 				8F17A8A91450195200C4F72E /* SuchergebnisseHausDetail.m */,
-				8F17A8AA1450195200C4F72E /* SuchergebnisseHausDetail.xib */,
-				8FA869A11445CC34008AC064 /* SuchergebnisseKarte.xib */,
 				8F368DF6144341A6000A35C4 /* DomizileFirstDetailViewController.xib */,
 				8F879E16143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib */,
-				8FDF03C2143C51CD002985FE /* DomizileThirdDetailViewController.xib */,
-				8F879E14143C5983002BD6C9 /* DomizileFourthDetailViewController.xib */,
-				8F42647F1430D19200CA5340 /* DomizilCell.xib */,
-				8F43F9A614519EBF00EBD6C0 /* DomizilCellThirdViewController.xib */,
-				8F43F9A81451A0F400EBD6C0 /* DomizilCellFourthViewController.xib */,
+				B44956841461938700E5DE49 /* DomizileCell.xib */,
 				8F9236E414598309004DF57E /* SuchergebnisseDomizil.xib */,
 			);
 			name = Domizile;
@@ -583,7 +592,14 @@
 				28216C950DB411BC00E5133A /* Orte.h */,
 				28216C960DB411BC00E5133A /* Orte.m */,
 				8F0DFC5C143C85210079589F /* OrteView.xib */,
-				8F0DFC5A143C76720079589F /* OrteAuswahlPopUp.xib */,
+				B47DA639146BE1BA00B310DE /* OrteTableViewCell.xib */,
+				B47DA640146BF38400B310DE /* GastronomieSubView.h */,
+				B47DA641146BF38400B310DE /* GastronomieSubView.m */,
+				B47DA642146BF38400B310DE /* GastronomieSubView.xib */,
+				B47DA645146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib */,
+				B47DA647146BFA3F00B310DE /* BilderGallerieSubView.h */,
+				B47DA648146BFA3F00B310DE /* BilderGallerieSubView.m */,
+				B47DA649146BFA3F00B310DE /* BilderGallerieSubView.xib */,
 			);
 			name = Orte;
 			sourceTree = "<group>";
@@ -608,9 +624,11 @@
 			children = (
 				8FF71625143B09B2005ADEDF /* EventRootViewController.h */,
 				8FF71626143B09B3005ADEDF /* EventRootViewController.m */,
+				B47DA64E146C11C700B310DE /* EventRootControllerTableCell.xib */,
 				8FF7161D143B06CF005ADEDF /* MonatEventDetailView.h */,
 				8FF7161E143B06CF005ADEDF /* MonatEventDetailView.m */,
 				8FF7161F143B06CF005ADEDF /* MonatEventDetailView.xib */,
+				B47DA650146C15B900B310DE /* MonatEventDetailTableCell.xib */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -620,11 +638,43 @@
 			children = (
 				8FD448EB143B283E004887B6 /* NewsRootViewController.h */,
 				8FD448EC143B283E004887B6 /* NewsRootViewController.m */,
+				B47DA64C146C0AD200B310DE /* NewsRootViewContrTableCell.xib */,
 				8FD448EE143B2902004887B6 /* NewsDetailView.h */,
 				8FD448EF143B2902004887B6 /* NewsDetailView.m */,
 				8FD448F0143B2902004887B6 /* NewsDetailView.xib */,
 			);
 			name = News;
+			sourceTree = "<group>";
+		};
+		B4A6199B1464071D00B9E4FF /* web_stuff */ = {
+			isa = PBXGroup;
+			children = (
+				B47DA636146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png */,
+				B4A6199C1464071D00B9E4FF /* bg_ipad.png */,
+				B4A6199D1464071D00B9E4FF /* einstell_btn.png */,
+				B4A6199E1464071D00B9E4FF /* logo.png */,
+				B4A6199F1464071D00B9E4FF /* normal */,
+				B4A619A81464071D00B9E4FF /* shaddow_left.png */,
+				B4A619A91464071D00B9E4FF /* shaddow_right.png */,
+				B4A619AA1464071D00B9E4FF /* suche_btn.png */,
+			);
+			name = web_stuff;
+			path = rsrc/web_stuff;
+			sourceTree = "<group>";
+		};
+		B4A6199F1464071D00B9E4FF /* normal */ = {
+			isa = PBXGroup;
+			children = (
+				B4A619A01464071D00B9E4FF /* domizile_btn.png */,
+				B4A619A11464071D00B9E4FF /* events_btn.png */,
+				B4A619A21464071D00B9E4FF /* home_btn.png */,
+				B4A619A31464071D00B9E4FF /* kontakt_btn.png */,
+				B4A619A41464071D00B9E4FF /* news_btn.png */,
+				B4A619A51464071D00B9E4FF /* orte_btn.png */,
+				B4A619A61464071D00B9E4FF /* shuttle_btn.png */,
+				B4A619A71464071D00B9E4FF /* wetter_btn.png */,
+			);
+			path = normal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,36 +730,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A619B914640AA500B9E4FF /* ApartmentModel.xcdatamodeld in Resources */,
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				8F4264801430D19200CA5340 /* DomizilCell.xib in Resources */,
 				8F9537E114320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.xib in Resources */,
 				8F9537EC143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.xib in Resources */,
 				8FF71621143B06D0005ADEDF /* MonatEventDetailView.xib in Resources */,
 				8FD448F2143B2903004887B6 /* NewsDetailView.xib in Resources */,
 				8FBC59E7143B448500529E5D /* WetterViewController.xib in Resources */,
 				8FBC59ED143B498100529E5D /* KontaktViewController.xib in Resources */,
-				8FDF03C3143C51CD002985FE /* DomizileThirdDetailViewController.xib in Resources */,
-				8F879E15143C5983002BD6C9 /* DomizileFourthDetailViewController.xib in Resources */,
 				8F879E17143C5BD5002BD6C9 /* DomizileSecondDetailViewController.xib in Resources */,
 				8F9850E8143C6C5400E12D25 /* WetterOrtePopUpView.xib in Resources */,
 				8F9850EA143C707300E12D25 /* WetterSearchPopUpViewController.xib in Resources */,
-				8F0DFC5B143C76720079589F /* OrteAuswahlPopUp.xib in Resources */,
 				8F0DFC5D143C85210079589F /* OrteView.xib in Resources */,
 				8FA5FC2D143CAEE700743200 /* TapkuLibrary.bundle in Resources */,
 				8F967160143DE5070041C197 /* CalenderPopUpViewController.xib in Resources */,
 				8F368DF7144341A6000A35C4 /* DomizileFirstDetailViewController.xib in Resources */,
 				8F7DD0FA1445A8BC00AC6A11 /* ButtonsPopUpViewController.xib in Resources */,
 				8FA8699D1445C3C1008AC064 /* SortierenNachPopOver.xib in Resources */,
-				8FA869A31445CC34008AC064 /* SuchergebnisseKarte.xib in Resources */,
 				8F9586FB1446EC0D00508C2D /* Home.xib in Resources */,
 				8F958700144711E500508C2D /* pig.png in Resources */,
-				8F17A8AC1450195200C4F72E /* SuchergebnisseHausDetail.xib in Resources */,
-				8F43F9A714519EC000EBD6C0 /* DomizilCellThirdViewController.xib in Resources */,
-				8F43F9A91451A0F500EBD6C0 /* DomizilCellFourthViewController.xib in Resources */,
-				8F357C8D1457048E00B1684C /* Apartments.sqlite in Resources */,
-				8FF188F714584A6A00786888 /* star.png in Resources */,
 				8FF188FC1458532600786888 /* HomePopUpViewController.xib in Resources */,
 				8F9236E514598309004DF57E /* SuchergebnisseDomizil.xib in Resources */,
+				B4495683146192AD00E5DE49 /* Apartments.sqlite in Resources */,
+				B44956851461938700E5DE49 /* DomizileCell.xib in Resources */,
+				B4A619AB1464071D00B9E4FF /* bg_ipad.png in Resources */,
+				B4A619AC1464071D00B9E4FF /* einstell_btn.png in Resources */,
+				B4A619AD1464071D00B9E4FF /* logo.png in Resources */,
+				B4A619AE1464071D00B9E4FF /* domizile_btn.png in Resources */,
+				B4A619AF1464071D00B9E4FF /* events_btn.png in Resources */,
+				B4A619B01464071D00B9E4FF /* home_btn.png in Resources */,
+				B4A619B11464071D00B9E4FF /* kontakt_btn.png in Resources */,
+				B4A619B21464071D00B9E4FF /* news_btn.png in Resources */,
+				B4A619B31464071D00B9E4FF /* orte_btn.png in Resources */,
+				B4A619B41464071D00B9E4FF /* shuttle_btn.png in Resources */,
+				B4A619B51464071D00B9E4FF /* wetter_btn.png in Resources */,
+				B4A619B61464071D00B9E4FF /* shaddow_left.png in Resources */,
+				B4A619B71464071D00B9E4FF /* shaddow_right.png in Resources */,
+				B4A619B81464071D00B9E4FF /* suche_btn.png in Resources */,
+				B47DA637146BE0E500B310DE /* Bildschirmfoto 2011-11-10 um 11.35.25.png in Resources */,
+				B47DA63A146BE1BA00B310DE /* OrteTableViewCell.xib in Resources */,
+				B47DA644146BF38400B310DE /* GastronomieSubView.xib in Resources */,
+				B47DA646146BF3F300B310DE /* GastronomieSubViewTableViewCell.xib in Resources */,
+				B47DA64B146BFA3F00B310DE /* BilderGallerieSubView.xib in Resources */,
+				B47DA64D146C0AD200B310DE /* NewsRootViewContrTableCell.xib in Resources */,
+				B47DA64F146C11C700B310DE /* EventRootControllerTableCell.xib in Resources */,
+				B47DA651146C15B900B310DE /* MonatEventDetailTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,10 +790,6 @@
 				28216C970DB411BC00E5133A /* Orte.m in Sources */,
 				284F764110B34E8A00D7BA5B /* Home.m in Sources */,
 				8BEF8B36135A238D003FED72 /* EnhancedSplitViewController.m in Sources */,
-				8FEBA389142A15D7008F1A68 /* DomizileRootViewController.m in Sources */,
-				8FEBA392142A1807008F1A68 /* DomizileSecondDetailViewController.m in Sources */,
-				8F9537801431D37C009B183B /* DomizileFourthDetailViewController.m in Sources */,
-				8F9537821431D37C009B183B /* DomizileThirdDetailViewController.m in Sources */,
 				8F9537E014320EE6009B183B /* ShuttleServiceDetailViewControllerMaserati.m in Sources */,
 				8F9537E414320F1F009B183B /* ShuttleServiceRootViewController.m in Sources */,
 				8F9537EB143219FC009B183B /* ShuttleServiceDetailViewControllerAstonMartin.m in Sources */,
@@ -750,7 +811,6 @@
 				8F190DE7144593820089F277 /* DomizileFirstDetailViewController.m in Sources */,
 				8F7DD0F91445A8BC00AC6A11 /* ButtonsPopUpViewController.m in Sources */,
 				8FA8699C1445C3C1008AC064 /* SortierenNachPopOver.m in Sources */,
-				8FA869A21445CC34008AC064 /* SuchergebnisseKarte.m in Sources */,
 				554F7CAF1446EE7F00F9C24D /* AbstractParser.m in Sources */,
 				554F7CB11446EE7F00F9C24D /* AvailabilityInfo2Parser.m in Sources */,
 				554F7CB51446EE7F00F9C24D /* ObjInfo2Parser.m in Sources */,
@@ -789,6 +849,9 @@
 				55C701D6146BF7FA00B2F3E3 /* ObjText+Extensions.m in Sources */,
 				55C701D9146BFBB200B2F3E3 /* AvailabilityInfo2+Extensions.m in Sources */,
 				55C701DC146C04E500B2F3E3 /* ObjAttribute+Extensions.m in Sources */,
+				B4A8EBF4146AD5F000A8E11B /* Search_Result.m in Sources */,
+				B47DA643146BF38400B310DE /* GastronomieSubView.m in Sources */,
+				B47DA64A146BFA3F00B310DE /* BilderGallerieSubView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

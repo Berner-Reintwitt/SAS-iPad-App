@@ -10,6 +10,8 @@
 #import "EnhancedSplitViewController.h"
 #import "MonatEventDetailView.h"
 #import "DomizileFirstDetailViewController.h"
+
+
 NSUInteger row;
 
 
@@ -19,11 +21,18 @@ NSUInteger row;
     DomizileFirstDetailViewController *secondMonthDetailViewController;
     NSArray *array1;
     EnhancedSplitViewController *splitViewController;
+    IBOutlet UILabel *cellTextfield;
+    IBOutlet UITableViewCell *tableViewCell;
+    
+
 }
 
 @property (nonatomic, retain) IBOutlet  MonatEventDetailView *firstMonthDetailViewController;
 @property (nonatomic, retain) IBOutlet  DomizileFirstDetailViewController *secondMonthDetailViewController;
 @property (nonatomic, retain) IBOutlet NSArray *array1;
 @property (nonatomic, assign) IBOutlet EnhancedSplitViewController *splitViewController;
+@property (retain, nonatomic) IBOutlet UILabel *cellTextfield;
+@property (retain, nonatomic) IBOutlet UITableViewCell *tableViewCell;
+
 
 @end

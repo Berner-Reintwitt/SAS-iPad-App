@@ -13,6 +13,7 @@
 @synthesize newsDetailView;
 @synthesize array1;
 @synthesize splitViewController;
+@synthesize tableCell;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,17 +43,20 @@
 
 
 - (void)viewDidLoad
-{   array1=[[NSArray alloc]initWithObjects:@"News 1", @"News 2", @"News 3", @"News 4", nil];
+{   
+   
+    array1=[[NSArray alloc]initWithObjects:@"News 1", @"News 2", @"News 3", @"News 4", nil];
     self.clearsSelectionOnViewWillAppear = NO;
-    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+   // self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     self.navigationItem.title=@"News";
-            
+    self.tableView.rowHeight=100;        
     [super viewDidLoad];
 }
 
 
 - (void)viewDidUnload
 {
+    [self setTableCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -74,7 +78,7 @@
 
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [array1 count];
+    return 5;
 }
 
 
@@ -84,11 +88,11 @@
     // Dequeue or create a cell of the appropriate type.
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
+       NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"NewsRootViewContrTableCell" owner:self options:nil];
+        cell=self.tableCell;
     }
     // Configure the cell.
-    cell.textLabel.text = [array1 objectAtIndex:indexPath.row];
+    //cell.textLabel.text = [array1 objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -115,7 +119,27 @@
         
     }
     
+    else if(row==2){
+        
+        newsDetailView.textView.text=@"Rezept";
+        
+    }
+    else if(row==3){
+        
+        newsDetailView.textView.text=@"leckeres Rezept";
+        
+    }
+    
+    else if(row==4){
+        
+        newsDetailView.textView.text=@"letzte Zeile";
+        
+    }
     
 }
 
+- (void)dealloc {
+    [tableCell release];
+    [super dealloc];
+}
 @end
