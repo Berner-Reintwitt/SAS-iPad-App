@@ -43,6 +43,7 @@ void setData(NSManagedObjectContext *context, NSString *key, NSData *data);
 void XorMd5Hash(NSMutableData *a, NSData *b);
 NSString *EndcodeBase16(NSString *string);
 NSData *readData(NSString *url, NSString *action, ...);
+NSData *readDataWithQueryArray(NSString *url, NSArray *paramAndValues);
 void logError(NSError *error);
 NSData *readPicture(NSString *url, NSInteger width, NSInteger height, NSInteger quality, NSString *mode);
 NSString *NewUUID();
@@ -55,9 +56,17 @@ NSString *EncodeAP16(NSData *md5Data);
 
 NSString *parseExidFromTag(NSString *tag);
 NSString *createExidParamString(NSEnumerator *enumerator);
-
+NSString *dateToYYYYMMDD(NSDate *date);
 
 BOOL containsPattern(NSString *source, NSString *pattern);
+
+
+int parseInt(NSString *string);
+double parseDouble(NSString *string);
+
+BOOL tryParseInt(NSString *string, int *target);
+BOOL tryParseDouble(NSString *string, double *target);
+
 
 @interface Utils : NSObject
 

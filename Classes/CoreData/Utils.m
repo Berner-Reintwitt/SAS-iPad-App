@@ -95,6 +95,50 @@ NSMutableData *CreateXorMd5Hash(NSData *a, NSData *b) {
 	return result;
 }
 
+NSString *dateToYYYYMMDD(NSDate *date) {
+	NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
+	NSCAssert(nil != df, @"dateToYYYYMMDD");
+	[df setDateFormat:@"yyyyMMdd"];
+	NSString *result = [df stringFromDate:date];
+	NSCAssert(nil != result, @"dateToYYYYMMDD");
+	return result;
+}
+
+
+BOOL tryParseInt(NSString *string, int *target) {
+	NSScanner* scanner = [NSScanner scannerWithString:string];
+	BOOL result = [scanner scanInt:target];
+	return result;
+}
+
+
+int parseInt(NSString *string) {
+	int result;
+	if (!tryParseInt(string, &result)) {
+		NSLog(@"parseInt error");
+		result = -1;
+	}
+	return result;
+}
+
+
+BOOL tryParseDouble(NSString *string, double *target) {
+	NSScanner* scanner = [NSScanner scannerWithString:string];
+	BOOL result = [scanner scanDouble:target];
+	return result;
+}
+
+
+double parseDouble(NSString *string) {
+	double result;
+	if (!tryParseDouble(string, &result)) {
+		NSLog(@"parseDouble error");
+		result = -1;
+	}
+	return result;
+}
+
+
 NSString *XorEncodedMd5Hash(NSString *a, NSString *b) {
 	if (nil == a || nil == b || a.length != 32 || b.length != 32) {
 		NSLog(@"argument exception");
@@ -168,9 +212,21 @@ void setData(NSManagedObjectContext *context, NSString *key, NSData *value) {
 }
 
 
+static NSData *httpGet(NSString *urlAndQuery) {
+	NSData *result;
+    NSURL *url_query = [NSURL URLWithString: urlAndQuery];
+	NSURLRequest *request = [NSURLRequest requestWithURL: url_query];
+    NSError *error = nil;
+    NSURLResponse *response;
+    result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (error) {
+        logError(error);
+    }
+	return result;
+}
+
+
 NSData *readData(NSString *url, NSString *action, ...) {
-    NSData *result = nil;
-    
     NSMutableString *query = [NSMutableString stringWithCapacity: 256];
     [query appendString: url];
     [query appendString: @"?"];
@@ -192,16 +248,27 @@ NSData *readData(NSString *url, NSString *action, ...) {
         [query appendString: @"&"];
     }
     va_end(argumentList);
-    
-    NSURL *url_query = [NSURL URLWithString: query];
-	NSURLRequest *request = [NSURLRequest requestWithURL: url_query];
-    NSError *error = nil;
-    NSURLResponse *response;
-    result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    if (error) {
-        logError(error);
-    }
-    return result;
+	return httpGet(query);
+}
+
+NSData *readDataWithQueryArray(NSString *url, NSArray *paramAndValues) {
+    NSMutableString *query = [NSMutableString stringWithCapacity: 256];
+    [query appendString: url];
+	if (nil != paramAndValues && paramAndValues.count > 0) {
+		BOOL first = true;
+		[query appendString:@"?"];
+		for (int i = 0; i + 1 < paramAndValues.count; i += 2) {
+			NSString *paramName = [paramAndValues objectAtIndex:i];
+			NSString *paramValue = [paramAndValues objectAtIndex:i + 1];
+			if (first) {
+				first = false;
+				[query appendFormat:@"%s=%s", paramName, paramValue];
+			} else {
+				[query appendFormat:@"&%s=%s", paramName, paramValue];
+			}
+		}
+	}
+	return httpGet(query);
 }
 
 

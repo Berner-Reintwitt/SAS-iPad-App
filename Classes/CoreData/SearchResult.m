@@ -8,21 +8,29 @@
 
 #import "SearchResult.h"
 #import "AbstractParser.h"
-
+#import "Utils.h"
+#import "StringConsts.h"
+#import "XPathQuery.h"
+#import "Search.h"
 
 @implementation SearchResult
+
+@synthesize exid, objnr, name, fromDate, toDate, rooms, bed_rooms, living_area, persons, max_persons, mindays, kurzbucher, nights, spar;
+  
+
++ (NSArray *) Search: (SearchParameters *) spar {
+    return [Search SearchWithParameters:spar];
+}
+
+
++ (NSArray *) mySearchresults {
+    return [Search SearchWithParameters:nil]; 
+}
+
+
++ (NSArray *) mySearchresults: (SearchParameters *) sp {
+    return [Search SearchWithParameters:sp];
 /*
-+ (NSArray *) mySearchresults{
-        SearchParameters *param=[SearchParameters globalSearchParameters];
-        return [self mySearchresults:param];   
-}   
-   
-*/
-
-
-        
-+ (NSArray *) mySearchresults: (SearchParameters *) sp{
-
     SearchParameters *spar =[[SearchParameters alloc]init];
     spar.children=2;
     spar.adults=2;
@@ -103,7 +111,17 @@
     [array addObject:sr];
     
     return array;
-    
+*/
+}
+
+
+- (double) hitrate {
+    return 1;
+}
+
+
+- (double) price {
+    return 1350;
 }
 
 

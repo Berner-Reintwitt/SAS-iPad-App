@@ -63,6 +63,11 @@ extern NSString *NAME_googlemaps_longitude;
 extern NSString *NAME_googlemaps_latitude;
 extern NSString *NAME_entfernung;
 
+// Search: ObjInfo
+extern NSString *NAME_kurzbucher;
+extern NSString *NAME_nights;
+
+
 extern NSString *CLASS_ObjAttribute;
 extern NSString *NAME_ObjAttribute;
 extern NSString *NAME_label;
@@ -144,6 +149,15 @@ extern NSString *CLASS_ImageData;
 extern NSString *XML_NodeName;
 extern NSString *XML_NodeContent;
 extern NSString *XML_NodeChildNodes;
+
+
+extern NSString *URL_SEARCH;
+extern NSString *PARAM_SEARCH_FROMDATE;
+extern NSString *PARAM_SEARCH_TODATE;
+extern NSString *PARAM_SEARCH_ADULTS;
+extern NSString *PARAM_SEARCH_CHILDREN;
+extern NSString *PARAM_SEARCH_RANGEFROM;
+extern NSString *PARAM_SEARCH_ROOMS;
 
 
 @interface StringConsts : NSObject

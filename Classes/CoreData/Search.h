@@ -11,7 +11,7 @@
 
 @interface Search : NSObject
 
-+ (NSEnumerator *) SearchWithParameters:(SearchParameters *)spar;
++ (NSArray *) SearchWithParameters:(SearchParameters *)spar;
 
 
 @end

@@ -55,6 +55,10 @@ NSString *NAME_googlemaps_longitude = @"googlemaps_longitude";
 NSString *NAME_googlemaps_latitude = @"googlemaps_latitude";
 NSString *NAME_entfernung = @"entfernung";
 
+NSString *NAME_kurzbucher = @"kurzbucher";
+NSString *NAME_nights = @"nights";
+
+
 NSString *CLASS_ObjAttribute = @"ObjAttribute";
 NSString *NAME_ObjAttribute = @"ObjAttribute";
 NSString *NAME_label = @"label";
@@ -101,7 +105,6 @@ NSString *NAME_data = @"data";
 NSString *CLASS_KeyValueData = @"KeyValueData";
 
 
-
 NSString *Name_attributes = @"attributes";
 NSString *Name_availabilityinfo = @"availabilityinfo";
 NSString *Name_data = @"data";
@@ -125,6 +128,15 @@ NSString *XML_NodeName = @"nodeName";
 NSString *XML_NodeContent = @"nodeContent";
 NSString *XML_NodeChildNodes = @"nodeChildArray";
 
+
+
+NSString *URL_SEARCH = @"http://feder-mirror.local/Search.ashx";
+NSString *PARAM_SEARCH_ADULTS = @"a";
+NSString *PARAM_SEARCH_CHILDREN = @"c";
+NSString *PARAM_SEARCH_FROMDATE = @"f";
+NSString *PARAM_SEARCH_RANGEFROM = @"g";
+NSString *PARAM_SEARCH_ROOMS = @"r";
+NSString *PARAM_SEARCH_TODATE = @"t";
 
 
 
