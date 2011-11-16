@@ -99,7 +99,7 @@
     //in relation to the label height otherwise we just return the minimum label height with padding
     if(selectedIndex == indexPath.row)
     {
-//return [self getLabelHeightForIndex:indexPath.row] + COMMENT_LABEL_PADDING * 2;
+        //return [self getLabelHeightForIndex:indexPath.row] + COMMENT_LABEL_PADDING * 2;
     }
     else {
         ////return COMMENT_LABEL_MIN_HEIGHT + COMMENT_LABEL_PADDING * 2;
