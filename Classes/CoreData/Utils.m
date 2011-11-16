@@ -212,7 +212,7 @@ void setData(NSManagedObjectContext *context, NSString *key, NSData *value) {
 }
 
 
-static NSData *httpGet(NSString *urlAndQuery) {
+NSData *httpGet(NSString *urlAndQuery) {
 	NSData *result;
     NSURL *url_query = [NSURL URLWithString: urlAndQuery];
 	NSURLRequest *request = [NSURLRequest requestWithURL: url_query];

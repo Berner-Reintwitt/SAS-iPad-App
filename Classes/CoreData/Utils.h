@@ -42,6 +42,8 @@ NSData *getData(NSManagedObjectContext *context, NSString *key);
 void setData(NSManagedObjectContext *context, NSString *key, NSData *data);
 void XorMd5Hash(NSMutableData *a, NSData *b);
 NSString *EndcodeBase16(NSString *string);
+
+NSData *httpGet(NSString *urlAndQuery);
 NSData *readData(NSString *url, NSString *action, ...);
 NSData *readDataWithQueryArray(NSString *url, NSArray *paramAndValues);
 void logError(NSError *error);
